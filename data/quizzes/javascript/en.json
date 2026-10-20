@@ -1,0 +1,1107 @@
+{
+  "id": "javascript",
+  "language": "en",
+  "title": "JavaScript",
+  "questions": [
+    {
+      "id": 1,
+      "level": "basic",
+      "question": "What is JavaScript?",
+      "correctAnswer": "An interpreted, dynamic, multi-paradigm programming language used in the browser, on the server (Node.js) and in many other environments.",
+      "wrongAnswers": [
+        "A compiled, statically typed language derived from Java that runs only inside the browser's sandbox and cannot be used on servers or other environments.",
+        "A markup language used to structure web pages, similar to HTML.",
+        "A styling language that controls the layout and colors of web pages."
+      ]
+    },
+    {
+      "id": 2,
+      "level": "basic",
+      "question": "What are the primitive data types?",
+      "correctAnswer": "string, number, boolean, null, undefined, symbol and bigint.",
+      "wrongAnswers": [
+        "string, number, boolean, object, array and function, since arrays and functions are stored by value like the other primitives.",
+        "string, int, float, char, boolean and null.",
+        "string, number, boolean, undefined, Date and RegExp."
+      ]
+    },
+    {
+      "id": 3,
+      "level": "basic",
+      "question": "What is the difference between var, let and const?",
+      "correctAnswer": "var is function-scoped and hoisted with undefined; let and const are block-scoped; const doesn't allow reassignment.",
+      "wrongAnswers": [
+        "var and let are block-scoped and can be reassigned; const is function-scoped and makes objects deeply immutable, so their properties cannot change either.",
+        "var and let are block-scoped; const is function-scoped and fully immutable.",
+        "All three are block-scoped; const prevents mutation of objects."
+      ]
+    },
+    {
+      "id": 4,
+      "level": "basic",
+      "question": "What is hoisting?",
+      "correctAnswer": "Behavior where declarations are \"lifted\" to the top of the scope before execution. Functions are fully hoisted; let/const stay in the temporal dead zone.",
+      "wrongAnswers": [
+        "The process in which minifiers move all variable and function declarations to the top of the file during bundling, so that the code can run in older browsers.",
+        "Moving all code to the top of the file during minification.",
+        "A feature where variables declared with let are initialized with undefined before execution."
+      ]
+    },
+    {
+      "id": 5,
+      "level": "basic",
+      "question": "What is the Temporal Dead Zone?",
+      "correctAnswer": "The period between the start of the scope and the let/const declaration, in which accessing the variable throws a ReferenceError.",
+      "wrongAnswers": [
+        "The period after a variable goes out of scope and before the garbage collector frees its memory, during which reading it returns undefined.",
+        "The time a Promise spends pending before resolving.",
+        "The delay before setTimeout(fn, 0) executes."
+      ]
+    },
+    {
+      "id": 6,
+      "level": "basic",
+      "question": "What is the difference between == and ===?",
+      "correctAnswer": "== compares with type coercion; === compares value and type without coercion. Prefer ===.",
+      "wrongAnswers": [
+        "=== compares values after converting both operands to the same type, while == compares value and type strictly; prefer == for safety.",
+        "== compares object references and === compares the contents of objects deeply, so two objects with the same keys are === equal.",
+        "=== compares with type coercion; == compares value and type without coercion."
+      ]
+    },
+    {
+      "id": 7,
+      "level": "basic",
+      "question": "What are falsy values?",
+      "correctAnswer": "false, 0, -0, 0n, \"\", null, undefined and NaN. Everything else is truthy.",
+      "wrongAnswers": [
+        "false, 0, \"\", null, undefined, empty arrays [] and empty objects {}. Everything else is truthy.",
+        "false, 0, \"0\", \"false\", null and undefined, because strings are converted to their meaning.",
+        "Only false and null."
+      ]
+    },
+    {
+      "id": 8,
+      "level": "basic",
+      "question": "What is typeof null?",
+      "correctAnswer": "It returns \"object\", a historical bug in the language kept for compatibility.",
+      "wrongAnswers": [
+        "It returns \"null\", since null has its own dedicated type tag in the language.",
+        "It throws a TypeError, because typeof cannot be applied to null values.",
+        "It returns \"undefined\"."
+      ]
+    },
+    {
+      "id": 9,
+      "level": "basic",
+      "question": "What is NaN?",
+      "correctAnswer": "\"Not a Number\", a numeric value resulting from invalid operations. Check it with Number.isNaN().",
+      "wrongAnswers": [
+        "A special string returned when numeric parsing fails; you check for it by comparing value === \"NaN\" after the conversion.",
+        "An alias for null used in numeric contexts; you check for it with value === NaN, which returns true for invalid results.",
+        "An error thrown when dividing by zero."
+      ]
+    },
+    {
+      "id": 10,
+      "level": "basic",
+      "question": "What is a function?",
+      "correctAnswer": "A reusable block of code that can receive parameters and return a value; in JS, functions are first-class values.",
+      "wrongAnswers": [
+        "A special object that can only be called once and cannot be stored in variables or passed as an argument to other functions.",
+        "A block of code that always runs automatically when the page loads.",
+        "A statement that declares a class with methods."
+      ]
+    },
+    {
+      "id": 11,
+      "level": "basic",
+      "question": "What is the difference between a function declaration and a function expression?",
+      "correctAnswer": "A declaration is fully hoisted and can be called before it is defined; an expression only exists after assignment.",
+      "wrongAnswers": [
+        "A function expression is fully hoisted and can be called before it appears, while a declaration only exists after the line where it is defined runs.",
+        "A declaration cannot receive parameters or return values, while an expression can; otherwise they behave the same in every scope.",
+        "There is no difference other than syntax."
+      ]
+    },
+    {
+      "id": 12,
+      "level": "basic",
+      "question": "What are arrow functions?",
+      "correctAnswer": "A short function syntax ((a, b) => a + b) that has no own this or arguments and inherits this from the enclosing scope.",
+      "wrongAnswers": [
+        "A short syntax ((a, b) => a + b) that creates its own this bound to the caller and its own arguments object, and can be used as a constructor with new.",
+        "Functions that run asynchronously by default.",
+        "Functions that can only return objects."
+      ]
+    },
+    {
+      "id": 13,
+      "level": "basic",
+      "question": "What is an object?",
+      "correctAnswer": "A collection of key-value pairs, the basis of most data in JavaScript.",
+      "wrongAnswers": [
+        "An ordered list of values accessed only by numeric index, the basis of most data in JavaScript.",
+        "A primitive type that stores text and numbers together, compared by value.",
+        "A function that can only be created with the class keyword."
+      ]
+    },
+    {
+      "id": 14,
+      "level": "basic",
+      "question": "How do you create and access object properties?",
+      "correctAnswer": "With literals { name: \"Ana\" }, accessing by obj.name or obj[\"name\"].",
+      "wrongAnswers": [
+        "With new Object(\"name\", \"Ana\"), reading values only through obj.get(\"name\") and writing through obj.set(\"name\", value).",
+        "With array-like literals [ name: \"Ana\" ], accessing properties with the arrow syntax obj->name as in PHP.",
+        "With JSON strings only, accessing by obj(\"name\")."
+      ]
+    },
+    {
+      "id": 15,
+      "level": "basic",
+      "question": "What is an array?",
+      "correctAnswer": "An ordered, indexed object for storing lists of values.",
+      "wrongAnswers": [
+        "A primitive type that stores a fixed number of values of the same type, defined when it is created.",
+        "An unordered collection of unique values that ignores duplicates automatically.",
+        "A key-value structure where keys can be any type."
+      ]
+    },
+    {
+      "id": 16,
+      "level": "basic",
+      "question": "What are map, filter and reduce for?",
+      "correctAnswer": "map transforms each item; filter selects items by a condition; reduce accumulates items into a single value.",
+      "wrongAnswers": [
+        "map selects items that match a condition; filter accumulates all items into a single value; reduce transforms each item into a new one.",
+        "They mutate the original array in place and return undefined, so you must read the original array afterwards to see the result.",
+        "map sorts the array; filter removes duplicates; reduce shortens the array length."
+      ]
+    },
+    {
+      "id": 17,
+      "level": "basic",
+      "question": "What is the difference between forEach and map?",
+      "correctAnswer": "forEach just runs something for each item and returns undefined; map returns a new transformed array.",
+      "wrongAnswers": [
+        "map executes a callback for each item and returns undefined; forEach returns a new array with each item transformed by the callback.",
+        "forEach runs callbacks asynchronously in parallel, while map runs them synchronously one after another and returns a new array.",
+        "forEach can be chained and map cannot."
+      ]
+    },
+    {
+      "id": 18,
+      "level": "basic",
+      "question": "How do you add and remove elements from an array?",
+      "correctAnswer": "push/pop at the end; unshift/shift at the start; splice at any position.",
+      "wrongAnswers": [
+        "push/pop at the start of the array; unshift/shift at the end; slice inserts or removes items at any position in place.",
+        "add/remove at the end; insert/delete at the start.",
+        "Arrays are immutable, so you can only create new ones with concat."
+      ]
+    },
+    {
+      "id": 19,
+      "level": "basic",
+      "question": "What is a template literal?",
+      "correctAnswer": "Strings with backticks that allow ${expression} interpolation and multiple lines.",
+      "wrongAnswers": [
+        "Strings in single quotes that can contain HTML tags and are rendered as markup when inserted into the DOM.",
+        "A string type that cannot contain variables or expressions, used for constant messages.",
+        "A function that formats numbers as currency."
+      ]
+    },
+    {
+      "id": 20,
+      "level": "basic",
+      "question": "What is destructuring?",
+      "correctAnswer": "Syntax for extracting values from arrays/objects into variables: const { name } = person.",
+      "wrongAnswers": [
+        "Converting an object into a JSON string so it can be sent over the network.",
+        "Deleting properties from an object to free memory.",
+        "Breaking a function into smaller functions."
+      ]
+    },
+    {
+      "id": 21,
+      "level": "basic",
+      "question": "What are the spread and rest operators?",
+      "correctAnswer": "... expands iterables/objects (spread) or gathers remaining arguments into an array (rest).",
+      "wrongAnswers": [
+        "... creates a deep clone of nested objects (spread), or removes the last element from an array and returns it (rest).",
+        "Spread uses the ... syntax to expand values, while rest uses ** to collect the remaining arguments into an object.",
+        "... pauses a function (spread) and resumes it later (rest)."
+      ]
+    },
+    {
+      "id": 22,
+      "level": "basic",
+      "question": "What is the DOM?",
+      "correctAnswer": "A tree representation of the HTML document that JavaScript can read and manipulate.",
+      "wrongAnswers": [
+        "A JavaScript library similar to jQuery that must be imported to manipulate the HTML of the page.",
+        "The browser's networking layer responsible for downloading HTML documents and their resources.",
+        "A database where the browser stores user data."
+      ]
+    },
+    {
+      "id": 23,
+      "level": "basic",
+      "question": "How do you select DOM elements?",
+      "correctAnswer": "document.querySelector, querySelectorAll, getElementById and similar.",
+      "wrongAnswers": [
+        "document.find, document.select and the $() function, which are available natively in every modern browser.",
+        "window.getElement and window.getElements, which return live arrays of matching elements.",
+        "document.query(\"tag\") only, which returns a single element."
+      ]
+    },
+    {
+      "id": 24,
+      "level": "basic",
+      "question": "What are events and how do you handle them?",
+      "correctAnswer": "Actions such as clicks or keypresses. You use element.addEventListener(\"click\", handler).",
+      "wrongAnswers": [
+        "Scheduled tasks that run at fixed intervals; you handle them by registering callbacks with setInterval only.",
+        "Messages pushed from the server; you handle them with element.listen(\"click\", handler) on the target element.",
+        "Network responses; you handle them with fetch().then()."
+      ]
+    },
+    {
+      "id": 25,
+      "level": "basic",
+      "question": "What is null versus undefined?",
+      "correctAnswer": "undefined indicates the absence of an assigned value; null is an intentional absence.",
+      "wrongAnswers": [
+        "null indicates that a variable was declared but never assigned, while undefined is an intentional absence set by the developer.",
+        "They are identical values, and null === undefined returns true because both represent missing data.",
+        "null is a number and undefined is a string."
+      ]
+    },
+    {
+      "id": 26,
+      "level": "basic",
+      "question": "What is a scope?",
+      "correctAnswer": "The region of code where a variable is accessible: global, function or block.",
+      "wrongAnswers": [
+        "The list of every variable declared in a program, which the engine keeps in a global table.",
+        "The lifetime of a variable in memory, measured from its creation until garbage collection.",
+        "The list of all variables declared in a program."
+      ]
+    },
+    {
+      "id": 27,
+      "level": "basic",
+      "question": "What is a closure?",
+      "correctAnswer": "A function that \"remembers\" the variables of the scope where it was created, even after that scope has finished.",
+      "wrongAnswers": [
+        "A function that can only access global variables and constants, because local variables are destroyed when their scope ends.",
+        "A block of code that terminates a loop early and returns control to the enclosing function, similar to break.",
+        "A function that closes the browser window when called."
+      ]
+    },
+    {
+      "id": 28,
+      "level": "basic",
+      "question": "What is this?",
+      "correctAnswer": "A reference to the execution context; its value depends on how the function is called (object, global, new, call/apply/bind).",
+      "wrongAnswers": [
+        "A reference that always points to the object where the function was originally defined, no matter how or where the function is called.",
+        "A reference that always points to the global window object in browsers and to module.exports in Node.js, regardless of the call site.",
+        "A reference to the current module's exports."
+      ]
+    },
+    {
+      "id": 29,
+      "level": "basic",
+      "question": "What is JSON and how do you use it?",
+      "correctAnswer": "A textual data format. JSON.stringify converts an object into a string and JSON.parse does the reverse.",
+      "wrongAnswers": [
+        "A binary data format. JSON.parse converts an object into a string and JSON.stringify converts a string back into an object.",
+        "A JavaScript library for HTTP requests.",
+        "A database engine built into browsers."
+      ]
+    },
+    {
+      "id": 30,
+      "level": "basic",
+      "question": "How does try...catch work?",
+      "correctAnswer": "It runs the code in try; if an error occurs, flow goes to catch; finally always runs.",
+      "wrongAnswers": [
+        "It runs the catch block first and then the try block; finally only runs when an error was thrown in either of them.",
+        "It retries the code inside try automatically until it succeeds, using catch only to log each failed attempt.",
+        "It catches errors only in asynchronous callbacks."
+      ]
+    },
+    {
+      "id": 31,
+      "level": "basic",
+      "question": "What are setTimeout and setInterval?",
+      "correctAnswer": "setTimeout runs a function once after a delay; setInterval runs it repeatedly.",
+      "wrongAnswers": [
+        "setInterval runs a function once after a delay, while setTimeout runs it repeatedly at the given interval until cleared.",
+        "setTimeout pauses all JavaScript execution for the given time, and setInterval resumes execution after the pause ends.",
+        "Both run the function synchronously and block the main thread."
+      ]
+    },
+    {
+      "id": 32,
+      "level": "basic",
+      "question": "What is a Promise?",
+      "correctAnswer": "An object representing the future result of an async operation: pending, fulfilled or rejected.",
+      "wrongAnswers": [
+        "A function that always runs on a separate thread and returns its result through a shared memory buffer.",
+        "A guarantee that an operation will never fail.",
+        "A synchronous callback queue."
+      ]
+    },
+    {
+      "id": 33,
+      "level": "basic",
+      "question": "What is async/await?",
+      "correctAnswer": "Syntax that lets you write async code sequentially; await pauses the function until the Promise resolves.",
+      "wrongAnswers": [
+        "Syntax that makes async functions run in parallel threads, so await waits for a worker thread to finish its computation.",
+        "Syntax in which await blocks the entire program and the event loop until the Promise resolves, like a synchronous call.",
+        "Syntax that converts synchronous code into callbacks automatically."
+      ]
+    },
+    {
+      "id": 34,
+      "level": "basic",
+      "question": "What is a callback?",
+      "correctAnswer": "A function passed as an argument to be called later, common in async operations and events.",
+      "wrongAnswers": [
+        "A function that calls itself recursively until a base condition is reached.",
+        "A function that is executed immediately after being defined, creating a private scope.",
+        "A function that returns another function."
+      ]
+    },
+    {
+      "id": 35,
+      "level": "intermediate",
+      "question": "What is the Event Loop?",
+      "correctAnswer": "A mechanism that coordinates the call stack, task queues and microtasks, enabling async operations on a single thread.",
+      "wrongAnswers": [
+        "A browser feature that repeats CSS animations indefinitely and synchronizes them with the screen refresh rate.",
+        "A loop that creates a new thread for each asynchronous operation.",
+        "A for loop that iterates over DOM events."
+      ]
+    },
+    {
+      "id": 36,
+      "level": "intermediate",
+      "question": "What is the difference between microtasks and macrotasks?",
+      "correctAnswer": "Microtasks (Promises, queueMicrotask) run after the current task, before the next macrotask (setTimeout, events).",
+      "wrongAnswers": [
+        "Macrotasks (setTimeout, events) always run before microtasks (Promises), which are processed only when the macrotask queue is empty.",
+        "Microtasks run in Web Workers and macrotasks on the main thread.",
+        "Microtasks are short functions and macrotasks are long functions."
+      ]
+    },
+    {
+      "id": 37,
+      "level": "intermediate",
+      "question": "What is the call stack?",
+      "correctAnswer": "A stack that records the functions being executed; overflowing it causes Maximum call stack size exceeded.",
+      "wrongAnswers": [
+        "A queue of pending Promises waiting to resolve, processed in FIFO order by the engine.",
+        "The memory area where objects and closures are allocated and later garbage collected.",
+        "The list of event listeners registered on the page."
+      ]
+    },
+    {
+      "id": 38,
+      "level": "intermediate",
+      "question": "What are prototypes?",
+      "correctAnswer": "JavaScript's inheritance mechanism: objects inherit properties from their prototype, forming the prototype chain.",
+      "wrongAnswers": [
+        "Draft versions of functions that the engine compiles in advance to speed up the first call.",
+        "Type declarations that describe objects, used by the engine only when TypeScript is enabled.",
+        "Draft versions of functions used during development."
+      ]
+    },
+    {
+      "id": 39,
+      "level": "intermediate",
+      "question": "How do classes work in JS?",
+      "correctAnswer": "They are syntactic sugar over prototypes: class, constructor, extends, super, static methods and # private fields.",
+      "wrongAnswers": [
+        "They are a separate object system, independent of prototypes, in which methods are copied into every instance as in Java.",
+        "They compile to WebAssembly modules.",
+        "They only support public fields and cannot be extended."
+      ]
+    },
+    {
+      "id": 40,
+      "level": "intermediate",
+      "question": "How do call, apply and bind work?",
+      "correctAnswer": "They set this: call invokes with separate arguments, apply with an array, bind returns a new function with this fixed.",
+      "wrongAnswers": [
+        "call invokes the function with an array of arguments, apply with separate arguments, and bind invokes it immediately with this fixed.",
+        "They clone a function so it can run in parallel in a different thread with its own copy of this and its arguments.",
+        "call invokes with an array, apply with separate arguments, bind invokes immediately."
+      ]
+    },
+    {
+      "id": 41,
+      "level": "intermediate",
+      "question": "What is currying?",
+      "correctAnswer": "Transforming a function of several arguments into a sequence of single-argument functions: f(a)(b).",
+      "wrongAnswers": [
+        "Caching the results of a function based on its arguments so repeated calls with the same input are faster.",
+        "Combining multiple functions into one, executed right to left.",
+        "Delaying function execution until the user stops typing."
+      ]
+    },
+    {
+      "id": 42,
+      "level": "intermediate",
+      "question": "What are higher-order functions?",
+      "correctAnswer": "Functions that receive other functions as arguments or return them (map, filter, decorators).",
+      "wrongAnswers": [
+        "Functions declared at the top level of a file, which the engine executes before any other code in the module.",
+        "Functions declared at the top of a file.",
+        "Functions with higher execution priority in the event loop."
+      ]
+    },
+    {
+      "id": 43,
+      "level": "intermediate",
+      "question": "What is a pure function?",
+      "correctAnswer": "Given the same input, it always returns the same output and causes no side effects.",
+      "wrongAnswers": [
+        "A function that has no parameters and only uses constants, so it can be optimized by the engine.",
+        "A function that has no parameters.",
+        "A function written without arrow syntax."
+      ]
+    },
+    {
+      "id": 44,
+      "level": "intermediate",
+      "question": "What is immutability and how do you achieve it?",
+      "correctAnswer": "Not changing existing data, creating copies (spread, map, structuredClone) or using Object.freeze.",
+      "wrongAnswers": [
+        "Declaring every variable with const, which makes objects and arrays deeply immutable so their contents cannot change.",
+        "Using push and splice, which create new arrays.",
+        "Storing data in localStorage so it cannot be changed."
+      ]
+    },
+    {
+      "id": 45,
+      "level": "intermediate",
+      "question": "What is the difference between a shallow and a deep copy?",
+      "correctAnswer": "A shallow copy (spread, Object.assign) copies only the first level; a deep copy (structuredClone) copies recursively.",
+      "wrongAnswers": [
+        "A shallow copy (structuredClone) copies only the first level of the object, while a deep copy (spread or Object.assign) copies nested objects recursively.",
+        "A shallow copy copies only primitives; a deep copy copies only functions.",
+        "They are identical; deep copy is just slower."
+      ]
+    },
+    {
+      "id": 46,
+      "level": "intermediate",
+      "question": "What is the difference between Promise.all, allSettled, race and any?",
+      "correctAnswer": "all fails if one fails; allSettled waits for all and reports each result; race returns the first to settle; any the first to fulfill.",
+      "wrongAnswers": [
+        "all returns the first promise that fulfills; allSettled rejects as soon as one fails; race waits for all to settle; any returns the first to settle.",
+        "all runs the promises sequentially one after another, while allSettled, race and any run them in parallel on separate threads.",
+        "all and allSettled are identical; race and any are identical."
+      ]
+    },
+    {
+      "id": 47,
+      "level": "intermediate",
+      "question": "How do you handle errors in async/await?",
+      "correctAnswer": "With try/catch around the await or .catch() on the Promise.",
+      "wrongAnswers": [
+        "Errors thrown inside async functions are swallowed automatically by the engine, so no explicit handling is needed.",
+        "Only with the global window.onerror handler, since try/catch does not work with await expressions.",
+        "Errors in async functions are swallowed automatically, so no handling is needed."
+      ]
+    },
+    {
+      "id": 48,
+      "level": "intermediate",
+      "question": "What is fetch?",
+      "correctAnswer": "A native Promise-based API for HTTP requests; it doesn't reject on 4xx/5xx responses, so you need to check response.ok.",
+      "wrongAnswers": [
+        "A native Promise-based API for HTTP requests that rejects automatically on any 4xx or 5xx response, so you only need a catch block.",
+        "A synchronous API that blocks the main thread until the HTTP response arrives, returning the parsed body directly.",
+        "A third-party library that must be installed via npm."
+      ]
+    },
+    {
+      "id": 49,
+      "level": "intermediate",
+      "question": "What is CORS?",
+      "correctAnswer": "A browser security mechanism that controls cross-origin requests, configured through server headers.",
+      "wrongAnswers": [
+        "A JavaScript library for making cross-domain requests.",
+        "A server-side firewall that blocks all external traffic.",
+        "A CSS feature for responsive layouts."
+      ]
+    },
+    {
+      "id": 50,
+      "level": "intermediate",
+      "question": "What is debounce?",
+      "correctAnswer": "Delaying a function's execution until a period without new calls has passed (e.g., search as you type).",
+      "wrongAnswers": [
+        "Limiting a function so that it runs at most once per fixed time interval, no matter how many times it is called (e.g., scroll).",
+        "Caching a function's results based on its arguments so repeated calls return immediately without recomputation.",
+        "Running a function immediately and ignoring all errors."
+      ]
+    },
+    {
+      "id": 51,
+      "level": "intermediate",
+      "question": "What is throttle?",
+      "correctAnswer": "Limiting a function's execution to at most once per time interval (e.g., scroll).",
+      "wrongAnswers": [
+        "Delaying a function's execution until a period without new calls has passed, so it only runs after the user stops (e.g., typing).",
+        "Slowing down outgoing network requests to save bandwidth by queuing them and sending one per second.",
+        "Running a function only once in the whole application lifetime."
+      ]
+    },
+    {
+      "id": 52,
+      "level": "intermediate",
+      "question": "What are event bubbling and capturing?",
+      "correctAnswer": "Event propagation: capturing goes down from the root to the target; bubbling goes up from the target to the root. stopPropagation interrupts it.",
+      "wrongAnswers": [
+        "Bubbling travels down from the root to the target and capturing travels up from the target to the root; preventDefault stops propagation.",
+        "Bubbling creates duplicate events; capturing removes them.",
+        "They describe how events are stored in memory."
+      ]
+    },
+    {
+      "id": 53,
+      "level": "intermediate",
+      "question": "What is event delegation?",
+      "correctAnswer": "Registering a listener on an ancestor to handle events from many children, taking advantage of bubbling.",
+      "wrongAnswers": [
+        "Registering a separate listener on every child element.",
+        "Sending events to a Web Worker for processing.",
+        "Delaying events until the page has fully loaded."
+      ]
+    },
+    {
+      "id": 54,
+      "level": "intermediate",
+      "question": "What are generators?",
+      "correctAnswer": "Functions (function*) that pause with yield and return iterators, useful for lazy sequences.",
+      "wrongAnswers": [
+        "Async functions (function*) that always return Promises and run their body in a separate microtask.",
+        "Functions that create new classes at runtime from a template object, used for factories.",
+        "Functions that generate random numbers."
+      ]
+    },
+    {
+      "id": 55,
+      "level": "intermediate",
+      "question": "What are iterators and iterables?",
+      "correctAnswer": "An iterable implements [Symbol.iterator]; an iterator has next() returning { value, done }. Used by for...of and spread.",
+      "wrongAnswers": [
+        "An iterable has a next() method returning { value, done }, and an iterator implements [Symbol.iterator]; they are used by for...in loops.",
+        "Iterators are arrays and iterables are objects.",
+        "They are only available in Node.js, not in browsers."
+      ]
+    },
+    {
+      "id": 56,
+      "level": "intermediate",
+      "question": "What is the difference between for...in and for...of?",
+      "correctAnswer": "for...in iterates over enumerable keys of objects; for...of iterates over values of iterables.",
+      "wrongAnswers": [
+        "for...of iterates over the enumerable keys of an object, while for...in iterates over the values of iterables such as arrays.",
+        "for...in only works with arrays and strings, while for...of only works with plain objects and their properties.",
+        "They are identical; for...of is just newer."
+      ]
+    },
+    {
+      "id": 57,
+      "level": "intermediate",
+      "question": "What are Map and Set?",
+      "correctAnswer": "Map is a key-value collection with keys of any type; Set stores unique values.",
+      "wrongAnswers": [
+        "Map stores unique values and ignores duplicates; Set is a key-value collection whose keys must be strings.",
+        "Map transforms arrays and Set assigns values to variables.",
+        "Both only accept strings as keys or values."
+      ]
+    },
+    {
+      "id": 58,
+      "level": "intermediate",
+      "question": "What are WeakMap and WeakSet?",
+      "correctAnswer": "Collections with weak references to objects, allowing garbage collection; they are not iterable.",
+      "wrongAnswers": [
+        "Smaller, faster versions of Map and Set that hold only primitive values and can be iterated with for...of.",
+        "Collections whose entries expire automatically after a configurable timeout, used as in-memory caches.",
+        "Smaller, faster versions of Map and Set that are iterable."
+      ]
+    },
+    {
+      "id": 59,
+      "level": "intermediate",
+      "question": "What is Symbol?",
+      "correctAnswer": "A primitive type that creates unique identifiers, used for property keys and protocols like Symbol.iterator.",
+      "wrongAnswers": [
+        "A string type used for emojis and special characters that cannot be represented with regular UTF-16 strings.",
+        "A global registry that stores every variable name used in the program so the engine can look them up faster.",
+        "An object that represents mathematical operators."
+      ]
+    },
+    {
+      "id": 60,
+      "level": "intermediate",
+      "question": "What are optional chaining and nullish coalescing?",
+      "correctAnswer": "?. accesses properties safely; ?? sets a default only for null/undefined.",
+      "wrongAnswers": [
+        "?. sets a default value for any falsy value, and ?? accesses nested properties safely without throwing errors.",
+        "?. throws a descriptive error when a property is missing, and ?? converts any value into a boolean.",
+        "Both are only available in TypeScript."
+      ]
+    },
+    {
+      "id": 61,
+      "level": "intermediate",
+      "question": "What are Object.freeze and Object.seal for?",
+      "correctAnswer": "freeze makes the object immutable (shallow); seal prevents adding or removing properties but allows changing them.",
+      "wrongAnswers": [
+        "seal makes the object completely immutable, while freeze only prevents adding new properties but still allows removing and changing them.",
+        "freeze makes the object and all nested objects deeply immutable, while seal encrypts its properties so they cannot be read.",
+        "Both only work in strict mode and are otherwise ignored."
+      ]
+    },
+    {
+      "id": 62,
+      "level": "intermediate",
+      "question": "What is Proxy?",
+      "correctAnswer": "An object that intercepts and redefines operations (get, set, etc.) of another object.",
+      "wrongAnswers": [
+        "A server that forwards HTTP requests from the browser to another origin, avoiding CORS restrictions.",
+        "A function that limits how often another function can run, similar to throttle.",
+        "A copy of an object that updates automatically."
+      ]
+    },
+    {
+      "id": 63,
+      "level": "intermediate",
+      "question": "How does the garbage collector work?",
+      "correctAnswer": "It frees memory of unreachable objects, using algorithms like mark-and-sweep.",
+      "wrongAnswers": [
+        "It frees memory of objects that haven't been accessed for the last 60 seconds, regardless of whether they are still referenced.",
+        "It requires developers to call delete on every object manually when it is no longer needed, otherwise memory is never released.",
+        "It only runs when the page is reloaded."
+      ]
+    },
+    {
+      "id": 64,
+      "level": "intermediate",
+      "question": "What causes memory leaks in JS?",
+      "correctAnswer": "Accidental globals, listeners and timers not removed, closures retaining large data and references to removed DOM nodes.",
+      "wrongAnswers": [
+        "Using const instead of let, because constants are never released by the garbage collector until the page closes.",
+        "Declaring too many functions in a single file, since every function definition reserves memory permanently.",
+        "Using const instead of let."
+      ]
+    },
+    {
+      "id": 65,
+      "level": "intermediate",
+      "question": "What is Intl?",
+      "correctAnswer": "An internationalization API for formatting dates, numbers and currencies and comparing strings according to locale.",
+      "wrongAnswers": [
+        "An API that automatically translates text between languages using the browser's built-in translation engine.",
+        "An API for detecting the user's IP address, country and time zone without asking for permission.",
+        "A library for handling integer math."
+      ]
+    },
+    {
+      "id": 66,
+      "level": "intermediate",
+      "question": "How do you work with dates in JS?",
+      "correctAnswer": "With Date, Intl.DateTimeFormat, or libraries like date-fns/Day.js; the upcoming Temporal API will fix many limitations.",
+      "wrongAnswers": [
+        "Only with Moment.js, because JavaScript has no native date support and the Date object was removed from the language.",
+        "With the native Time object, which handles time zones, formatting and arithmetic perfectly in every browser.",
+        "By storing dates as plain strings and comparing them alphabetically."
+      ]
+    },
+    {
+      "id": 67,
+      "level": "intermediate",
+      "question": "What are CommonJS and ES Modules?",
+      "correctAnswer": "CommonJS uses require/module.exports (synchronous, classic Node); ES Modules use import/export (static, the language standard).",
+      "wrongAnswers": [
+        "ES Modules use require/module.exports and load synchronously, while CommonJS uses import/export and is resolved statically by the language.",
+        "CommonJS is for browsers and ES Modules are only for Node.",
+        "They are two names for the same module system."
+      ]
+    },
+    {
+      "id": 68,
+      "level": "advanced",
+      "question": "Explain the execution order of console.log, setTimeout(0) and Promise.then.",
+      "correctAnswer": "Synchronous code first, then microtasks (then), and finally macrotasks (setTimeout), even with a 0 delay.",
+      "wrongAnswers": [
+        "They run exactly in the order they appear in the source code, because a 0 ms delay means the callbacks execute immediately.",
+        "setTimeout(0) first, then console.log, then Promise.then.",
+        "Promise.then first, then console.log, then setTimeout."
+      ]
+    },
+    {
+      "id": 69,
+      "level": "advanced",
+      "question": "What is Promise.withResolvers?",
+      "correctAnswer": "A method that returns { promise, resolve, reject }, simplifying the creation of externally controlled promises.",
+      "wrongAnswers": [
+        "A method that resolves every promise in an array at once with the same value, useful for resetting state.",
+        "A method that converts a callback-based function into a function that returns a Promise, like util.promisify.",
+        "A method that retries a promise until it resolves."
+      ]
+    },
+    {
+      "id": 70,
+      "level": "advanced",
+      "question": "How do you implement Promise.all from scratch?",
+      "correctAnswer": "Return a new Promise, iterate the promises storing results by index, resolve when the counter reaches the total and reject on the first failure.",
+      "wrongAnswers": [
+        "Await each promise sequentially inside a for loop, pushing each result into an array and returning it at the end.",
+        "Wait with setTimeout for a long enough fixed delay and then read the value of each promise synchronously.",
+        "Use Promise.race in a loop until all promises resolve."
+      ]
+    },
+    {
+      "id": 71,
+      "level": "advanced",
+      "question": "How does prototypal inheritance work in detail?",
+      "correctAnswer": "When accessing a property, the engine searches the object and goes up the __proto__ chain until null; Object.create sets the prototype explicitly.",
+      "wrongAnswers": [
+        "Properties are copied from the parent into each child when the object is created, so later changes to the parent never affect existing children.",
+        "The engine searches the global scope first, then the object itself, and finally the module scope, stopping at the first match.",
+        "Each object has a fixed list of parent classes defined at compile time."
+      ]
+    },
+    {
+      "id": 72,
+      "level": "advanced",
+      "question": "What is the difference between Object.create(null) and {}?",
+      "correctAnswer": "The former creates an object without a prototype (no toString, etc.), useful as a pure dictionary.",
+      "wrongAnswers": [
+        "Object.create(null) returns the value null, while {} creates an empty object that inherits from Object.prototype.",
+        "{} creates an object without any prototype, while Object.create(null) inherits toString and other methods from Object.prototype.",
+        "There is no difference."
+      ]
+    },
+    {
+      "id": 73,
+      "level": "advanced",
+      "question": "What are property descriptors?",
+      "correctAnswer": "Property metadata (value, writable, enumerable, configurable, get, set), manipulated via Object.defineProperty.",
+      "wrongAnswers": [
+        "JSDoc comments that describe what each property does, used by editors to show documentation on hover.",
+        "TypeScript types attached to object properties at runtime and enforced by the engine on assignment.",
+        "CSS rules applied to DOM element properties."
+      ]
+    },
+    {
+      "id": 74,
+      "level": "advanced",
+      "question": "What is the Reflect module?",
+      "correctAnswer": "An API with methods that mirror object operations, used together with Proxy.",
+      "wrongAnswers": [
+        "An API for inspecting and traversing the DOM tree, returning information about elements and their styles.",
+        "A module for reading TypeScript types and decorators at runtime through reflection metadata.",
+        "An API for inspecting the DOM tree."
+      ]
+    },
+    {
+      "id": 75,
+      "level": "advanced",
+      "question": "What is tail call optimization in JS?",
+      "correctAnswer": "An optimization that reuses the call frame for calls in tail position; it is part of the spec but only supported by some engines.",
+      "wrongAnswers": [
+        "An optimization implemented by every JavaScript engine that converts all recursive functions into loops automatically.",
+        "A technique that moves function calls to the end of the file so that they are executed after all declarations.",
+        "An optimization supported by all engines that removes recursion entirely."
+      ]
+    },
+    {
+      "id": 76,
+      "level": "advanced",
+      "question": "How do SharedArrayBuffer and Atomics work?",
+      "correctAnswer": "They enable shared memory between workers, with atomic operations to avoid race conditions.",
+      "wrongAnswers": [
+        "They store arrays in localStorage shared between tabs.",
+        "They share arrays between server and client automatically.",
+        "They compress arrays to save memory."
+      ]
+    },
+    {
+      "id": 77,
+      "level": "advanced",
+      "question": "What are async iterators and for await...of?",
+      "correctAnswer": "Iterators that return Promises, used to consume async data streams.",
+      "wrongAnswers": [
+        "Iterators that run each iteration on a separate thread so long loops don't block the main thread.",
+        "A loop that awaits all Promises in parallel and returns an array with every result at the end.",
+        "Synchronous iterators that block until all data arrives."
+      ]
+    },
+    {
+      "id": 78,
+      "level": "advanced",
+      "question": "How do AbortController and AbortSignal work?",
+      "correctAnswer": "They let you cancel async operations, such as fetch, signaling via controller.abort().",
+      "wrongAnswers": [
+        "They stop the entire JavaScript program immediately, including timers and pending Promises, like process.exit.",
+        "They catch errors thrown by fetch and convert them into rejected Promises with a descriptive message.",
+        "They set a timeout for setTimeout calls."
+      ]
+    },
+    {
+      "id": 79,
+      "level": "advanced",
+      "question": "What is the Event Loop in Node.js vs the browser?",
+      "correctAnswer": "Node uses libuv with phases (timers, I/O, setImmediate, close), plus process.nextTick; the browser has task queues and rendering.",
+      "wrongAnswers": [
+        "They are identical: Node.js embeds the browser's event loop from Chromium, including rendering steps and requestAnimationFrame.",
+        "The browser uses libuv with timers, I/O and close phases, while Node.js uses the rendering pipeline with animation frames.",
+        "Node runs everything synchronously; only the browser has an event loop."
+      ]
+    },
+    {
+      "id": 80,
+      "level": "advanced",
+      "question": "What is Tree Shaking?",
+      "correctAnswer": "Removing unused code during bundling, relying on static ES Modules and the absence of side effects.",
+      "wrongAnswers": [
+        "Removing unused DOM nodes at runtime to reduce memory usage on pages with many elements.",
+        "Reordering the dependency tree alphabetically so that modules load in a predictable order.",
+        "Minifying variable names in the bundle."
+      ]
+    },
+    {
+      "id": 81,
+      "level": "advanced",
+      "question": "How does the V8 engine work?",
+      "correctAnswer": "It compiles JS to bytecode (Ignition) and optimizes \"hot\" code with JIT (TurboFan), using hidden classes and inline caching.",
+      "wrongAnswers": [
+        "It interprets JavaScript line by line on every execution without any compilation or optimization, which keeps memory usage low.",
+        "It compiles all JavaScript ahead of time into native machine code before the page loads, so no JIT is involved at runtime.",
+        "It converts JavaScript into Java bytecode and runs it on the JVM."
+      ]
+    },
+    {
+      "id": 82,
+      "level": "advanced",
+      "question": "What are hidden classes?",
+      "correctAnswer": "V8 internal structures that represent the \"shape\" of objects; keeping the same property order improves performance.",
+      "wrongAnswers": [
+        "Classes declared with the private keyword, which are hidden from other modules and cannot be imported.",
+        "CSS classes applied to elements but hidden from DevTools to protect the stylesheet from copying.",
+        "CSS classes that are applied but not visible in DevTools."
+      ]
+    },
+    {
+      "id": 83,
+      "level": "advanced",
+      "question": "How do you identify and fix performance bottlenecks in the browser?",
+      "correctAnswer": "With DevTools' Performance tab and Lighthouse, reducing main-thread work, layout thrashing and bundle size.",
+      "wrongAnswers": [
+        "By wrapping expensive code in more setTimeout calls with longer delays, so the browser has time to catch up between tasks.",
+        "By adding more setTimeout calls to delay work.",
+        "By using var instead of let everywhere."
+      ]
+    },
+    {
+      "id": 84,
+      "level": "advanced",
+      "question": "What is layout thrashing?",
+      "correctAnswer": "Alternating DOM layout reads and writes that force repeated recalculations; avoid it by batching reads and writes.",
+      "wrongAnswers": [
+        "Repeatedly reloading CSS files due to cache misses.",
+        "Rendering the same component twice in development.",
+        "Using too many nested flexbox containers."
+      ]
+    },
+    {
+      "id": 85,
+      "level": "advanced",
+      "question": "What are requestAnimationFrame and requestIdleCallback?",
+      "correctAnswer": "rAF runs before the next paint (animations); rIC runs during idle periods for low-priority work.",
+      "wrongAnswers": [
+        "rAF runs during idle periods when the browser has nothing else to do, while rIC runs right before the next paint for animations.",
+        "rAF requests a new frame from the server for video playback, while rIC cancels pending network requests when the tab is idle.",
+        "Both run in Web Workers."
+      ]
+    },
+    {
+      "id": 86,
+      "level": "advanced",
+      "question": "What is a Service Worker?",
+      "correctAnswer": "A script that acts as a proxy between the app and the network, enabling offline caching, push notifications and PWAs.",
+      "wrongAnswers": [
+        "A Web Worker with direct access to the DOM that renders parts of the page in the background.",
+        "A Node.js process on the server that handles incoming HTTP requests for the web app.",
+        "A browser extension that blocks ads."
+      ]
+    },
+    {
+      "id": 87,
+      "level": "advanced",
+      "question": "What is XSS and how do you prevent it?",
+      "correctAnswer": "Script injection into pages. Prevent it by sanitizing/escaping input, avoiding innerHTML with untrusted data and using CSP.",
+      "wrongAnswers": [
+        "A cross-site request forgery attack in which a malicious site sends requests with the user's cookies; prevent it by enabling CORS on the server.",
+        "A CSS bug that breaks layouts in some browsers; prevent it by including a CSS reset and avoiding vendor prefixes.",
+        "A server overload attack; prevent it with rate limiting only."
+      ]
+    },
+    {
+      "id": 88,
+      "level": "advanced",
+      "question": "What is CSRF?",
+      "correctAnswer": "An attack that forces the authenticated browser to perform unwanted actions; prevented with CSRF tokens and SameSite cookies.",
+      "wrongAnswers": [
+        "An attack that injects malicious scripts into a page; it is prevented by using innerHTML instead of textContent.",
+        "An attack that reads cookies through JavaScript; it is prevented by moving tokens into localStorage.",
+        "A CSS rendering flaw; prevented with a CSS reset."
+      ]
+    },
+    {
+      "id": 89,
+      "level": "advanced",
+      "question": "What is prototype pollution?",
+      "correctAnswer": "A vulnerability in which an attacker modifies Object.prototype via keys like __proto__, affecting the entire application.",
+      "wrongAnswers": [
+        "A memory leak caused by long prototype chains that the garbage collector cannot traverse completely.",
+        "Having too many methods on a class prototype, causing slowness.",
+        "Using prototype-based libraries in a class-based codebase."
+      ]
+    },
+    {
+      "id": 90,
+      "level": "advanced",
+      "question": "How does structuredClone work?",
+      "correctAnswer": "It creates a deep copy of cloneable values (Map, Set, Date, cycles), but doesn't copy functions or class prototypes.",
+      "wrongAnswers": [
+        "It creates a shallow copy of the value and preserves functions, getters and class prototypes, so instances keep their methods.",
+        "It serializes the value to JSON and parses it back, so Dates become strings and Maps and Sets are lost in the copy.",
+        "It clones DOM elements with their event listeners."
+      ]
+    },
+    {
+      "id": 91,
+      "level": "advanced",
+      "question": "What is the Observer pattern?",
+      "correctAnswer": "Objects (observers) subscribe to a subject and are notified of changes; the basis of events and streams.",
+      "wrongAnswers": [
+        "A pattern that ensures a class has only one instance and provides a global access point to it.",
+        "A pattern in which one central object controls the creation and lifecycle of every other object.",
+        "A pattern that converts one interface into another."
+      ]
+    },
+    {
+      "id": 92,
+      "level": "advanced",
+      "question": "What are the Module pattern and IIFE?",
+      "correctAnswer": "An IIFE is a function executed immediately, creating a private scope; the Module pattern uses closures to encapsulate state, now replaced by ES Modules.",
+      "wrongAnswers": [
+        "An IIFE is a module imported with import(), and the Module pattern is a CSS methodology for organizing stylesheets by component.",
+        "An IIFE is a function that runs on every page navigation, and the Module pattern is the package format used by npm.",
+        "Both are synonyms for ES Modules' import/export."
+      ]
+    },
+    {
+      "id": 93,
+      "level": "advanced",
+      "question": "What is memoization?",
+      "correctAnswer": "Caching the results of pure functions based on their arguments, avoiding recalculation.",
+      "wrongAnswers": [
+        "Storing variables in localStorage so their values survive page reloads and browser restarts.",
+        "Writing comments to remember what code does.",
+        "Limiting how often a function runs per second."
+      ]
+    },
+    {
+      "id": 94,
+      "level": "advanced",
+      "question": "How do you deal with decimal number precision?",
+      "correctAnswer": "Numbers are 64-bit floats (0.1 + 0.2 !== 0.3); use integers in cents, toFixed for display or decimal libraries; BigInt for large integers.",
+      "wrongAnswers": [
+        "Call parseInt on every arithmetic result, which removes floating-point errors while keeping the decimal places intact.",
+        "Use the native Decimal type introduced in ES2015, which stores exact decimal values for currency calculations.",
+        "Use parseInt on every result, which fixes all precision issues."
+      ]
+    },
+    {
+      "id": 95,
+      "level": "advanced",
+      "question": "What are Tagged Templates?",
+      "correctAnswer": "Functions that process template literals (a tag followed by a template literal), used in styled-components and safe SQL.",
+      "wrongAnswers": [
+        "HTML templates marked with data-tag attributes that the browser fills with values from JavaScript objects.",
+        "Template literals that are only allowed to contain HTML tags and are escaped automatically when interpolated.",
+        "Git tags applied to template files."
+      ]
+    },
+    {
+      "id": 96,
+      "level": "advanced",
+      "question": "What are decorators and their current status in JavaScript?",
+      "correctAnswer": "A standardized proposal for annotating classes and members with @; already supported by transpilers and being implemented in engines.",
+      "wrongAnswers": [
+        "A long-standing native feature supported by every browser since ES2015 and used widely without any transpiler.",
+        "A TypeScript-only feature that will never be part of the JavaScript language, so it always requires tsc.",
+        "A CSS feature for decorating text."
+      ]
+    },
+    {
+      "id": 97,
+      "level": "advanced",
+      "question": "What is the difference between dynamic import() and static import?",
+      "correctAnswer": "Dynamic import loads modules on demand and returns a Promise, enabling code splitting; static import is resolved before execution.",
+      "wrongAnswers": [
+        "Dynamic import() is synchronous and returns the module object directly, so it can be used anywhere without await.",
+        "Static import loads on demand; dynamic import is resolved before execution.",
+        "Dynamic import only works in Node; static import only in browsers."
+      ]
+    },
+    {
+      "id": 98,
+      "level": "advanced",
+      "question": "What is top-level await?",
+      "correctAnswer": "It allows using await at the top level of ES modules, without wrapping in an async function.",
+      "wrongAnswers": [
+        "It allows await at the top level of CommonJS files loaded with require, blocking the importer until it resolves.",
+        "It makes every function declared in the module async automatically so await can be used anywhere.",
+        "It allows await in any CommonJS file."
+      ]
+    },
+    {
+      "id": 99,
+      "level": "advanced",
+      "question": "How does type coercion work in [] + {} and [] == ![]?",
+      "correctAnswer": "Operators convert to primitives: [] + {} results in \"[object Object]\" and [] == ![] is true, because both become 0. Avoid implicit coercion.",
+      "wrongAnswers": [
+        "[] + {} results in 0 because both operands become numbers, and [] == ![] is false because an array is never equal to a boolean.",
+        "[] + {} returns \"{}\" by concatenating the object's JSON, and [] == ![] is false because the two values have different types.",
+        "[] + {} results in 0 and [] == ![] is false."
+      ]
+    },
+    {
+      "id": 100,
+      "level": "advanced",
+      "question": "How do you ensure JavaScript code quality in teams?",
+      "correctAnswer": "ESLint, Prettier, tests (Vitest/Jest), code review, TypeScript/JSDoc and automated CI.",
+      "wrongAnswers": [
+        "Have a single senior developer write and approve all the code so that the style stays consistent without tooling.",
+        "Skip tests to ship faster and rely on users reporting bugs in production, fixing them with hotfixes.",
+        "Minifying the code so it is harder to change."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "first-steps",
+    "name": "First Steps",
+    "description": "Complete your first official quiz.",
+    "icon": "footprints",
+    "category": "completion",
+    "rarity": "common",
+    "criteria_type": "quizzes_completed",
+    "criteria_config": { "count": 1 }
+  },
+  {
+    "slug": "quiz-explorer",
+    "name": "Quiz Explorer",
+    "description": "Complete 5 official quiz attempts.",
+    "icon": "compass",
+    "category": "completion",
+    "rarity": "common",
+    "criteria_type": "quizzes_completed",
+    "criteria_config": { "count": 5 }
+  },
+  {
+    "slug": "dedicated-learner",
+    "name": "Dedicated Learner",
+    "description": "Complete 10 official quiz attempts.",
+    "icon": "book-open-check",
+    "category": "completion",
+    "rarity": "uncommon",
+    "criteria_type": "quizzes_completed",
+    "criteria_config": { "count": 10 }
+  },
+  {
+    "slug": "quiz-master",
+    "name": "Quiz Master",
+    "description": "Complete 25 official quiz attempts.",
+    "icon": "crown",
+    "category": "completion",
+    "rarity": "epic",
+    "criteria_type": "quizzes_completed",
+    "criteria_config": { "count": 25 }
+  },
+  {
+    "slug": "full-marks",
+    "name": "Full Marks",
+    "description": "Complete an official quiz answering every question correctly on the first try.",
+    "icon": "badge-check",
+    "category": "accuracy",
+    "rarity": "uncommon",
+    "criteria_type": "quiz_accuracy",
+    "criteria_config": { "min_accuracy": 100, "min_questions": 1 }
+  },
+  {
+    "slug": "level-complete-foundations",
+    "name": "Level Complete",
+    "description": "Complete a Basic-level attempt of the JavaScript, TypeScript and React quizzes.",
+    "icon": "layers",
+    "category": "exploration",
+    "rarity": "rare",
+    "criteria_type": "level_completed",
+    "criteria_config": { "level": "basic", "quiz_ids": ["javascript", "typescript", "react"] }
+  },
+  {
+    "slug": "react-specialist",
+    "name": "Quiz Specialist",
+    "description": "Complete the React quiz.",
+    "icon": "atom",
+    "category": "exploration",
+    "rarity": "common",
+    "criteria_type": "quiz_completed",
+    "criteria_config": { "quiz_id": "react" }
+  },
+  {
+    "slug": "sharp-mind",
+    "name": "Sharp Mind",
+    "description": "Answer 5 questions correctly in a row.",
+    "icon": "zap",
+    "category": "streak",
+    "rarity": "common",
+    "criteria_type": "correct_streak",
+    "criteria_config": { "count": 5 }
+  },
+  {
+    "slug": "focused-learner",
+    "name": "Focused Learner",
+    "description": "Answer 10 questions correctly in a row.",
+    "icon": "flame",
+    "category": "streak",
+    "rarity": "uncommon",
+    "criteria_type": "correct_streak",
+    "criteria_config": { "count": 10 }
+  },
+  {
+    "slug": "unstoppable",
+    "name": "Unstoppable",
+    "description": "Answer 50 questions correctly in a row.",
+    "icon": "rocket",
+    "category": "streak",
+    "rarity": "legendary",
+    "criteria_type": "correct_streak",
+    "criteria_config": { "count": 50 }
+  },
+  {
+    "slug": "curious-mind",
+    "name": "Curious Mind",
+    "description": "Answer 5 official questions correctly.",
+    "icon": "lightbulb",
+    "category": "milestone",
+    "rarity": "common",
+    "criteria_type": "correct_answers",
+    "criteria_config": { "count": 5 }
+  },
+  {
+    "slug": "knowledge-seeker",
+    "name": "Knowledge Seeker",
+    "description": "Answer 10 official questions correctly.",
+    "icon": "search",
+    "category": "milestone",
+    "rarity": "common",
+    "criteria_type": "correct_answers",
+    "criteria_config": { "count": 10 }
+  },
+  {
+    "slug": "knowledge-builder",
+    "name": "Knowledge Builder",
+    "description": "Answer 50 official questions correctly.",
+    "icon": "blocks",
+    "category": "milestone",
+    "rarity": "uncommon",
+    "criteria_type": "correct_answers",
+    "criteria_config": { "count": 50 }
+  },
+  {
+    "slug": "scholar",
+    "name": "Scholar",
+    "description": "Answer 100 official questions correctly.",
+    "icon": "graduation-cap",
+    "category": "milestone",
+    "rarity": "rare",
+    "criteria_type": "correct_answers",
+    "criteria_config": { "count": 100 }
+  },
+  {
+    "slug": "expert",
+    "name": "Expert",
+    "description": "Answer 500 official questions correctly.",
+    "icon": "trophy",
+    "category": "milestone",
+    "rarity": "legendary",
+    "criteria_type": "correct_answers",
+    "criteria_config": { "count": 500 }
+  },
+  {
+    "slug": "getting-the-hang-of-it",
+    "name": "Getting the Hang of It",
+    "description": "Reach at least 80% accuracy on a completed official quiz of 10 or more questions.",
+    "icon": "target",
+    "category": "accuracy",
+    "rarity": "common",
+    "criteria_type": "quiz_accuracy",
+    "criteria_config": { "min_accuracy": 80, "min_questions": 10 }
+  },
+  {
+    "slug": "precision",
+    "name": "Precision",
+    "description": "Reach 100% accuracy on a completed official quiz of 10 or more questions.",
+    "icon": "crosshair",
+    "category": "accuracy",
+    "rarity": "rare",
+    "criteria_type": "quiz_accuracy",
+    "criteria_config": { "min_accuracy": 100, "min_questions": 10 }
+  },
+  {
+    "slug": "first-try-champion",
+    "name": "First-Try Champion",
+    "description": "Answer 10 official questions correctly on the first try.",
+    "icon": "medal",
+    "category": "accuracy",
+    "rarity": "uncommon",
+    "criteria_type": "first_try_correct",
+    "criteria_config": { "count": 10 }
+  }
+]

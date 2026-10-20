@@ -1,0 +1,1107 @@
+{
+  "id": "react",
+  "language": "pt-br",
+  "title": "React",
+  "questions": [
+    {
+      "id": 1,
+      "level": "basic",
+      "question": "O que é React?",
+      "correctAnswer": "Uma biblioteca JavaScript declarativa, baseada em componentes, criada pelo Facebook (Meta) para construir interfaces de usuário.",
+      "wrongAnswers": [
+        "Um framework full-stack criado pelo Google que reúne roteamento, motor de templates e ORM para construir aplicações web renderizadas no servidor.",
+        "Uma biblioteca imperativa de manipulação do DOM criada pela Microsoft que substituiu o jQuery como forma padrão de atualizar páginas HTML diretamente.",
+        "Um motor de templates imperativo criado pela Microsoft que compila arquivos HTML em bundles JavaScript otimizados."
+      ]
+    },
+    {
+      "id": 2,
+      "level": "basic",
+      "question": "O que é JSX?",
+      "correctAnswer": "Uma extensão de sintaxe que permite escrever estruturas parecidas com HTML dentro do JavaScript. É transformada em chamadas React.createElement (ou jsx()) pelo compilador.",
+      "wrongAnswers": [
+        "Uma linguagem de templates que o navegador interpreta nativamente em runtime, convertendo tags em nós do DOM sem exigir Babel ou qualquer etapa de compilação.",
+        "Um superconjunto estrito do HTML que o React envia ao servidor, onde é renderizado em markup estático e devolvido ao cliente como string.",
+        "Uma nova linguagem de programação que substitui o JavaScript em projetos React e é executada diretamente pelo navegador sem compilação."
+      ]
+    },
+    {
+      "id": 3,
+      "level": "basic",
+      "question": "O que é um componente?",
+      "correctAnswer": "Uma função (ou classe) reutilizável que recebe props e retorna elementos React descrevendo parte da UI.",
+      "wrongAnswers": [
+        "Um singleton global que armazena todo o estado da aplicação e é compartilhado automaticamente com todas as páginas pelo runtime do React.",
+        "Um arquivo HTML carregado em runtime e injetado na página com innerHTML, descrevendo parte da interface como markup estático.",
+        "Um módulo CSS que agrupa estilos e é aplicado aos elementos do DOM pelo nome da classe."
+      ]
+    },
+    {
+      "id": 4,
+      "level": "basic",
+      "question": "Qual a diferença entre componente funcional e de classe?",
+      "correctAnswer": "Funcionais são funções simples que usam Hooks para estado e efeitos; os de classe usam this, state e métodos de ciclo de vida. Hoje o padrão é usar funcionais.",
+      "wrongAnswers": [
+        "Componentes de classe são funções simples que usam Hooks, enquanto os funcionais usam this, state e métodos de ciclo de vida; classes são o padrão moderno.",
+        "Componentes funcionais não podem ter estado nem efeitos; componentes de classe são a única forma de gerenciar estado e são o padrão recomendado atualmente.",
+        "Componentes de classe rodam no servidor e componentes funcionais rodam apenas no navegador; ambos são igualmente recomendados hoje."
+      ]
+    },
+    {
+      "id": 5,
+      "level": "basic",
+      "question": "O que são props?",
+      "correctAnswer": "Dados passados do componente pai para o filho, somente leitura (imutáveis dentro do filho).",
+      "wrongAnswers": [
+        "Dados pertencentes ao componente filho, que ele pode modificar livremente e enviar de volta ao pai automaticamente a cada render.",
+        "Variáveis globais injetadas pelo React em todos os componentes, acessíveis em qualquer lugar sem precisar ser repassadas explicitamente.",
+        "Variáveis globais compartilhadas por todos os componentes da aplicação sem precisar ser repassadas."
+      ]
+    },
+    {
+      "id": 6,
+      "level": "basic",
+      "question": "O que é state?",
+      "correctAnswer": "Dados internos de um componente que mudam ao longo do tempo e, ao serem alterados, provocam nova renderização.",
+      "wrongAnswers": [
+        "Dados somente leitura recebidos do componente pai que nunca mudam durante a vida do componente e nunca disparam renders.",
+        "Dados armazenados no localStorage do navegador que o React lê automaticamente a cada renderização.",
+        "Um objeto de configuração estático definido uma vez no build e compartilhado entre todas as instâncias do componente."
+      ]
+    },
+    {
+      "id": 7,
+      "level": "basic",
+      "question": "Qual a diferença entre props e state?",
+      "correctAnswer": "Props vêm de fora e são imutáveis para o componente; state pertence ao componente e é atualizado por ele (via setState/useState).",
+      "wrongAnswers": [
+        "Props pertencem ao componente e podem ser alteradas diretamente; state vem do pai e é somente leitura.",
+        "Props e state são a mesma coisa; os nomes são intercambiáveis e só diferem entre componentes de classe e funcionais.",
+        "Props são usadas apenas para estilização, enquanto state é usado apenas para dados buscados de APIs."
+      ]
+    },
+    {
+      "id": 8,
+      "level": "basic",
+      "question": "O que é o Virtual DOM?",
+      "correctAnswer": "Uma representação em memória da árvore de elementos. O React compara versões (diffing) e aplica no DOM real só o que mudou.",
+      "wrongAnswers": [
+        "Uma cópia oculta do DOM real que o React descarta e recria por completo a cada render, substituindo a página inteira para se manter sincronizado.",
+        "Uma API do navegador, semelhante ao Shadow DOM, que isola estilos e markup de cada componente do restante da página para encapsulamento.",
+        "Um cache no servidor de páginas HTML renderizadas que o React entrega no lugar do DOM real para melhorar o SEO."
+      ]
+    },
+    {
+      "id": 9,
+      "level": "basic",
+      "question": "O que é o useState?",
+      "correctAnswer": "Hook que declara uma variável de estado em componente funcional. Retorna [valor, setValor].",
+      "wrongAnswers": [
+        "Hook que retorna um objeto mutável cuja propriedade .current persiste entre renders sem causar nova renderização.",
+        "Hook que lê um valor do Provider de Context mais próximo e o retorna junto com uma função dispatch.",
+        "Hook que retorna um objeto mutável cuja propriedade .current persiste sem causar re-renderização."
+      ]
+    },
+    {
+      "id": 10,
+      "level": "basic",
+      "question": "O que é o useEffect?",
+      "correctAnswer": "Hook para executar efeitos colaterais (requisições, assinaturas, manipulação do DOM) após a renderização, controlado por um array de dependências.",
+      "wrongAnswers": [
+        "Hook que roda de forma síncrona durante a renderização para calcular valores derivados antes de o JSX ser retornado, controlado por um array de dependências.",
+        "Hook que memoriza um cálculo custoso e o recalcula apenas quando as dependências mudam.",
+        "Hook que roda apenas uma vez no servidor para buscar dados antes de o HTML ser enviado ao cliente."
+      ]
+    },
+    {
+      "id": 11,
+      "level": "basic",
+      "question": "O que significa o array de dependências do useEffect?",
+      "correctAnswer": "Lista de valores que, ao mudarem, fazem o efeito rodar de novo. Array vazio roda só na montagem; sem array roda a cada renderização.",
+      "wrongAnswers": [
+        "Lista de valores que o efeito não pode ler. Array vazio faz o efeito rodar a cada renderização; omiti-lo faz rodar só na montagem.",
+        "Lista de componentes filhos que devem re-renderizar após o efeito. Array vazio desativa o efeito completamente.",
+        "Lista de props repassadas à função de limpeza. Omiti-lo faz o efeito rodar apenas na desmontagem."
+      ]
+    },
+    {
+      "id": 12,
+      "level": "basic",
+      "question": "Como fazer uma renderização condicional?",
+      "correctAnswer": "Com if, operador ternário (cond ? A : B), && (cond && <A/>) ou retornando null.",
+      "wrongAnswers": [
+        "Apenas com os componentes nativos <If>, <ElseIf> e <Else> que o React exporta, já que o JSX não avalia expressões JavaScript dentro das chaves.",
+        "Com as diretivas v-if e v-show colocadas diretamente nos elementos JSX, que o React avalia antes de decidir o que renderizar.",
+        "Definindo display: none pela prop hidden, já que o JSX não suporta expressões JavaScript."
+      ]
+    },
+    {
+      "id": 13,
+      "level": "basic",
+      "question": "Como renderizar listas?",
+      "correctAnswer": "Usando array.map() retornando elementos, cada um com uma key única e estável.",
+      "wrongAnswers": [
+        "Usando array.forEach() dentro das chaves do JSX, que coleta os elementos retornados automaticamente e atribui keys pela posição.",
+        "Usando o componente nativo <List items={...}>, que itera o array e gera keys estáveis, dispensando informá-las.",
+        "Usando um laço for diretamente dentro das chaves do JSX, com o índice do array como única opção de key."
+      ]
+    },
+    {
+      "id": 14,
+      "level": "basic",
+      "question": "Para que serve a key?",
+      "correctAnswer": "Ajuda o React a identificar quais itens mudaram, foram adicionados ou removidos, otimizando a reconciliação.",
+      "wrongAnswers": [
+        "Define o seletor CSS que o React usa para estilizar cada item da lista, de modo que itens com a mesma key compartilham estilos.",
+        "Define a ordem em que os itens são ordenados antes de renderizar, então o React sempre os exibe em ordem crescente de key.",
+        "Criptografa os itens da lista para que não possam ser lidos do DOM por scripts de terceiros."
+      ]
+    },
+    {
+      "id": 15,
+      "level": "basic",
+      "question": "Por que não usar o índice do array como key?",
+      "correctAnswer": "Se a lista for reordenada, filtrada ou tiver inserções, o índice muda e pode causar bugs de estado e renders desnecessários. Prefira IDs estáveis.",
+      "wrongAnswers": [
+        "Porque o React lança erro de compilação sempre que um número é usado como key, então índices sempre precisam ser convertidos em string.",
+        "Porque keys numéricas são sempre mais lentas de comparar que strings, causando lentidão perceptível mesmo em listas que nunca mudam de ordem.",
+        "Porque o React recalcula os índices a cada render usando uma semente aleatória, então o mesmo item recebe uma key diferente a cada vez e seu nó do DOM é sempre recriado do zero."
+      ]
+    },
+    {
+      "id": 16,
+      "level": "basic",
+      "question": "O que são Fragments?",
+      "correctAnswer": "<>...</> permite agrupar vários elementos sem adicionar um nó extra ao DOM.",
+      "wrongAnswers": [
+        "<>...</> renderiza os filhos dentro de uma <div> invisível que é excluída dos seletores CSS, mas continua presente na árvore do DOM.",
+        "Fragments dividem um componente grande em arquivos menores que o React carrega sob demanda, reduzindo o bundle inicial.",
+        "Fragments são renderizações parciais que o React usa para atualizar só parte da saída de um componente."
+      ]
+    },
+    {
+      "id": 17,
+      "level": "basic",
+      "question": "Como tratar eventos no React?",
+      "correctAnswer": "Com props em camelCase, como onClick={handler}, passando uma função (não uma chamada).",
+      "wrongAnswers": [
+        "Com atributos HTML minúsculos como onclick=\"handler()\", passando uma string de código que o React avalia quando o evento dispara.",
+        "Com props em camelCase como onClick={handler()}, chamando a função durante o render para que o React receba o valor retornado como listener.",
+        "Com atributos HTML minúsculos como onclick=\"handler()\", passando uma string que é avaliada."
+      ]
+    },
+    {
+      "id": 18,
+      "level": "basic",
+      "question": "O que é um componente controlado?",
+      "correctAnswer": "Input cujo valor é controlado pelo estado React (value + onChange).",
+      "wrongAnswers": [
+        "Input cujo valor é gerenciado pelo próprio DOM e lido por uma ref apenas quando necessário, como no submit.",
+        "Componente cuja renderização é totalmente controlada pelo pai por uma prop shouldRender que o React verifica antes de cada atualização.",
+        "Input validado automaticamente pelo navegador usando apenas atributos HTML."
+      ]
+    },
+    {
+      "id": 19,
+      "level": "basic",
+      "question": "O que é um componente não controlado?",
+      "correctAnswer": "Input cujo valor é gerenciado pelo próprio DOM e lido via ref quando necessário.",
+      "wrongAnswers": [
+        "Input cujo valor é controlado pelo estado React pelas props value e onChange a cada tecla digitada.",
+        "Componente sem pai, montado diretamente no document.body, que ignora todas as mudanças de props após a montagem.",
+        "Input cujo valor é controlado pelo estado React (value + onChange)."
+      ]
+    },
+    {
+      "id": 20,
+      "level": "basic",
+      "question": "O que são refs?",
+      "correctAnswer": "Referências mutáveis (useRef) que dão acesso a um nó do DOM ou guardam valores que persistem entre renders sem causar re-render.",
+      "wrongAnswers": [
+        "Snapshots imutáveis das props que o React guarda para o componente comparar valores anteriores e novos durante a reconciliação.",
+        "Referências ao estado de outro componente que disparam re-render de ambos sempre que o valor é lido.",
+        "Ligações entre rotas que o React Router usa para navegar sem recarregar a página."
+      ]
+    },
+    {
+      "id": 21,
+      "level": "basic",
+      "question": "O que é \"lifting state up\"?",
+      "correctAnswer": "Mover o estado para o ancestral comum mais próximo para que componentes irmãos o compartilhem via props.",
+      "wrongAnswers": [
+        "Mover o estado para uma store global como o Redux para que fique disponível a todos os componentes sem props.",
+        "Mover o estado do pai para os filhos para que o pai renderize mais rápido e os irmãos fiquem independentes.",
+        "Persistir o estado no servidor para que sobreviva a um recarregamento da página."
+      ]
+    },
+    {
+      "id": 22,
+      "level": "basic",
+      "question": "O que é children?",
+      "correctAnswer": "Prop especial com o conteúdo colocado entre as tags de abertura e fechamento do componente.",
+      "wrongAnswers": [
+        "Array fornecido pelo React listando todos os componentes renderizados abaixo do atual, usado principalmente para depurar a árvore.",
+        "Hook que retorna os nós filhos do DOM do componente após a montagem, para manipulá-los diretamente.",
+        "Um array que lista todos os componentes renderizados abaixo do atual na árvore, fornecido pelo React para depuração."
+      ]
+    },
+    {
+      "id": 23,
+      "level": "basic",
+      "question": "Como estilizar componentes no React?",
+      "correctAnswer": "CSS comum com className, CSS Modules, styled-components/Emotion, Tailwind ou estilos inline via style={{}}.",
+      "wrongAnswers": [
+        "Apenas com strings de estilo inline como style=\"color: red\", porque o React não importa arquivos .css nem aplica classes aos elementos.",
+        "Apenas com styled-components ou Emotion, já que className não é suportado no JSX e arquivos CSS comuns são ignorados pelo bundler.",
+        "Apenas com a prop styles, que recebe o caminho de um arquivo CSS e o carrega em tempo de execução."
+      ]
+    },
+    {
+      "id": 24,
+      "level": "basic",
+      "question": "Por que className em vez de class?",
+      "correctAnswer": "Porque class é palavra reservada em JavaScript; o JSX usa nomes de propriedades do DOM.",
+      "wrongAnswers": [
+        "Porque class só funciona dentro de componentes de classe, enquanto className funciona em componentes de classe e funcionais.",
+        "Porque os navegadores descontinuaram o atributo class no HTML5 e agora exigem className em todo elemento do DOM.",
+        "Porque className permite várias classes enquanto class aceita apenas uma."
+      ]
+    },
+    {
+      "id": 25,
+      "level": "basic",
+      "question": "Por que o estado não deve ser alterado diretamente?",
+      "correctAnswer": "Mutar o estado não dispara re-render e quebra otimizações. Sempre use o setter com um novo valor/objeto.",
+      "wrongAnswers": [
+        "Porque o React congela objetos de estado com Object.freeze, então qualquer mutação direta lança TypeError em runtime em qualquer ambiente.",
+        "Porque a mutação direta dispara duas renderizações seguidas em vez de uma, dobrando o trabalho do React a cada mudança.",
+        "Porque mutar o estado só é permitido dentro do useEffect, nunca em handlers de eventos."
+      ]
+    },
+    {
+      "id": 26,
+      "level": "basic",
+      "question": "O setState é síncrono?",
+      "correctAnswer": "Não. Atualizações são agrupadas (batching) e aplicadas na próxima renderização; para depender do valor anterior use a forma funcional setX(prev => ...).",
+      "wrongAnswers": [
+        "Sim. O valor atualizado fica disponível já na linha seguinte após chamar o setter, então dá para lê-lo imediatamente.",
+        "Não. Ele retorna uma Promise que precisa ser aguardada antes de ler o novo estado; caso contrário, você obtém o valor anterior.",
+        "Sim, em componentes funcionais; só é assíncrono em componentes de classe."
+      ]
+    },
+    {
+      "id": 27,
+      "level": "basic",
+      "question": "O que é Create React App e qual a alternativa atual?",
+      "correctAnswer": "Era uma ferramenta de scaffolding, hoje descontinuada. Alternativas: Vite, Next.js, Remix/React Router.",
+      "wrongAnswers": [
+        "É o runtime oficial do React, ainda obrigatório para rodar qualquer aplicação React no navegador; não há alternativa.",
+        "Era uma biblioteca de gerenciamento de estado para apps React, descontinuada e substituída por Redux Toolkit e Zustand.",
+        "É uma ferramenta de testes que foi substituída pelo React Testing Library."
+      ]
+    },
+    {
+      "id": 28,
+      "level": "basic",
+      "question": "O que é Strict Mode?",
+      "correctAnswer": "Componente de desenvolvimento (<StrictMode>) que ativa verificações extras e executa certos ciclos em dobro para expor efeitos impuros.",
+      "wrongAnswers": [
+        "Modo de produção que desativa todos os avisos e minifica o bundle para execução mais rápida.",
+        "Flag do compilador TypeScript que o React usa para proibir o tipo any em componentes.",
+        "Modo de segurança que bloqueia scripts inline e impõe uma Content Security Policy."
+      ]
+    },
+    {
+      "id": 29,
+      "level": "basic",
+      "question": "O que é prop drilling?",
+      "correctAnswer": "Passar props por vários níveis intermediários só para chegar a um componente profundo. Resolve-se com Context, composição ou gerenciadores de estado.",
+      "wrongAnswers": [
+        "Validar props em runtime com PropTypes em componentes profundamente aninhados para detectar erros de tipo antes de chegarem ao DOM.",
+        "Otimização do React em que componentes intermediários que só repassam props são pulados automaticamente na renderização.",
+        "Passar props do filho para o pai através de vários níveis usando refs."
+      ]
+    },
+    {
+      "id": 30,
+      "level": "basic",
+      "question": "O que é Context API?",
+      "correctAnswer": "Mecanismo para compartilhar valores (tema, usuário) com toda uma subárvore sem passar props manualmente.",
+      "wrongAnswers": [
+        "API para fazer requisições HTTP a partir de componentes com cache automático.",
+        "API do navegador que armazena dados entre abas, usada pelo React para estado global.",
+        "API de roteamento que compartilha a URL atual com todos os componentes."
+      ]
+    },
+    {
+      "id": 31,
+      "level": "basic",
+      "question": "Como passar dados do filho para o pai?",
+      "correctAnswer": "O pai passa uma função callback via props e o filho a chama com os dados.",
+      "wrongAnswers": [
+        "O filho modifica diretamente as props do pai e o React propaga a mudança para cima no próximo render.",
+        "O filho emite um evento DOM customizado e o pai recebe o payload automaticamente pelo seu Hook useState.",
+        "O filho retorna os dados na função de renderização e o pai os lê."
+      ]
+    },
+    {
+      "id": 32,
+      "level": "basic",
+      "question": "O que é um componente puro?",
+      "correctAnswer": "Um que, dadas as mesmas props e state, sempre retorna o mesmo JSX e não causa efeitos colaterais durante a renderização.",
+      "wrongAnswers": [
+        "Um que não recebe props nem tem state, renderizando apenas markup estático que nunca muda.",
+        "Um que não possui props nem state.",
+        "Um escrito sem JSX, usando apenas chamadas React.createElement."
+      ]
+    },
+    {
+      "id": 33,
+      "level": "basic",
+      "question": "Como o React sabe quando renderizar de novo?",
+      "correctAnswer": "Quando o state do componente muda, quando as props mudam ou quando o componente pai re-renderiza (ou um Context consumido muda).",
+      "wrongAnswers": [
+        "Sempre que qualquer variável local dentro do corpo do componente é reatribuída, o React detecta a mudança e agenda um novo render.",
+        "Ele verifica o DOM a cada 16 ms e re-renderiza qualquer componente cuja saída mude.",
+        "Apenas quando o desenvolvedor chama forceUpdate() ou ReactDOM.render() novamente."
+      ]
+    },
+    {
+      "id": 34,
+      "level": "basic",
+      "question": "O que é o ReactDOM.createRoot?",
+      "correctAnswer": "API do React 18+ que cria a raiz de renderização para montar a aplicação, habilitando recursos concorrentes.",
+      "wrongAnswers": [
+        "API legada do React 15 que cria um documento HTML separado para renderização no servidor, hoje substituída pelo renderToString.",
+        "Hook que cria uma raiz de portal para renderizar modais fora da árvore principal, habilitando recursos concorrentes para overlays.",
+        "API que cria uma nova raiz de Context para estado global."
+      ]
+    },
+    {
+      "id": 35,
+      "level": "intermediate",
+      "question": "Para que serve o useMemo?",
+      "correctAnswer": "Memoriza o resultado de um cálculo custoso, recalculando-o apenas quando as dependências mudam.",
+      "wrongAnswers": [
+        "Memoriza a referência de uma função entre renders para que os filhos não re-renderizem.",
+        "Guarda um valor que persiste entre renders e pode ser mutado sem re-renderizar.",
+        "Faz cache global de respostas de API entre todos os componentes."
+      ]
+    },
+    {
+      "id": 36,
+      "level": "intermediate",
+      "question": "Para que serve o useCallback?",
+      "correctAnswer": "Memoriza a referência de uma função entre renders, útil para evitar re-renders de filhos memoizados ou estabilizar dependências.",
+      "wrongAnswers": [
+        "Executa um callback de forma síncrona após cada render, como o useEffect, mas antes de o navegador pintar a tela.",
+        "Memoriza o valor de retorno de um cálculo custoso, recalculando-o apenas quando as dependências mudam.",
+        "Registra um callback que roda quando o componente é desmontado."
+      ]
+    },
+    {
+      "id": 37,
+      "level": "intermediate",
+      "question": "O que faz o React.memo?",
+      "correctAnswer": "Memoriza um componente e evita re-render se as props não mudaram (comparação rasa).",
+      "wrongAnswers": [
+        "Memoriza um componente e evita re-render se o estado interno não mudou, usando comparação profunda de cada campo.",
+        "Faz cache do HTML renderizado do componente no servidor para que requisições seguintes pulem a renderização.",
+        "Memoriza um valor dentro de um componente, como o useMemo."
+      ]
+    },
+    {
+      "id": 38,
+      "level": "intermediate",
+      "question": "Qual a diferença entre useMemo e useCallback?",
+      "correctAnswer": "useMemo memoriza um valor calculado; useCallback(fn, deps) equivale a useMemo(() => fn, deps), memorizando a função.",
+      "wrongAnswers": [
+        "useMemo memoriza uma função; useCallback memoriza o valor que a função retorna.",
+        "useMemo roda no servidor e useCallback roda no cliente.",
+        "Não há diferença; useCallback é apenas o nome antigo do useMemo."
+      ]
+    },
+    {
+      "id": 39,
+      "level": "intermediate",
+      "question": "Quando usar useReducer em vez de useState?",
+      "correctAnswer": "Quando o estado é complexo, tem várias sub-partes ou transições que dependem do estado anterior, centralizando a lógica em um reducer.",
+      "wrongAnswers": [
+        "Quando o estado precisa ser compartilhado na aplicação inteira sem Context, já que reducers são globais por padrão.",
+        "Quando o estado é um valor primitivo, como string ou número, porque useState só suporta objetos e arrays e não lida com transições que dependem do estado anterior.",
+        "Sempre que o estado for um valor primitivo, já que useState só aceita objetos."
+      ]
+    },
+    {
+      "id": 40,
+      "level": "intermediate",
+      "question": "O que é um custom Hook?",
+      "correctAnswer": "Função que começa com use e reutiliza lógica com estado entre componentes, compondo outros Hooks.",
+      "wrongAnswers": [
+        "Componente que não renderiza nada e existe só para guardar estado global que outros componentes assinam.",
+        "Hook fornecido por biblioteca de terceiros que precisa ser registrado com ReactDOM.registerHook antes de os componentes o chamarem.",
+        "Um método de classe que encapsula métodos de ciclo de vida para reutilização."
+      ]
+    },
+    {
+      "id": 41,
+      "level": "intermediate",
+      "question": "Como funciona o cleanup do useEffect?",
+      "correctAnswer": "A função retornada pelo efeito roda antes do próximo efeito e na desmontagem, usada para cancelar assinaturas, timers e requisições.",
+      "wrongAnswers": [
+        "A função retornada pelo efeito roda apenas uma vez, logo após o primeiro render, para inicializar assinaturas e timers.",
+        "O React cancela automaticamente timers, assinaturas e requisições na desmontagem, então retornar uma função do efeito é desnecessário.",
+        "A limpeza roda antes da primeira renderização para resetar o estado do componente."
+      ]
+    },
+    {
+      "id": 42,
+      "level": "intermediate",
+      "question": "Qual a diferença entre useEffect e useLayoutEffect?",
+      "correctAnswer": "useLayoutEffect roda de forma síncrona após mutações do DOM e antes da pintura (para medir layout); useEffect roda depois da pintura.",
+      "wrongAnswers": [
+        "useLayoutEffect roda apenas no servidor durante o SSR, enquanto useEffect roda apenas no navegador após a hidratação.",
+        "useLayoutEffect roda no servidor e useEffect roda no cliente.",
+        "useLayoutEffect só roda quando propriedades de layout do CSS mudam."
+      ]
+    },
+    {
+      "id": 43,
+      "level": "intermediate",
+      "question": "O que é useRef além de acessar o DOM?",
+      "correctAnswer": "Guarda qualquer valor mutável que persiste entre renders (ex.: id de timer, valor anterior) sem disparar re-render.",
+      "wrongAnswers": [
+        "Dá ao filho uma referência ao estado do pai para que possa lê-lo e modificá-lo sem callbacks.",
+        "Cria uma variável reativa que re-renderiza o componente sempre que .current muda.",
+        "Guarda valores que são resetados a cada render, úteis para cálculos temporários."
+      ]
+    },
+    {
+      "id": 44,
+      "level": "intermediate",
+      "question": "O que é reconciliação?",
+      "correctAnswer": "O algoritmo que compara a árvore anterior com a nova e determina o conjunto mínimo de mudanças no DOM.",
+      "wrongAnswers": [
+        "O processo que mescla o HTML renderizado no servidor com o estado do cliente após a hidratação, resolvendo conflitos entre as duas versões e escolhendo o valor do cliente em caso de divergência.",
+        "O processo de mesclar o estado do servidor com o do cliente após uma requisição.",
+        "O processo de combinar vários arquivos CSS em um só durante o build."
+      ]
+    },
+    {
+      "id": 45,
+      "level": "intermediate",
+      "question": "Como funciona o diffing do React?",
+      "correctAnswer": "Assume que elementos de tipos diferentes geram árvores diferentes e usa key para casar itens em listas, rodando em O(n).",
+      "wrongAnswers": [
+        "Compara cada nó com todos os outros nas duas árvores para achar o script de edição ótimo, rodando em O(n³).",
+        "Serializa as duas árvores em strings HTML e substitui apenas os trechos que diferem, ignorando os tipos dos elementos.",
+        "Ignora os tipos dos elementos e se baseia apenas na ordem dos filhos."
+      ]
+    },
+    {
+      "id": 46,
+      "level": "intermediate",
+      "question": "O que são Error Boundaries?",
+      "correctAnswer": "Componentes de classe que capturam erros de renderização dos filhos e exibem uma UI de fallback (getDerivedStateFromError/componentDidCatch).",
+      "wrongAnswers": [
+        "Blocos try/catch que o compilador do React insere em volta de cada componente no build, registrando os erros no console.",
+        "Componentes funcionais que envolvem os filhos em try/catch e também capturam erros em handlers de eventos, callbacks assíncronos e renderização no servidor, exibindo fallback via useErrorBoundary.",
+        "Hooks (useErrorBoundary) que capturam qualquer erro, inclusive em handlers de eventos e código assíncrono."
+      ]
+    },
+    {
+      "id": 47,
+      "level": "intermediate",
+      "question": "O que é React.lazy e Suspense?",
+      "correctAnswer": "lazy carrega componentes sob demanda (code splitting); Suspense exibe um fallback enquanto o código ou dados carregam.",
+      "wrongAnswers": [
+        "lazy adia a renderização de um componente até ele entrar na tela; Suspense pausa animações CSS enquanto o componente está oculto.",
+        "lazy marca um componente como baixa prioridade no modo concorrente; Suspense cancela a renderização se passar de um timeout.",
+        "lazy carrega imagens sob demanda; Suspense esconde a página até todas as imagens carregarem."
+      ]
+    },
+    {
+      "id": 48,
+      "level": "intermediate",
+      "question": "O que é code splitting?",
+      "correctAnswer": "Dividir o bundle em partes carregadas sob demanda para reduzir o tempo de carregamento inicial.",
+      "wrongAnswers": [
+        "Dividir um componente grande em vários arquivos menores para melhorar a legibilidade, sem mudar como o bundle é carregado.",
+        "Separar CSS e JavaScript em servidores ou CDNs diferentes para balancear a carga de rede no carregamento inicial.",
+        "Dividir o código entre repositórios de frontend e backend."
+      ]
+    },
+    {
+      "id": 49,
+      "level": "intermediate",
+      "question": "Como funciona o React Router?",
+      "correctAnswer": "Biblioteca de roteamento que associa URLs a componentes, com Routes, Route, Link, useNavigate, useParams e rotas aninhadas.",
+      "wrongAnswers": [
+        "Biblioteca do lado do servidor que renderiza um HTML diferente para cada URL e recarrega a página a cada navegação.",
+        "Um módulo nativo do React que mapeia arquivos da pasta pages para URLs automaticamente, recarregando a página a cada navegação e expondo o caminho atual pelo Hook useLocation do react-dom.",
+        "Extensão do navegador que intercepta links e carrega componentes React."
+      ]
+    },
+    {
+      "id": 50,
+      "level": "intermediate",
+      "question": "O que é um Higher-Order Component (HOC)?",
+      "correctAnswer": "Função que recebe um componente e retorna outro com comportamento adicional (ex.: withAuth). Hoje, Hooks costumam substituí-lo.",
+      "wrongAnswers": [
+        "Componente colocado no topo da árvore que envolve toda a aplicação e fornece configuração global.",
+        "Componente de classe que estende outro componente de classe para herdar seus métodos, o padrão de reuso recomendado hoje.",
+        "Componente com maior prioridade de renderização no modo concorrente."
+      ]
+    },
+    {
+      "id": 51,
+      "level": "intermediate",
+      "question": "O que é o padrão Render Props?",
+      "correctAnswer": "Técnica em que um componente recebe uma função como prop para decidir o que renderizar, compartilhando lógica.",
+      "wrongAnswers": [
+        "Técnica em que um componente recebe JSX como string em uma prop e o renderiza com innerHTML para compartilhar markup.",
+        "Técnica em que o método render é passado como prop entre componentes de classe, indisponível em componentes funcionais.",
+        "Técnica em que as props são calculadas durante o render em vez de passadas pelo pai."
+      ]
+    },
+    {
+      "id": 52,
+      "level": "intermediate",
+      "question": "O que é composição de componentes?",
+      "correctAnswer": "Construir UIs combinando componentes menores via children e props, preferida à herança no React.",
+      "wrongAnswers": [
+        "Construir UIs por cadeias profundas de herança de classes, que o React recomenda em vez de passar children e props.",
+        "Mesclar vários componentes em um único arquivo no build para reduzir requisições.",
+        "Combinar o estado de vários componentes em um único objeto global."
+      ]
+    },
+    {
+      "id": 53,
+      "level": "intermediate",
+      "question": "O que são Portals?",
+      "correctAnswer": "createPortal renderiza filhos em um nó do DOM fora da hierarquia do pai, útil para modais e tooltips.",
+      "wrongAnswers": [
+        "Conectam duas raízes React separadas na mesma página para compartilharem estado e contexto, renderizando filhos na árvore da outra raiz; útil para micro frontends e widgets.",
+        "Portals conectam duas aplicações React separadas para compartilhar estado.",
+        "Portals abrem uma nova janela do navegador e renderizam componentes nela."
+      ]
+    },
+    {
+      "id": 54,
+      "level": "intermediate",
+      "question": "Como gerenciar formulários no React?",
+      "correctAnswer": "Com componentes controlados e useState, ou bibliotecas como React Hook Form e Formik, combinadas a validação (Zod/Yup).",
+      "wrongAnswers": [
+        "Com o Hook nativo useForm do núcleo do React, que valida campos automaticamente usando atributos HTML.",
+        "Apenas com formulários HTML nativos não controlados que enviam ao servidor, porque o React não mantém valores de inputs no estado; a validação é feita só por atributos HTML como required e pattern.",
+        "Apenas com formulários HTML nativos, já que o React não suporta estado de formulário."
+      ]
+    },
+    {
+      "id": 55,
+      "level": "intermediate",
+      "question": "Como buscar dados em um componente?",
+      "correctAnswer": "Com useEffect + fetch, ou melhor, bibliotecas como TanStack Query/SWR, que cuidam de cache, revalidação e estados de loading/erro.",
+      "wrongAnswers": [
+        "Chamando fetch diretamente no corpo do render; o React faz cache da Promise automaticamente e deduplica chamadas repetidas.",
+        "Usando componentWillMount em componentes funcionais, que roda antes do primeiro render no servidor e no cliente.",
+        "Apenas por meio do Redux, já que componentes não podem fazer requisições HTTP."
+      ]
+    },
+    {
+      "id": 56,
+      "level": "intermediate",
+      "question": "O que é o TanStack Query (React Query)?",
+      "correctAnswer": "Biblioteca para gerenciar estado do servidor: cache, deduplicação, refetch, paginação e mutações.",
+      "wrongAnswers": [
+        "Biblioteca para consultar o DOM com seletores CSS dentro de componentes React, substituindo refs na maioria dos casos.",
+        "ORM leve que permite a componentes React consultar um banco SQL direto do navegador com segurança de tipos.",
+        "Um ORM de banco de dados para aplicações React."
+      ]
+    },
+    {
+      "id": 57,
+      "level": "intermediate",
+      "question": "Qual a diferença entre estado local, global e do servidor?",
+      "correctAnswer": "Local vive em um componente; global é compartilhado pela app (Context, Redux, Zustand); do servidor é dado remoto com cache e sincronização (React Query).",
+      "wrongAnswers": [
+        "Estado local guarda strings, global guarda objetos e do servidor guarda arrays, conforme as convenções do React.",
+        "Estado local fica no localStorage, global no sessionStorage e do servidor em cookies; o React sincroniza os três automaticamente pela Context API a cada render.",
+        "São a mesma coisa com nomes diferentes dependendo da biblioteca usada."
+      ]
+    },
+    {
+      "id": 58,
+      "level": "intermediate",
+      "question": "O que é Redux e quando usar?",
+      "correctAnswer": "Container de estado previsível com store, actions e reducers. Útil para estado global complexo; hoje se usa o Redux Toolkit.",
+      "wrongAnswers": [
+        "Hook do React para estado local que deve substituir o useState em todos os componentes por consistência.",
+        "Framework de servidor para construir APIs REST consumidas pelo React, com roteamento, middlewares e reducers.",
+        "Biblioteca CSS para construir layouts previsíveis."
+      ]
+    },
+    {
+      "id": 59,
+      "level": "intermediate",
+      "question": "O que é Redux Toolkit?",
+      "correctAnswer": "Conjunto oficial de utilitários que simplifica o Redux (configureStore, createSlice, createAsyncThunk, RTK Query).",
+      "wrongAnswers": [
+        "Extensão de navegador que apenas inspeciona stores Redux, mostrando actions e diffs de estado em desenvolvimento.",
+        "Substituto do React que usa o Redux como motor de renderização no lugar do Virtual DOM.",
+        "Uma biblioteca de testes para simular actions do Redux."
+      ]
+    },
+    {
+      "id": 60,
+      "level": "intermediate",
+      "question": "Qual a alternativa leve ao Redux?",
+      "correctAnswer": "Zustand, Jotai, Recoil ou o próprio Context + useReducer para casos simples.",
+      "wrongAnswers": [
+        "Axios, Lodash ou Moment.js, que gerenciam estado global de forma mais simples que o Redux em apps pequenos.",
+        "jQuery ou models do Backbone, que são containers de estado mais leves e se integram ao React sem providers.",
+        "Axios, Lodash ou Moment.js para casos simples."
+      ]
+    },
+    {
+      "id": 61,
+      "level": "intermediate",
+      "question": "Por que Context pode causar re-renders excessivos?",
+      "correctAnswer": "Todos os consumidores re-renderizam quando o valor do Provider muda. Divida contextos e memorize o valor.",
+      "wrongAnswers": [
+        "Porque o Context re-renderiza a aplicação inteira sempre que qualquer estado muda, mesmo fora do Provider.",
+        "Porque os valores do Context são comparados profundamente a cada render, o que é lento para objetos grandes e arrays aninhados.",
+        "Porque cada consumidor cria sua própria cópia do Provider."
+      ]
+    },
+    {
+      "id": 62,
+      "level": "intermediate",
+      "question": "O que é forwardRef?",
+      "correctAnswer": "Permite que um componente repasse uma ref recebida para um elemento filho. (No React 19, ref pode ser prop direta.)",
+      "wrongAnswers": [
+        "Cria uma ref que aponta automaticamente para o próximo elemento irmão no DOM após a montagem.",
+        "Permite que o componente pai leia e modifique o estado interno do filho por uma ref, sem callbacks ou props. (No React 19, forwardRef foi substituído pelo Hook useParentState.)",
+        "Repassa todas as props ao componente filho, exceto children."
+      ]
+    },
+    {
+      "id": 63,
+      "level": "intermediate",
+      "question": "O que é useImperativeHandle?",
+      "correctAnswer": "Personaliza o valor exposto ao pai via ref, expondo só métodos específicos.",
+      "wrongAnswers": [
+        "Força o componente a re-renderizar de forma imperativa, como o forceUpdate em componentes de classe.",
+        "Trata eventos imperativos do DOM como scroll e resize, substituindo o addEventListener nos componentes.",
+        "Dá ao filho acesso direto ao nó do DOM do pai."
+      ]
+    },
+    {
+      "id": 64,
+      "level": "intermediate",
+      "question": "Qual a diferença entre useId e gerar IDs manualmente?",
+      "correctAnswer": "useId gera IDs únicos e estáveis entre servidor e cliente, evitando erros de hidratação.",
+      "wrongAnswers": [
+        "useId gera um novo ID aleatório a cada render, o que é mais seguro que IDs manuais porque nunca se repetem.",
+        "useId lê o atributo id existente do elemento do DOM após a montagem e o retorna ao componente.",
+        "Não há diferença; useId é apenas um wrapper de Math.random()."
+      ]
+    },
+    {
+      "id": 65,
+      "level": "intermediate",
+      "question": "O que é hidratação (hydration)?",
+      "correctAnswer": "Processo em que o React anexa eventos e estado ao HTML renderizado no servidor, tornando-o interativo.",
+      "wrongAnswers": [
+        "O processo de carregar dados da API na store do Redux na inicialização.",
+        "O processo de converter JSX em strings HTML no servidor.",
+        "O processo de comprimir o bundle antes de enviá-lo ao navegador."
+      ]
+    },
+    {
+      "id": 66,
+      "level": "intermediate",
+      "question": "O que é SSR, SSG e CSR?",
+      "correctAnswer": "SSR renderiza no servidor a cada requisição; SSG gera HTML no build; CSR renderiza no navegador via JavaScript.",
+      "wrongAnswers": [
+        "SSR gera HTML no build; SSG renderiza no servidor a cada requisição; CSR renderiza em um nó de borda da CDN.",
+        "SSR renderiza no navegador via JavaScript; SSG em um service worker; CSR no servidor a cada requisição.",
+        "SSR, SSG e CSR são três pré-processadores CSS suportados pelo React."
+      ]
+    },
+    {
+      "id": 67,
+      "level": "intermediate",
+      "question": "Como testar componentes React?",
+      "correctAnswer": "Com Jest ou Vitest e React Testing Library, simulando interações do usuário e verificando o que aparece na tela.",
+      "wrongAnswers": [
+        "Apenas com testes end-to-end no Selenium, já que test runners como o Jest não interpretam nem renderizam JSX.",
+        "Apenas com testes manuais no navegador, já que componentes não podem ser testados automaticamente.",
+        "Tirando snapshots do Virtual DOM apenas com ReactDOM.test()."
+      ]
+    },
+    {
+      "id": 68,
+      "level": "advanced",
+      "question": "O que é React Fiber?",
+      "correctAnswer": "A reimplementação do núcleo do React (16+) que quebra a renderização em unidades de trabalho interrompíveis, permitindo priorização e concorrência.",
+      "wrongAnswers": [
+        "Motor CSS introduzido no React 16 que recalcula estilos de forma incremental para evitar layout thrashing.",
+        "Uma camada de rede introduzida no React 16 que transmite dados de componentes do servidor usando threads leves chamadas fibers, permitindo downloads paralelos de chunks e prioridades por requisição.",
+        "Motor CSS introduzido no React 16 para recalcular estilos mais rápido."
+      ]
+    },
+    {
+      "id": 69,
+      "level": "advanced",
+      "question": "O que é renderização concorrente?",
+      "correctAnswer": "Capacidade do React de preparar várias versões da UI, pausar ou descartar renders de baixa prioridade para manter a interface responsiva.",
+      "wrongAnswers": [
+        "Renderizar componentes em vários Web Workers em paralelo para usar todos os núcleos da CPU durante as atualizações.",
+        "Renderizar o mesmo componente no servidor e no cliente ao mesmo tempo e manter o que terminar primeiro.",
+        "Capacidade do React de renderizar componentes em vários Web Workers ao mesmo tempo, usando todos os núcleos da CPU para que renders pesados nunca bloqueiem a thread principal ou a entrada do usuário."
+      ]
+    },
+    {
+      "id": 70,
+      "level": "advanced",
+      "question": "O que faz useTransition?",
+      "correctAnswer": "Marca atualizações de estado como não urgentes (transições), mantendo a UI responsiva e expondo isPending.",
+      "wrongAnswers": [
+        "Atrasa um valor até o usuário parar de digitar, funcionando como um debounce nativo para inputs.",
+        "Anima transições CSS entre dois estados de um componente.",
+        "Gerencia transições de página entre rotas no React Router."
+      ]
+    },
+    {
+      "id": 71,
+      "level": "advanced",
+      "question": "O que faz useDeferredValue?",
+      "correctAnswer": "Retorna uma versão \"atrasada\" de um valor, permitindo que partes custosas atualizem depois de atualizações urgentes.",
+      "wrongAnswers": [
+        "Retorna uma Promise que resolve com o valor após o próximo commit, para que partes custosas possam aguardá-la dentro de efeitos e atualizar só quando o navegador estiver ocioso.",
+        "Guarda um valor que só é aplicado quando o componente desmonta.",
+        "Atrasa a montagem do componente até que o valor esteja definido."
+      ]
+    },
+    {
+      "id": 72,
+      "level": "advanced",
+      "question": "O que é automatic batching no React 18?",
+      "correctAnswer": "Agrupamento automático de múltiplas atualizações de estado em uma só renderização, inclusive em promises, timeouts e eventos nativos.",
+      "wrongAnswers": [
+        "Agrupamento automático das requisições HTTP feitas por componentes em uma única chamada de rede para reduzir latência.",
+        "Agrupamento que só funciona dentro de handlers de eventos React e nunca se aplica a promises, timeouts ou eventos nativos.",
+        "Empacotamento automático de componentes em um único arquivo JavaScript."
+      ]
+    },
+    {
+      "id": 73,
+      "level": "advanced",
+      "question": "O que são React Server Components (RSC)?",
+      "correctAnswer": "Componentes executados apenas no servidor, sem enviar seu JS ao cliente, podendo acessar dados diretamente e reduzindo o bundle.",
+      "wrongAnswers": [
+        "Componentes que rodam dentro de um service worker para fazer cache de respostas do servidor e servi-las offline sem JavaScript.",
+        "Componentes renderizados no servidor e depois reexecutados no cliente com todo o seu JavaScript para hidratação.",
+        "Componentes que se conectam a um servidor WebSocket para receber atualizações em tempo real."
+      ]
+    },
+    {
+      "id": 74,
+      "level": "advanced",
+      "question": "Qual a diferença entre Server e Client Components?",
+      "correctAnswer": "Server Components rodam no servidor e não têm estado nem efeitos; Client Components ('use client') rodam no navegador e podem usar Hooks e eventos.",
+      "wrongAnswers": [
+        "Server Components podem usar useState, useEffect e handlers de eventos, enquanto Client Components não têm estado nem efeitos.",
+        "Não há diferença em runtime; a diretiva 'use client' só muda tipos do TypeScript e regras de lint.",
+        "Client Components rodam apenas no servidor e Server Components apenas no navegador."
+      ]
+    },
+    {
+      "id": 75,
+      "level": "advanced",
+      "question": "O que são Server Actions?",
+      "correctAnswer": "Funções assíncronas executadas no servidor ('use server') e invocadas de formulários ou eventos, sem criar endpoints manuais.",
+      "wrongAnswers": [
+        "Funções que rodam no navegador e depois são serializadas para o servidor para logging e analytics.",
+        "Actions do Redux despachadas no servidor ('use server') antes da hidratação, para a store do cliente iniciar com o estado correto e formulários enviarem sem JavaScript.",
+        "Tarefas cron agendadas pelo React para rodar periodicamente no servidor."
+      ]
+    },
+    {
+      "id": 76,
+      "level": "advanced",
+      "question": "O que faz o Hook use do React 19?",
+      "correctAnswer": "Lê o valor de uma Promise ou Context durante a renderização, integrando-se ao Suspense e podendo ser chamado condicionalmente.",
+      "wrongAnswers": [
+        "Executa um efeito uma vez após a montagem, substituindo o useEffect com array vazio, e não pode ser chamado condicionalmente.",
+        "Importa um módulo dinamicamente durante a renderização, substituindo o React.lazy, e suspende até o código carregar; como os outros Hooks, deve ser chamado no topo e nunca condicionalmente.",
+        "Declara uma variável de estado que persiste entre recarregamentos da página."
+      ]
+    },
+    {
+      "id": 77,
+      "level": "advanced",
+      "question": "O que é useOptimistic?",
+      "correctAnswer": "Hook do React 19 para exibir um estado otimista imediato enquanto uma ação assíncrona está em andamento.",
+      "wrongAnswers": [
+        "Hook que repete automaticamente requisições com falha usando backoff exponencial até terem sucesso ou expirarem.",
+        "Hook que otimiza a renderização pulando componentes cujas props provavelmente não vão mudar.",
+        "Hook que prevê a próxima navegação do usuário e faz prefetch."
+      ]
+    },
+    {
+      "id": 78,
+      "level": "advanced",
+      "question": "O que é useActionState?",
+      "correctAnswer": "Hook que gerencia o estado resultante de uma ação de formulário, expondo estado, função de ação e status pendente.",
+      "wrongAnswers": [
+        "Hook que lê o código de status HTTP do último fetch feito pelo componente e o expõe como estado.",
+        "Hook que despacha actions do Redux a partir de formulários e retorna o estado atualizado da store, uma função dispatch e uma flag de pendência enquanto o reducer roda no servidor.",
+        "Hook que rastreia quais ações do usuário ocorreram para analytics."
+      ]
+    },
+    {
+      "id": 79,
+      "level": "advanced",
+      "question": "O que é o React Compiler?",
+      "correctAnswer": "Compilador que memoriza componentes e valores automaticamente, reduzindo a necessidade de useMemo, useCallback e memo manuais.",
+      "wrongAnswers": [
+        "Compilador que converte componentes de classe em componentes funcionais automaticamente durante o build.",
+        "Ferramenta de build que compila JSX em strings HTML estáticas, substituindo o Babel e removendo o runtime do React do bundle para que componentes não re-renderizem mais no navegador.",
+        "Compilador que traduz código React para código nativo mobile."
+      ]
+    },
+    {
+      "id": 80,
+      "level": "advanced",
+      "question": "Como o React decide a ordem dos Hooks?",
+      "correctAnswer": "Pela ordem de chamada em cada render, guardada em uma lista ligada na fiber. Por isso não podem ser chamados condicionalmente.",
+      "wrongAnswers": [
+        "Por um ID único que o compilador atribui a cada chamada de Hook, então podem ser chamados condicionalmente com segurança.",
+        "Pela ordem alfabética dos nomes, resolvida em tempo de compilação e guardada em um hash map no componente; por isso custom Hooks precisam começar com use e podem ser chamados dentro de condições.",
+        "Pela ordem alfabética dos nomes dos Hooks."
+      ]
+    },
+    {
+      "id": 81,
+      "level": "advanced",
+      "question": "O que são stale closures?",
+      "correctAnswer": "Funções que capturam valores antigos de state/props de um render passado. Resolva com dependências corretas, forma funcional do setter ou refs.",
+      "wrongAnswers": [
+        "Closures coletadas pelo garbage collector cedo demais, deixando variáveis undefined quando a função finalmente roda.",
+        "Event listeners que não foram removidos após a desmontagem e continuam disparando em um nó do DOM desanexado.",
+        "Funções memoizadas para sempre que nunca podem ser atualizadas."
+      ]
+    },
+    {
+      "id": 82,
+      "level": "advanced",
+      "question": "Como o React trata atualizações de prioridade?",
+      "correctAnswer": "Usando \"lanes\": eventos discretos têm alta prioridade, transições e trabalho em segundo plano têm baixa.",
+      "wrongAnswers": [
+        "Usando uma fila FIFO simples em que toda atualização tem a mesma prioridade e é processada na ordem de chegada.",
+        "Usando o zIndex de cada componente para decidir qual renderiza primeiro quando há várias atualizações pendentes.",
+        "Usando o zIndex de cada componente para determinar a prioridade de render."
+      ]
+    },
+    {
+      "id": 83,
+      "level": "advanced",
+      "question": "O que é streaming SSR?",
+      "correctAnswer": "Enviar o HTML em partes conforme Suspense boundaries resolvem, melhorando TTFB e percepção de velocidade.",
+      "wrongAnswers": [
+        "Transmitir conteúdo de vídeo do servidor usando componentes React.",
+        "Renderizar a página inteira no servidor e enviá-la só quando tudo estiver pronto.",
+        "Enviar o bundle JavaScript em pequenas partes via WebSockets."
+      ]
+    },
+    {
+      "id": 84,
+      "level": "advanced",
+      "question": "O que é Selective Hydration?",
+      "correctAnswer": "Hidratar partes da página sob demanda/prioridade (ex.: a região clicada primeiro), sem bloquear a página toda.",
+      "wrongAnswers": [
+        "Hidratar a página estritamente de cima para baixo na ordem do documento, bloqueando interação até terminar.",
+        "Escolher um conjunto de componentes que nunca será hidratado, transformando-os em HTML estático permanente que ignora cliques, para o restante da página carregar mais rápido.",
+        "Escolher quais componentes nunca serão hidratados, tornando-os estáticos para sempre."
+      ]
+    },
+    {
+      "id": 85,
+      "level": "advanced",
+      "question": "Como depurar problemas de performance em React?",
+      "correctAnswer": "Com React DevTools Profiler, Chrome Performance, why-did-you-render, análise de bundle e Web Vitals.",
+      "wrongAnswers": [
+        "Ativando o Strict Mode em produção, que reporta componentes lentos e seus tempos de render no console.",
+        "Adicionando console.log em todo componente e contando mensagens manualmente.",
+        "Envolvendo todos os componentes em React.memo até o problema sumir."
+      ]
+    },
+    {
+      "id": 86,
+      "level": "advanced",
+      "question": "O que é virtualização de listas?",
+      "correctAnswer": "Renderizar apenas os itens visíveis (react-window, TanStack Virtual), essencial para listas com milhares de itens.",
+      "wrongAnswers": [
+        "Guardar os dados da lista dentro do Virtual DOM em vez do state para o React compará-los mais rápido.",
+        "Renderizar listas dentro de um sandbox de máquina virtual isolado para separar sua memória do app, o que é essencial quando as listas têm milhares de itens.",
+        "Carregar a lista completa no servidor e enviá-la como imagem."
+      ]
+    },
+    {
+      "id": 87,
+      "level": "advanced",
+      "question": "Como projetar uma arquitetura escalável de pastas em React?",
+      "correctAnswer": "Organização por feature/domínio, componentes compartilhados em ui, camadas para dados/hooks/serviços e limites claros de importação.",
+      "wrongAnswers": [
+        "Pastas organizadas estritamente por tipo de arquivo (todos .js em uma, todos .css em outra), sem considerar feature ou domínio.",
+        "Uma única pasta components plana com todos os arquivos, porque o bundler do React exige estrutura plana para resolver imports, mais um arquivo utils global compartilhado por todas as features.",
+        "Uma pasta por desenvolvedor para que as equipes não entrem em conflito."
+      ]
+    },
+    {
+      "id": 88,
+      "level": "advanced",
+      "question": "O que é o padrão Compound Components?",
+      "correctAnswer": "Componentes que trabalham juntos compartilhando estado implícito (ex.: Tabs, Tabs.List, Tabs.Panel), geralmente via Context.",
+      "wrongAnswers": [
+        "Componentes que herdam de uma classe base comum e compartilham comportamento pela cadeia de protótipos.",
+        "Componentes compilados juntos em um único chunk do bundle (ex.: Tabs, Tabs.List, Tabs.Panel) para sempre carregarem ao mesmo tempo, geralmente configurados pelo splitChunks do webpack.",
+        "Componentes compilados juntos em um único arquivo de bundle."
+      ]
+    },
+    {
+      "id": 89,
+      "level": "advanced",
+      "question": "O que é o padrão Controlled Props / State Reducer?",
+      "correctAnswer": "Permitem que o consumidor controle ou sobrescreva o estado interno de um componente reutilizável, dando flexibilidade a design systems.",
+      "wrongAnswers": [
+        "Impedem os consumidores de alterar o estado interno de um componente reutilizável, garantindo consistência em design systems.",
+        "Movem automaticamente todo o estado dos componentes para reducers do Redux para inspeção no DevTools.",
+        "Validam props com uma função reducer antes de renderizar."
+      ]
+    },
+    {
+      "id": 90,
+      "level": "advanced",
+      "question": "Como implementar autenticação em uma SPA React?",
+      "correctAnswer": "Tokens via cookies httpOnly ou fluxo OAuth/OIDC, rotas protegidas, contexto de usuário e refresh de tokens, evitando guardar tokens sensíveis em localStorage.",
+      "wrongAnswers": [
+        "Embutir a chave secreta da API no bundle para o frontend assinar e validar os próprios tokens.",
+        "Guardar usuário e senha no localStorage, enviá-los no corpo de toda requisição e verificar as permissões só no frontend, já que o backend confia nas requisições da SPA.",
+        "Guardando usuário e senha no localStorage e enviando-os em cada requisição."
+      ]
+    },
+    {
+      "id": 91,
+      "level": "advanced",
+      "question": "Como lidar com acessibilidade (a11y) em React?",
+      "correctAnswer": "HTML semântico, atributos ARIA, gerenciamento de foco, labels em formulários, navegação por teclado e testes com axe/eslint-plugin-jsx-a11y.",
+      "wrongAnswers": [
+        "O React cuida da acessibilidade automaticamente em todo elemento, então nenhum atributo, teste ou controle de foco é necessário.",
+        "Usar apenas elementos <div> com onClick, já que o React os normaliza para leitores de tela e teclados.",
+        "Adicionando role=\"button\" a todos os elementos para torná-los acessíveis."
+      ]
+    },
+    {
+      "id": 92,
+      "level": "advanced",
+      "question": "Como funciona o useSyncExternalStore?",
+      "correctAnswer": "Hook para assinar fontes de dados externas de forma segura com renderização concorrente, evitando \"tearing\". Bibliotecas de estado o utilizam.",
+      "wrongAnswers": [
+        "Hook que sincroniza o estado do componente entre abas do navegador usando eventos do localStorage.",
+        "Hook que mantém o estado do componente sincronizado com um banco remoto em tempo real via WebSockets.",
+        "Hook que força scripts externos a carregarem de forma síncrona."
+      ]
+    },
+    {
+      "id": 93,
+      "level": "advanced",
+      "question": "O que causa erros de hidratação e como evitá-los?",
+      "correctAnswer": "Diferenças entre HTML do servidor e do cliente (datas, window, aleatoriedade). Evite com useEffect para dados só do cliente ou suppressHydrationWarning.",
+      "wrongAnswers": [
+        "Falta de keys em listas renderizadas no servidor; evite-as usando sempre o índice do array como key.",
+        "Falhas de rede ao baixar o bundle JavaScript, que deixam a página sem handlers de eventos. Evite-as repetindo o download em um service worker e embutindo o bundle no HTML.",
+        "Usar componentes demais em uma página; evite-os dividindo em mais páginas."
+      ]
+    },
+    {
+      "id": 94,
+      "level": "advanced",
+      "question": "Como evitar waterfalls de requisições?",
+      "correctAnswer": "Disparar requisições em paralelo (Promise.all), buscar dados em nível de rota/servidor, usar prefetch e Suspense.",
+      "wrongAnswers": [
+        "Buscar dados no useEffect de cada filho aninhado, um nível após o outro, adicionando um atraso fixo entre as requisições para o servidor nunca ser sobrecarregado por chamadas paralelas.",
+        "Adicionando um atraso entre requisições para não sobrecarregar o servidor.",
+        "Combinando todos os endpoints da API em uma única cadeia sequencial de chamadas."
+      ]
+    },
+    {
+      "id": 95,
+      "level": "advanced",
+      "question": "O que é micro frontend e como aplicar com React?",
+      "correctAnswer": "Dividir a aplicação em frontends independentes por time, integrados via Module Federation, iframes ou web components.",
+      "wrongAnswers": [
+        "Um app React muito pequeno com menos de dez componentes, publicado separado do backend principal.",
+        "Uma aplicação React muito pequena, com menos de dez componentes, publicada separada do backend; é construída dividindo um componente em muitos componentes minúsculos dentro do mesmo bundle.",
+        "Um componente React que renderiza apenas em dispositivos móveis."
+      ]
+    },
+    {
+      "id": 96,
+      "level": "advanced",
+      "question": "Quando NÃO usar useMemo/useCallback?",
+      "correctAnswer": "Quando o cálculo é barato ou não há filhos memoizados; a memorização tem custo e complexidade e pode ser prematura.",
+      "wrongAnswers": [
+        "Quando o componente consome Context, porque Hooks de memorização são incompatíveis com Providers.",
+        "Nunca: devem envolver todo valor e função em todo componente, porque a memorização é gratuita e o time do React a recomenda como padrão para garantir máxima performance.",
+        "Quando o componente é renderizado no servidor, pois lançam erros lá."
+      ]
+    },
+    {
+      "id": 97,
+      "level": "advanced",
+      "question": "Como o React lida com eventos (event delegation)?",
+      "correctAnswer": "Usa SyntheticEvents, anexando listeners na raiz da aplicação (não em cada nó) e normalizando o comportamento entre navegadores.",
+      "wrongAnswers": [
+        "Anexa um listener nativo diretamente a cada nó do DOM que tem a prop onClick, removendo-o na desmontagem.",
+        "Delega todos os eventos a um Web Worker que os processa fora da thread principal e devolve os resultados.",
+        "Usa um laço de polling para verificar entradas do usuário a cada frame."
+      ]
+    },
+    {
+      "id": 98,
+      "level": "advanced",
+      "question": "Como estruturar testes em uma aplicação React grande?",
+      "correctAnswer": "Pirâmide: testes unitários de hooks/utilitários, testes de integração de componentes com RTL, mocks de rede com MSW e poucos testes E2E (Playwright/Cypress).",
+      "wrongAnswers": [
+        "Apenas testes de snapshot de cada componente, já que snapshots cobrem renderização e comportamento por completo.",
+        "Pirâmide invertida: principalmente testes end-to-end pela UI para cada feature com Selenium, além de snapshots de cada componente, e quase nenhum teste unitário ou de integração.",
+        "Apenas QA manual, porque testes automatizados atrasam o desenvolvimento."
+      ]
+    },
+    {
+      "id": 99,
+      "level": "advanced",
+      "question": "O que é Suspense com data fetching?",
+      "correctAnswer": "Permite que bibliotecas compatíveis suspendam a renderização enquanto os dados carregam, exibindo o fallback da boundary mais próxima.",
+      "wrongAnswers": [
+        "Busca dados automaticamente para qualquer componente envolvido nele, sem exigir uma biblioteca compatível.",
+        "Cancela requisições de dados que passam do timeout definido na prop e mostra um error boundary no lugar.",
+        "Faz cache global de todas as chamadas fetch durante a sessão."
+      ]
+    },
+    {
+      "id": 100,
+      "level": "advanced",
+      "question": "Como migrar uma aplicação de classes para Hooks?",
+      "correctAnswer": "Incrementalmente, convertendo componentes folha primeiro, extraindo lógica de ciclo de vida para Hooks e mantendo ambos coexistindo.",
+      "wrongAnswers": [
+        "Tudo de uma vez em uma única release, porque componentes de classe e Hooks não coexistem na mesma aplicação; um codemod oficial converte toda classe automaticamente, sem revisão.",
+        "Tudo de uma vez, já que classes e Hooks não podem coexistir no mesmo app.",
+        "Rodando um codemod oficial que converte tudo automaticamente sem revisão."
+      ]
+    }
+  ]
+}

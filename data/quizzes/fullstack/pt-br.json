@@ -1,0 +1,1107 @@
+{
+  "id": "fullstack",
+  "language": "pt-br",
+  "title": "Vaga Fullstack React + Node.js",
+  "questions": [
+    {
+      "id": 1,
+      "level": "basic",
+      "question": "O que é Node.js?",
+      "correctAnswer": "Ambiente de execução JavaScript baseado no motor V8 que roda fora do navegador, orientado a eventos e com I/O não bloqueante.",
+      "wrongAnswers": [
+        "Framework front-end para construir interfaces no navegador, baseado no motor SpiderMonkey, que renderiza componentes e gerencia roteamento no cliente.",
+        "Runtime Java multi-thread que executa JavaScript pela JVM, criando uma thread bloqueante por requisição para tratar operações de I/O em paralelo.",
+        "Framework JavaScript para construir interfaces no navegador."
+      ]
+    },
+    {
+      "id": 2,
+      "level": "basic",
+      "question": "Node.js é single-thread?",
+      "correctAnswer": "O código JavaScript roda em uma thread principal, mas I/O é delegado ao libuv (thread pool e SO), permitindo concorrência. Para CPU intensiva usam-se worker threads.",
+      "wrongAnswers": [
+        "Não. Cada requisição recebida é atribuída automaticamente a uma thread do sistema operacional, então o código JavaScript sempre roda em paralelo em todos os núcleos sem configuração extra.",
+        "Sim, e por isso não consegue executar nenhuma operação concorrente: cada chamada de I/O bloqueia o processo inteiro até terminar, motivo pelo qual worker threads foram removidas.",
+        "Não, cada requisição roda automaticamente em sua própria thread dedicada."
+      ]
+    },
+    {
+      "id": 3,
+      "level": "basic",
+      "question": "O que é o npm?",
+      "correctAnswer": "Gerenciador de pacotes do Node, com registro público e o arquivo package.json para dependências e scripts.",
+      "wrongAnswers": [
+        "Bundler JavaScript como o Webpack que combina os módulos listados no package.json em um único arquivo.",
+        "Servidor web embutido do Node.",
+        "Ferramenta para monitorar a memória de processos Node."
+      ]
+    },
+    {
+      "id": 4,
+      "level": "basic",
+      "question": "Qual a diferença entre dependencies e devDependencies?",
+      "correctAnswer": "dependencies são necessárias em produção; devDependencies apenas em desenvolvimento (testes, lint, build).",
+      "wrongAnswers": [
+        "devDependencies são necessárias em produção porque incluem ferramentas de build, enquanto dependencies só são usadas localmente em desenvolvimento e testes.",
+        "dependencies são instaladas globalmente na máquina e compartilhadas por todos os projetos, enquanto devDependencies ficam em node_modules.",
+        "devDependencies são necessárias em produção; dependencies só em desenvolvimento."
+      ]
+    },
+    {
+      "id": 5,
+      "level": "basic",
+      "question": "O que é o package-lock.json?",
+      "correctAnswer": "Arquivo que fixa as versões exatas instaladas para garantir builds reproduzíveis.",
+      "wrongAnswers": [
+        "Arquivo que trava o projeto para que nenhum pacote seja instalado ou removido até ser apagado manualmente.",
+        "Arquivo que guarda as credenciais de login e tokens do registro npm para publicar pacotes.",
+        "Arquivo que lista pacotes bloqueados por segurança."
+      ]
+    },
+    {
+      "id": 6,
+      "level": "basic",
+      "question": "O que é Express?",
+      "correctAnswer": "Framework web minimalista para Node, que facilita criar rotas, middlewares e APIs HTTP.",
+      "wrongAnswers": [
+        "Framework front-end full-stack para renderizar componentes React no servidor com roteamento e busca de dados embutidos.",
+        "Gerenciador de processos que mantém aplicações Node ativas em produção, reiniciando-as quando caem.",
+        "ORM para bancos SQL."
+      ]
+    },
+    {
+      "id": 7,
+      "level": "basic",
+      "question": "O que é um middleware?",
+      "correctAnswer": "Função com acesso a req, res e next que processa requisições em cadeia (logs, autenticação, parsing, erros).",
+      "wrongAnswers": [
+        "Camada de banco de dados entre o Node e o disco, fazendo cache de consultas e transações antes de gravá-las.",
+        "Camada de banco entre o Node e o disco que faz cache de consultas, roda só uma vez quando o servidor inicia e não acessa req nem res, usada para carregar configuração antes das rotas.",
+        "Componente frontend que envolve páginas."
+      ]
+    },
+    {
+      "id": 8,
+      "level": "basic",
+      "question": "O que é uma API REST?",
+      "correctAnswer": "Estilo arquitetural que expõe recursos via URLs e métodos HTTP (GET, POST, PUT, PATCH, DELETE), de forma stateless.",
+      "wrongAnswers": [
+        "Linguagem de consulta em que o cliente descreve exatamente os campos que precisa e o servidor retorna apenas esses.",
+        "Protocolo que mantém uma sessão persistente por cliente no servidor e expõe procedimentos em vez de recursos, com o cliente escolhendo exatamente os campos a receber em cada chamada.",
+        "Linguagem de consulta em que o cliente escolhe os campos."
+      ]
+    },
+    {
+      "id": 9,
+      "level": "basic",
+      "question": "Quais os principais métodos HTTP e seus usos?",
+      "correctAnswer": "GET lê; POST cria; PUT substitui; PATCH atualiza parcialmente; DELETE remove.",
+      "wrongAnswers": [
+        "GET cria recursos; POST os lê; PUT remove; PATCH substitui o recurso inteiro; DELETE atualiza parcialmente.",
+        "PUT atualiza parcialmente um recurso enquanto PATCH o substitui por completo; GET e POST são intercambiáveis para ler dados.",
+        "GET e POST são os únicos métodos; os outros estão obsoletos."
+      ]
+    },
+    {
+      "id": 10,
+      "level": "basic",
+      "question": "O que significam os códigos 200, 201, 400, 401, 403, 404 e 500?",
+      "correctAnswer": "Sucesso, criado, requisição inválida, não autenticado, proibido, não encontrado e erro interno do servidor.",
+      "wrongAnswers": [
+        "Criado, sucesso, não autenticado, requisição inválida, não encontrado, proibido e timeout de gateway, nessa ordem.",
+        "Sucesso, redirecionamento, erro de servidor, proibido, não autenticado, criado e não encontrado, nessa ordem.",
+        "Sucesso, aceito, conflito, pagamento necessário, proibido, removido e bad gateway."
+      ]
+    },
+    {
+      "id": 11,
+      "level": "basic",
+      "question": "Qual a diferença entre 401 e 403?",
+      "correctAnswer": "401: não autenticado (identidade ausente/inválida); 403: autenticado, mas sem permissão.",
+      "wrongAnswers": [
+        "401 significa que o usuário está autenticado mas sem permissão; 403 significa identidade ausente ou inválida.",
+        "401 significa recurso não encontrado no servidor; 403 significa que o servidor encontrou um erro interno.",
+        "401: autenticado sem permissão; 403: não autenticado."
+      ]
+    },
+    {
+      "id": 12,
+      "level": "basic",
+      "question": "O que é JSON e por que é usado em APIs?",
+      "correctAnswer": "Formato leve e legível de troca de dados, nativo em JavaScript, usado entre frontend e backend.",
+      "wrongAnswers": [
+        "Formato binário que comprime dados para transferência mais rápida.",
+        "Linguagem de consulta de banco usada por APIs REST.",
+        "Linguagem de marcação que substitui o HTML em APIs."
+      ]
+    },
+    {
+      "id": 13,
+      "level": "basic",
+      "question": "Como um React app se comunica com um backend Node?",
+      "correctAnswer": "Por requisições HTTP (fetch/axios/React Query) a endpoints REST ou GraphQL, trocando JSON.",
+      "wrongAnswers": [
+        "Importando funções do backend diretamente nos componentes React, já que ambos rodam no mesmo processo Node.js em produção.",
+        "Abrindo uma conexão direta com o banco no navegador e compartilhando-a com o backend por cookies.",
+        "Lendo os arquivos do backend pela API de sistema de arquivos."
+      ]
+    },
+    {
+      "id": 14,
+      "level": "basic",
+      "question": "O que é CORS e como configurar no Express?",
+      "correctAnswer": "Controle de requisições entre origens diferentes; configura-se com o middleware cors, definindo origens, métodos e credenciais permitidas.",
+      "wrongAnswers": [
+        "Configuração no React que desativa as verificações de segurança do navegador para chamar qualquer API de qualquer origem.",
+        "É configurado adicionando mode: 'no-cors' em toda resposta do backend, o que libera todas as origens e credenciais.",
+        "Permissão de banco configurada no ORM."
+      ]
+    },
+    {
+      "id": 15,
+      "level": "basic",
+      "question": "O que são variáveis de ambiente?",
+      "correctAnswer": "Valores de configuração externos ao código (portas, URLs, segredos), lidos por process.env e geralmente definidos em .env.",
+      "wrongAnswers": [
+        "Variáveis declaradas com var no escopo global e constantes fixas para cada ambiente, compartilhadas entre módulos e trocadas comentando e descomentando linhas antes do deploy.",
+        "Variáveis declaradas com var no escopo global.",
+        "Constantes fixas no código para cada ambiente."
+      ]
+    },
+    {
+      "id": 16,
+      "level": "basic",
+      "question": "Por que nunca commitar o .env?",
+      "correctAnswer": "Contém segredos (chaves, senhas); deve ir ao .gitignore, com um .env.example sem valores reais.",
+      "wrongAnswers": [
+        "Porque o Node.js se recusa a ler arquivos .env dentro de um repositório Git por segurança.",
+        "Porque o Git não armazena arquivos que começam com ponto.",
+        "Porque deixa o repositório grande demais."
+      ]
+    },
+    {
+      "id": 17,
+      "level": "basic",
+      "question": "O que é async/await no Node?",
+      "correctAnswer": "Sintaxe para lidar com Promises de forma sequencial, essencial para I/O como banco e HTTP.",
+      "wrongAnswers": [
+        "Forma de executar código em várias threads do SO no Node, em que cada await move a função para uma nova worker thread.",
+        "Sintaxe que torna operações de I/O síncronas e bloqueantes, então o servidor espera cada consulta antes de aceitar novas requisições.",
+        "Recurso exclusivo do Node, indisponível nos navegadores."
+      ]
+    },
+    {
+      "id": 18,
+      "level": "basic",
+      "question": "Como ler o corpo de uma requisição JSON no Express?",
+      "correctAnswer": "Com app.use(express.json()) e acesso via req.body.",
+      "wrongAnswers": [
+        "Com req.json() diretamente no handler, que interpreta o corpo sem registrar nenhum middleware.",
+        "Com JSON.parse(req) no início de cada handler, já que o Express não fornece um parser de corpo.",
+        "Com req.params.body."
+      ]
+    },
+    {
+      "id": 19,
+      "level": "basic",
+      "question": "Como definir parâmetros de rota e de query?",
+      "correctAnswer": "Rota: /users/:id com req.params.id; query: /users?page=2 com req.query.page.",
+      "wrongAnswers": [
+        "Rota: /users?id com req.query.id; query: /users/:page com req.params.page, já que params vêm depois da interrogação.",
+        "Parâmetros de rota e de query são lidos de req.body após registrar express.json() como middleware.",
+        "Rota: /users?id com req.query.id; query: /users/:page com req.params.page."
+      ]
+    },
+    {
+      "id": 20,
+      "level": "basic",
+      "question": "O que é um ORM?",
+      "correctAnswer": "Mapeia tabelas do banco para objetos, simplificando consultas: Prisma, Sequelize, TypeORM, Drizzle.",
+      "wrongAnswers": [
+        "Servidor de banco relacional como o PostgreSQL que guarda tabelas em disco e executa consultas SQL.",
+        "Ferramenta apenas para monitorar performance de queries.",
+        "Camada de cache entre a API e o cliente."
+      ]
+    },
+    {
+      "id": 21,
+      "level": "basic",
+      "question": "Qual a diferença entre SQL e NoSQL?",
+      "correctAnswer": "SQL é relacional, com esquema e joins (PostgreSQL, MySQL); NoSQL tem modelos flexíveis (MongoDB, Redis), ideais para certos casos de uso.",
+      "wrongAnswers": [
+        "SQL serve só para aplicações pequenas e NoSQL só para grandes, já que bancos SQL não escalam além de um servidor.",
+        "Bancos NoSQL são relacionais, com esquemas rígidos e joins (MongoDB, Redis), enquanto bancos SQL usam documentos flexíveis sem esquema (PostgreSQL, MySQL) e não escalam além de um servidor.",
+        "NoSQL é relacional com joins; SQL tem modelos flexíveis sem esquema."
+      ]
+    },
+    {
+      "id": 22,
+      "level": "basic",
+      "question": "O que é MongoDB?",
+      "correctAnswer": "Banco NoSQL orientado a documentos JSON (BSON), flexível e escalável horizontalmente.",
+      "wrongAnswers": [
+        "Banco relacional com esquemas rígidos, chaves estrangeiras e joins, consultado exclusivamente com SQL padrão.",
+        "Cache chave-valor em memória usado principalmente para sessões e rate limiting, sem persistência em disco.",
+        "Cache em memória para sessões."
+      ]
+    },
+    {
+      "id": 23,
+      "level": "basic",
+      "question": "O que é autenticação e autorização?",
+      "correctAnswer": "Autenticação confirma quem é o usuário; autorização define o que ele pode fazer.",
+      "wrongAnswers": [
+        "Autorização confirma quem é o usuário, enquanto autenticação define o que esse usuário pode fazer no sistema.",
+        "São sinônimos usados de forma intercambiável na documentação de segurança para descrever o login.",
+        "São sinônimos."
+      ]
+    },
+    {
+      "id": 24,
+      "level": "basic",
+      "question": "O que é JWT?",
+      "correctAnswer": "JSON Web Token: token assinado contendo claims, usado para autenticação stateless; deve ter expiração e ser transmitido com segurança.",
+      "wrongAnswers": [
+        "ID de sessão guardado no servidor que nunca expira e é enviado na URL de toda requisição.",
+        "Formato de banco criptografado para guardar senhas no servidor, ou um ID de sessão que nunca expira e é enviado na URL; deve ser compartilhado publicamente para outros serviços validarem usuários.",
+        "Banco criptografado para guardar senhas de usuários."
+      ]
+    },
+    {
+      "id": 25,
+      "level": "basic",
+      "question": "Por que fazer hash de senhas?",
+      "correctAnswer": "Para nunca armazenar a senha em texto puro; usa-se bcrypt/argon2 com salt, que são lentos de propósito.",
+      "wrongAnswers": [
+        "Para comprimir senhas e ocupar menos espaço no banco, usando algoritmos rápidos como MD5 para melhor performance.",
+        "Para o servidor poder descriptografá-las depois e enviá-las por e-mail quando o usuário esquece as credenciais.",
+        "Para comprimir senhas e economizar espaço no banco."
+      ]
+    },
+    {
+      "id": 26,
+      "level": "basic",
+      "question": "O que é um proxy no Vite/CRA para desenvolvimento?",
+      "correctAnswer": "Configuração que redireciona chamadas /api do frontend para o backend local, evitando CORS em desenvolvimento.",
+      "wrongAnswers": [
+        "VPN configurada no servidor de desenvolvimento que esconde o IP do desenvolvedor de APIs de terceiros.",
+        "Configuração de balanceador de produção que distribui o tráfego da API entre várias instâncias do backend.",
+        "VPN que esconde o IP do desenvolvedor."
+      ]
+    },
+    {
+      "id": 27,
+      "level": "basic",
+      "question": "O que é o useEffect típico para buscar dados da API?",
+      "correctAnswer": "Efeito que chama fetch ao montar o componente e atualiza o estado com a resposta, tratando loading e erro.",
+      "wrongAnswers": [
+        "Efeito sem array de dependências que chama fetch a cada render para manter os dados atualizados, gravando a resposta direto no DOM em vez do estado para evitar renders extras.",
+        "Efeito que roda no servidor antes da renderização.",
+        "Efeito que escreve dados diretamente no DOM."
+      ]
+    },
+    {
+      "id": 28,
+      "level": "basic",
+      "question": "O que é um monorepo?",
+      "correctAnswer": "Um único repositório que contém vários projetos (frontend, backend, pacotes compartilhados).",
+      "wrongAnswers": [
+        "Repositório que contém só um projeto com um único package.json e nenhum código compartilhado.",
+        "Projeto dividido em vários repositórios separados, um por pacote, ligados por git submodules.",
+        "Repositório com um único arquivo."
+      ]
+    },
+    {
+      "id": 29,
+      "level": "basic",
+      "question": "O que é nodemon?",
+      "correctAnswer": "Ferramenta de desenvolvimento que reinicia o servidor Node ao detectar alterações nos arquivos.",
+      "wrongAnswers": [
+        "Gerenciador de processos de produção que roda o Node em modo cluster em todos os núcleos com recarga sem downtime.",
+        "Pacote para agendar tarefas cron dentro de uma aplicação Node usando um arquivo de configuração.",
+        "Gerenciador de processos de produção com clustering."
+      ]
+    },
+    {
+      "id": 30,
+      "level": "basic",
+      "question": "Como estruturar um projeto Express?",
+      "correctAnswer": "Camadas como routes, controllers, services, models/repositories e middlewares, separando responsabilidades.",
+      "wrongAnswers": [
+        "Tudo em um único index.js com rotas, consultas SQL e regras de negócio, que é o padrão recomendado para o Express.",
+        "Uma pasta por método HTTP, como get, post e put, em que cada arquivo mistura o handler e as consultas ao banco.",
+        "Uma pasta por método HTTP (get, post, put)."
+      ]
+    },
+    {
+      "id": 31,
+      "level": "basic",
+      "question": "O que é o padrão MVC?",
+      "correctAnswer": "Separa Model (dados), View (interface) e Controller (lógica de entrada); em APIs, a \"view\" costuma ser o JSON.",
+      "wrongAnswers": [
+        "Module, Variable e Class: convenção de nomes JavaScript para organizar arquivos em projetos Node.",
+        "Model, Validation e Cache: padrão de banco para validar e fazer cache de registros antes de salvar.",
+        "Multiple Virtual Containers: arquitetura do Docker."
+      ]
+    },
+    {
+      "id": 32,
+      "level": "basic",
+      "question": "O que é HTTPS e por que importa?",
+      "correctAnswer": "HTTP sobre TLS, criptografa o tráfego e garante integridade e autenticidade do servidor.",
+      "wrongAnswers": [
+        "Versão mais rápida do HTTP que comprime toda resposta automaticamente e faz cache no navegador.",
+        "Variante do HTTP que só funciona na porta 80 e adiciona autenticação de usuário por cabeçalhos.",
+        "HTTP com autenticação de usuário embutida."
+      ]
+    },
+    {
+      "id": 33,
+      "level": "basic",
+      "question": "Como tratar erros em Express?",
+      "correctAnswer": "Com middleware de erro (err, req, res, next) ao final da cadeia, e try/catch (ou wrappers) em handlers assíncronos.",
+      "wrongAnswers": [
+        "O Express captura todos os erros assíncronos automaticamente em toda versão, então nada é necessário.",
+        "Com process.exit(1) dentro de cada rota.",
+        "Com window.onerror no servidor."
+      ]
+    },
+    {
+      "id": 34,
+      "level": "basic",
+      "question": "O que é validação de entrada e por que fazer no backend?",
+      "correctAnswer": "Garantir que os dados recebidos são válidos e seguros; o frontend pode ser burlado, então a validação do servidor é obrigatória (Zod, Joi).",
+      "wrongAnswers": [
+        "Só é necessária no frontend, já que usuários não conseguem burlar formulários.",
+        "É feita automaticamente pelo banco, então a API não precisa.",
+        "Só é obrigatória em requisições GET."
+      ]
+    },
+    {
+      "id": 35,
+      "level": "intermediate",
+      "question": "Como funciona o Event Loop do Node.js?",
+      "correctAnswer": "Processa fases (timers, pending, poll, check, close), com microtasks (process.nextTick, Promises) entre elas, garantindo I/O não bloqueante.",
+      "wrongAnswers": [
+        "Executa todo callback na ordem exata em que foi registrado, sem fases nem microtasks, até a fila esvaziar.",
+        "Cria uma thread do SO por requisição recebida e executa os callbacks na ordem em que foram registrados, sem fases nem microtasks, unindo as threads quando as respostas são enviadas.",
+        "Cria uma thread por requisição e as processa em paralelo."
+      ]
+    },
+    {
+      "id": 36,
+      "level": "intermediate",
+      "question": "Como evitar bloquear o event loop?",
+      "correctAnswer": "Evitar operações síncronas pesadas, mover CPU intensiva para worker threads ou serviços/filas e usar streams para grandes dados.",
+      "wrongAnswers": [
+        "Usar métodos síncronos de fs e crypto, que são mais rápidos que os assíncronos e liberam o event loop mais cedo.",
+        "Envolver código pesado de CPU em uma Promise, que move o processamento automaticamente para outra thread do pool do libuv.",
+        "Aumentar o tamanho do heap do Node."
+      ]
+    },
+    {
+      "id": 37,
+      "level": "intermediate",
+      "question": "O que são streams no Node?",
+      "correctAnswer": "Interfaces para processar dados em partes (leitura, escrita, transformação), economizando memória em arquivos e respostas grandes.",
+      "wrongAnswers": [
+        "APIs de transmissão de áudio e vídeo ao vivo usadas para construir plataformas de streaming no Node.",
+        "Arrays que carregam todos os dados na memória de uma vez e os expõem por um iterador.",
+        "Event listeners para entrada de teclado."
+      ]
+    },
+    {
+      "id": 38,
+      "level": "intermediate",
+      "question": "O que é cluster/worker threads?",
+      "correctAnswer": "cluster cria processos para usar vários núcleos; worker_threads executa JS em threads separadas para CPU intensiva.",
+      "wrongAnswers": [
+        "cluster executa JavaScript em threads separadas que compartilham memória, enquanto worker_threads cria processos com memória própria.",
+        "Ambos são pools de conexões que distribuem consultas entre vários servidores de banco para balancear carga.",
+        "São APIs do navegador indisponíveis no Node."
+      ]
+    },
+    {
+      "id": 39,
+      "level": "intermediate",
+      "question": "Como implementar autenticação com JWT em React + Node?",
+      "correctAnswer": "Login valida credenciais e emite token (access curto + refresh); o cliente o envia (preferencialmente cookie httpOnly); middleware verifica a assinatura e injeta o usuário.",
+      "wrongAnswers": [
+        "O frontend gera e assina o JWT com uma chave embutida no bundle, e o backend confia em qualquer token recebido sem verificar a assinatura.",
+        "Incluir a senha do usuário no payload do JWT e compará-la com o banco em toda requisição, usando tokens que nunca expiram.",
+        "Guardar a senha do usuário no JWT e verificá-la em cada requisição."
+      ]
+    },
+    {
+      "id": 40,
+      "level": "intermediate",
+      "question": "Onde armazenar o token no frontend?",
+      "correctAnswer": "Preferencialmente em cookies httpOnly + Secure + SameSite, que mitigam XSS; localStorage é vulnerável a roubo por XSS.",
+      "wrongAnswers": [
+        "No localStorage, que fica isolado dos scripts da página e por isso é imune a XSS, ou na query string da URL para ser enviado automaticamente em toda requisição.",
+        "No localStorage, que é imune a XSS.",
+        "Em uma variável JavaScript global compartilhada com todos os scripts."
+      ]
+    },
+    {
+      "id": 41,
+      "level": "intermediate",
+      "question": "O que é refresh token e rotação?",
+      "correctAnswer": "Token de longa duração usado para obter novos access tokens; a rotação o substitui a cada uso, detectando reutilização indevida.",
+      "wrongAnswers": [
+        "Token de curta duração enviado em toda requisição no lugar do access token e rotacionado pelo cliente a cada poucos segundos, ou um cron job que rotaciona senhas do banco toda noite.",
+        "Token que recarrega a página automaticamente.",
+        "Tarefa cron que rotaciona senhas do banco."
+      ]
+    },
+    {
+      "id": 42,
+      "level": "intermediate",
+      "question": "Como implementar rotas protegidas no React?",
+      "correctAnswer": "Um componente ProtectedRoute verifica a sessão e redireciona ao login; o backend sempre revalida, pois o frontend não é confiável.",
+      "wrongAnswers": [
+        "Esconder os links das rotas protegidas no menu; o backend não precisa verificar nada porque usuários não digitam URLs.",
+        "Verificar uma flag booleana no localStorage antes de renderizar a rota, o que basta para proteger os dados retornados pela API.",
+        "Usar CSS para esconder páginas protegidas."
+      ]
+    },
+    {
+      "id": 43,
+      "level": "intermediate",
+      "question": "Como implementar autorização por papéis (RBAC)?",
+      "correctAnswer": "Associar papéis/permissões ao usuário e verificar em middleware por rota ou recurso no servidor.",
+      "wrongAnswers": [
+        "Guardar papéis no JWT e lê-los no servidor sem nunca verificar a assinatura do token.",
+        "Verificar papéis apenas nos componentes React.",
+        "Dar admin a todos e restringir na interface."
+      ]
+    },
+    {
+      "id": 44,
+      "level": "intermediate",
+      "question": "O que é Prisma e quais suas vantagens?",
+      "correctAnswer": "ORM TypeScript-first com schema declarativo, migrations, cliente tipado e boa experiência de desenvolvimento.",
+      "wrongAnswers": [
+        "Banco NoSQL de documentos escrito em Rust que guarda JSON e substitui o PostgreSQL, oferecendo também logs estruturados com níveis e correlação de requisições para aplicações Node.",
+        "Banco NoSQL escrito em Rust.",
+        "Biblioteca de gerenciamento de estado do React."
+      ]
+    },
+    {
+      "id": 45,
+      "level": "intermediate",
+      "question": "O que são migrations?",
+      "correctAnswer": "Scripts versionados que evoluem o esquema do banco de forma controlada e reprodutível.",
+      "wrongAnswers": [
+        "O processo de mover uma aplicação de um provedor de nuvem para outro, incluindo DNS e armazenamento.",
+        "Scripts que copiam dados de produção para staging automaticamente toda noite para testes.",
+        "Backups do banco feitos todas as noites."
+      ]
+    },
+    {
+      "id": 46,
+      "level": "intermediate",
+      "question": "O que é o problema N+1?",
+      "correctAnswer": "Executar uma consulta por item de uma lista em vez de uma consulta agregada; resolve-se com include/join, batching ou DataLoader.",
+      "wrongAnswers": [
+        "Ter uma instância de servidor a mais do que o necessário em produção, desperdiçando recursos mas melhorando a disponibilidade.",
+        "Bug de paginação em que cada página retorna um item a mais, causando duplicados quando o usuário rola.",
+        "Ter uma instância de servidor a mais do que o necessário, ou um bug de paginação que retorna um item a mais por página; resolve-se removendo uma instância ou subtraindo um do limite."
+      ]
+    },
+    {
+      "id": 47,
+      "level": "intermediate",
+      "question": "O que são índices no banco e quando usá-los?",
+      "correctAnswer": "Estruturas que aceleram buscas em colunas consultadas com frequência, com custo em escrita e espaço.",
+      "wrongAnswers": [
+        "Chaves primárias que devem ser definidas em toda coluna de toda tabela para garantir unicidade dos valores.",
+        "Estruturas que aceleram inserts e updates e reduzem uso de disco, então devem ser adicionadas a toda coluna.",
+        "Listas de todas as tabelas do banco."
+      ]
+    },
+    {
+      "id": 48,
+      "level": "intermediate",
+      "question": "O que são transações?",
+      "correctAnswer": "Conjunto de operações atômicas (ACID): ou todas são aplicadas ou nenhuma.",
+      "wrongAnswers": [
+        "Operações de pagamento processadas por um gateway externo e registradas no banco para contabilidade.",
+        "Operações que rodam em paralelo sem garantias de consistência para maximizar a vazão.",
+        "Log de toda query executada."
+      ]
+    },
+    {
+      "id": 49,
+      "level": "intermediate",
+      "question": "O que é paginação e quais tipos existem?",
+      "correctAnswer": "Divide resultados em partes: offset/limit (simples, ruim em grandes volumes) e cursor-based (mais eficiente e estável).",
+      "wrongAnswers": [
+        "Dividir o frontend em várias páginas; os tipos são single-page applications e multi-page applications.",
+        "Offset/limit é o mais eficiente para grandes volumes, enquanto paginação por cursor só funciona em tabelas pequenas.",
+        "Comprimir respostas grandes; tipos: gzip e brotli."
+      ]
+    },
+    {
+      "id": 50,
+      "level": "intermediate",
+      "question": "O que é o TanStack Query e por que usar com uma API Node?",
+      "correctAnswer": "Gerencia cache, loading, erros, revalidação e mutações do estado do servidor no React, eliminando useEffect manual.",
+      "wrongAnswers": [
+        "Biblioteca Node para executar consultas SQL com cache, usada em route handlers do Express.",
+        "ORM que permite a componentes React consultar o banco direto do navegador, substituindo a API Node, com cache embutido de resultados SQL e novas tentativas automáticas em caso de falha.",
+        "ORM para consultar o banco a partir do React."
+      ]
+    },
+    {
+      "id": 51,
+      "level": "intermediate",
+      "question": "Como compartilhar tipos entre frontend e backend?",
+      "correctAnswer": "Monorepo com pacote de tipos/schemas (Zod) compartilhado, ou geração a partir de OpenAPI/tRPC.",
+      "wrongAnswers": [
+        "Copiar e colar manualmente arquivos de tipos entre os repositórios de frontend e backend após cada mudança.",
+        "Tipos não podem ser compartilhados entre frontend e backend porque rodam em ambientes diferentes, então use any em tudo.",
+        "Usar any em todo lugar para evitar divergências."
+      ]
+    },
+    {
+      "id": 52,
+      "level": "intermediate",
+      "question": "O que é tRPC?",
+      "correctAnswer": "Biblioteca que permite chamar funções do servidor com tipagem ponta a ponta em TypeScript, sem schema ou geração de código.",
+      "wrongAnswers": [
+        "Implementação de servidor GraphQL que exige arquivo de schema e gera clientes TypeScript a partir dele.",
+        "Protocolo RPC binário usado pelo gRPC, baseado em Protocol Buffers e HTTP/2.",
+        "Cliente REST para Python."
+      ]
+    },
+    {
+      "id": 53,
+      "level": "intermediate",
+      "question": "O que é GraphQL e quando usar?",
+      "correctAnswer": "Linguagem de consulta que permite ao cliente pedir exatamente os dados necessários; útil com muitos clientes e dados relacionados, com mais complexidade que REST.",
+      "wrongAnswers": [
+        "Banco de dados em grafo para guardar nós e relacionamentos, usado para modelar redes sociais e recomendações.",
+        "Substituto do REST sempre mais simples que o REST e que deve ser usado em todo projeto, independentemente dos clientes.",
+        "Biblioteca de gráficos para dashboards."
+      ]
+    },
+    {
+      "id": 54,
+      "level": "intermediate",
+      "question": "Como versionar uma API REST?",
+      "correctAnswer": "Por prefixo (/v1/), cabeçalhos ou media types, evitando quebrar clientes existentes.",
+      "wrongAnswers": [
+        "Versionar é desnecessário; basta mudar a API e os clientes se adaptam automaticamente ao novo formato.",
+        "Mudando a porta do servidor a cada versão.",
+        "Renomeando o domínio a cada release."
+      ]
+    },
+    {
+      "id": 55,
+      "level": "intermediate",
+      "question": "O que é rate limiting e como aplicar?",
+      "correctAnswer": "Limitar o número de requisições por cliente/IP em um intervalo (express-rate-limit, Redis), mitigando abuso e DoS.",
+      "wrongAnswers": [
+        "Limitar o tamanho do corpo das requisições e adicionar atrasos artificiais em toda resposta para uploads grandes e clientes rápidos não consumirem memória ou banda demais no servidor.",
+        "Limitar apenas o tamanho do corpo das requisições.",
+        "Limitar a velocidade de resposta do servidor para evitar sobrecarga."
+      ]
+    },
+    {
+      "id": 56,
+      "level": "intermediate",
+      "question": "O que é Helmet?",
+      "correctAnswer": "Middleware que define cabeçalhos HTTP de segurança no Express.",
+      "wrongAnswers": [
+        "Biblioteca de autenticação do Node que implementa estratégias de login como OAuth e JWT.",
+        "Componente React para gerenciar o título do documento e as meta tags de cada página.",
+        "Ferramenta para criptografar o banco."
+      ]
+    },
+    {
+      "id": 57,
+      "level": "intermediate",
+      "question": "Como prevenir SQL Injection?",
+      "correctAnswer": "Usando queries parametrizadas/ORM e nunca concatenando entrada do usuário em SQL.",
+      "wrongAnswers": [
+        "Escapar aspas simples no frontend antes de enviar os dados, o que torna seguro concatenar os valores no SQL do backend.",
+        "Esconder as mensagens de erro do banco nas respostas da API, o que impede atacantes de injetar SQL pelos campos.",
+        "Escapar aspas simples apenas no frontend."
+      ]
+    },
+    {
+      "id": 58,
+      "level": "intermediate",
+      "question": "Como prevenir XSS?",
+      "correctAnswer": "React escapa por padrão; evite dangerouslySetInnerHTML, sanitize HTML (DOMPurify), use CSP e cookies httpOnly.",
+      "wrongAnswers": [
+        "Guardar tokens de autenticação no localStorage em vez de cookies, o que impede scripts de acessá-los.",
+        "Usar dangerouslySetInnerHTML para todo conteúdo do usuário.",
+        "Desativar HTTPS em desenvolvimento e produção."
+      ]
+    },
+    {
+      "id": 59,
+      "level": "intermediate",
+      "question": "O que é CSRF e como se proteger?",
+      "correctAnswer": "Requisição forjada usando a sessão do usuário; use cookies SameSite, tokens CSRF e verificação de origem.",
+      "wrongAnswers": [
+        "Injeção de scripts nas páginas por entradas do usuário; proteja-se com DOMPurify e Content Security Policy.",
+        "Deadlock no banco causado por requisições concorrentes; proteja-se envolvendo toda consulta em uma transação.",
+        "Deadlock no banco; proteja com transações."
+      ]
+    },
+    {
+      "id": 60,
+      "level": "intermediate",
+      "question": "Como fazer upload de arquivos com React + Node?",
+      "correctAnswer": "FormData no frontend e multer (ou URL pré-assinada para S3) no backend, validando tipo e tamanho.",
+      "wrongAnswers": [
+        "Enviar ao servidor o caminho do arquivo no computador do usuário, que então lê o arquivo direto do disco do usuário.",
+        "Converter arquivos em strings JSON e enviá-los na URL.",
+        "Usar o localStorage para transferir arquivos ao servidor."
+      ]
+    },
+    {
+      "id": 61,
+      "level": "intermediate",
+      "question": "O que é WebSocket e quando usar?",
+      "correctAnswer": "Comunicação bidirecional persistente (Socket.IO/ws), útil para chats, notificações e dados em tempo real.",
+      "wrongAnswers": [
+        "Variante segura do REST usada exclusivamente para processamento de pagamentos entre bancos.",
+        "Requisição HTTP unidirecional que fecha logo após a resposta, usada para baixar arquivos grandes e para processamento de pagamentos entre bancos com segurança maior que REST.",
+        "Requisição HTTP unidirecional que fecha após a resposta."
+      ]
+    },
+    {
+      "id": 62,
+      "level": "intermediate",
+      "question": "Como testar a API Node?",
+      "correctAnswer": "Com Jest/Vitest e Supertest para endpoints, bancos em memória ou containers de teste e mocks de serviços externos.",
+      "wrongAnswers": [
+        "Apenas chamando os endpoints manualmente com Postman em produção após cada deploy, ou com React Testing Library, que renderiza rotas da API e verifica o JSON na tela.",
+        "Com React Testing Library.",
+        "APIs Node não podem ser testadas automaticamente."
+      ]
+    },
+    {
+      "id": 63,
+      "level": "intermediate",
+      "question": "Como testar o frontend e a integração?",
+      "correctAnswer": "React Testing Library para componentes, MSW para simular a API e Playwright/Cypress para fluxos E2E.",
+      "wrongAnswers": [
+        "Supertest para componentes React e Jest para fluxos end-to-end em um navegador real.",
+        "Testar apenas o backend, já que bugs de frontend são cosméticos e não afetam os usuários.",
+        "Apenas testes manuais no navegador."
+      ]
+    },
+    {
+      "id": 64,
+      "level": "intermediate",
+      "question": "O que é Docker e por que usar?",
+      "correctAnswer": "Containers empacotam app e dependências, garantindo consistência entre ambientes; usa-se Dockerfile e docker-compose para app + banco.",
+      "wrongAnswers": [
+        "Hypervisor que emula hardware completo e roda um sistema operacional convidado para cada aplicação, funcionando também como alternativa ao npm que instala dependências em pastas isoladas.",
+        "Hypervisor de máquinas virtuais que emula hardware completo para cada app.",
+        "Gerenciador de pacotes Node alternativo ao npm."
+      ]
+    },
+    {
+      "id": 65,
+      "level": "intermediate",
+      "question": "O que é CI/CD para esse stack?",
+      "correctAnswer": "Pipeline (GitHub Actions) que roda lint, testes e build a cada push e faz deploy automático nas branches certas.",
+      "wrongAnswers": [
+        "Plugin de editor que formata arquivos e roda testes sempre que são salvos localmente.",
+        "Checklist manual executado pelo time antes de cada release, aprovando resultados de lint e testes, complementado por um plugin de editor que formata arquivos e roda testes ao salvar.",
+        "Checklist manual executado antes de cada release."
+      ]
+    },
+    {
+      "id": 66,
+      "level": "intermediate",
+      "question": "Como logar corretamente em Node?",
+      "correctAnswer": "Logs estruturados em JSON com níveis (pino/winston), correlação por request ID e sem dados sensíveis.",
+      "wrongAnswers": [
+        "console.log de tudo, incluindo senhas e tokens, para facilitar a depuração, e desativar todos os logs em produção para melhorar a performance e não guardar dados de requisições.",
+        "Escrever logs apenas no console do navegador.",
+        "Desativar logs em produção para melhorar a performance."
+      ]
+    },
+    {
+      "id": 67,
+      "level": "intermediate",
+      "question": "O que é graceful shutdown?",
+      "correctAnswer": "Encerrar o servidor ao receber SIGTERM concluindo requisições em andamento e fechando conexões (banco, filas).",
+      "wrongAnswers": [
+        "Matar o processo imediatamente com SIGKILL para liberar memória o mais rápido possível.",
+        "Mostrar uma página de erro amigável aos usuários quando o servidor cai inesperadamente.",
+        "Reiniciar o servidor toda noite."
+      ]
+    },
+    {
+      "id": 68,
+      "level": "advanced",
+      "question": "Como projetaria uma arquitetura escalável para React + Node?",
+      "correctAnswer": "Frontend em CDN, backend stateless atrás de load balancer, cache (Redis), banco com réplicas de leitura, filas para tarefas assíncronas e observabilidade.",
+      "wrongAnswers": [
+        "Um único servidor potente rodando frontend, backend e banco juntos, guardando sessões em memória do processo por velocidade.",
+        "Backend com estado em que cada instância guarda suas sessões em memória, com roteamento fixo e sem camada de cache.",
+        "Servir o app React a partir do banco de dados."
+      ]
+    },
+    {
+      "id": 69,
+      "level": "advanced",
+      "question": "Como escalar o Node horizontalmente?",
+      "correctAnswer": "Múltiplas instâncias stateless atrás de balanceador, sessões externas (Redis/JWT) e autoscaling baseado em CPU/latência.",
+      "wrongAnswers": [
+        "Aumentar indefinidamente CPU e memória de um único servidor, que é a definição de escala horizontal.",
+        "Aumentar continuamente CPU e memória de um único servidor, ou rodar várias instâncias que guardam sessões na memória do próprio processo, sem balanceador na frente.",
+        "Aumentar indefinidamente a CPU de um único servidor."
+      ]
+    },
+    {
+      "id": 70,
+      "level": "advanced",
+      "question": "Como projetar uma API idempotente?",
+      "correctAnswer": "Usar chaves de idempotência (Idempotency-Key) em POSTs críticos como pagamentos, armazenando o resultado da primeira execução.",
+      "wrongAnswers": [
+        "Usar apenas requisições GET em toda operação, inclusive pagamentos, porque GET é idempotente por definição, e rejeitar qualquer requisição repetida com erro 500.",
+        "Usar apenas requisições GET em toda operação.",
+        "Repetir toda requisição automaticamente no cliente, sem chaves."
+      ]
+    },
+    {
+      "id": 71,
+      "level": "advanced",
+      "question": "Quando usar filas (BullMQ, RabbitMQ, SQS)?",
+      "correctAnswer": "Para tarefas demoradas ou falhas toleráveis (e-mails, relatórios, integrações), desacoplando e permitindo retries e escala de workers.",
+      "wrongAnswers": [
+        "Apenas para guardar sessões e tokens de autenticação entre requisições em um sistema distribuído.",
+        "Para toda requisição, inclusive leituras simples, porque filas sempre reduzem a latência em relação ao processamento direto; também são usadas para guardar sessões entre requisições.",
+        "Apenas quando o banco está fora do ar."
+      ]
+    },
+    {
+      "id": 72,
+      "level": "advanced",
+      "question": "Como implementar cache em múltiplas camadas?",
+      "correctAnswer": "Cache de CDN, HTTP (Cache-Control, ETag), cache de aplicação (Redis) e cache do cliente (React Query), com invalidação definida.",
+      "wrongAnswers": [
+        "Usar apenas o localStorage do navegador, que cobre automaticamente todas as camadas, da CDN ao banco.",
+        "Fazer cache de toda resposta para sempre sem estratégia de invalidação, confiando nos deploys para limpar dados velhos.",
+        "Usar apenas cache de consultas do banco."
+      ]
+    },
+    {
+      "id": 73,
+      "level": "advanced",
+      "question": "Como lidar com invalidação de cache?",
+      "correctAnswer": "TTL, invalidação por evento/tag e estratégias como write-through ou cache-aside; evitar inconsistências com chaves bem planejadas.",
+      "wrongAnswers": [
+        "Nunca invalidar entradas; reiniciar o servidor de cache sempre que usuários reportarem dados desatualizados.",
+        "Limpar todo o cache a cada requisição para os dados servidos estarem sempre consistentes com o banco.",
+        "Usar chaves aleatórias para entradas nunca colidirem."
+      ]
+    },
+    {
+      "id": 74,
+      "level": "advanced",
+      "question": "Como projetar um sistema de autenticação robusto?",
+      "correctAnswer": "OAuth2/OIDC, MFA, refresh rotation, revogação de sessões, rate limit em login, auditoria e armazenamento seguro de segredos.",
+      "wrongAnswers": [
+        "Guardar usuários e senhas em texto puro para facilitar a recuperação e emitir tokens longos que nunca expiram, por conveniência.",
+        "Usuário e senha em texto puro para facilitar a recuperação.",
+        "Autenticação apenas no frontend."
+      ]
+    },
+    {
+      "id": 75,
+      "level": "advanced",
+      "question": "Como implementar OAuth/Login social?",
+      "correctAnswer": "Fluxo Authorization Code com PKCE; o backend troca o código por tokens, cria a sessão e nunca expõe o client secret ao frontend.",
+      "wrongAnswers": [
+        "Pedir a senha do Google ou GitHub no seu próprio formulário e fazer login no provedor em nome do usuário pelo backend.",
+        "Usar o fluxo implícito com o client secret embutido no bundle React para o frontend trocar códigos por tokens, guardando o access token do provedor na URL para requisições futuras.",
+        "Guardar o access token do provedor na URL."
+      ]
+    },
+    {
+      "id": 76,
+      "level": "advanced",
+      "question": "Como lidar com concorrência e race conditions no banco?",
+      "correctAnswer": "Transações com níveis de isolamento adequados, locks otimistas (versão) ou pessimistas e constraints únicas.",
+      "wrongAnswers": [
+        "Adicionar setTimeout entre escritas para evitar colisões.",
+        "Usar uma única variável global como lock entre instâncias.",
+        "Ignorar, já que bancos serializam tudo automaticamente."
+      ]
+    },
+    {
+      "id": 77,
+      "level": "advanced",
+      "question": "O que é o padrão Repository e Service Layer?",
+      "correctAnswer": "Repository isola o acesso a dados; Service concentra regras de negócio; facilita testes e troca de tecnologias.",
+      "wrongAnswers": [
+        "Repository contém as regras de negócio e Service trata roteamento HTTP e parsing; ambos são conceitos do Git usados para organizar código em repositórios e serviços para deploy.",
+        "Ambos são conceitos do Git para organizar código.",
+        "Service acessa o banco diretamente e Repository renderiza views."
+      ]
+    },
+    {
+      "id": 78,
+      "level": "advanced",
+      "question": "O que é Clean/Hexagonal Architecture?",
+      "correctAnswer": "Organização em camadas com dependências apontando para o domínio, isolando regras de negócio de frameworks e infraestrutura.",
+      "wrongAnswers": [
+        "Arquitetura em que a camada de domínio depende diretamente do banco e do framework web para reduzir indireções.",
+        "Arquitetura CSS para construir layouts limpos em formato de hexágono com espaçamento consistente.",
+        "Estratégia de deploy com racks de servidores hexagonais."
+      ]
+    },
+    {
+      "id": 79,
+      "level": "advanced",
+      "question": "O que é microservices vs monolito modular?",
+      "correctAnswer": "Microservices separam serviços implantáveis independentemente, com custo operacional; monolito modular mantém um deploy com módulos bem delimitados, geralmente melhor ponto de partida.",
+      "wrongAnswers": [
+        "Monolito modular é sempre mais difícil de manter que microservices, então microservices devem ser o ponto de partida de qualquer produto novo.",
+        "Monolito modular publica cada módulo de forma independente com banco próprio, enquanto microservices compartilham um banco e um único deploy; microservices são sempre o melhor ponto de partida.",
+        "Microservices compartilham um banco e um único deploy."
+      ]
+    },
+    {
+      "id": 80,
+      "level": "advanced",
+      "question": "Como garantir consistência entre serviços?",
+      "correctAnswer": "Eventos e padrões como Saga/Outbox, idempotência e consistência eventual em vez de transações distribuídas.",
+      "wrongAnswers": [
+        "Usar two-phase commit entre todos os serviços em cada requisição, ou deixar cada serviço gravar direto nas tabelas dos outros, garantindo consistência forte o tempo todo.",
+        "Usar um único lock global entre todos os serviços.",
+        "Usar two-phase commit em toda requisição."
+      ]
+    },
+    {
+      "id": 81,
+      "level": "advanced",
+      "question": "Como observar e depurar produção?",
+      "correctAnswer": "Logs estruturados, métricas (Prometheus/Grafana), tracing distribuído (OpenTelemetry), alertas e monitoramento de erros (Sentry).",
+      "wrongAnswers": [
+        "Acessar os servidores de produção via SSH e adicionar console.log no código sempre que um problema é reportado.",
+        "Esperar os usuários reportarem problemas em chamados de suporte e reproduzi-los localmente.",
+        "Rodar o debugger conectado à produção o tempo todo."
+      ]
+    },
+    {
+      "id": 82,
+      "level": "advanced",
+      "question": "Como diagnosticar vazamento de memória em Node?",
+      "correctAnswer": "Usar --inspect, heap snapshots no Chrome DevTools, clinic.js e checar listeners, caches ilimitados e closures retendo referências.",
+      "wrongAnswers": [
+        "Reiniciar o servidor a cada hora com um cron job, o que corrige o vazamento permanentemente ao limpar a memória.",
+        "Aumentar --max-old-space-size até o processo parar de cair, já que vazamentos são causados por limites baixos de memória, e reiniciar o servidor a cada hora com um cron job para limpar a memória.",
+        "Trocar const por let."
+      ]
+    },
+    {
+      "id": 83,
+      "level": "advanced",
+      "question": "Como otimizar performance de uma API Node?",
+      "correctAnswer": "Reduzir consultas e payloads, índices, cache, compressão, paginação, connection pooling e profiling (flamegraphs).",
+      "wrongAnswers": [
+        "Retornar todos os registros em cada resposta para evitar chamadas extras e abrir uma nova conexão por consulta.",
+        "Usar leituras de arquivo síncronas e desativar compressão, já que ambas reduzem o uso de CPU no servidor.",
+        "Usar leituras de arquivo síncronas para ganhar velocidade."
+      ]
+    },
+    {
+      "id": 84,
+      "level": "advanced",
+      "question": "O que é connection pooling?",
+      "correctAnswer": "Reutilizar um conjunto limitado de conexões ao banco, evitando o custo de abri-las e sobrecarregá-lo.",
+      "wrongAnswers": [
+        "Abrir uma nova conexão com o banco para cada consulta e fechá-la logo depois, ou compartilhar uma única conexão entre todos os usuários, sem limite nem fila.",
+        "Abrir uma nova conexão para cada consulta.",
+        "Compartilhar uma conexão entre todos os usuários sem limites."
+      ]
+    },
+    {
+      "id": 85,
+      "level": "advanced",
+      "question": "Como lidar com validação e contratos de API?",
+      "correctAnswer": "Schemas compartilhados (Zod/OpenAPI), geração de clientes tipados, testes de contrato e versionamento cuidadoso.",
+      "wrongAnswers": [
+        "Confiar na documentação de uma wiki atualizada manualmente por quem muda os endpoints.",
+        "Mudar o formato das respostas livremente, já que os clientes devem se adaptar ao que a API retorna.",
+        "Validar apenas no frontend."
+      ]
+    },
+    {
+      "id": 86,
+      "level": "advanced",
+      "question": "Como implementar paginação infinita no React com API Node?",
+      "correctAnswer": "Cursor no backend e useInfiniteQuery no frontend, com IntersectionObserver para carregar mais itens.",
+      "wrongAnswers": [
+        "Buscar a tabela inteira uma vez e fatiar no navegador.",
+        "Usar offset com números de página e setInterval para carregar mais.",
+        "Recarregar a página com limite maior a cada rolagem."
+      ]
+    },
+    {
+      "id": 87,
+      "level": "advanced",
+      "question": "Como implementar atualizações otimistas?",
+      "correctAnswer": "Atualizar a UI imediatamente (React Query onMutate ou useOptimistic), reverter em caso de erro e revalidar ao concluir.",
+      "wrongAnswers": [
+        "Aguardar a resposta do servidor antes de atualizar a interface, mostrando um spinner até terminar.",
+        "Atualizar a interface imediatamente e nunca reconciliar com o servidor, mesmo se a requisição falhar.",
+        "Desativar o botão até a página recarregar."
+      ]
+    },
+    {
+      "id": 88,
+      "level": "advanced",
+      "question": "Como evitar re-renders e lentidão em apps React grandes?",
+      "correctAnswer": "Dividir estado, memoização seletiva, virtualização de listas, code splitting e medir com Profiler.",
+      "wrongAnswers": [
+        "Renderizar todos os itens de listas grandes de uma vez para a rolagem nunca precisar montar novos componentes.",
+        "Colocar todo o estado em um único contexto no topo.",
+        "Envolver todo componente em React.memo sem medir."
+      ]
+    },
+    {
+      "id": 89,
+      "level": "advanced",
+      "question": "Como funciona deploy sem downtime?",
+      "correctAnswer": "Estratégias blue/green ou rolling, health checks, migrações compatíveis em duas fases (expand/contract) e feature flags.",
+      "wrongAnswers": [
+        "Rodar migrações destrutivas no banco antes de publicar o novo código para a versão antiga falhar rápido.",
+        "Parar todos os servidores de uma vez, rodar migrações destrutivas, publicar a nova versão e iniciar tudo novamente o mais rápido possível em horários de pouco tráfego.",
+        "Publicar apenas à noite, quando não há usuários."
+      ]
+    },
+    {
+      "id": 90,
+      "level": "advanced",
+      "question": "Como fazer migrações de banco seguras?",
+      "correctAnswer": "Alterações retrocompatíveis em etapas, executar em baixa carga, backups e rollback planejado.",
+      "wrongAnswers": [
+        "Apagar e recriar as tabelas afetadas em um único deploy, restaurando os dados do último backup depois.",
+        "Rodar migrações em horário de pico para os problemas serem detectados mais rápido pelo maior número de usuários.",
+        "Editar tabelas de produção manualmente, sem scripts."
+      ]
+    },
+    {
+      "id": 91,
+      "level": "advanced",
+      "question": "Como proteger segredos e dependências?",
+      "correctAnswer": "Gerenciadores de segredos, rotação de chaves, npm audit/Dependabot, lockfiles e revisão de pacotes (supply chain).",
+      "wrongAnswers": [
+        "Commitar segredos em repositório privado e nunca atualizar dependências.",
+        "Usar a versão mais recente de todo pacote, sem lockfile.",
+        "Compartilhar segredos no chat do time por conveniência."
+      ]
+    },
+    {
+      "id": 92,
+      "level": "advanced",
+      "question": "Como lidar com LGPD/GDPR na aplicação?",
+      "correctAnswer": "Minimizar dados, consentimento, direito de acesso e exclusão, criptografia, logs sem dados pessoais e registros de tratamento.",
+      "wrongAnswers": [
+        "Coletar o máximo de dados pessoais possível caso se tornem úteis depois e guardá-los indefinidamente.",
+        "Registrar todo dado pessoal em logs para auditoria, já que logs são isentos das regulações de privacidade.",
+        "Registrar todos os dados pessoais em logs para auditoria."
+      ]
+    },
+    {
+      "id": 93,
+      "level": "advanced",
+      "question": "Como projetar uma API para processar pagamentos?",
+      "correctAnswer": "Integrar gateway (Stripe/Mercado Pago), confirmar por webhooks assinados, usar idempotência, nunca guardar dados de cartão e tratar estados assíncronos.",
+      "wrongAnswers": [
+        "Confiar no redirecionamento do frontend para a página de sucesso como confirmação do pagamento, pulando a verificação por webhook.",
+        "Guardar números completos de cartão no banco para compras repetidas mais rápidas.",
+        "Processar cartões diretamente, sem gateway."
+      ]
+    },
+    {
+      "id": 94,
+      "level": "advanced",
+      "question": "Como fazer real-time em escala?",
+      "correctAnswer": "Socket.IO com adaptador Redis, serviços gerenciados (Pusher/Ably) ou SSE; considerar reconexão, backpressure e autenticação.",
+      "wrongAnswers": [
+        "Fazer cada cliente consultar a API a cada 100 milissegundos por atualizações, o que escala linearmente com mais servidores.",
+        "Rodar um único servidor WebSocket sem adaptador e aumentar a memória conforme o número de usuários cresce.",
+        "Consultar a API a cada 100 ms em todo cliente."
+      ]
+    },
+    {
+      "id": 95,
+      "level": "advanced",
+      "question": "Como organizar um monorepo fullstack?",
+      "correctAnswer": "pnpm/Turborepo com apps/web, apps/api e packages/{ui,types,config}, pipeline de build com cache e versionamento compartilhado.",
+      "wrongAnswers": [
+        "Uma pasta por desenvolvedor com sua cópia do código compartilhado, mesclada manualmente antes de cada release, ou repositórios separados com definições de tipos copiadas à mão.",
+        "Uma pasta por desenvolvedor com código duplicado.",
+        "Repositórios separados com tipos copiados."
+      ]
+    },
+    {
+      "id": 96,
+      "level": "advanced",
+      "question": "Como você abordaria a decisão entre REST, GraphQL e tRPC?",
+      "correctAnswer": "REST para APIs públicas e simples, GraphQL para clientes variados com dados relacionados, tRPC para times full TypeScript com controle de ambos os lados.",
+      "wrongAnswers": [
+        "tRPC para APIs públicas consumidas por terceiros em várias linguagens, REST para apps internos só TypeScript e GraphQL para todos os outros casos, já que substitui completamente os outros dois.",
+        "GraphQL para todos os casos, já que substitui os outros completamente.",
+        "Escolher aleatoriamente; não há trade-offs."
+      ]
+    },
+    {
+      "id": 97,
+      "level": "advanced",
+      "question": "Como conduzir code review e liderar tecnicamente?",
+      "correctAnswer": "Foco em clareza, riscos e arquitetura; feedback objetivo e respeitoso, padrões automatizados (lint, testes) e compartilhamento de conhecimento.",
+      "wrongAnswers": [
+        "Focar em preferências pessoais de estilo e rejeitar o que for diferente de como você escreveria, ou aprovar todo pull request rápido sem ler para as revisões nunca atrasarem o time.",
+        "Focar em preferências pessoais de estilo e rejeitar o que for diferente.",
+        "Aprovar tudo rapidamente para não atrasar o time."
+      ]
+    },
+    {
+      "id": 98,
+      "level": "advanced",
+      "question": "Fale sobre um desafio técnico difícil que você resolveu.",
+      "correctAnswer": "Use o método STAR: Situação, Tarefa, Ação e Resultado, com métricas (ex.: reduziu latência em 40%) e aprendizados. Prepare uma história real antes da entrevista.",
+      "wrongAnswers": [
+        "Improvisar uma história hipotética durante a entrevista, vaga e sem números, para não ser questionada em detalhe.",
+        "Listar todas as tecnologias e frameworks usados no projeto, sem explicar o contexto, suas ações ou os resultados.",
+        "Descrever apenas as tecnologias usadas, sem contexto nem resultados."
+      ]
+    },
+    {
+      "id": 99,
+      "level": "advanced",
+      "question": "Como você priorizaria entregas sob prazo apertado?",
+      "correctAnswer": "Alinhar o escopo mínimo de valor (MVP), identificar riscos, comunicar trade-offs ao time/produto e registrar dívida técnica assumida.",
+      "wrongAnswers": [
+        "Entregar tudo de uma vez no fim do prazo, sem checkpoints intermediários nem comunicação sobre riscos.",
+        "Fazer hora extra em silêncio para entregar o escopo completo, pulando testes e code review sem avisar ninguém, e entregar tudo de uma vez no fim, sem checkpoints intermediários.",
+        "Pular testes e code review silenciosamente."
+      ]
+    },
+    {
+      "id": 100,
+      "level": "advanced",
+      "question": "Que perguntas fazer ao entrevistador?",
+      "correctAnswer": "Sobre stack e arquitetura, processo de deploy, cultura de testes e code review, onboarding, métricas de sucesso da função e oportunidades de crescimento.",
+      "wrongAnswers": [
+        "Perguntar só sobre salário, benefícios e férias, evitando temas técnicos ou do time para não parecer despreparado.",
+        "Não fazer nenhuma pergunta, já que perguntar indica que você não pesquisou a empresa antes da entrevista.",
+        "Nenhuma; fazer perguntas mostra falta de preparo."
+      ]
+    }
+  ]
+}

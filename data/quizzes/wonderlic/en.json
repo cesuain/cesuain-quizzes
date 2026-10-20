@@ -1,0 +1,1107 @@
+{
+  "id": "wonderlic",
+  "language": "en",
+  "title": "Wonderlic",
+  "questions": [
+    {
+      "id": 1,
+      "level": "basic",
+      "question": "What number comes next in the series: 2, 4, 6, 8, ?",
+      "correctAnswer": "10",
+      "wrongAnswers": [
+        "12",
+        "9",
+        "16"
+      ]
+    },
+    {
+      "id": 2,
+      "level": "basic",
+      "question": "What number comes next in the series: 3, 6, 12, 24, ?",
+      "correctAnswer": "48",
+      "wrongAnswers": [
+        "36",
+        "30",
+        "42"
+      ]
+    },
+    {
+      "id": 3,
+      "level": "basic",
+      "question": "Which word is the opposite of ANCIENT?",
+      "correctAnswer": "Modern",
+      "wrongAnswers": [
+        "Old",
+        "Antique",
+        "Historic"
+      ]
+    },
+    {
+      "id": 4,
+      "level": "basic",
+      "question": "Pencils cost $0.25 each. How much do 12 pencils cost?",
+      "correctAnswer": "$3.00",
+      "wrongAnswers": [
+        "$2.50",
+        "$3.25",
+        "$2.75"
+      ]
+    },
+    {
+      "id": 5,
+      "level": "basic",
+      "question": "Which word does not belong with the others: Apple, Banana, Carrot, Grape?",
+      "correctAnswer": "Carrot",
+      "wrongAnswers": [
+        "Apple",
+        "Banana",
+        "Grape"
+      ]
+    },
+    {
+      "id": 6,
+      "level": "basic",
+      "question": "If the day after tomorrow is Saturday, what day is today?",
+      "correctAnswer": "Thursday",
+      "wrongAnswers": [
+        "Friday",
+        "Wednesday",
+        "Sunday"
+      ]
+    },
+    {
+      "id": 7,
+      "level": "basic",
+      "question": "HAND is to GLOVE as FOOT is to:",
+      "correctAnswer": "Shoe",
+      "wrongAnswers": [
+        "Toe",
+        "Ankle",
+        "Hat"
+      ]
+    },
+    {
+      "id": 8,
+      "level": "basic",
+      "question": "Which word means the same as RAPID?",
+      "correctAnswer": "Quick",
+      "wrongAnswers": [
+        "Slow",
+        "Steady",
+        "Rare"
+      ]
+    },
+    {
+      "id": 9,
+      "level": "basic",
+      "question": "A train travels at 60 miles per hour. How far does it go in 3 hours?",
+      "correctAnswer": "180 miles",
+      "wrongAnswers": [
+        "120 miles",
+        "200 miles",
+        "160 miles"
+      ]
+    },
+    {
+      "id": 10,
+      "level": "basic",
+      "question": "\"All dogs are animals. Rex is a dog.\" If these statements are true, the conclusion \"Rex is an animal\" is:",
+      "correctAnswer": "True — it follows from the statements",
+      "wrongAnswers": [
+        "False — it contradicts the statements",
+        "Uncertain — the statements are not enough to decide",
+        "Neither — the statements contradict each other"
+      ]
+    },
+    {
+      "id": 11,
+      "level": "basic",
+      "question": "How many months of the year have 31 days?",
+      "correctAnswer": "7",
+      "wrongAnswers": [
+        "6",
+        "5",
+        "8"
+      ]
+    },
+    {
+      "id": 12,
+      "level": "basic",
+      "question": "Which one does not belong with the others: Circle, Square, Triangle, Cube?",
+      "correctAnswer": "Cube",
+      "wrongAnswers": [
+        "Circle",
+        "Square",
+        "Triangle"
+      ]
+    },
+    {
+      "id": 13,
+      "level": "basic",
+      "question": "What number comes next in the series: 5, 10, 15, 20, ?",
+      "correctAnswer": "25",
+      "wrongAnswers": [
+        "30",
+        "24",
+        "22"
+      ]
+    },
+    {
+      "id": 14,
+      "level": "basic",
+      "question": "John is taller than Mike, and Mike is taller than Sam. Who is the shortest?",
+      "correctAnswer": "Sam",
+      "wrongAnswers": [
+        "John",
+        "Mike",
+        "It cannot be determined"
+      ]
+    },
+    {
+      "id": 15,
+      "level": "basic",
+      "question": "Which word is the opposite of GENEROUS?",
+      "correctAnswer": "Stingy",
+      "wrongAnswers": [
+        "Kind",
+        "Wealthy",
+        "Humble"
+      ]
+    },
+    {
+      "id": 16,
+      "level": "basic",
+      "question": "A shirt costs $20 and is on sale for 25% off. What is the sale price?",
+      "correctAnswer": "$15",
+      "wrongAnswers": [
+        "$5",
+        "$16",
+        "$18"
+      ]
+    },
+    {
+      "id": 17,
+      "level": "basic",
+      "question": "Which of these numbers is the largest?",
+      "correctAnswer": "0.7",
+      "wrongAnswers": [
+        "0.65",
+        "0.077",
+        "0.69"
+      ]
+    },
+    {
+      "id": 18,
+      "level": "basic",
+      "question": "BOOK is to READ as FORK is to:",
+      "correctAnswer": "Eat",
+      "wrongAnswers": [
+        "Kitchen",
+        "Spoon",
+        "Metal"
+      ]
+    },
+    {
+      "id": 19,
+      "level": "basic",
+      "question": "What letter comes next in the series: A, C, E, G, ?",
+      "correctAnswer": "I",
+      "wrongAnswers": [
+        "H",
+        "J",
+        "K"
+      ]
+    },
+    {
+      "id": 20,
+      "level": "basic",
+      "question": "How many minutes are there in 2.5 hours?",
+      "correctAnswer": "150",
+      "wrongAnswers": [
+        "125",
+        "130",
+        "250"
+      ]
+    },
+    {
+      "id": 21,
+      "level": "basic",
+      "question": "Which one does not belong with the others: Dog, Cat, Eagle, Horse?",
+      "correctAnswer": "Eagle",
+      "wrongAnswers": [
+        "Dog",
+        "Cat",
+        "Horse"
+      ]
+    },
+    {
+      "id": 22,
+      "level": "basic",
+      "question": "What is 15% of 200?",
+      "correctAnswer": "30",
+      "wrongAnswers": [
+        "20",
+        "15",
+        "35"
+      ]
+    },
+    {
+      "id": 23,
+      "level": "basic",
+      "question": "A clock shows exactly 3:00. What is the angle between the hour and minute hands?",
+      "correctAnswer": "90°",
+      "wrongAnswers": [
+        "45°",
+        "180°",
+        "60°"
+      ]
+    },
+    {
+      "id": 24,
+      "level": "basic",
+      "question": "Which word means the same as ENORMOUS?",
+      "correctAnswer": "Huge",
+      "wrongAnswers": [
+        "Tiny",
+        "Heavy",
+        "Wide"
+      ]
+    },
+    {
+      "id": 25,
+      "level": "basic",
+      "question": "What number comes next in the series: 1, 4, 9, 16, ?",
+      "correctAnswer": "25",
+      "wrongAnswers": [
+        "20",
+        "24",
+        "32"
+      ]
+    },
+    {
+      "id": 26,
+      "level": "basic",
+      "question": "Lisa has 3 times as many apples as Tom. Tom has 4 apples. How many apples do they have together?",
+      "correctAnswer": "16",
+      "wrongAnswers": [
+        "12",
+        "7",
+        "15"
+      ]
+    },
+    {
+      "id": 27,
+      "level": "basic",
+      "question": "Which word is the opposite of EXPAND?",
+      "correctAnswer": "Contract",
+      "wrongAnswers": [
+        "Extend",
+        "Grow",
+        "Spread"
+      ]
+    },
+    {
+      "id": 28,
+      "level": "basic",
+      "question": "Which one does not belong with the others: January, March, Friday, October?",
+      "correctAnswer": "Friday",
+      "wrongAnswers": [
+        "January",
+        "March",
+        "October"
+      ]
+    },
+    {
+      "id": 29,
+      "level": "basic",
+      "question": "What number comes next in the series: 100, 90, 80, 70, ?",
+      "correctAnswer": "60",
+      "wrongAnswers": [
+        "50",
+        "65",
+        "55"
+      ]
+    },
+    {
+      "id": 30,
+      "level": "basic",
+      "question": "A dozen eggs costs $3.60. How much does one egg cost?",
+      "correctAnswer": "$0.30",
+      "wrongAnswers": [
+        "$0.36",
+        "$0.25",
+        "$0.33"
+      ]
+    },
+    {
+      "id": 31,
+      "level": "basic",
+      "question": "\"Some cats are black. Whiskers is a cat.\" If these statements are true, the conclusion \"Whiskers is black\" is:",
+      "correctAnswer": "Uncertain — the statements are not enough to decide",
+      "wrongAnswers": [
+        "True — it follows from the statements",
+        "False — it contradicts the statements",
+        "Neither — the statements contradict each other"
+      ]
+    },
+    {
+      "id": 32,
+      "level": "basic",
+      "question": "How long is it from 9:00 AM to 5:30 PM?",
+      "correctAnswer": "8 hours 30 minutes",
+      "wrongAnswers": [
+        "7 hours 30 minutes",
+        "8 hours",
+        "9 hours 30 minutes"
+      ]
+    },
+    {
+      "id": 33,
+      "level": "basic",
+      "question": "SUN is to DAY as MOON is to:",
+      "correctAnswer": "Night",
+      "wrongAnswers": [
+        "Star",
+        "Sky",
+        "Light"
+      ]
+    },
+    {
+      "id": 34,
+      "level": "basic",
+      "question": "What is half of one quarter of 80?",
+      "correctAnswer": "10",
+      "wrongAnswers": [
+        "20",
+        "40",
+        "5"
+      ]
+    },
+    {
+      "id": 35,
+      "level": "intermediate",
+      "question": "What number comes next in the series: 1, 1, 2, 3, 5, 8, ?",
+      "correctAnswer": "13",
+      "wrongAnswers": [
+        "11",
+        "12",
+        "15"
+      ]
+    },
+    {
+      "id": 36,
+      "level": "intermediate",
+      "question": "What number comes next in the series: 2, 6, 18, 54, ?",
+      "correctAnswer": "162",
+      "wrongAnswers": [
+        "108",
+        "72",
+        "216"
+      ]
+    },
+    {
+      "id": 37,
+      "level": "intermediate",
+      "question": "\"All roses are flowers. Some flowers fade quickly.\" If these statements are true, the conclusion \"Some roses fade quickly\" is:",
+      "correctAnswer": "Uncertain — the statements are not enough to decide",
+      "wrongAnswers": [
+        "True — it follows from the statements",
+        "False — it contradicts the statements",
+        "Neither — the statements contradict each other"
+      ]
+    },
+    {
+      "id": 38,
+      "level": "intermediate",
+      "question": "4 workers can build a wall in 6 days. Working at the same rate, how long would 8 workers take?",
+      "correctAnswer": "3 days",
+      "wrongAnswers": [
+        "12 days",
+        "2 days",
+        "4 days"
+      ]
+    },
+    {
+      "id": 39,
+      "level": "intermediate",
+      "question": "A car averages 30 miles per gallon and gas costs $3.50 per gallon. How much does the fuel for a 240-mile trip cost?",
+      "correctAnswer": "$28.00",
+      "wrongAnswers": [
+        "$24.00",
+        "$30.00",
+        "$32.00"
+      ]
+    },
+    {
+      "id": 40,
+      "level": "intermediate",
+      "question": "Anna is older than Ben. Carla is younger than Ben. Daniel is older than Anna. Who is the second oldest?",
+      "correctAnswer": "Anna",
+      "wrongAnswers": [
+        "Ben",
+        "Daniel",
+        "Carla"
+      ]
+    },
+    {
+      "id": 41,
+      "level": "intermediate",
+      "question": "Which word is the opposite of CANDID?",
+      "correctAnswer": "Evasive",
+      "wrongAnswers": [
+        "Frank",
+        "Honest",
+        "Open"
+      ]
+    },
+    {
+      "id": 42,
+      "level": "intermediate",
+      "question": "Which statement means the same as \"Not all employees are managers\"?",
+      "correctAnswer": "Some employees are not managers",
+      "wrongAnswers": [
+        "No employees are managers",
+        "All managers are employees",
+        "Some managers are not employees"
+      ]
+    },
+    {
+      "id": 43,
+      "level": "intermediate",
+      "question": "The price of an item rose from $40 to $50. What was the percentage increase?",
+      "correctAnswer": "25%",
+      "wrongAnswers": [
+        "20%",
+        "10%",
+        "50%"
+      ]
+    },
+    {
+      "id": 44,
+      "level": "intermediate",
+      "question": "What letter comes next in the series: B, D, G, K, ?",
+      "correctAnswer": "P",
+      "wrongAnswers": [
+        "O",
+        "Q",
+        "N"
+      ]
+    },
+    {
+      "id": 45,
+      "level": "intermediate",
+      "question": "Which number does not belong with the others: 3, 5, 9, 11, 13?",
+      "correctAnswer": "9",
+      "wrongAnswers": [
+        "3",
+        "11",
+        "13"
+      ]
+    },
+    {
+      "id": 46,
+      "level": "intermediate",
+      "question": "Mary is 3 times as old as her son. In 12 years she will be twice as old as him. How old is Mary now?",
+      "correctAnswer": "36",
+      "wrongAnswers": [
+        "24",
+        "30",
+        "48"
+      ]
+    },
+    {
+      "id": 47,
+      "level": "intermediate",
+      "question": "A rectangle has a perimeter of 30 and a length of 10. What is its area?",
+      "correctAnswer": "50",
+      "wrongAnswers": [
+        "300",
+        "40",
+        "75"
+      ]
+    },
+    {
+      "id": 48,
+      "level": "intermediate",
+      "question": "FISH is to SCHOOL as WOLF is to:",
+      "correctAnswer": "Pack",
+      "wrongAnswers": [
+        "Herd",
+        "Flock",
+        "Den"
+      ]
+    },
+    {
+      "id": 49,
+      "level": "intermediate",
+      "question": "What is the average of 12, 15, 18, 21 and 24?",
+      "correctAnswer": "18",
+      "wrongAnswers": [
+        "17",
+        "19",
+        "20"
+      ]
+    },
+    {
+      "id": 50,
+      "level": "intermediate",
+      "question": "What number comes next in the series: 81, 27, 9, 3, ?",
+      "correctAnswer": "1",
+      "wrongAnswers": [
+        "0",
+        "1/3",
+        "-3"
+      ]
+    },
+    {
+      "id": 51,
+      "level": "intermediate",
+      "question": "If some A are B, and all B are C, which statement must be true?",
+      "correctAnswer": "Some A are C",
+      "wrongAnswers": [
+        "All A are C",
+        "No A are C",
+        "All C are A"
+      ]
+    },
+    {
+      "id": 52,
+      "level": "intermediate",
+      "question": "Which word means the same as OBSOLETE?",
+      "correctAnswer": "Outdated",
+      "wrongAnswers": [
+        "Obscure",
+        "Absolute",
+        "Essential"
+      ]
+    },
+    {
+      "id": 53,
+      "level": "intermediate",
+      "question": "A store sells 3 pens for $2. How much do 18 pens cost?",
+      "correctAnswer": "$12",
+      "wrongAnswers": [
+        "$9",
+        "$10",
+        "$15"
+      ]
+    },
+    {
+      "id": 54,
+      "level": "intermediate",
+      "question": "A meeting started at 10:45 and lasted 1 hour and 50 minutes. When did it end?",
+      "correctAnswer": "12:35",
+      "wrongAnswers": [
+        "12:25",
+        "12:45",
+        "11:35"
+      ]
+    },
+    {
+      "id": 55,
+      "level": "intermediate",
+      "question": "Today is Wednesday. What day of the week will it be 100 days from today?",
+      "correctAnswer": "Friday",
+      "wrongAnswers": [
+        "Thursday",
+        "Saturday",
+        "Wednesday"
+      ]
+    },
+    {
+      "id": 56,
+      "level": "intermediate",
+      "question": "What number comes next in the series: 2, 3, 5, 9, 17, ?",
+      "correctAnswer": "33",
+      "wrongAnswers": [
+        "25",
+        "31",
+        "34"
+      ]
+    },
+    {
+      "id": 57,
+      "level": "intermediate",
+      "question": "How many 5-cent coins make $3.25?",
+      "correctAnswer": "65",
+      "wrongAnswers": [
+        "60",
+        "55",
+        "75"
+      ]
+    },
+    {
+      "id": 58,
+      "level": "intermediate",
+      "question": "A class of 40 students has a boy-to-girl ratio of 3:5. How many girls are in the class?",
+      "correctAnswer": "25",
+      "wrongAnswers": [
+        "15",
+        "24",
+        "20"
+      ]
+    },
+    {
+      "id": 59,
+      "level": "intermediate",
+      "question": "Pointing at a photo, a man says: \"I have no brothers or sisters, but that man's father is my father's son.\" Who is in the photo?",
+      "correctAnswer": "His son",
+      "wrongAnswers": [
+        "Himself",
+        "His father",
+        "His nephew"
+      ]
+    },
+    {
+      "id": 60,
+      "level": "intermediate",
+      "question": "Which word is the opposite of SCARCE?",
+      "correctAnswer": "Abundant",
+      "wrongAnswers": [
+        "Rare",
+        "Limited",
+        "Fragile"
+      ]
+    },
+    {
+      "id": 61,
+      "level": "intermediate",
+      "question": "7 is to 49 as 9 is to:",
+      "correctAnswer": "81",
+      "wrongAnswers": [
+        "63",
+        "18",
+        "72"
+      ]
+    },
+    {
+      "id": 62,
+      "level": "intermediate",
+      "question": "If you rearrange the letters CIFAIPC, you get the name of a(n):",
+      "correctAnswer": "Ocean",
+      "wrongAnswers": [
+        "City",
+        "Animal",
+        "Country"
+      ]
+    },
+    {
+      "id": 63,
+      "level": "intermediate",
+      "question": "What is 0.25 × 0.4?",
+      "correctAnswer": "0.1",
+      "wrongAnswers": [
+        "0.01",
+        "1",
+        "0.65"
+      ]
+    },
+    {
+      "id": 64,
+      "level": "intermediate",
+      "question": "\"If it rains, the ground gets wet. The ground is wet.\" If these statements are true, the conclusion \"It rained\" is:",
+      "correctAnswer": "Uncertain — the statements are not enough to decide",
+      "wrongAnswers": [
+        "True — it follows from the statements",
+        "False — it contradicts the statements",
+        "Neither — the statements contradict each other"
+      ]
+    },
+    {
+      "id": 65,
+      "level": "intermediate",
+      "question": "Which one does not belong with the others: Copper, Iron, Bronze, Silver?",
+      "correctAnswer": "Bronze",
+      "wrongAnswers": [
+        "Copper",
+        "Iron",
+        "Silver"
+      ]
+    },
+    {
+      "id": 66,
+      "level": "intermediate",
+      "question": "A man walks 3 km north and then 4 km east. How far is he from his starting point in a straight line?",
+      "correctAnswer": "5 km",
+      "wrongAnswers": [
+        "7 km",
+        "6 km",
+        "4 km"
+      ]
+    },
+    {
+      "id": 67,
+      "level": "intermediate",
+      "question": "AUTHOR is to NOVEL as COMPOSER is to:",
+      "correctAnswer": "Symphony",
+      "wrongAnswers": [
+        "Orchestra",
+        "Piano",
+        "Conductor"
+      ]
+    },
+    {
+      "id": 68,
+      "level": "advanced",
+      "question": "What number comes next in the series: 1, 2, 6, 24, 120, ?",
+      "correctAnswer": "720",
+      "wrongAnswers": [
+        "240",
+        "600",
+        "840"
+      ]
+    },
+    {
+      "id": 69,
+      "level": "advanced",
+      "question": "What number comes next in the series: 3, 7, 15, 31, 63, ?",
+      "correctAnswer": "127",
+      "wrongAnswers": [
+        "126",
+        "125",
+        "95"
+      ]
+    },
+    {
+      "id": 70,
+      "level": "advanced",
+      "question": "A clock shows exactly 3:15. What is the angle between the hour and minute hands?",
+      "correctAnswer": "7.5°",
+      "wrongAnswers": [
+        "0°",
+        "15°",
+        "22.5°"
+      ]
+    },
+    {
+      "id": 71,
+      "level": "advanced",
+      "question": "Two trains 300 miles apart travel toward each other at 70 mph and 80 mph. How many hours until they meet?",
+      "correctAnswer": "2",
+      "wrongAnswers": [
+        "2.5",
+        "3",
+        "1.5"
+      ]
+    },
+    {
+      "id": 72,
+      "level": "advanced",
+      "question": "Pipe A fills a tank in 6 hours and pipe B fills it in 3 hours. How long do both pipes take together?",
+      "correctAnswer": "2 hours",
+      "wrongAnswers": [
+        "4.5 hours",
+        "3 hours",
+        "1.5 hours"
+      ]
+    },
+    {
+      "id": 73,
+      "level": "advanced",
+      "question": "A price is increased by 20% and then decreased by 20%. What is the net change?",
+      "correctAnswer": "A 4% decrease",
+      "wrongAnswers": [
+        "No change",
+        "A 4% increase",
+        "A 2% decrease"
+      ]
+    },
+    {
+      "id": 74,
+      "level": "advanced",
+      "question": "What number comes next in the series: 2, 5, 11, 23, 47, ?",
+      "correctAnswer": "95",
+      "wrongAnswers": [
+        "94",
+        "71",
+        "96"
+      ]
+    },
+    {
+      "id": 75,
+      "level": "advanced",
+      "question": "What letter comes next in the series: Z, X, U, Q, ?",
+      "correctAnswer": "L",
+      "wrongAnswers": [
+        "M",
+        "K",
+        "N"
+      ]
+    },
+    {
+      "id": 76,
+      "level": "advanced",
+      "question": "\"No managers are lazy. Some employees are lazy.\" Which statement must be true?",
+      "correctAnswer": "Some employees are not managers",
+      "wrongAnswers": [
+        "No employees are managers",
+        "Some managers are not employees",
+        "All lazy people are employees"
+      ]
+    },
+    {
+      "id": 77,
+      "level": "advanced",
+      "question": "Five people sit in a row. E is at the far left. A is to the left of B, C is to the right of B, and D sits between A and B. Who is in the middle seat?",
+      "correctAnswer": "D",
+      "wrongAnswers": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "id": 78,
+      "level": "advanced",
+      "question": "The average of 5 numbers is 20. After one number is removed, the average of the remaining 4 is 18. What number was removed?",
+      "correctAnswer": "28",
+      "wrongAnswers": [
+        "22",
+        "2",
+        "26"
+      ]
+    },
+    {
+      "id": 79,
+      "level": "advanced",
+      "question": "In 5 years, Sam will be twice as old as he was 10 years ago. How old is Sam now?",
+      "correctAnswer": "25",
+      "wrongAnswers": [
+        "20",
+        "30",
+        "15"
+      ]
+    },
+    {
+      "id": 80,
+      "level": "advanced",
+      "question": "You drive to work at 40 mph and return on the same route at 60 mph. What is your average speed for the round trip?",
+      "correctAnswer": "48 mph",
+      "wrongAnswers": [
+        "50 mph",
+        "45 mph",
+        "52 mph"
+      ]
+    },
+    {
+      "id": 81,
+      "level": "advanced",
+      "question": "You have 20 coins, all dimes (10¢) and quarters (25¢), worth $3.80 in total. How many quarters do you have?",
+      "correctAnswer": "12",
+      "wrongAnswers": [
+        "8",
+        "10",
+        "14"
+      ]
+    },
+    {
+      "id": 82,
+      "level": "advanced",
+      "question": "\"All Bloops are Razzies. All Razzies are Lazzies.\" If these statements are true, the conclusion \"All Bloops are Lazzies\" is:",
+      "correctAnswer": "True — it follows from the statements",
+      "wrongAnswers": [
+        "False — it contradicts the statements",
+        "Uncertain — the statements are not enough to decide",
+        "Neither — the statements contradict each other"
+      ]
+    },
+    {
+      "id": 83,
+      "level": "advanced",
+      "question": "What number comes next in the series: 4, 9, 25, 49, 121, ?",
+      "correctAnswer": "169",
+      "wrongAnswers": [
+        "144",
+        "196",
+        "125"
+      ]
+    },
+    {
+      "id": 84,
+      "level": "advanced",
+      "question": "Which number does not belong with the others: 64, 125, 216, 343, 400?",
+      "correctAnswer": "400",
+      "wrongAnswers": [
+        "64",
+        "125",
+        "343"
+      ]
+    },
+    {
+      "id": 85,
+      "level": "advanced",
+      "question": "If the 3rd of a month is a Tuesday, what day of the week is the 25th of the same month?",
+      "correctAnswer": "Wednesday",
+      "wrongAnswers": [
+        "Tuesday",
+        "Thursday",
+        "Monday"
+      ]
+    },
+    {
+      "id": 86,
+      "level": "advanced",
+      "question": "6 machines make 6 parts in 6 minutes. How many machines are needed to make 60 parts in 12 minutes?",
+      "correctAnswer": "30",
+      "wrongAnswers": [
+        "60",
+        "12",
+        "20"
+      ]
+    },
+    {
+      "id": 87,
+      "level": "advanced",
+      "question": "Two fair dice are rolled. What is the probability that the sum is 7?",
+      "correctAnswer": "1/6",
+      "wrongAnswers": [
+        "1/12",
+        "7/36",
+        "1/36"
+      ]
+    },
+    {
+      "id": 88,
+      "level": "advanced",
+      "question": "\"If the alarm is on, the door is locked. The door is not locked.\" If these statements are true, the conclusion \"The alarm is not on\" is:",
+      "correctAnswer": "True — it follows from the statements",
+      "wrongAnswers": [
+        "False — it contradicts the statements",
+        "Uncertain — the statements are not enough to decide",
+        "Neither — the statements contradict each other"
+      ]
+    },
+    {
+      "id": 89,
+      "level": "advanced",
+      "question": "A number increased by 25% equals 150. What is the original number?",
+      "correctAnswer": "120",
+      "wrongAnswers": [
+        "112.5",
+        "125",
+        "110"
+      ]
+    },
+    {
+      "id": 90,
+      "level": "advanced",
+      "question": "How many liters of pure water must be added to 10 liters of a 30% salt solution to make it a 20% solution?",
+      "correctAnswer": "5",
+      "wrongAnswers": [
+        "10",
+        "3",
+        "2.5"
+      ]
+    },
+    {
+      "id": 91,
+      "level": "advanced",
+      "question": "$1,000 is invested at 10% interest compounded annually. How much is it worth after 2 years?",
+      "correctAnswer": "$1,210",
+      "wrongAnswers": [
+        "$1,200",
+        "$1,100",
+        "$1,221"
+      ]
+    },
+    {
+      "id": 92,
+      "level": "advanced",
+      "question": "What number comes next in the series: 1, 3, 6, 10, 15, 21, ?",
+      "correctAnswer": "28",
+      "wrongAnswers": [
+        "27",
+        "30",
+        "26"
+      ]
+    },
+    {
+      "id": 93,
+      "level": "advanced",
+      "question": "VERBOSE is to CONCISE as TIMID is to:",
+      "correctAnswer": "Bold",
+      "wrongAnswers": [
+        "Shy",
+        "Brief",
+        "Quiet"
+      ]
+    },
+    {
+      "id": 94,
+      "level": "advanced",
+      "question": "In a code, CAT is written as DBU. How would DOG be written?",
+      "correctAnswer": "EPH",
+      "wrongAnswers": [
+        "EPG",
+        "CNF",
+        "DPH"
+      ]
+    },
+    {
+      "id": 95,
+      "level": "advanced",
+      "question": "A father and son have a combined age of 50. Five years ago, the father was 7 times as old as the son. How old is the father now?",
+      "correctAnswer": "40",
+      "wrongAnswers": [
+        "35",
+        "42",
+        "45"
+      ]
+    },
+    {
+      "id": 96,
+      "level": "advanced",
+      "question": "A prize is in box A, B or C. Exactly one of these statements is true: (1) The prize is in box A. (2) The prize is not in box B. (3) The prize is not in box A. Where is the prize?",
+      "correctAnswer": "Box B",
+      "wrongAnswers": [
+        "Box A",
+        "Box C",
+        "It cannot be determined"
+      ]
+    },
+    {
+      "id": 97,
+      "level": "advanced",
+      "question": "A cyclist rides 12 km in 30 minutes. At the same pace, how many minutes does it take to ride 30 km?",
+      "correctAnswer": "75",
+      "wrongAnswers": [
+        "60",
+        "90",
+        "70"
+      ]
+    },
+    {
+      "id": 98,
+      "level": "advanced",
+      "question": "What number comes next in the series: 2, 3, 5, 7, 11, 13, ?",
+      "correctAnswer": "17",
+      "wrongAnswers": [
+        "15",
+        "19",
+        "16"
+      ]
+    },
+    {
+      "id": 99,
+      "level": "advanced",
+      "question": "Following the same rule — 8 → 3, 15 → 4, 24 → 5 — what does 35 map to?",
+      "correctAnswer": "6",
+      "wrongAnswers": [
+        "7",
+        "5",
+        "36"
+      ]
+    },
+    {
+      "id": 100,
+      "level": "advanced",
+      "question": "If 3 cats catch 3 mice in 3 minutes, how many cats are needed to catch 100 mice in 100 minutes?",
+      "correctAnswer": "3",
+      "wrongAnswers": [
+        "100",
+        "33",
+        "300"
+      ]
+    }
+  ]
+}

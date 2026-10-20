@@ -1,0 +1,1107 @@
+{
+  "id": "fullstack",
+  "language": "en",
+  "title": "Fullstack React + Node.js Role",
+  "questions": [
+    {
+      "id": 1,
+      "level": "basic",
+      "question": "What is Node.js?",
+      "correctAnswer": "A JavaScript runtime based on the V8 engine that runs outside the browser, event-driven and with non-blocking I/O.",
+      "wrongAnswers": [
+        "A front-end framework for building user interfaces in the browser, based on the SpiderMonkey engine, that renders components and manages client-side routing.",
+        "A multi-threaded Java runtime that executes JavaScript through the JVM, creating one blocking thread per request to handle I/O operations in parallel.",
+        "A JavaScript framework for building user interfaces in the browser."
+      ]
+    },
+    {
+      "id": 2,
+      "level": "basic",
+      "question": "Is Node.js single-threaded?",
+      "correctAnswer": "JavaScript code runs on a main thread, but I/O is delegated to libuv (thread pool and OS), allowing concurrency. For CPU-intensive work, worker threads are used.",
+      "wrongAnswers": [
+        "No. Every incoming request is automatically assigned to its own operating system thread, so JavaScript code always runs in parallel across all CPU cores without any extra configuration.",
+        "Yes, and because of that it cannot perform any concurrent operation: each I/O call blocks the whole process until it completes, which is why worker threads were removed.",
+        "No, every request automatically runs on its own dedicated thread."
+      ]
+    },
+    {
+      "id": 3,
+      "level": "basic",
+      "question": "What is npm?",
+      "correctAnswer": "Node's package manager, with a public registry and the package.json file for dependencies and scripts.",
+      "wrongAnswers": [
+        "A JavaScript bundler like Webpack that combines modules listed in package.json into a single file.",
+        "Node's built-in web server.",
+        "A tool for monitoring Node process memory."
+      ]
+    },
+    {
+      "id": 4,
+      "level": "basic",
+      "question": "What is the difference between dependencies and devDependencies?",
+      "correctAnswer": "dependencies are needed in production; devDependencies only in development (tests, lint, build).",
+      "wrongAnswers": [
+        "devDependencies are required in production because they include build tools, while dependencies are only used locally during development and tests.",
+        "dependencies are installed globally on the machine and shared by all projects, while devDependencies are installed locally inside node_modules.",
+        "devDependencies are needed in production; dependencies only in development."
+      ]
+    },
+    {
+      "id": 5,
+      "level": "basic",
+      "question": "What is package-lock.json?",
+      "correctAnswer": "A file that pins the exact installed versions to guarantee reproducible builds.",
+      "wrongAnswers": [
+        "A file that locks the project so that no new packages can be installed or removed until it is deleted manually.",
+        "A file that stores the npm registry login credentials and authentication tokens for publishing packages.",
+        "A file listing packages blocked for security reasons."
+      ]
+    },
+    {
+      "id": 6,
+      "level": "basic",
+      "question": "What is Express?",
+      "correctAnswer": "A minimalist web framework for Node that makes it easy to create routes, middleware and HTTP APIs.",
+      "wrongAnswers": [
+        "A full-stack front-end framework for rendering React components on the server with built-in routing and data fetching.",
+        "A process manager that keeps Node applications alive in production, restarting them when they crash.",
+        "An ORM for SQL databases."
+      ]
+    },
+    {
+      "id": 7,
+      "level": "basic",
+      "question": "What is middleware?",
+      "correctAnswer": "A function with access to req, res and next that processes requests in a chain (logging, authentication, parsing, errors).",
+      "wrongAnswers": [
+        "A database layer that sits between Node and the disk, caching queries and transactions before they are written.",
+        "A database layer between Node and the disk that caches queries, runs only once when the server starts and cannot access req or res, used to load configuration before routes are registered.",
+        "A frontend component that wraps pages."
+      ]
+    },
+    {
+      "id": 8,
+      "level": "basic",
+      "question": "What is a REST API?",
+      "correctAnswer": "An architectural style that exposes resources via URLs and HTTP methods (GET, POST, PUT, PATCH, DELETE), in a stateless way.",
+      "wrongAnswers": [
+        "A query language in which the client describes exactly which fields it needs and the server returns only those fields.",
+        "A protocol that keeps a persistent session per client on the server and exposes procedures instead of resources, with the client choosing exactly which fields to receive in each call.",
+        "A query language where the client chooses the fields."
+      ]
+    },
+    {
+      "id": 9,
+      "level": "basic",
+      "question": "What are the main HTTP methods and their uses?",
+      "correctAnswer": "GET reads; POST creates; PUT replaces; PATCH partially updates; DELETE removes.",
+      "wrongAnswers": [
+        "GET creates resources; POST reads them; PUT deletes; PATCH replaces the whole resource; DELETE updates it partially.",
+        "PUT partially updates a resource while PATCH replaces it entirely; GET and POST are interchangeable for reading data.",
+        "GET and POST are the only methods; the rest are deprecated."
+      ]
+    },
+    {
+      "id": 10,
+      "level": "basic",
+      "question": "What do codes 200, 201, 400, 401, 403, 404 and 500 mean?",
+      "correctAnswer": "Success, created, bad request, unauthenticated, forbidden, not found and internal server error.",
+      "wrongAnswers": [
+        "Created, success, unauthenticated, bad request, not found, forbidden and gateway timeout, in that order.",
+        "Success, redirect, server error, forbidden, unauthenticated, created and not found, in that order.",
+        "Success, accepted, conflict, payment required, forbidden, gone and bad gateway."
+      ]
+    },
+    {
+      "id": 11,
+      "level": "basic",
+      "question": "What is the difference between 401 and 403?",
+      "correctAnswer": "401: not authenticated (missing/invalid identity); 403: authenticated, but without permission.",
+      "wrongAnswers": [
+        "401 means the user is authenticated but lacks permission; 403 means the identity is missing or invalid.",
+        "401 means the resource was not found on the server; 403 means the server encountered an internal error.",
+        "401: authenticated without permission; 403: not authenticated."
+      ]
+    },
+    {
+      "id": 12,
+      "level": "basic",
+      "question": "What is JSON and why is it used in APIs?",
+      "correctAnswer": "A lightweight, readable data interchange format, native to JavaScript, used between frontend and backend.",
+      "wrongAnswers": [
+        "A binary format that compresses data for faster transfer.",
+        "A database query language used by REST APIs.",
+        "A markup language that replaces HTML in APIs."
+      ]
+    },
+    {
+      "id": 13,
+      "level": "basic",
+      "question": "How does a React app communicate with a Node backend?",
+      "correctAnswer": "Through HTTP requests (fetch/axios/React Query) to REST or GraphQL endpoints, exchanging JSON.",
+      "wrongAnswers": [
+        "By importing backend functions directly into React components, since both run in the same Node.js process in production.",
+        "By opening a direct database connection from the browser and sharing it with the backend through cookies.",
+        "By reading the backend's files through the file system API."
+      ]
+    },
+    {
+      "id": 14,
+      "level": "basic",
+      "question": "What is CORS and how do you configure it in Express?",
+      "correctAnswer": "Control of cross-origin requests; it's configured with the cors middleware, defining allowed origins, methods and credentials.",
+      "wrongAnswers": [
+        "A frontend setting in React that disables the browser's security checks so it can call any API from any origin.",
+        "It's configured by adding mode: 'no-cors' to every response on the backend, which allows all origins and credentials.",
+        "A database permission configured in the ORM."
+      ]
+    },
+    {
+      "id": 15,
+      "level": "basic",
+      "question": "What are environment variables?",
+      "correctAnswer": "Configuration values external to the code (ports, URLs, secrets), read via process.env and usually defined in .env.",
+      "wrongAnswers": [
+        "Variables declared with var in the global scope and hardcoded constants for each environment, shared between modules and switched by commenting and uncommenting lines before deploying.",
+        "Variables declared with var in the global scope.",
+        "Constants hardcoded in the source for each environment."
+      ]
+    },
+    {
+      "id": 16,
+      "level": "basic",
+      "question": "Why should you never commit .env?",
+      "correctAnswer": "It contains secrets (keys, passwords); it should be in .gitignore, with a .env.example without real values.",
+      "wrongAnswers": [
+        "Because Node.js refuses to read .env files from inside a Git repository for security reasons.",
+        "Because Git cannot store files starting with a dot.",
+        "Because it makes the repository too large."
+      ]
+    },
+    {
+      "id": 17,
+      "level": "basic",
+      "question": "What is async/await in Node?",
+      "correctAnswer": "Syntax for handling Promises sequentially, essential for I/O like databases and HTTP.",
+      "wrongAnswers": [
+        "A way to run code in multiple OS threads in Node, where each await moves the function to a new worker thread.",
+        "Syntax that makes I/O operations synchronous and blocking, so the server waits for each query before accepting new requests.",
+        "A Node-only feature not available in browsers."
+      ]
+    },
+    {
+      "id": 18,
+      "level": "basic",
+      "question": "How do you read a JSON request body in Express?",
+      "correctAnswer": "With app.use(express.json()) and access via req.body.",
+      "wrongAnswers": [
+        "With req.json() directly inside the handler, which parses the body without registering any middleware.",
+        "With JSON.parse(req) at the start of every handler, since Express does not provide a body parser.",
+        "With req.params.body."
+      ]
+    },
+    {
+      "id": 19,
+      "level": "basic",
+      "question": "How do you define route and query parameters?",
+      "correctAnswer": "Route: /users/:id with req.params.id; query: /users?page=2 with req.query.page.",
+      "wrongAnswers": [
+        "Route: /users?id with req.query.id; query: /users/:page with req.params.page, since params come after the question mark.",
+        "Both route and query parameters are read from req.body after registering express.json() as middleware.",
+        "Route: /users?id with req.query.id; query: /users/:page with req.params.page."
+      ]
+    },
+    {
+      "id": 20,
+      "level": "basic",
+      "question": "What is an ORM?",
+      "correctAnswer": "It maps database tables to objects, simplifying queries: Prisma, Sequelize, TypeORM, Drizzle.",
+      "wrongAnswers": [
+        "A relational database server like PostgreSQL that stores tables on disk and runs SQL queries.",
+        "A tool for monitoring query performance only.",
+        "A caching layer between the API and the client."
+      ]
+    },
+    {
+      "id": 21,
+      "level": "basic",
+      "question": "What is the difference between SQL and NoSQL?",
+      "correctAnswer": "SQL is relational, with schema and joins (PostgreSQL, MySQL); NoSQL has flexible models (MongoDB, Redis), ideal for certain use cases.",
+      "wrongAnswers": [
+        "SQL is suitable only for small applications and NoSQL only for large ones, since SQL databases cannot scale beyond one server.",
+        "NoSQL databases are relational, with strict schemas and joins (MongoDB, Redis), while SQL databases use flexible schemaless documents (PostgreSQL, MySQL) and cannot scale beyond a single server.",
+        "NoSQL is relational with joins; SQL has flexible schemaless models."
+      ]
+    },
+    {
+      "id": 22,
+      "level": "basic",
+      "question": "What is MongoDB?",
+      "correctAnswer": "A document-oriented NoSQL database storing JSON (BSON), flexible and horizontally scalable.",
+      "wrongAnswers": [
+        "A relational database with strict schemas, foreign keys and joins, queried exclusively with standard SQL.",
+        "An in-memory key-value cache used mainly for sessions and rate limiting, with no persistence to disk.",
+        "An in-memory cache for sessions."
+      ]
+    },
+    {
+      "id": 23,
+      "level": "basic",
+      "question": "What are authentication and authorization?",
+      "correctAnswer": "Authentication confirms who the user is; authorization defines what they can do.",
+      "wrongAnswers": [
+        "Authorization confirms who the user is, while authentication defines what that user is allowed to do in the system.",
+        "They are synonyms used interchangeably in security documentation to describe the login process.",
+        "They are synonyms."
+      ]
+    },
+    {
+      "id": 24,
+      "level": "basic",
+      "question": "What is JWT?",
+      "correctAnswer": "JSON Web Token: a signed token containing claims, used for stateless authentication; it should have an expiration and be transmitted securely.",
+      "wrongAnswers": [
+        "A session ID stored on the server that never expires and is sent in the URL of every request.",
+        "An encrypted database format for storing user passwords on the server, or a session ID that never expires and is sent in the URL; it should be shared publicly so other services can validate users.",
+        "An encrypted database for storing user passwords."
+      ]
+    },
+    {
+      "id": 25,
+      "level": "basic",
+      "question": "Why hash passwords?",
+      "correctAnswer": "To never store passwords in plain text; bcrypt/argon2 with salt is used, which are slow on purpose.",
+      "wrongAnswers": [
+        "To compress passwords so they take less space in the database, using fast algorithms like MD5 for better performance.",
+        "So the server can decrypt them later and send them back to users by email when they forget their credentials.",
+        "To compress passwords and save database space."
+      ]
+    },
+    {
+      "id": 26,
+      "level": "basic",
+      "question": "What is a proxy in Vite/CRA for development?",
+      "correctAnswer": "A configuration that forwards /api calls from the frontend to the local backend, avoiding CORS in development.",
+      "wrongAnswers": [
+        "A VPN configured in the development server that hides the developer's IP address from third-party APIs.",
+        "A production load balancer configuration that distributes API traffic between several backend instances.",
+        "A VPN that hides the developer's IP."
+      ]
+    },
+    {
+      "id": 27,
+      "level": "basic",
+      "question": "What is the typical useEffect for fetching API data?",
+      "correctAnswer": "An effect that calls fetch on mount and updates state with the response, handling loading and error.",
+      "wrongAnswers": [
+        "An effect with no dependency array that calls fetch on every render to keep the data fresh, writing the response directly into the DOM instead of state to avoid extra renders.",
+        "An effect that runs on the server before rendering.",
+        "An effect that writes data directly into the DOM."
+      ]
+    },
+    {
+      "id": 28,
+      "level": "basic",
+      "question": "What is a monorepo?",
+      "correctAnswer": "A single repository that contains several projects (frontend, backend, shared packages).",
+      "wrongAnswers": [
+        "A repository that contains only one project with a single package.json and no shared code.",
+        "A project split into many separate repositories, one for each package, linked by git submodules.",
+        "A repository with only one file."
+      ]
+    },
+    {
+      "id": 29,
+      "level": "basic",
+      "question": "What is nodemon?",
+      "correctAnswer": "A development tool that restarts the Node server when it detects file changes.",
+      "wrongAnswers": [
+        "A production process manager that runs Node in cluster mode across all CPU cores with zero-downtime reloads.",
+        "A package for scheduling cron jobs inside a Node application using a configuration file.",
+        "A production process manager with clustering."
+      ]
+    },
+    {
+      "id": 30,
+      "level": "basic",
+      "question": "How do you structure an Express project?",
+      "correctAnswer": "Layers like routes, controllers, services, models/repositories and middlewares, separating responsibilities.",
+      "wrongAnswers": [
+        "Everything in a single index.js file containing routes, SQL queries and business rules, which is the recommended standard for Express.",
+        "One folder per HTTP method, such as get, post and put, with each file containing the handler and its database queries mixed together.",
+        "One folder per HTTP method (get, post, put)."
+      ]
+    },
+    {
+      "id": 31,
+      "level": "basic",
+      "question": "What is the MVC pattern?",
+      "correctAnswer": "It separates Model (data), View (interface) and Controller (input logic); in APIs, the \"view\" is usually the JSON.",
+      "wrongAnswers": [
+        "Module, Variable and Class: a JavaScript naming convention for organizing files in Node projects.",
+        "Model, Validation and Cache: a database pattern for validating and caching records before saving.",
+        "Multiple Virtual Containers: a Docker architecture."
+      ]
+    },
+    {
+      "id": 32,
+      "level": "basic",
+      "question": "What is HTTPS and why does it matter?",
+      "correctAnswer": "HTTP over TLS; it encrypts traffic and ensures integrity and server authenticity.",
+      "wrongAnswers": [
+        "A faster version of HTTP that compresses every response automatically and caches it in the browser.",
+        "An HTTP variant that only works on port 80 and adds user authentication through headers.",
+        "HTTP with built-in user authentication."
+      ]
+    },
+    {
+      "id": 33,
+      "level": "basic",
+      "question": "How do you handle errors in Express?",
+      "correctAnswer": "With an error middleware (err, req, res, next) at the end of the chain, and try/catch (or wrappers) in async handlers.",
+      "wrongAnswers": [
+        "Express catches all async errors automatically in every version, so nothing is needed.",
+        "With process.exit(1) inside every route.",
+        "With window.onerror in the server."
+      ]
+    },
+    {
+      "id": 34,
+      "level": "basic",
+      "question": "What is input validation and why do it on the backend?",
+      "correctAnswer": "Ensuring received data is valid and safe; the frontend can be bypassed, so server validation is mandatory (Zod, Joi).",
+      "wrongAnswers": [
+        "It is only needed on the frontend, since users can't bypass forms.",
+        "It is done by the database automatically, so the API doesn't need it.",
+        "It is only required for GET requests."
+      ]
+    },
+    {
+      "id": 35,
+      "level": "intermediate",
+      "question": "How does the Node.js Event Loop work?",
+      "correctAnswer": "It processes phases (timers, pending, poll, check, close), with microtasks (process.nextTick, Promises) between them, ensuring non-blocking I/O.",
+      "wrongAnswers": [
+        "It runs every callback in the exact order it was registered, without phases or microtasks, until the queue is empty.",
+        "It creates one OS thread per incoming request and runs callbacks in the order they were registered, with no phases or microtasks, joining the threads when the responses are sent.",
+        "It creates one thread per request and processes them in parallel."
+      ]
+    },
+    {
+      "id": 36,
+      "level": "intermediate",
+      "question": "How do you avoid blocking the event loop?",
+      "correctAnswer": "Avoid heavy synchronous operations, move CPU-intensive work to worker threads or services/queues and use streams for large data.",
+      "wrongAnswers": [
+        "Use synchronous fs and crypto methods, which are faster than their asynchronous versions and free the event loop sooner.",
+        "Wrap CPU-intensive code in a Promise, which automatically moves the computation to another thread in the libuv pool.",
+        "Increase the Node heap size."
+      ]
+    },
+    {
+      "id": 37,
+      "level": "intermediate",
+      "question": "What are streams in Node?",
+      "correctAnswer": "Interfaces for processing data in chunks (read, write, transform), saving memory with large files and responses.",
+      "wrongAnswers": [
+        "Live audio and video broadcasting APIs used to build streaming platforms on top of Node.",
+        "Arrays that load all the data into memory at once and expose it through an iterator.",
+        "Event listeners for keyboard input."
+      ]
+    },
+    {
+      "id": 38,
+      "level": "intermediate",
+      "question": "What are cluster/worker threads?",
+      "correctAnswer": "cluster creates processes to use multiple cores; worker_threads runs JS in separate threads for CPU-intensive work.",
+      "wrongAnswers": [
+        "cluster runs JavaScript in separate threads that share memory, while worker_threads creates separate processes with their own memory.",
+        "Both are database connection pools that distribute queries across multiple database servers for load balancing.",
+        "They are browser APIs not available in Node."
+      ]
+    },
+    {
+      "id": 39,
+      "level": "intermediate",
+      "question": "How do you implement JWT authentication in React + Node?",
+      "correctAnswer": "Login validates credentials and issues a token (short access + refresh); the client sends it (preferably httpOnly cookie); middleware verifies the signature and injects the user.",
+      "wrongAnswers": [
+        "The frontend generates and signs the JWT itself using a key embedded in the bundle, and the backend trusts any token it receives without verifying the signature.",
+        "Include the user's password inside the JWT payload and compare it with the database on every request, using tokens that never expire.",
+        "Store the user's password in the JWT and verify it on each request."
+      ]
+    },
+    {
+      "id": 40,
+      "level": "intermediate",
+      "question": "Where should you store the token on the frontend?",
+      "correctAnswer": "Preferably in httpOnly + Secure + SameSite cookies, which mitigate XSS; localStorage is vulnerable to theft via XSS.",
+      "wrongAnswers": [
+        "In localStorage, which is isolated from scripts running on the page and therefore immune to XSS, or in the URL query string so it's sent automatically with every request.",
+        "In localStorage, which is immune to XSS.",
+        "In a global JavaScript variable shared with all scripts."
+      ]
+    },
+    {
+      "id": 41,
+      "level": "intermediate",
+      "question": "What is a refresh token and rotation?",
+      "correctAnswer": "A long-lived token used to obtain new access tokens; rotation replaces it on each use, detecting improper reuse.",
+      "wrongAnswers": [
+        "A short-lived token sent with every request instead of the access token and rotated by the client every few seconds, or a cron job that rotates database passwords every night.",
+        "A token that refreshes the page automatically.",
+        "A cron job that rotates database passwords."
+      ]
+    },
+    {
+      "id": 42,
+      "level": "intermediate",
+      "question": "How do you implement protected routes in React?",
+      "correctAnswer": "A ProtectedRoute component checks the session and redirects to login; the backend always re-validates, since the frontend isn't trustworthy.",
+      "wrongAnswers": [
+        "Hide the links to protected routes in the navigation menu; the backend doesn't need to check anything because users can't type URLs.",
+        "Check a boolean flag stored in localStorage before rendering the route, which is enough to secure the data returned by the API.",
+        "Use CSS to hide protected pages."
+      ]
+    },
+    {
+      "id": 43,
+      "level": "intermediate",
+      "question": "How do you implement role-based authorization (RBAC)?",
+      "correctAnswer": "Associate roles/permissions with the user and check them in middleware per route or resource on the server.",
+      "wrongAnswers": [
+        "Store roles in the JWT and read them on the server without ever verifying the token's signature.",
+        "Check roles only in React components.",
+        "Give every user admin and restrict in the UI."
+      ]
+    },
+    {
+      "id": 44,
+      "level": "intermediate",
+      "question": "What is Prisma and what are its advantages?",
+      "correctAnswer": "A TypeScript-first ORM with a declarative schema, migrations, a typed client and good developer experience.",
+      "wrongAnswers": [
+        "A NoSQL document database written in Rust that stores JSON and replaces PostgreSQL, also offering structured logging with levels and request correlation for Node applications.",
+        "A NoSQL database written in Rust.",
+        "A React state management library."
+      ]
+    },
+    {
+      "id": 45,
+      "level": "intermediate",
+      "question": "What are migrations?",
+      "correctAnswer": "Versioned scripts that evolve the database schema in a controlled, reproducible way.",
+      "wrongAnswers": [
+        "The process of moving an application from one cloud provider to another, including DNS and storage.",
+        "Scripts that copy production data into staging automatically every night for testing purposes.",
+        "Backups of the database taken every night."
+      ]
+    },
+    {
+      "id": 46,
+      "level": "intermediate",
+      "question": "What is the N+1 problem?",
+      "correctAnswer": "Running one query per item in a list instead of an aggregated query; solved with include/join, batching or DataLoader.",
+      "wrongAnswers": [
+        "Having one more server instance than needed in production, which wastes resources but improves availability.",
+        "A pagination bug where each page returns one extra item, causing duplicates when the user scrolls.",
+        "Having one more server instance than needed, or a pagination bug that returns one extra item per page; it's solved by removing an instance or subtracting one from the limit."
+      ]
+    },
+    {
+      "id": 47,
+      "level": "intermediate",
+      "question": "What are database indexes and when should you use them?",
+      "correctAnswer": "Structures that speed up searches on frequently queried columns, at a cost in writes and space.",
+      "wrongAnswers": [
+        "Primary keys that must be defined on every column of every table to guarantee uniqueness of values.",
+        "Structures that speed up inserts and updates while reducing disk usage, so they should be added to every column.",
+        "Lists of all tables in the database."
+      ]
+    },
+    {
+      "id": 48,
+      "level": "intermediate",
+      "question": "What are transactions?",
+      "correctAnswer": "A set of atomic operations (ACID): either all are applied or none.",
+      "wrongAnswers": [
+        "Payment operations processed by an external gateway and recorded in the database for accounting.",
+        "Operations that run in parallel without any consistency guarantees to maximize throughput.",
+        "A log of every query executed."
+      ]
+    },
+    {
+      "id": 49,
+      "level": "intermediate",
+      "question": "What is pagination and what types exist?",
+      "correctAnswer": "Splitting results into parts: offset/limit (simple, poor for large volumes) and cursor-based (more efficient and stable).",
+      "wrongAnswers": [
+        "Splitting the frontend into multiple pages; the types are single-page applications and multi-page applications.",
+        "Offset/limit is the most efficient for large volumes, while cursor-based pagination only works for small tables.",
+        "Compressing large responses; types: gzip and brotli."
+      ]
+    },
+    {
+      "id": 50,
+      "level": "intermediate",
+      "question": "What is TanStack Query and why use it with a Node API?",
+      "correctAnswer": "It manages caching, loading, errors, revalidation and mutations of server state in React, eliminating manual useEffect.",
+      "wrongAnswers": [
+        "A Node library for running SQL queries with caching, used in Express route handlers.",
+        "An ORM that lets React components query the database directly from the browser, replacing the Node API, with built-in caching of SQL results and automatic retries on failure.",
+        "An ORM for querying the database from React."
+      ]
+    },
+    {
+      "id": 51,
+      "level": "intermediate",
+      "question": "How do you share types between frontend and backend?",
+      "correctAnswer": "A monorepo with a shared types/schemas (Zod) package, or generation from OpenAPI/tRPC.",
+      "wrongAnswers": [
+        "Copy and paste type definition files manually between the frontend and backend repositories after each change.",
+        "Types can't be shared between frontend and backend because they run in different environments, so use any everywhere.",
+        "Use any everywhere to avoid mismatches."
+      ]
+    },
+    {
+      "id": 52,
+      "level": "intermediate",
+      "question": "What is tRPC?",
+      "correctAnswer": "A library that lets you call server functions with end-to-end TypeScript typing, without a schema or code generation.",
+      "wrongAnswers": [
+        "A GraphQL server implementation that requires a schema file and generates TypeScript clients from it.",
+        "A binary RPC protocol used by gRPC, based on Protocol Buffers and HTTP/2.",
+        "A REST client for Python."
+      ]
+    },
+    {
+      "id": 53,
+      "level": "intermediate",
+      "question": "What is GraphQL and when should you use it?",
+      "correctAnswer": "A query language that lets the client request exactly the data it needs; useful with many clients and related data, with more complexity than REST.",
+      "wrongAnswers": [
+        "A graph database for storing nodes and relationships, used to model social networks and recommendation engines.",
+        "A REST replacement that is always simpler than REST and should be used in every project regardless of the clients.",
+        "A charting library for dashboards."
+      ]
+    },
+    {
+      "id": 54,
+      "level": "intermediate",
+      "question": "How do you version a REST API?",
+      "correctAnswer": "By prefix (/v1/), headers or media types, avoiding breaking existing clients.",
+      "wrongAnswers": [
+        "Versioning is unnecessary; just change the API and clients will adapt automatically to the new format.",
+        "By changing the server port for each version.",
+        "By renaming the domain for each release."
+      ]
+    },
+    {
+      "id": 55,
+      "level": "intermediate",
+      "question": "What is rate limiting and how do you apply it?",
+      "correctAnswer": "Limiting the number of requests per client/IP in an interval (express-rate-limit, Redis), mitigating abuse and DoS.",
+      "wrongAnswers": [
+        "Limiting the size of request bodies and adding artificial delays to every response so that large uploads and fast clients don't consume too much memory or network bandwidth on the server.",
+        "Limiting the size of request bodies only.",
+        "Limiting how fast the server responds to avoid overload."
+      ]
+    },
+    {
+      "id": 56,
+      "level": "intermediate",
+      "question": "What is Helmet?",
+      "correctAnswer": "A middleware that sets security HTTP headers in Express.",
+      "wrongAnswers": [
+        "A Node authentication library that implements login strategies such as OAuth and JWT.",
+        "A React component for managing the document title and meta tags of each page.",
+        "A tool for encrypting the database."
+      ]
+    },
+    {
+      "id": 57,
+      "level": "intermediate",
+      "question": "How do you prevent SQL Injection?",
+      "correctAnswer": "Use parameterized queries/ORM and never concatenate user input into SQL.",
+      "wrongAnswers": [
+        "Escape single quotes on the frontend before sending the data, which makes the values safe to concatenate into SQL on the backend.",
+        "Hide database error messages from the API responses, which prevents attackers from injecting SQL through input fields.",
+        "Escape single quotes on the frontend only."
+      ]
+    },
+    {
+      "id": 58,
+      "level": "intermediate",
+      "question": "How do you prevent XSS?",
+      "correctAnswer": "React escapes by default; avoid dangerouslySetInnerHTML, sanitize HTML (DOMPurify), use CSP and httpOnly cookies.",
+      "wrongAnswers": [
+        "Store authentication tokens in localStorage instead of cookies, which prevents scripts from accessing them.",
+        "Use dangerouslySetInnerHTML for all user content.",
+        "Disable HTTPS in development and production."
+      ]
+    },
+    {
+      "id": 59,
+      "level": "intermediate",
+      "question": "What is CSRF and how do you protect against it?",
+      "correctAnswer": "A forged request using the user's session; use SameSite cookies, CSRF tokens and origin checking.",
+      "wrongAnswers": [
+        "Script injection into pages through user input; protect against it with DOMPurify and a Content Security Policy.",
+        "A database deadlock caused by concurrent requests; protect against it by wrapping every query in a transaction.",
+        "A database deadlock; protect with transactions."
+      ]
+    },
+    {
+      "id": 60,
+      "level": "intermediate",
+      "question": "How do you upload files with React + Node?",
+      "correctAnswer": "FormData on the frontend and multer (or a presigned S3 URL) on the backend, validating type and size.",
+      "wrongAnswers": [
+        "Send the file's path on the user's computer to the server, which then reads the file directly from the user's disk.",
+        "Convert files to JSON strings and send them in the URL.",
+        "Use localStorage to transfer files to the server."
+      ]
+    },
+    {
+      "id": 61,
+      "level": "intermediate",
+      "question": "What is WebSocket and when should you use it?",
+      "correctAnswer": "Persistent bidirectional communication (Socket.IO/ws), useful for chats, notifications and real-time data.",
+      "wrongAnswers": [
+        "A secure variant of REST used exclusively for payment processing between banks.",
+        "A one-way HTTP request that closes immediately after the response, used for downloading large files and for payment processing between banks with stronger security than REST.",
+        "A one-way HTTP request that closes after the response."
+      ]
+    },
+    {
+      "id": 62,
+      "level": "intermediate",
+      "question": "How do you test the Node API?",
+      "correctAnswer": "With Jest/Vitest and Supertest for endpoints, in-memory databases or test containers and mocks of external services.",
+      "wrongAnswers": [
+        "Only by calling the endpoints manually with Postman against production after each deploy, or with React Testing Library, which renders API routes and checks the JSON on screen.",
+        "With React Testing Library.",
+        "Node APIs can't be tested automatically."
+      ]
+    },
+    {
+      "id": 63,
+      "level": "intermediate",
+      "question": "How do you test the frontend and integration?",
+      "correctAnswer": "React Testing Library for components, MSW to mock the API and Playwright/Cypress for E2E flows.",
+      "wrongAnswers": [
+        "Supertest for React components and Jest for end-to-end flows in a real browser.",
+        "Test only the backend, since frontend bugs are cosmetic and don't affect users.",
+        "Only manual testing in the browser."
+      ]
+    },
+    {
+      "id": 64,
+      "level": "intermediate",
+      "question": "What is Docker and why use it?",
+      "correctAnswer": "Containers package the app and its dependencies, ensuring consistency across environments; Dockerfile and docker-compose are used for app + database.",
+      "wrongAnswers": [
+        "A hypervisor that emulates complete hardware and runs a full guest operating system for each application, also working as an npm alternative that installs dependencies into isolated folders.",
+        "A virtual machine hypervisor that emulates full hardware for each app.",
+        "A Node package manager alternative to npm."
+      ]
+    },
+    {
+      "id": 65,
+      "level": "intermediate",
+      "question": "What is CI/CD for this stack?",
+      "correctAnswer": "A pipeline (GitHub Actions) that runs lint, tests and build on each push and deploys automatically from the right branches.",
+      "wrongAnswers": [
+        "A code editor plugin that formats files and runs tests whenever they are saved locally.",
+        "A manual checklist executed by the team before each release, signing off lint and test results, complemented by an editor plugin that formats files and runs tests on save.",
+        "A manual checklist executed before each release."
+      ]
+    },
+    {
+      "id": 66,
+      "level": "intermediate",
+      "question": "How do you log correctly in Node?",
+      "correctAnswer": "Structured JSON logs with levels (pino/winston), correlation by request ID and no sensitive data.",
+      "wrongAnswers": [
+        "console.log everything, including passwords and tokens, to make debugging easier, and disable all logs in production to improve performance and avoid storing request data.",
+        "Write logs only to the browser console.",
+        "Disable logs in production to improve performance."
+      ]
+    },
+    {
+      "id": 67,
+      "level": "intermediate",
+      "question": "What is graceful shutdown?",
+      "correctAnswer": "Stopping the server on SIGTERM by finishing in-flight requests and closing connections (database, queues).",
+      "wrongAnswers": [
+        "Killing the process immediately with SIGKILL so that it releases memory as fast as possible.",
+        "Displaying a friendly error page to users when the server crashes unexpectedly.",
+        "Restarting the server every night."
+      ]
+    },
+    {
+      "id": 68,
+      "level": "advanced",
+      "question": "How would you design a scalable architecture for React + Node?",
+      "correctAnswer": "Frontend on a CDN, stateless backend behind a load balancer, cache (Redis), database with read replicas, queues for async tasks and observability.",
+      "wrongAnswers": [
+        "A single powerful server that runs the frontend, backend and database together, keeping user sessions in process memory for speed.",
+        "A stateful backend in which each instance keeps its own user sessions in memory, with sticky routing and no cache layer.",
+        "Serving the React app from the database."
+      ]
+    },
+    {
+      "id": 69,
+      "level": "advanced",
+      "question": "How do you scale Node horizontally?",
+      "correctAnswer": "Multiple stateless instances behind a load balancer, external sessions (Redis/JWT) and autoscaling based on CPU/latency.",
+      "wrongAnswers": [
+        "Keep increasing the CPU and memory of a single server indefinitely, which is the definition of horizontal scaling.",
+        "Keep increasing the CPU and memory of a single server, or run several instances that store sessions in their own process memory without a load balancer in front of them.",
+        "Increase the CPU of a single server indefinitely."
+      ]
+    },
+    {
+      "id": 70,
+      "level": "advanced",
+      "question": "How do you design an idempotent API?",
+      "correctAnswer": "Use idempotency keys (Idempotency-Key) on critical POSTs like payments, storing the result of the first execution.",
+      "wrongAnswers": [
+        "Use only GET requests for every operation, including payments, because GET is idempotent by definition, and reject any request that arrives twice with a 500 error.",
+        "Use only GET requests for every operation.",
+        "Retry every request automatically on the client without keys."
+      ]
+    },
+    {
+      "id": 71,
+      "level": "advanced",
+      "question": "When should you use queues (BullMQ, RabbitMQ, SQS)?",
+      "correctAnswer": "For long-running tasks or tolerable failures (emails, reports, integrations), decoupling and enabling retries and worker scaling.",
+      "wrongAnswers": [
+        "Only for storing user sessions and authentication tokens between requests in a distributed system.",
+        "For every request, including simple reads, because queues always reduce latency compared to processing directly; they are also used to store user sessions between requests.",
+        "Only when the database is down."
+      ]
+    },
+    {
+      "id": 72,
+      "level": "advanced",
+      "question": "How do you implement multi-layer caching?",
+      "correctAnswer": "CDN cache, HTTP (Cache-Control, ETag), application cache (Redis) and client cache (React Query), with defined invalidation.",
+      "wrongAnswers": [
+        "Use only the browser's localStorage, which covers every layer from the CDN to the database automatically.",
+        "Cache every response forever without any invalidation strategy, relying on deploys to clear stale data.",
+        "Use only database query caching."
+      ]
+    },
+    {
+      "id": 73,
+      "level": "advanced",
+      "question": "How do you handle cache invalidation?",
+      "correctAnswer": "TTL, event/tag-based invalidation and strategies like write-through or cache-aside; avoid inconsistencies with well-planned keys.",
+      "wrongAnswers": [
+        "Never invalidate entries; restart the cache server whenever users report stale data in the application.",
+        "Clear the entire cache on every request so that the data served is always consistent with the database.",
+        "Use random keys so entries never collide."
+      ]
+    },
+    {
+      "id": 74,
+      "level": "advanced",
+      "question": "How do you design a robust authentication system?",
+      "correctAnswer": "OAuth2/OIDC, MFA, refresh rotation, session revocation, login rate limiting, auditing and secure secret storage.",
+      "wrongAnswers": [
+        "Store usernames and passwords in plain text for easy recovery, and issue long-lived tokens that never expire for convenience.",
+        "Username and password stored in plain text for easy recovery.",
+        "Authentication only on the frontend."
+      ]
+    },
+    {
+      "id": 75,
+      "level": "advanced",
+      "question": "How do you implement OAuth/social login?",
+      "correctAnswer": "Authorization Code flow with PKCE; the backend exchanges the code for tokens, creates the session and never exposes the client secret to the frontend.",
+      "wrongAnswers": [
+        "Ask users for their Google or GitHub password in your own form and log in to the provider on their behalf from the backend.",
+        "Use the implicit flow with the client secret embedded in the React bundle so the frontend exchanges codes for tokens, storing the provider's access token in the URL for later requests.",
+        "Store the provider's access token in the URL."
+      ]
+    },
+    {
+      "id": 76,
+      "level": "advanced",
+      "question": "How do you handle concurrency and race conditions in the database?",
+      "correctAnswer": "Transactions with appropriate isolation levels, optimistic (version) or pessimistic locks and unique constraints.",
+      "wrongAnswers": [
+        "Add setTimeout between writes to avoid collisions.",
+        "Use a single global variable as a lock across instances.",
+        "Ignore them, since databases serialize everything automatically."
+      ]
+    },
+    {
+      "id": 77,
+      "level": "advanced",
+      "question": "What are the Repository and Service Layer patterns?",
+      "correctAnswer": "Repository isolates data access; Service concentrates business rules; this eases testing and swapping technologies.",
+      "wrongAnswers": [
+        "Repository holds the business rules and Service handles HTTP routing and request parsing; both are Git concepts used to organize code into repositories and services for deployment.",
+        "Both are Git concepts for organizing code.",
+        "Service accesses the database directly and Repository renders views."
+      ]
+    },
+    {
+      "id": 78,
+      "level": "advanced",
+      "question": "What is Clean/Hexagonal Architecture?",
+      "correctAnswer": "Layered organization with dependencies pointing toward the domain, isolating business rules from frameworks and infrastructure.",
+      "wrongAnswers": [
+        "An architecture in which the domain layer depends directly on the database and web framework to reduce indirection.",
+        "A CSS architecture for building clean, hexagon-shaped layouts with consistent spacing.",
+        "A deployment strategy using hexagonal server racks."
+      ]
+    },
+    {
+      "id": 79,
+      "level": "advanced",
+      "question": "What are microservices vs a modular monolith?",
+      "correctAnswer": "Microservices split independently deployable services, with operational cost; a modular monolith keeps one deploy with well-defined modules, usually the better starting point.",
+      "wrongAnswers": [
+        "A modular monolith is always harder to maintain than microservices, so microservices should be the default starting point for any new product.",
+        "A modular monolith deploys each module independently with its own database, while microservices share one database and a single deploy; microservices are always the best starting point.",
+        "Microservices share one database and one deploy."
+      ]
+    },
+    {
+      "id": 80,
+      "level": "advanced",
+      "question": "How do you ensure consistency between services?",
+      "correctAnswer": "Events and patterns like Saga/Outbox, idempotency and eventual consistency instead of distributed transactions.",
+      "wrongAnswers": [
+        "Use two-phase commit across every service on each request, or let each service write directly into the other services' database tables, guaranteeing strong consistency at all times.",
+        "Use a single global lock across all services.",
+        "Use two-phase commit for every request."
+      ]
+    },
+    {
+      "id": 81,
+      "level": "advanced",
+      "question": "How do you observe and debug production?",
+      "correctAnswer": "Structured logs, metrics (Prometheus/Grafana), distributed tracing (OpenTelemetry), alerts and error monitoring (Sentry).",
+      "wrongAnswers": [
+        "SSH into the production servers and add console.log statements to the code whenever an issue is reported.",
+        "Wait for users to report problems through support tickets and reproduce them locally.",
+        "Run the debugger attached to production at all times."
+      ]
+    },
+    {
+      "id": 82,
+      "level": "advanced",
+      "question": "How do you diagnose a memory leak in Node?",
+      "correctAnswer": "Use --inspect, heap snapshots in Chrome DevTools, clinic.js and check listeners, unbounded caches and closures retaining references.",
+      "wrongAnswers": [
+        "Restart the server every hour with a cron job, which fixes the leak permanently by clearing memory.",
+        "Increase --max-old-space-size until the process stops crashing, since leaks are caused by low memory limits, and restart the server every hour with a cron job to clear memory.",
+        "Switch from const to let."
+      ]
+    },
+    {
+      "id": 83,
+      "level": "advanced",
+      "question": "How do you optimize the performance of a Node API?",
+      "correctAnswer": "Reduce queries and payloads, indexes, caching, compression, pagination, connection pooling and profiling (flamegraphs).",
+      "wrongAnswers": [
+        "Return every record in each response to avoid extra calls, and open a new database connection for every query.",
+        "Use synchronous file reads and disable compression, since both reduce CPU usage on the server.",
+        "Use synchronous file reads for speed."
+      ]
+    },
+    {
+      "id": 84,
+      "level": "advanced",
+      "question": "What is connection pooling?",
+      "correctAnswer": "Reusing a limited set of database connections, avoiding the cost of opening them and overloading the database.",
+      "wrongAnswers": [
+        "Opening a brand new database connection for every query and closing it immediately afterwards, or sharing one single connection among all users without any limit or queue.",
+        "Opening a new connection for every query.",
+        "Sharing one connection between all users without limits."
+      ]
+    },
+    {
+      "id": 85,
+      "level": "advanced",
+      "question": "How do you handle validation and API contracts?",
+      "correctAnswer": "Shared schemas (Zod/OpenAPI), typed client generation, contract testing and careful versioning.",
+      "wrongAnswers": [
+        "Rely on documentation kept in a wiki and updated manually by whoever changes the endpoints.",
+        "Change response shapes freely, since clients are expected to adapt to whatever the API returns.",
+        "Validate only on the frontend."
+      ]
+    },
+    {
+      "id": 86,
+      "level": "advanced",
+      "question": "How do you implement infinite pagination in React with a Node API?",
+      "correctAnswer": "Cursor on the backend and useInfiniteQuery on the frontend, with IntersectionObserver to load more items.",
+      "wrongAnswers": [
+        "Fetch the whole table once and slice it in the browser.",
+        "Use offset with page numbers and setInterval to load more.",
+        "Reload the page with a larger limit on every scroll."
+      ]
+    },
+    {
+      "id": 87,
+      "level": "advanced",
+      "question": "How do you implement optimistic updates?",
+      "correctAnswer": "Update the UI immediately (React Query onMutate or useOptimistic), roll back on error and revalidate on completion.",
+      "wrongAnswers": [
+        "Wait for the server response before updating the UI, showing a spinner until the request finishes.",
+        "Update the UI immediately and never reconcile with the server, even if the request fails.",
+        "Disable the button until the page reloads."
+      ]
+    },
+    {
+      "id": 88,
+      "level": "advanced",
+      "question": "How do you avoid re-renders and slowness in large React apps?",
+      "correctAnswer": "Split state, selective memoization, list virtualization, code splitting and measuring with the Profiler.",
+      "wrongAnswers": [
+        "Render every item of large lists at once so that scrolling never needs to mount new components.",
+        "Put all state in a single top-level context.",
+        "Wrap every component in React.memo without measuring."
+      ]
+    },
+    {
+      "id": 89,
+      "level": "advanced",
+      "question": "How does zero-downtime deployment work?",
+      "correctAnswer": "Blue/green or rolling strategies, health checks, two-phase compatible migrations (expand/contract) and feature flags.",
+      "wrongAnswers": [
+        "Run destructive database migrations before deploying the new code so that the old version fails fast.",
+        "Stop all servers at once, run destructive migrations, deploy the new version and start everything again as quickly as possible during low traffic hours.",
+        "Deploy only at night when there are no users."
+      ]
+    },
+    {
+      "id": 90,
+      "level": "advanced",
+      "question": "How do you perform safe database migrations?",
+      "correctAnswer": "Backward-compatible changes in steps, running during low load, backups and a planned rollback.",
+      "wrongAnswers": [
+        "Drop and recreate the affected tables in a single deploy, restoring data from the last backup afterwards.",
+        "Run migrations during peak hours so problems are detected faster by the larger number of users.",
+        "Edit production tables manually without scripts."
+      ]
+    },
+    {
+      "id": 91,
+      "level": "advanced",
+      "question": "How do you protect secrets and dependencies?",
+      "correctAnswer": "Secret managers, key rotation, npm audit/Dependabot, lockfiles and package review (supply chain).",
+      "wrongAnswers": [
+        "Commit secrets to a private repo and never update dependencies.",
+        "Use the latest version of every package without a lockfile.",
+        "Share secrets in team chat for convenience."
+      ]
+    },
+    {
+      "id": 92,
+      "level": "advanced",
+      "question": "How do you handle LGPD/GDPR in the application?",
+      "correctAnswer": "Data minimization, consent, rights of access and deletion, encryption, logs without personal data and processing records.",
+      "wrongAnswers": [
+        "Collect as much personal data as possible in case it becomes useful later, and keep it indefinitely.",
+        "Log every piece of personal data for auditing purposes, since logs are exempt from privacy regulations.",
+        "Log all personal data for auditing."
+      ]
+    },
+    {
+      "id": 93,
+      "level": "advanced",
+      "question": "How do you design an API for processing payments?",
+      "correctAnswer": "Integrate a gateway (Stripe/Mercado Pago), confirm via signed webhooks, use idempotency, never store card data and handle async states.",
+      "wrongAnswers": [
+        "Trust the frontend's redirect to the success page as confirmation that the payment was approved, skipping webhook verification.",
+        "Store full card numbers in the database for faster repeat purchases.",
+        "Process cards directly without a gateway."
+      ]
+    },
+    {
+      "id": 94,
+      "level": "advanced",
+      "question": "How do you do real-time at scale?",
+      "correctAnswer": "Socket.IO with a Redis adapter, managed services (Pusher/Ably) or SSE; consider reconnection, backpressure and authentication.",
+      "wrongAnswers": [
+        "Have every client poll the API every 100 milliseconds for updates, which scales linearly with more servers.",
+        "Run a single WebSocket server without any adapter and increase its memory as the number of users grows.",
+        "Poll the API every 100 ms from every client."
+      ]
+    },
+    {
+      "id": 95,
+      "level": "advanced",
+      "question": "How do you organize a full-stack monorepo?",
+      "correctAnswer": "pnpm/Turborepo with apps/web, apps/api and packages/{ui,types,config}, a cached build pipeline and shared versioning.",
+      "wrongAnswers": [
+        "One folder per developer with their own copy of shared code merged manually before each release, or separate repositories with type definitions copied between them by hand.",
+        "One folder per developer with duplicated code.",
+        "Separate repositories with copied types."
+      ]
+    },
+    {
+      "id": 96,
+      "level": "advanced",
+      "question": "How would you approach the decision between REST, GraphQL and tRPC?",
+      "correctAnswer": "REST for public and simple APIs, GraphQL for varied clients with related data, tRPC for full-TypeScript teams controlling both sides.",
+      "wrongAnswers": [
+        "tRPC for public APIs consumed by third parties in many languages, REST for internal TypeScript-only apps, and GraphQL for every other case, since it completely replaces the other two.",
+        "GraphQL for every case, since it replaces the others completely.",
+        "Choose randomly; they have no trade-offs."
+      ]
+    },
+    {
+      "id": 97,
+      "level": "advanced",
+      "question": "How do you conduct code reviews and lead technically?",
+      "correctAnswer": "Focus on clarity, risks and architecture; objective and respectful feedback, automated standards (lint, tests) and knowledge sharing.",
+      "wrongAnswers": [
+        "Focus on personal style preferences and reject anything that differs from how you would write it, or approve every pull request quickly without reading so reviews never slow the team down.",
+        "Focus on personal style preferences and reject anything different.",
+        "Approve everything quickly to avoid slowing the team."
+      ]
+    },
+    {
+      "id": 98,
+      "level": "advanced",
+      "question": "Talk about a hard technical challenge you solved.",
+      "correctAnswer": "Use the STAR method: Situation, Task, Action and Result, with metrics (e.g., reduced latency by 40%) and learnings. Prepare a real story before the interview.",
+      "wrongAnswers": [
+        "Improvise a hypothetical story during the interview, keeping it vague and without numbers so it can't be questioned in detail.",
+        "List every technology and framework you used during the project, without explaining the context, your actions or the results.",
+        "Describe only the technologies used, without context or results."
+      ]
+    },
+    {
+      "id": 99,
+      "level": "advanced",
+      "question": "How would you prioritize deliveries under a tight deadline?",
+      "correctAnswer": "Align on the minimum valuable scope (MVP), identify risks, communicate trade-offs to the team/product and record the technical debt taken on.",
+      "wrongAnswers": [
+        "Deliver everything at once at the end of the deadline, without intermediate checkpoints or communication about risks.",
+        "Work overtime silently to deliver the full scope, skipping tests and code review without telling anyone, and deliver everything at once at the end without intermediate checkpoints.",
+        "Skip tests and code review silently."
+      ]
+    },
+    {
+      "id": 100,
+      "level": "advanced",
+      "question": "What questions should you ask the interviewer?",
+      "correctAnswer": "About stack and architecture, deploy process, testing and code review culture, onboarding, success metrics for the role and growth opportunities.",
+      "wrongAnswers": [
+        "Ask only about salary, benefits and vacation days, avoiding technical or team-related topics so you don't appear unprepared.",
+        "Don't ask any questions at all, since asking signals that you didn't research the company before the interview.",
+        "No questions; asking questions shows a lack of preparation."
+      ]
+    }
+  ]
+}

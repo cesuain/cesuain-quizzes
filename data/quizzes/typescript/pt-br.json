@@ -1,0 +1,1107 @@
+{
+  "id": "typescript",
+  "language": "pt-br",
+  "title": "TypeScript",
+  "questions": [
+    {
+      "id": 1,
+      "level": "basic",
+      "question": "O que é TypeScript?",
+      "correctAnswer": "Um superconjunto tipado do JavaScript, desenvolvido pela Microsoft, que é compilado para JavaScript puro e detecta erros em tempo de desenvolvimento.",
+      "wrongAnswers": [
+        "Um novo runtime desenvolvido pelo Google que executa código tipado diretamente no navegador, substituindo os motores JavaScript e detectando erros só quando o código roda em produção.",
+        "Um subconjunto do JavaScript que remove recursos dinâmicos para o código rodar mais rápido no Node.js.",
+        "Um linter desenvolvido pelo Facebook que verifica o estilo do código JavaScript em tempo de execução."
+      ]
+    },
+    {
+      "id": 2,
+      "level": "basic",
+      "question": "Quais as vantagens do TypeScript?",
+      "correctAnswer": "Detecção precoce de erros, melhor autocomplete e refatoração, código autodocumentado e manutenção mais segura em projetos grandes.",
+      "wrongAnswers": [
+        "Execução mais rápida em runtime, porque os navegadores leem as anotações de tipo e as usam para otimizar o código de máquina gerado para cada função em projetos grandes.",
+        "Execução mais rápida em runtime, já que os tipos são usados pelo navegador para otimizar o código.",
+        "Bundle menor, já que o TypeScript remove código não utilizado automaticamente."
+      ]
+    },
+    {
+      "id": 3,
+      "level": "basic",
+      "question": "Quais são os tipos primitivos?",
+      "correctAnswer": "string, number, boolean, null, undefined, symbol e bigint.",
+      "wrongAnswers": [
+        "string, number, boolean, object, array, function e tuple, que são todos representados como valores primitivos em runtime.",
+        "string, int, float, double, char, boolean e void, espelhando os tipos primitivos disponíveis em Java e C#.",
+        "string, number, boolean, any, unknown e never."
+      ]
+    },
+    {
+      "id": 4,
+      "level": "basic",
+      "question": "O que é o tipo any?",
+      "correctAnswer": "Desativa a checagem de tipos para aquele valor. Deve ser evitado, pois remove a segurança do TypeScript.",
+      "wrongAnswers": [
+        "Um tipo seguro para valores desconhecidos que exige restrição antes do uso.",
+        "Um tipo que representa valores que nunca ocorrem.",
+        "Um tipo que aceita apenas valores primitivos, não objetos."
+      ]
+    },
+    {
+      "id": 5,
+      "level": "basic",
+      "question": "O que é o tipo unknown?",
+      "correctAnswer": "Um tipo seguro para valores desconhecidos: é preciso restringi-lo (type narrowing) antes de usá-lo.",
+      "wrongAnswers": [
+        "Um tipo que desativa toda a checagem do valor, permitindo qualquer operação sem restrição; é apenas um alias mais novo de any introduzido no TypeScript 3.",
+        "Um tipo atribuído automaticamente a variáveis declaradas sem valor inicial, que não podem ser reatribuídas após a primeira atribuição.",
+        "Um tipo que desativa toda a checagem de tipos, idêntico ao any."
+      ]
+    },
+    {
+      "id": 6,
+      "level": "basic",
+      "question": "Qual a diferença entre any e unknown?",
+      "correctAnswer": "any permite qualquer operação sem checagem; unknown exige verificação de tipo antes do uso.",
+      "wrongAnswers": [
+        "unknown permite qualquer operação sem checagem; any exige verificação de tipo antes do uso.",
+        "any é só para objetos e unknown é só para primitivos.",
+        "Não há diferença; unknown é um alias de any introduzido no TS 3."
+      ]
+    },
+    {
+      "id": 7,
+      "level": "basic",
+      "question": "O que é o tipo never?",
+      "correctAnswer": "Representa valores que nunca ocorrem, como funções que sempre lançam erro ou ramos impossíveis em checagens exaustivas.",
+      "wrongAnswers": [
+        "Representa uma função que não retorna valor útil, como void.",
+        "Representa null e undefined combinados.",
+        "Representa uma variável que nunca pode ser reatribuída, como const."
+      ]
+    },
+    {
+      "id": 8,
+      "level": "basic",
+      "question": "O que é o tipo void?",
+      "correctAnswer": "Indica que uma função não retorna valor útil.",
+      "wrongAnswers": [
+        "Indica um valor que nunca pode ocorrer, como o resultado de um laço infinito ou de uma função que sempre lança erro.",
+        "Indica que uma variável ou propriedade é sempre null e nunca pode conter outro valor.",
+        "Indica que uma função pode retornar qualquer tipo."
+      ]
+    },
+    {
+      "id": 9,
+      "level": "basic",
+      "question": "Como declarar um array tipado?",
+      "correctAnswer": "string[] ou Array<string>.",
+      "wrongAnswers": [
+        "array<string> ou [string]... usando sintaxe genérica minúscula.",
+        "List<string> ou string() como no C#.",
+        "array<string> ou [string]..."
+      ]
+    },
+    {
+      "id": 10,
+      "level": "basic",
+      "question": "O que são tuplas?",
+      "correctAnswer": "Arrays com tamanho e tipos fixos por posição, como [string, number].",
+      "wrongAnswers": [
+        "Objetos com exatamente duas propriedades chamadas first e second, usados para retornar pares de valores de funções sem criar uma classe.",
+        "Arrays que podem crescer até qualquer tamanho, mas só podem conter valores de um único tipo, como number[] ou string[].",
+        "Conjuntos imutáveis de valores únicos, como Set."
+      ]
+    },
+    {
+      "id": 11,
+      "level": "basic",
+      "question": "O que é uma interface?",
+      "correctAnswer": "Declaração que descreve a forma de um objeto (propriedades e métodos), podendo ser estendida e implementada por classes.",
+      "wrongAnswers": [
+        "Um objeto de runtime que valida os dados passados às funções e lança erro quando falta uma propriedade obrigatória ou ela tem o tipo errado.",
+        "Uma classe que contém implementações padrão de métodos, que outras classes herdam estendendo-a com a palavra-chave implements.",
+        "Tipo que só consegue descrever uniões e primitivos."
+      ]
+    },
+    {
+      "id": 12,
+      "level": "basic",
+      "question": "O que é um type alias?",
+      "correctAnswer": "Nome para qualquer tipo, criado com type, incluindo uniões, interseções, tuplas e primitivos.",
+      "wrongAnswers": [
+        "Um nome apenas para formas de objetos, criado com type, que suporta declaration merging como as interfaces.",
+        "Uma variável de runtime que guarda um tipo para ser inspecionado depois por APIs de reflexão.",
+        "Atalho que renomeia uma classe JavaScript em tempo de compilação."
+      ]
+    },
+    {
+      "id": 13,
+      "level": "basic",
+      "question": "Qual a diferença entre interface e type?",
+      "correctAnswer": "Interfaces suportam declaration merging e extends; type aceita uniões, tuplas e tipos condicionais. Para objetos, ambos funcionam bem.",
+      "wrongAnswers": [
+        "type suporta declaration merging; interfaces aceitam uniões e tipos condicionais.",
+        "Interfaces existem em runtime enquanto types são apagados.",
+        "Interfaces só podem ser usadas com classes, nunca com objetos simples."
+      ]
+    },
+    {
+      "id": 14,
+      "level": "basic",
+      "question": "O que é inferência de tipos?",
+      "correctAnswer": "Capacidade do compilador de deduzir o tipo a partir do valor atribuído, sem anotação explícita.",
+      "wrongAnswers": [
+        "O processo de converter tipos em checagens de runtime automaticamente.",
+        "Recurso que adivinha tipos em runtime usando typeof.",
+        "A capacidade de importar tipos de outros arquivos sem instruções import."
+      ]
+    },
+    {
+      "id": 15,
+      "level": "basic",
+      "question": "O que são union types?",
+      "correctAnswer": "Tipos que aceitam um entre vários, como string | number.",
+      "wrongAnswers": [
+        "Tipos que mesclam vários em um só, exigindo todas as propriedades, escritos como A & B.",
+        "Tipos que convertem um valor em outro tipo em runtime, como Number(x).",
+        "Tipos que combinam vários em um, exigindo todas as propriedades, como A & B."
+      ]
+    },
+    {
+      "id": 16,
+      "level": "basic",
+      "question": "O que são intersection types?",
+      "correctAnswer": "Combinam vários tipos em um só, com A & B, exigindo todas as propriedades.",
+      "wrongAnswers": [
+        "Aceitam um valor de um entre vários tipos, escritos como A | B, sem exigir todas as propriedades.",
+        "Mantêm apenas as propriedades que A e B têm em comum, removendo o resto do resultado.",
+        "Comparam dois tipos e retornam um boolean."
+      ]
+    },
+    {
+      "id": 17,
+      "level": "basic",
+      "question": "O que são literal types?",
+      "correctAnswer": "Tipos que representam valores exatos, como \"admin\" ou 42, usados em uniões como \"GET\" | \"POST\".",
+      "wrongAnswers": [
+        "Tipos escritos como strings literais que são avaliados em runtime, então \"admin\" vira uma checagem de que o valor é igual à string.",
+        "Tipos criados automaticamente para cada objeto literal no código, que não podem ser combinados em uniões ou interseções.",
+        "Tipos que só permitem template literals."
+      ]
+    },
+    {
+      "id": 18,
+      "level": "basic",
+      "question": "O que são propriedades opcionais?",
+      "correctAnswer": "Declaradas com ?, como nome?: string; o valor pode ser undefined.",
+      "wrongAnswers": [
+        "Declaradas com !, como nome!: string, o que significa que o valor pode ser null em runtime.",
+        "Declaradas com a palavra-chave optional antes do nome da propriedade.",
+        "Propriedades com valor padrão preenchido automaticamente pelo compilador."
+      ]
+    },
+    {
+      "id": 19,
+      "level": "basic",
+      "question": "O que é readonly?",
+      "correctAnswer": "Modificador que impede reatribuição de uma propriedade após a inicialização.",
+      "wrongAnswers": [
+        "Modificador que torna uma propriedade privada à classe.",
+        "Modificador que congela o objeto em runtime com Object.freeze.",
+        "Modificador que torna uma propriedade opcional."
+      ]
+    },
+    {
+      "id": 20,
+      "level": "basic",
+      "question": "O que é um enum?",
+      "correctAnswer": "Conjunto de constantes nomeadas. Podem ser numéricos ou de string; muitos preferem uniões de literais por serem mais leves.",
+      "wrongAnswers": [
+        "Tipo que enumera todas as chaves de um objeto em runtime.",
+        "Construção de laço para iterar sobre propriedades de objetos.",
+        "Tipo especial de array que só aceita números em sequência."
+      ]
+    },
+    {
+      "id": 21,
+      "level": "basic",
+      "question": "Como tipar uma função?",
+      "correctAnswer": "Anotando parâmetros e retorno: function soma(a: number, b: number): number.",
+      "wrongAnswers": [
+        "Com sintaxe parecida com Java: function soma(number a, number b) -> number, declarando o tipo antes de cada parâmetro.",
+        "Com um comentário JSDoc acima da função, já que o TypeScript não consegue anotar parâmetros inline.",
+        "Com function soma(number a, number b) -> number."
+      ]
+    },
+    {
+      "id": 22,
+      "level": "basic",
+      "question": "Como definir parâmetros opcionais e padrão?",
+      "correctAnswer": "(a: number, b?: number) para opcional e (a: number, b = 10) para valor padrão.",
+      "wrongAnswers": [
+        "(a: number, b!: number) para opcional e (a: number, b: 10) para valor padrão, em que o tipo literal define o padrão.",
+        "(a: number, optional b: number) para opcional e (a: number, default b = 10) para valor padrão.",
+        "(a: number, ?b: number) para opcional e (a: number, b := 10) para valor padrão."
+      ]
+    },
+    {
+      "id": 23,
+      "level": "basic",
+      "question": "O que é type assertion?",
+      "correctAnswer": "Informar ao compilador o tipo de um valor com as, como valor as string. Não faz conversão em runtime.",
+      "wrongAnswers": [
+        "Converter um valor para outro tipo em runtime com as, de modo que valor as string se comporta como String(valor) e muda o dado real.",
+        "Uma checagem de runtime que lança erro se o valor não corresponder ao tipo.",
+        "Uma asserção de teste que verifica tipos em testes unitários."
+      ]
+    },
+    {
+      "id": 24,
+      "level": "basic",
+      "question": "O que é o operador ! (non-null assertion)?",
+      "correctAnswer": "Afirma que um valor não é null/undefined (obj!.x). Use com cautela.",
+      "wrongAnswers": [
+        "Nega um tipo, então !string significa todos os tipos exceto string; útil para excluir casos.",
+        "Verifica em runtime que o valor não é null e lança um erro descritivo caso contrário.",
+        "Marca uma propriedade como obrigatória em uma interface."
+      ]
+    },
+    {
+      "id": 25,
+      "level": "basic",
+      "question": "O que é optional chaining ?.?",
+      "correctAnswer": "Acessa propriedades com segurança, retornando undefined se o valor intermediário for nulo.",
+      "wrongAnswers": [
+        "Lança um TypeError descritivo se algum valor intermediário da cadeia for null ou undefined.",
+        "Torna uma propriedade opcional em uma declaração de tipo.",
+        "Retorna o lado direito se o esquerdo for null ou undefined."
+      ]
+    },
+    {
+      "id": 26,
+      "level": "basic",
+      "question": "O que é nullish coalescing ???",
+      "correctAnswer": "Retorna o lado direito apenas se o esquerdo for null ou undefined (diferente de ||, que considera falsy).",
+      "wrongAnswers": [
+        "Retorna o lado direito sempre que o esquerdo for qualquer valor falsy, incluindo 0 e strings vazias, exatamente como o operador ||.",
+        "Acessa propriedades aninhadas com segurança, retornando undefined quando um valor intermediário falta em vez de lançar erro.",
+        "Verifica se ambos os lados são null e retorna um boolean."
+      ]
+    },
+    {
+      "id": 27,
+      "level": "basic",
+      "question": "O que é o tsconfig.json?",
+      "correctAnswer": "Arquivo de configuração do compilador: opções como target, module, strict, paths e arquivos incluídos.",
+      "wrongAnswers": [
+        "O arquivo que lista as dependências npm e scripts de um projeto TypeScript, substituindo o package.json em projetos que usam tsc.",
+        "Arquivo gerado pelo tsc contendo os source maps da saída compilada.",
+        "Arquivo onde variáveis de ambiente de runtime são declaradas para o TypeScript."
+      ]
+    },
+    {
+      "id": 28,
+      "level": "basic",
+      "question": "O que faz a opção strict?",
+      "correctAnswer": "Habilita um conjunto de checagens rigorosas (strictNullChecks, noImplicitAny, etc.), recomendada em novos projetos.",
+      "wrongAnswers": [
+        "Apenas ativa a diretiva \"use strict\" do JavaScript nos arquivos gerados, sem mudar nenhum comportamento de checagem de tipos do compilador.",
+        "Faz o compilador parar no primeiro erro encontrado em vez de reportar todos, o que acelera o feedback em projetos grandes.",
+        "Proíbe o uso de classes e enums."
+      ]
+    },
+    {
+      "id": 29,
+      "level": "basic",
+      "question": "O que é noImplicitAny?",
+      "correctAnswer": "Gera erro quando o TypeScript infere any implicitamente por falta de anotação.",
+      "wrongAnswers": [
+        "Proíbe qualquer uso explícito do tipo any em todo o código, inclusive em asserções de tipo.",
+        "Converte todo any implícito em unknown automaticamente.",
+        "Desativa a inferência de tipos, exigindo anotar toda variável."
+      ]
+    },
+    {
+      "id": 30,
+      "level": "basic",
+      "question": "O que é strictNullChecks?",
+      "correctAnswer": "Torna null e undefined tipos distintos, evitando erros de acesso a valores nulos.",
+      "wrongAnswers": [
+        "Remove null da linguagem por completo, de modo que só undefined pode representar valores ausentes.",
+        "Insere checagens de null em runtime no JavaScript gerado e lança erros quando são acessados.",
+        "Força toda propriedade a ser inicializada com null."
+      ]
+    },
+    {
+      "id": 31,
+      "level": "basic",
+      "question": "Como tipar classes?",
+      "correctAnswer": "Declarando propriedades com tipos e modificadores de acesso (public, private, protected) e implementando interfaces com implements.",
+      "wrongAnswers": [
+        "Colocando um decorator @Type() obrigatório acima de cada propriedade, já que campos de classe não podem ser anotados diretamente no TypeScript.",
+        "Declarando tipos apenas como parâmetros do construtor, porque propriedades no corpo da classe não recebem tipos nem modificadores.",
+        "Usando um decorator @Type acima de cada propriedade, que é obrigatório."
+      ]
+    },
+    {
+      "id": 32,
+      "level": "basic",
+      "question": "O que é um arquivo .d.ts?",
+      "correctAnswer": "Arquivo de declaração de tipos, sem implementação, que descreve bibliotecas JavaScript.",
+      "wrongAnswers": [
+        "Arquivo JavaScript compilado com tipos embutidos como metadados, usado pelo Node para checar valores em runtime.",
+        "Arquivo de depuração gerado pelo tsc para rastrear erros de tipo.",
+        "Arquivo de dados com fixtures para testes tipados."
+      ]
+    },
+    {
+      "id": 33,
+      "level": "basic",
+      "question": "O que é o @types?",
+      "correctAnswer": "Pacotes no npm (como @types/node) que fornecem declarações de tipo para bibliotecas escritas em JavaScript.",
+      "wrongAnswers": [
+        "Namespace nativo do TypeScript que contém os tipos primitivos e precisa ser importado em todo arquivo.",
+        "Pasta na raiz do projeto onde todas as interfaces e type aliases devem ficar para o compilador encontrá-los.",
+        "Decorator usado para declarar tipos em propriedades de classe."
+      ]
+    },
+    {
+      "id": 34,
+      "level": "basic",
+      "question": "Como o TypeScript é executado?",
+      "correctAnswer": "É transpilado para JavaScript por tsc (ou esbuild/SWC/Babel) e o JS resultante roda em Node ou no navegador. Ferramentas como tsx e ts-node executam direto.",
+      "wrongAnswers": [
+        "Navegadores modernos e o Node.js executam arquivos .ts nativamente, lendo as anotações de tipo para validar valores durante a execução, sem etapa de transpilação.",
+        "É compilado para WebAssembly pelo tsc, e o módulo .wasm resultante roda mais rápido que JavaScript no Node.js e no navegador.",
+        "Navegadores executam arquivos .ts nativamente, sem necessidade de compilação."
+      ]
+    },
+    {
+      "id": 35,
+      "level": "intermediate",
+      "question": "O que são generics?",
+      "correctAnswer": "Permitem criar componentes, funções e tipos reutilizáveis que funcionam com vários tipos, como function id<T>(x: T): T.",
+      "wrongAnswers": [
+        "Tipos que aceitam qualquer valor sem checagem, como o any, usados quando não se sabe o tipo de um parâmetro, como function id(x: any): any.",
+        "Apenas tipos utilitários nativos como Partial e Pick.",
+        "Classes que podem ser instanciadas sem construtor."
+      ]
+    },
+    {
+      "id": 36,
+      "level": "intermediate",
+      "question": "Como restringir um generic?",
+      "correctAnswer": "Com extends: <T extends { id: number }>, exigindo que T tenha certa forma.",
+      "wrongAnswers": [
+        "Com implements: <T implements { id: number }>, exigindo que T forneça essa forma.",
+        "Com uma cláusula where após a assinatura: <T> where T: { id: number }, como no C#.",
+        "Com implements: <T implements { id: number }>."
+      ]
+    },
+    {
+      "id": 37,
+      "level": "intermediate",
+      "question": "O que é keyof?",
+      "correctAnswer": "Produz uma união com as chaves de um tipo: keyof {a: 1; b: 2} resulta em \"a\" | \"b\".",
+      "wrongAnswers": [
+        "Retorna um array com as chaves do objeto em runtime, como Object.keys.",
+        "Produz uma união dos valores do tipo: 1 | 2.",
+        "Verifica se uma chave existe em um objeto e retorna um boolean."
+      ]
+    },
+    {
+      "id": 38,
+      "level": "intermediate",
+      "question": "O que é typeof em contexto de tipos?",
+      "correctAnswer": "Obtém o tipo de uma variável ou valor existente: type T = typeof obj.",
+      "wrongAnswers": [
+        "Retorna um tipo literal de string como \"object\" ou \"string\", igual ao operador typeof do JavaScript.",
+        "Cria uma nova variável com o mesmo valor de obj.",
+        "Verifica em runtime se um valor corresponde a um tipo declarado."
+      ]
+    },
+    {
+      "id": 39,
+      "level": "intermediate",
+      "question": "O que são mapped types?",
+      "correctAnswer": "Tipos que transformam cada propriedade de outro tipo: { [K in keyof T]: ... }.",
+      "wrongAnswers": [
+        "Tipos criados a partir da estrutura de dados Map em runtime.",
+        "Tipos que mapeiam os parâmetros de uma função para o tipo de retorno.",
+        "Tipos gerados por source maps para depuração."
+      ]
+    },
+    {
+      "id": 40,
+      "level": "intermediate",
+      "question": "O que são conditional types?",
+      "correctAnswer": "Tipos que escolhem um resultado conforme uma condição: T extends string ? \"sim\" : \"não\".",
+      "wrongAnswers": [
+        "Tipos que o compilador só checa quando um if correspondente em runtime resulta em verdadeiro.",
+        "Tipos que se tornam opcionais dependendo de uma flag do compilador.",
+        "Tipos criados com blocos if/else dentro de interfaces."
+      ]
+    },
+    {
+      "id": 41,
+      "level": "intermediate",
+      "question": "O que é a palavra-chave infer?",
+      "correctAnswer": "Dentro de tipos condicionais, captura um tipo para reutilizá-lo, como em T extends Promise<infer U> ? U : T.",
+      "wrongAnswers": [
+        "Diz ao compilador para inferir o tipo de uma variável em runtime.",
+        "Força a inferência de tipo em parâmetros de função sem anotações.",
+        "Converte any no tipo mais específico disponível."
+      ]
+    },
+    {
+      "id": 42,
+      "level": "intermediate",
+      "question": "O que é Partial<T>?",
+      "correctAnswer": "Utilitário que torna todas as propriedades de T opcionais.",
+      "wrongAnswers": [
+        "Utilitário que torna todas as propriedades de T obrigatórias, removendo o modificador ?.",
+        "Utilitário que torna todas as propriedades de T somente leitura e opcionais ao mesmo tempo.",
+        "Utilitário que seleciona metade das propriedades de T."
+      ]
+    },
+    {
+      "id": 43,
+      "level": "intermediate",
+      "question": "O que é Required<T>?",
+      "correctAnswer": "Torna todas as propriedades obrigatórias.",
+      "wrongAnswers": [
+        "Torna todas as propriedades de T opcionais, adicionando ? a cada uma.",
+        "Exige que T seja um tipo objeto e falha a compilação caso contrário.",
+        "Remove null e undefined de T."
+      ]
+    },
+    {
+      "id": 44,
+      "level": "intermediate",
+      "question": "O que é Pick<T, K>?",
+      "correctAnswer": "Cria um tipo com apenas as propriedades K de T.",
+      "wrongAnswers": [
+        "Cria um tipo com todas as propriedades de T, exceto as listadas em K.",
+        "Cria um tipo objeto cujas chaves são K e os valores são T.",
+        "Cria um tipo com todas as propriedades de T, exceto K."
+      ]
+    },
+    {
+      "id": 45,
+      "level": "intermediate",
+      "question": "O que é Omit<T, K>?",
+      "correctAnswer": "Cria um tipo com todas as propriedades de T, exceto K.",
+      "wrongAnswers": [
+        "Cria um tipo apenas com as propriedades K de T, descartando o resto.",
+        "Remove da união T os membros que são atribuíveis a K.",
+        "Remove null e undefined de T."
+      ]
+    },
+    {
+      "id": 46,
+      "level": "intermediate",
+      "question": "O que é Record<K, V>?",
+      "correctAnswer": "Cria um tipo de objeto com chaves K e valores V.",
+      "wrongAnswers": [
+        "Cria um tipo tupla [K, V] usado para representar pares chave-valor.",
+        "Cria uma interface cujos nomes de propriedades são os membros de V e cujos valores são os membros de K.",
+        "Cria uma instância de Map com chaves K e valores V em runtime."
+      ]
+    },
+    {
+      "id": 47,
+      "level": "intermediate",
+      "question": "O que são Readonly<T>?",
+      "correctAnswer": "Torna todas as propriedades de T somente leitura.",
+      "wrongAnswers": [
+        "Congela o objeto em runtime com Object.freeze, recursivamente.",
+        "Torna todas as propriedades de T privadas à classe que as declara.",
+        "Torna imutável apenas o array de nível superior de T."
+      ]
+    },
+    {
+      "id": 48,
+      "level": "intermediate",
+      "question": "O que é ReturnType<T>?",
+      "correctAnswer": "Extrai o tipo de retorno de uma função.",
+      "wrongAnswers": [
+        "Extrai os tipos dos argumentos de uma função e os retorna como uma tupla readonly, na ordem de declaração.",
+        "Extrai o tipo do valor resolvido de uma Promise.",
+        "Extrai os tipos dos parâmetros de uma função como tupla."
+      ]
+    },
+    {
+      "id": 49,
+      "level": "intermediate",
+      "question": "O que é Parameters<T>?",
+      "correctAnswer": "Extrai os tipos dos parâmetros de uma função como tupla.",
+      "wrongAnswers": [
+        "Extrai o tipo de retorno de uma função como um único tipo.",
+        "Retorna um tipo objeto indexado pelos nomes dos parâmetros.",
+        "Retorna um objeto com os nomes dos parâmetros como chaves."
+      ]
+    },
+    {
+      "id": 50,
+      "level": "intermediate",
+      "question": "O que é Awaited<T>?",
+      "correctAnswer": "Obtém o tipo resolvido de uma Promise, desembrulhando recursivamente.",
+      "wrongAnswers": [
+        "Envolve T em uma Promise, produzindo Promise<T> para tipos de retorno async.",
+        "Torna uma função async no nível de tipos, mudando o tipo de retorno automaticamente.",
+        "Aguarda a checagem de tipos terminar antes de compilar."
+      ]
+    },
+    {
+      "id": 51,
+      "level": "intermediate",
+      "question": "O que é NonNullable<T>?",
+      "correctAnswer": "Remove null e undefined de T.",
+      "wrongAnswers": [
+        "Adiciona null e undefined a T, tornando-o anulável.",
+        "Torna todas as propriedades de T obrigatórias e não opcionais.",
+        "Lança erro de compilação se T puder ser null."
+      ]
+    },
+    {
+      "id": 52,
+      "level": "intermediate",
+      "question": "O que são Exclude e Extract?",
+      "correctAnswer": "Exclude<T, U> remove de T os membros atribuíveis a U; Extract<T, U> mantém só esses membros.",
+      "wrongAnswers": [
+        "Exclude<T, U> mantém apenas os membros de T atribuíveis a U; Extract<T, U> remove esses membros de T.",
+        "Exclude remove propriedades de um tipo objeto; Extract seleciona propriedades de um tipo objeto, como Omit e Pick.",
+        "São funções de runtime que filtram arrays por tipo."
+      ]
+    },
+    {
+      "id": 53,
+      "level": "intermediate",
+      "question": "O que é type narrowing?",
+      "correctAnswer": "Refinar um tipo mais amplo para um mais específico usando typeof, instanceof, in, igualdade ou guards.",
+      "wrongAnswers": [
+        "Converter um tipo específico em um mais amplo, como de um literal de string para string ou any, para deixar atribuições mais flexíveis.",
+        "Fazer cast de um valor com as para um tipo menor, em que o compilador confia sem verificar, para reduzir os tipos possíveis.",
+        "Reduzir o número de tipos em um arquivo para acelerar a compilação."
+      ]
+    },
+    {
+      "id": 54,
+      "level": "intermediate",
+      "question": "O que são type guards?",
+      "correctAnswer": "Expressões ou funções que garantem o tipo dentro de um bloco, como typeof x === \"string\".",
+      "wrongAnswers": [
+        "Flags do compilador que impedem o uso de any.",
+        "Decorators que validam tipos de propriedades de classe em runtime.",
+        "Modificadores de acesso que protegem membros de classe."
+      ]
+    },
+    {
+      "id": 55,
+      "level": "intermediate",
+      "question": "O que são type predicates?",
+      "correctAnswer": "Funções com retorno x is Tipo que informam ao compilador que o argumento é daquele tipo.",
+      "wrongAnswers": [
+        "Funções que retornam apenas um tipo literal boolean.",
+        "Restrições genéricas escritas com extends.",
+        "Asserções escritas com as const."
+      ]
+    },
+    {
+      "id": 56,
+      "level": "intermediate",
+      "question": "O que são discriminated unions?",
+      "correctAnswer": "Uniões de objetos com uma propriedade literal comum (ex.: kind) que permite narrowing seguro com switch.",
+      "wrongAnswers": [
+        "Uniões em que cada membro deve ter nomes de propriedades totalmente diferentes.",
+        "Uniões que excluem membros com base em uma flag do compilador.",
+        "Uniões apenas de tipos primitivos, como string | number."
+      ]
+    },
+    {
+      "id": 57,
+      "level": "intermediate",
+      "question": "Como fazer checagem exaustiva?",
+      "correctAnswer": "No default do switch, atribuir o valor a never; se faltar um caso, o compilador acusa erro.",
+      "wrongAnswers": [
+        "Adicionar um default que retorna any, para o compilador considerar todo valor possível tratado e o switch completo.",
+        "Ativar a flag exhaustive no tsconfig.json, que faz todo switch reportar automaticamente casos faltantes da união.",
+        "Adicionar um default que retorna any, cobrindo todos os casos."
+      ]
+    },
+    {
+      "id": 58,
+      "level": "intermediate",
+      "question": "O que é as const?",
+      "correctAnswer": "Faz o literal ser inferido como imutável e com os tipos mais específicos possíveis (readonly, literais).",
+      "wrongAnswers": [
+        "Converte uma declaração let em const em runtime, impedindo a reatribuição da variável.",
+        "Congela o objeto em runtime com Object.freeze, tornando também imutáveis as propriedades aninhadas.",
+        "Faz cast de qualquer valor para um tipo numérico constante."
+      ]
+    },
+    {
+      "id": 59,
+      "level": "intermediate",
+      "question": "Qual a diferença entre interface extends e interseção &?",
+      "correctAnswer": "extends detecta conflitos de propriedades com erro e é mais performático; & combina tipos e pode produzir never em conflitos.",
+      "wrongAnswers": [
+        "& detecta conflitos de propriedades com erro claro e é mais rápido de checar, enquanto extends produz never silenciosamente em conflitos.",
+        "extends só funciona com classes e & só com interfaces, então são usados em situações completamente diferentes.",
+        "Não há diferença; compilam para declarações idênticas."
+      ]
+    },
+    {
+      "id": 60,
+      "level": "intermediate",
+      "question": "O que é declaration merging?",
+      "correctAnswer": "Interfaces com o mesmo nome no mesmo escopo são mescladas em uma só, útil para estender tipos de bibliotecas.",
+      "wrongAnswers": [
+        "Mesclar vários arquivos .ts em um único arquivo de saída na compilação para reduzir o número de módulos.",
+        "Combinar dois type aliases com o mesmo nome em uma união.",
+        "Mesclar uma classe e um enum em um único objeto em runtime."
+      ]
+    },
+    {
+      "id": 61,
+      "level": "intermediate",
+      "question": "O que são index signatures?",
+      "correctAnswer": "Definem o tipo de chaves dinâmicas: { [chave: string]: number }.",
+      "wrongAnswers": [
+        "Declaram que todo índice de array deve ser um inteiro positivo, impedindo índices negativos ou fracionários.",
+        "Criam um índice em runtime para buscas mais rápidas em objetos grandes.",
+        "Definem o tipo do índice de um array, que deve ser sempre number."
+      ]
+    },
+    {
+      "id": 62,
+      "level": "intermediate",
+      "question": "O que são template literal types?",
+      "correctAnswer": "Tipos de string construídos por interpolação, como on${Capitalize<string>} (com crases dentro do tipo).",
+      "wrongAnswers": [
+        "Tipos para templates HTML, usados por frameworks como Angular para checar bindings dentro dos templates dos componentes.",
+        "Template strings de runtime que validam o conteúdo interpolado contra um tipo declarado e lançam erro se não bater.",
+        "Tipos que só podem ser usados dentro do JSX."
+      ]
+    },
+    {
+      "id": 63,
+      "level": "intermediate",
+      "question": "O que são overloads de função?",
+      "correctAnswer": "Várias assinaturas para a mesma função, descrevendo diferentes combinações de parâmetros e retornos.",
+      "wrongAnswers": [
+        "Várias implementações da mesma função, cada uma com seu corpo, selecionadas em runtime pelos tipos dos argumentos.",
+        "Métodos redefinidos em subclasses com a palavra-chave override, substituindo a implementação do pai.",
+        "Funções que recebem mais argumentos do que o declarado."
+      ]
+    },
+    {
+      "id": 64,
+      "level": "intermediate",
+      "question": "O que é o modificador abstract?",
+      "correctAnswer": "Marca classes ou métodos que devem ser implementados por subclasses; classes abstratas não podem ser instanciadas.",
+      "wrongAnswers": [
+        "Marca classes que só podem ser instanciadas uma vez, implementando o padrão singleton no nível de tipos.",
+        "Esconde um método da saída JavaScript compilada, mantendo-o disponível para a checagem de tipos.",
+        "Marca métodos que rodam de forma assíncrona."
+      ]
+    },
+    {
+      "id": 65,
+      "level": "intermediate",
+      "question": "Qual a diferença entre private e #private?",
+      "correctAnswer": "private só existe em tempo de compilação; #campo é privacidade real do JavaScript em runtime.",
+      "wrongAnswers": [
+        "#campo só existe em tempo de compilação e é apagado, enquanto private é imposto pelo motor JavaScript em runtime.",
+        "private é usado para métodos e #private apenas para propriedades; não podem ser usados de forma intercambiável.",
+        "Não há diferença; # é só uma sintaxe mais curta."
+      ]
+    },
+    {
+      "id": 66,
+      "level": "intermediate",
+      "question": "Como tipar um componente React com props?",
+      "correctAnswer": "Definindo uma interface/type de props e aplicando ao parâmetro: function Botao({ label }: BotaoProps).",
+      "wrongAnswers": [
+        "Passando o tipo das props como segundo argumento da função, como function Botao(props, BotaoProps), que o React lê em runtime.",
+        "Anotando o tipo de retorno do componente como BotaoProps, para o compilador inferir as props esperadas a partir do JSX retornado.",
+        "Usando apenas PropTypes, já que o TypeScript não consegue tipar props do React."
+      ]
+    },
+    {
+      "id": 67,
+      "level": "intermediate",
+      "question": "Como tipar useState no React?",
+      "correctAnswer": "Com generics: useState<Usuario | null>(null).",
+      "wrongAnswers": [
+        "Com um cast na função setter: setUsuario as (u: Usuario) => void.",
+        "Não pode ser tipado; useState sempre retorna any no TypeScript.",
+        "Não pode ser tipado; useState sempre retorna any."
+      ]
+    },
+    {
+      "id": 68,
+      "level": "intermediate",
+      "question": "Como tipar eventos no React?",
+      "correctAnswer": "Com tipos como React.ChangeEvent<HTMLInputElement> e React.MouseEvent<HTMLButtonElement>.",
+      "wrongAnswers": [
+        "Apenas com o tipo nativo Event do DOM, porque o React não fornece definições de tipos de eventos próprias para handlers.",
+        "Com any, que é o tipo recomendado pelo time do React para handlers de eventos, evitando problemas de compatibilidade entre navegadores.",
+        "Com React.Event<\"click\"> e React.Event<\"change\">."
+      ]
+    },
+    {
+      "id": 69,
+      "level": "intermediate",
+      "question": "Como tipar uma resposta de API com segurança?",
+      "correctAnswer": "Definir tipos e validar em runtime com bibliotecas como Zod, já que tipos desaparecem na compilação.",
+      "wrongAnswers": [
+        "Anotar o resultado do fetch com as MeuTipo, o que faz o compilador inserir uma validação em runtime do corpo da resposta.",
+        "Usar um arquivo .d.ts para a API, que o TypeScript checa contra respostas reais.",
+        "Ativar o modo strict, que valida respostas JSON automaticamente."
+      ]
+    },
+    {
+      "id": 70,
+      "level": "advanced",
+      "question": "Como criar um tipo DeepPartial?",
+      "correctAnswer": "type DeepPartial<T> = { [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K] }.",
+      "wrongAnswers": [
+        "type DeepPartial<T> = Partial<Partial<T>>, já que aplicar Partial duas vezes torna opcionais também as propriedades aninhadas.",
+        "type DeepPartial<T> = { [K in keyof T]-?: DeepPartial<T[K]> }.",
+        "type DeepPartial<T> = T extends object ? Partial<T> : never."
+      ]
+    },
+    {
+      "id": 71,
+      "level": "advanced",
+      "question": "O que é covariância e contravariância?",
+      "correctAnswer": "Covariância permite usar subtipos onde se espera um supertipo (retornos); contravariância inverte (parâmetros, sob strictFunctionTypes).",
+      "wrongAnswers": [
+        "Covariância se aplica a parâmetros e contravariância a tipos de retorno.",
+        "Descrevem como os tipos mudam entre versões do TypeScript.",
+        "Covariância significa que dois tipos são idênticos; contravariância, que são incompatíveis."
+      ]
+    },
+    {
+      "id": 72,
+      "level": "advanced",
+      "question": "O que é strictFunctionTypes?",
+      "correctAnswer": "Faz a checagem contravariante dos parâmetros de funções, impedindo atribuições inseguras.",
+      "wrongAnswers": [
+        "Exige que toda função e método declare tipo de retorno explícito, falhando a compilação caso contrário.",
+        "Torna os parâmetros de função bivariantes por flexibilidade, permitindo mais atribuições entre callbacks.",
+        "Proíbe arrow functions em favor de declarações de função."
+      ]
+    },
+    {
+      "id": 73,
+      "level": "advanced",
+      "question": "O que são variadic tuple types?",
+      "correctAnswer": "Tuplas com spread de tipos genéricos ([...T, ...U]), permitindo tipar concatenação de argumentos.",
+      "wrongAnswers": [
+        "Tuplas que podem ter qualquer tamanho e tipo de elementos, equivalentes a any[] mas com melhor autocomplete.",
+        "Funções que aceitam um número variável de parâmetros de tipo, como fn<A, B, C, ...>().",
+        "Arrays cujo tamanho é determinado em runtime."
+      ]
+    },
+    {
+      "id": 74,
+      "level": "advanced",
+      "question": "O que são key remapping em mapped types?",
+      "correctAnswer": "Uso de as para renomear chaves: { [K in keyof T as \"get\" + Capitalize<K & string>]: () => T[K] }.",
+      "wrongAnswers": [
+        "Usar o tipo utilitário rename() para mudar chaves de um objeto em runtime preservando os tipos dos valores.",
+        "Usar Record<V, K> para trocar chaves e valores de um tipo, de modo que os valores viram as novas chaves do tipo resultante.",
+        "Usar keyof para ordenar alfabeticamente as chaves de um tipo."
+      ]
+    },
+    {
+      "id": 75,
+      "level": "advanced",
+      "question": "O que são distributive conditional types?",
+      "correctAnswer": "Tipos condicionais com parâmetro \"nu\" se distribuem sobre uniões: T extends U ? X : Y é aplicado a cada membro.",
+      "wrongAnswers": [
+        "Tipos condicionais que se aplicam apenas ao primeiro membro de uma união, ignorando os demais a menos que envolvidos em array.",
+        "Tipos condicionais distribuídos entre vários arquivos para compilação mais rápida.",
+        "Tipos condicionais que convertem uniões em interseções automaticamente."
+      ]
+    },
+    {
+      "id": 76,
+      "level": "advanced",
+      "question": "Como evitar a distribuição em conditional types?",
+      "correctAnswer": "Envolvendo em tuplas: [T] extends [U] ? ... : ....",
+      "wrongAnswers": [
+        "Adicionando a palavra-chave nodistribute antes de extends, como T nodistribute extends U ? X : Y.",
+        "Desativando o modo strict no tsconfig.json, o que desliga a distribuição de tipos condicionais globalmente.",
+        "Usando T & {} extends U."
+      ]
+    },
+    {
+      "id": 77,
+      "level": "advanced",
+      "question": "O que são branded types (tipos opacos)?",
+      "correctAnswer": "Técnica de adicionar uma marca fantasma (string & { __brand: \"UserId\" }) para diferenciar tipos estruturalmente idênticos.",
+      "wrongAnswers": [
+        "Tipos publicados por uma biblioteca e selados para que consumidores não possam estendê-los nem adicionar propriedades.",
+        "Tipos criptografados pelo compilador para que sua estrutura interna fique oculta aos consumidores de um pacote publicado.",
+        "Tipos criptografados em tempo de compilação para esconder sua estrutura."
+      ]
+    },
+    {
+      "id": 78,
+      "level": "advanced",
+      "question": "Como tipar uma função que preserva literais?",
+      "correctAnswer": "Usando generics com const (<const T>) ou restrições como T extends string.",
+      "wrongAnswers": [
+        "Anotando o parâmetro como any, o que mantém os tipos literais intactos porque any nunca alarga valores.",
+        "Usando readonly apenas no tipo de retorno, o que impede o compilador de alargar argumentos literais.",
+        "Anotando o parâmetro como any para que os literais sejam mantidos."
+      ]
+    },
+    {
+      "id": 79,
+      "level": "advanced",
+      "question": "O que é unique symbol?",
+      "correctAnswer": "Tipo para símbolos únicos, útil para chaves e brands que nunca colidem.",
+      "wrongAnswers": [
+        "Função de runtime que gera IDs únicos para objetos.",
+        "Tipo que proíbe valores duplicados em um array.",
+        "Modificador que torna uma classe um singleton."
+      ]
+    },
+    {
+      "id": 80,
+      "level": "advanced",
+      "question": "O que é o this tipado?",
+      "correctAnswer": "É possível declarar o tipo de this como primeiro parâmetro falso: function f(this: Contexto); também existe o tipo polimórfico this.",
+      "wrongAnswers": [
+        "Tipa-se this com um decorator como @this(Contexto) colocado acima da declaração da função.",
+        "this é sempre tipado como any e não pode ser anotado.",
+        "this só pode ser tipado dentro de arrow functions."
+      ]
+    },
+    {
+      "id": 81,
+      "level": "advanced",
+      "question": "O que são decorators?",
+      "correctAnswer": "Funções anotadas com @ que modificam classes e membros. O TS 5 suporta decorators do padrão ECMAScript; experimentalDecorators mantém o formato antigo.",
+      "wrongAnswers": [
+        "Comentários especiais iniciados com @ que só afetam ferramentas de documentação e são ignorados pelo compilador e pelo runtime.",
+        "Funções que rodam apenas na compilação e são removidas da saída, então nunca têm efeito em runtime.",
+        "Anotações de tipo que adicionam estilos CSS às classes."
+      ]
+    },
+    {
+      "id": 82,
+      "level": "advanced",
+      "question": "O que é module augmentation?",
+      "correctAnswer": "Estender tipos de módulos existentes com declare module \"x\" { ... }, por exemplo, adicionando campos ao Request do Express.",
+      "wrongAnswers": [
+        "Instalar automaticamente módulos npm faltantes quando o compilador não encontra declarações de tipo de um import.",
+        "Mesclar dois módulos separados em um único arquivo no build para reduzir imports e melhorar o tree shaking.",
+        "Aumentar o limite de tamanho do bundle de um módulo."
+      ]
+    },
+    {
+      "id": 83,
+      "level": "advanced",
+      "question": "O que é declare global?",
+      "correctAnswer": "Permite adicionar ou alterar tipos no escopo global a partir de um módulo.",
+      "wrongAnswers": [
+        "Declara uma variável global de runtime acessível de qualquer arquivo.",
+        "Faz todos os tipos de um arquivo serem exportados automaticamente.",
+        "Desativa o escopo de módulo para todo o projeto."
+      ]
+    },
+    {
+      "id": 84,
+      "level": "advanced",
+      "question": "O que é isolatedModules?",
+      "correctAnswer": "Exige que cada arquivo possa ser transpilado isoladamente, necessário para esbuild/SWC/Babel; restringe re-exports de tipos sem type.",
+      "wrongAnswers": [
+        "Executa a checagem de tipos de cada módulo em uma thread separada na compilação para acelerar builds grandes.",
+        "Impede que módulos importem uns aos outros, obrigando cada arquivo a ser autocontido e sem dependências.",
+        "Empacota cada módulo em seu próprio arquivo de saída."
+      ]
+    },
+    {
+      "id": 85,
+      "level": "advanced",
+      "question": "Qual a diferença entre tsc e esbuild/swc?",
+      "correctAnswer": "tsc faz checagem de tipos e emite JS; esbuild/SWC apenas removem tipos e transpilam, muito mais rápido, sem checagem.",
+      "wrongAnswers": [
+        "esbuild/SWC checam tipos com mais rigor que o tsc, mas são mais lentos.",
+        "tsc apenas remove tipos; esbuild/SWC fazem checagem completa.",
+        "São idênticos; esbuild e SWC são apenas wrappers do tsc."
+      ]
+    },
+    {
+      "id": 86,
+      "level": "advanced",
+      "question": "O que são project references?",
+      "correctAnswer": "Recurso de monorepos que divide o projeto em subprojetos com builds incrementais e dependências tipadas (composite).",
+      "wrongAnswers": [
+        "Links para páginas de documentação externas declarados no tsconfig.json para o editor exibi-los ao passar o mouse.",
+        "Comentários triple-slash /// <reference> que todo arquivo precisa incluir para importar tipos de outros arquivos.",
+        "Uma lista de pacotes npm dos quais o projeto depende."
+      ]
+    },
+    {
+      "id": 87,
+      "level": "advanced",
+      "question": "Como funciona a resolução de módulos (moduleResolution)?",
+      "correctAnswer": "Define como imports são localizados: node10, node16/nodenext (respeita ESM/CJS e exports) e bundler.",
+      "wrongAnswers": [
+        "Resolve conflitos de versão entre pacotes npm escolhendo a versão compatível mais nova de cada dependência.",
+        "Define a ordem em que os módulos são executados em runtime.",
+        "Determina quais módulos são removidos do bundle por tree shaking."
+      ]
+    },
+    {
+      "id": 88,
+      "level": "advanced",
+      "question": "Como tipar corretamente um Object.keys?",
+      "correctAnswer": "Retorna string[] por segurança estrutural; usa-se cast as (keyof T)[] quando se sabe a forma exata.",
+      "wrongAnswers": [
+        "Retorna any[], então sempre se deve anotar o resultado como unknown[] e restringir cada chave manualmente.",
+        "Já retorna (keyof T)[], então nunca é preciso cast.",
+        "Retorna uma união dos valores do objeto."
+      ]
+    },
+    {
+      "id": 89,
+      "level": "advanced",
+      "question": "O que são recursive types?",
+      "correctAnswer": "Tipos que se referenciam, como type Json = string | number | boolean | null | Json[] | { [k: string]: Json }.",
+      "wrongAnswers": [
+        "Tipos que o TypeScript proíbe porque autorreferências fariam o compilador entrar em laço infinito.",
+        "Tipos gerados por funções recursivas em runtime.",
+        "Tipos que repetem a mesma propriedade várias vezes."
+      ]
+    },
+    {
+      "id": 90,
+      "level": "advanced",
+      "question": "Como inferir tipos a partir de um schema Zod?",
+      "correctAnswer": "Com z.infer<typeof schema>, mantendo validação e tipo em uma única fonte.",
+      "wrongAnswers": [
+        "Com ReturnType<typeof schema>, que extrai o tipo de saída validado do objeto schema.",
+        "Com ReturnType<schema>, que extrai o tipo validado.",
+        "Com schema.type, uma propriedade que guarda o tipo TypeScript em runtime."
+      ]
+    },
+    {
+      "id": 91,
+      "level": "advanced",
+      "question": "O que é o tipo Function e por que evitá-lo?",
+      "correctAnswer": "Aceita qualquer função sem informar parâmetros ou retorno. Prefira assinaturas específicas como (x: number) => void.",
+      "wrongAnswers": [
+        "Só aceita arrow functions, então passar uma declaração de função ou método para um parâmetro Function causa erro de compilação.",
+        "Está descontinuado e sempre gera erro de compilação no modo strict, então código que o usa não compila mais.",
+        "Força todas as funções a retornarem void."
+      ]
+    },
+    {
+      "id": 92,
+      "level": "advanced",
+      "question": "Como funciona o infer com tuplas e funções?",
+      "correctAnswer": "Permite extrair partes, por exemplo T extends (...args: infer A) => infer R ? [A, R] : never.",
+      "wrongAnswers": [
+        "infer só funciona com tipos Promise; para extrair parâmetros ou retorno é preciso usar reflexão em runtime.",
+        "Infere tipos de funções em runtime inspecionando os argumentos da primeira chamada e fazendo cache do resultado.",
+        "Só funciona com Promises e não consegue extrair partes de funções."
+      ]
+    },
+    {
+      "id": 93,
+      "level": "advanced",
+      "question": "Como tipar HOCs ou funções de composição de forma genérica?",
+      "correctAnswer": "Com generics que preservam as props originais e removem/injetam props via Omit e interseções.",
+      "wrongAnswers": [
+        "Tipando toda prop como any, porque componentes de ordem superior não podem ser tipados genericamente no TypeScript.",
+        "Tipando todas as props como any, já que HOCs não podem ser tipados.",
+        "Duplicando a interface de props para cada componente envolvido."
+      ]
+    },
+    {
+      "id": 94,
+      "level": "advanced",
+      "question": "O que é \"type widening\"?",
+      "correctAnswer": "Alargamento de tipos literais para o tipo base (let x = \"a\" vira string), enquanto const x = \"a\" mantém o literal.",
+      "wrongAnswers": [
+        "Restringir um tipo base a um literal, então let x = \"a\" é inferido como \"a\" enquanto const x = \"a\" vira string.",
+        "Converter automaticamente todo tipo number do projeto em bigint quando os valores excedem o limite de inteiros seguros.",
+        "Aumentar o nível de rigor do compilador."
+      ]
+    },
+    {
+      "id": 95,
+      "level": "advanced",
+      "question": "Como lidar com bibliotecas sem tipos?",
+      "correctAnswer": "Instalar @types/..., criar um .d.ts com declare module \"lib\" ou usar any isolado como última opção.",
+      "wrongAnswers": [
+        "Desativar a checagem do TypeScript no projeto inteiro com // @ts-nocheck em todo arquivo que importa a biblioteca.",
+        "Reescrever a biblioteca em TypeScript antes de usá-la.",
+        "Importá-la com require, que o TypeScript tipa automaticamente."
+      ]
+    },
+    {
+      "id": 96,
+      "level": "advanced",
+      "question": "Como reduzir o tempo de compilação em projetos grandes?",
+      "correctAnswer": "Usar incremental, project references, skipLibCheck, evitar tipos excessivamente complexos e usar checagem em CI separada do build.",
+      "wrongAnswers": [
+        "Desativar o modo strict e trocar tipos complexos por any em todo lugar, o que elimina boa parte do trabalho do tsc.",
+        "Juntar todos os arquivos em um único arquivo enorme para o tsc ler e interpretar só um arquivo por build.",
+        "Colocar todo o código em um único arquivo para o tsc ler uma vez."
+      ]
+    },
+    {
+      "id": 97,
+      "level": "advanced",
+      "question": "O que são abstract construct signatures?",
+      "correctAnswer": "Assinaturas abstract new () => T que descrevem construtores de classes abstratas.",
+      "wrongAnswers": [
+        "Assinaturas que permitem criar instâncias de classes abstratas diretamente com new, ignorando a restrição abstract.",
+        "Assinaturas de construtor que rodam só em tempo de compilação para validar hierarquias de classes.",
+        "Assinaturas que impedem uma classe de ser estendida."
+      ]
+    },
+    {
+      "id": 98,
+      "level": "advanced",
+      "question": "O que é o operador using (TS 5.2)?",
+      "correctAnswer": "Declaração de recursos descartáveis, chamando automaticamente [Symbol.dispose] ao sair do escopo.",
+      "wrongAnswers": [
+        "Palavra-chave para importar namespaces no arquivo atual, semelhante à diretiva using do C#.",
+        "Declaração que marca uma variável como usada para o compilador e o linter pararem de avisar sobre valores não usados.",
+        "Instrução que carrega um módulo de forma síncrona."
+      ]
+    },
+    {
+      "id": 99,
+      "level": "advanced",
+      "question": "Como tipar um event emitter de forma segura?",
+      "correctAnswer": "Com um mapa de eventos (interface Eventos { login: User }) e generics on<K extends keyof Eventos>(evento: K, cb: (payload: Eventos[K]) => void).",
+      "wrongAnswers": [
+        "Tipando todo nome de evento como string e todo payload como any, e documentando as formas esperadas em comentários.",
+        "Criando uma classe emitter separada para cada evento e usando o tipo Function em todos os callbacks registrados.",
+        "Tipando todos os eventos como string e todos os payloads como any."
+      ]
+    },
+    {
+      "id": 100,
+      "level": "advanced",
+      "question": "Quando usar unknown em catch?",
+      "correctAnswer": "Com useUnknownInCatchVariables (parte do strict), o erro é unknown, obrigando a verificar com instanceof Error antes de usar.",
+      "wrongAnswers": [
+        "Apenas quando o bloco try contém await, porque erros síncronos são sempre tipados como Error pelo compilador.",
+        "Nunca; variáveis de catch são sempre tipadas como Error.",
+        "Apenas quando o bloco try contém código assíncrono."
+      ]
+    }
+  ]
+}

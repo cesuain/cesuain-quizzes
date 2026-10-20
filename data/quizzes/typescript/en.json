@@ -1,0 +1,1107 @@
+{
+  "id": "typescript",
+  "language": "en",
+  "title": "TypeScript",
+  "questions": [
+    {
+      "id": 1,
+      "level": "basic",
+      "question": "What is TypeScript?",
+      "correctAnswer": "A typed superset of JavaScript, developed by Microsoft, that compiles to plain JavaScript and catches errors at development time.",
+      "wrongAnswers": [
+        "A new runtime developed by Google that executes typed code directly in the browser, replacing JavaScript engines and catching errors only when the code runs in production.",
+        "A subset of JavaScript that removes dynamic features to make code run faster in Node.js.",
+        "A linter developed by Facebook that checks JavaScript code style at runtime."
+      ]
+    },
+    {
+      "id": 2,
+      "level": "basic",
+      "question": "What are the advantages of TypeScript?",
+      "correctAnswer": "Early error detection, better autocomplete and refactoring, self-documenting code and safer maintenance in large projects.",
+      "wrongAnswers": [
+        "Faster runtime execution, because browsers read the type annotations and use them to optimize the generated machine code for every function in large projects.",
+        "Faster runtime execution, since types are used by the browser to optimize code.",
+        "Smaller bundle size, since TypeScript removes unused code automatically."
+      ]
+    },
+    {
+      "id": 3,
+      "level": "basic",
+      "question": "What are the primitive types?",
+      "correctAnswer": "string, number, boolean, null, undefined, symbol and bigint.",
+      "wrongAnswers": [
+        "string, number, boolean, object, array, function and tuple, which are all represented as primitive values at runtime.",
+        "string, int, float, double, char, boolean and void, mirroring the primitive types available in Java and C#.",
+        "string, number, boolean, any, unknown and never."
+      ]
+    },
+    {
+      "id": 4,
+      "level": "basic",
+      "question": "What is the any type?",
+      "correctAnswer": "It disables type checking for that value. It should be avoided because it removes TypeScript's safety.",
+      "wrongAnswers": [
+        "A safe type for unknown values that requires narrowing before use.",
+        "A type representing values that never occur.",
+        "A type that accepts only primitive values, not objects."
+      ]
+    },
+    {
+      "id": 5,
+      "level": "basic",
+      "question": "What is the unknown type?",
+      "correctAnswer": "A safe type for unknown values: you must narrow it (type narrowing) before using it.",
+      "wrongAnswers": [
+        "A type that disables all checking for the value, allowing any operation without narrowing; it is just a newer alias for any introduced in TypeScript 3.",
+        "A type automatically assigned to variables declared without an initial value, which cannot be reassigned after the first assignment is made.",
+        "A type that disables all type checking, identical to any."
+      ]
+    },
+    {
+      "id": 6,
+      "level": "basic",
+      "question": "What is the difference between any and unknown?",
+      "correctAnswer": "any allows any operation without checking; unknown requires a type check before use.",
+      "wrongAnswers": [
+        "unknown allows any operation without checking; any requires a type check before use.",
+        "any is only for objects and unknown is only for primitives.",
+        "There is no difference; unknown is an alias of any introduced in TS 3."
+      ]
+    },
+    {
+      "id": 7,
+      "level": "basic",
+      "question": "What is the never type?",
+      "correctAnswer": "It represents values that never occur, such as functions that always throw or impossible branches in exhaustive checks.",
+      "wrongAnswers": [
+        "It represents a function that returns nothing useful, like void.",
+        "It represents null and undefined combined.",
+        "It represents a variable that can never be reassigned, like const."
+      ]
+    },
+    {
+      "id": 8,
+      "level": "basic",
+      "question": "What is the void type?",
+      "correctAnswer": "It indicates that a function doesn't return a useful value.",
+      "wrongAnswers": [
+        "It indicates a value that can never occur, such as the result of an infinite loop or a function that always throws.",
+        "It indicates that a variable or property is always null and can never hold any other value.",
+        "It indicates that a function can return any type."
+      ]
+    },
+    {
+      "id": 9,
+      "level": "basic",
+      "question": "How do you declare a typed array?",
+      "correctAnswer": "string[] or Array<string>.",
+      "wrongAnswers": [
+        "array<string> or [string]... using lowercase generic syntax.",
+        "List<string> or string() as in C#.",
+        "array<string> or [string]..."
+      ]
+    },
+    {
+      "id": 10,
+      "level": "basic",
+      "question": "What are tuples?",
+      "correctAnswer": "Arrays with a fixed length and fixed types per position, such as [string, number].",
+      "wrongAnswers": [
+        "Objects with exactly two properties named first and second, used to return pairs of values from functions without creating a class.",
+        "Arrays that can grow to any length but can only contain values of a single type, such as number[] or string[].",
+        "Immutable sets of unique values, like Set."
+      ]
+    },
+    {
+      "id": 11,
+      "level": "basic",
+      "question": "What is an interface?",
+      "correctAnswer": "A declaration that describes the shape of an object (properties and methods), which can be extended and implemented by classes.",
+      "wrongAnswers": [
+        "A runtime object that validates the data passed to functions and throws an error when a required property is missing or has the wrong type.",
+        "A class that contains default implementations of methods, which other classes inherit by extending it with the implements keyword.",
+        "A type that can only describe unions and primitives."
+      ]
+    },
+    {
+      "id": 12,
+      "level": "basic",
+      "question": "What is a type alias?",
+      "correctAnswer": "A name for any type, created with type, including unions, intersections, tuples and primitives.",
+      "wrongAnswers": [
+        "A name for object shapes only, created with type, which supports declaration merging just like interfaces do.",
+        "A runtime variable that stores a type so it can be inspected later through reflection APIs.",
+        "A shortcut that renames a JavaScript class at compile time."
+      ]
+    },
+    {
+      "id": 13,
+      "level": "basic",
+      "question": "What is the difference between interface and type?",
+      "correctAnswer": "Interfaces support declaration merging and extends; type accepts unions, tuples and conditional types. For objects, both work well.",
+      "wrongAnswers": [
+        "type supports declaration merging; interfaces accept unions and conditional types.",
+        "Interfaces exist at runtime while types are erased.",
+        "Interfaces can only be used with classes, never with plain objects."
+      ]
+    },
+    {
+      "id": 14,
+      "level": "basic",
+      "question": "What is type inference?",
+      "correctAnswer": "The compiler's ability to deduce a type from the assigned value without an explicit annotation.",
+      "wrongAnswers": [
+        "The process of converting types into runtime checks automatically.",
+        "A feature that guesses types at runtime using typeof.",
+        "The ability to import types from other files without import statements."
+      ]
+    },
+    {
+      "id": 15,
+      "level": "basic",
+      "question": "What are union types?",
+      "correctAnswer": "Types that accept one of several, such as string | number.",
+      "wrongAnswers": [
+        "Types that merge several types into one, requiring every property, written as A & B.",
+        "Types that convert a value to another type at runtime, like Number(x).",
+        "Types that combine several into one, requiring all properties, such as A & B."
+      ]
+    },
+    {
+      "id": 16,
+      "level": "basic",
+      "question": "What are intersection types?",
+      "correctAnswer": "They combine several types into one with A & B, requiring all properties.",
+      "wrongAnswers": [
+        "They accept a value of one of several types, written as A | B, without requiring all properties.",
+        "They keep only the properties that A and B have in common, removing the rest from the result.",
+        "They compare two types and return a boolean."
+      ]
+    },
+    {
+      "id": 17,
+      "level": "basic",
+      "question": "What are literal types?",
+      "correctAnswer": "Types that represent exact values, such as \"admin\" or 42, used in unions like \"GET\" | \"POST\".",
+      "wrongAnswers": [
+        "Types written as string literals that are evaluated at runtime, so \"admin\" becomes a check that the value equals the string.",
+        "Types created automatically for every object literal in the code, which cannot be combined in unions or intersections.",
+        "Types that only allow template literal strings."
+      ]
+    },
+    {
+      "id": 18,
+      "level": "basic",
+      "question": "What are optional properties?",
+      "correctAnswer": "Declared with ?, as in name?: string; the value may be undefined.",
+      "wrongAnswers": [
+        "Declared with !, as in name!: string, which means the value may be null at runtime.",
+        "Declared with the optional keyword before the property name.",
+        "Properties with a default value that is filled in automatically by the compiler."
+      ]
+    },
+    {
+      "id": 19,
+      "level": "basic",
+      "question": "What is readonly?",
+      "correctAnswer": "A modifier that prevents reassignment of a property after initialization.",
+      "wrongAnswers": [
+        "A modifier that makes a property private to the class.",
+        "A modifier that freezes the object at runtime with Object.freeze.",
+        "A modifier that makes a property optional."
+      ]
+    },
+    {
+      "id": 20,
+      "level": "basic",
+      "question": "What is an enum?",
+      "correctAnswer": "A set of named constants. They can be numeric or string-based; many prefer unions of literals because they are lighter.",
+      "wrongAnswers": [
+        "A type that enumerates all the keys of an object at runtime.",
+        "A loop construct for iterating over object properties.",
+        "A special array type that only accepts numbers in sequence."
+      ]
+    },
+    {
+      "id": 21,
+      "level": "basic",
+      "question": "How do you type a function?",
+      "correctAnswer": "By annotating parameters and return: function sum(a: number, b: number): number.",
+      "wrongAnswers": [
+        "With Java-like syntax: function sum(number a, number b) -> number, declaring the type before each parameter.",
+        "With a JSDoc comment above the function, since TypeScript cannot annotate parameters inline.",
+        "With function sum(number a, number b) -> number."
+      ]
+    },
+    {
+      "id": 22,
+      "level": "basic",
+      "question": "How do you define optional and default parameters?",
+      "correctAnswer": "(a: number, b?: number) for optional and (a: number, b = 10) for a default value.",
+      "wrongAnswers": [
+        "(a: number, b!: number) for optional and (a: number, b: 10) for a default value, where the literal type sets the default.",
+        "(a: number, optional b: number) for optional and (a: number, default b = 10) for a default value.",
+        "(a: number, ?b: number) for optional and (a: number, b := 10) for a default value."
+      ]
+    },
+    {
+      "id": 23,
+      "level": "basic",
+      "question": "What is a type assertion?",
+      "correctAnswer": "Telling the compiler a value's type with as, as in value as string. It does not convert at runtime.",
+      "wrongAnswers": [
+        "Converting a value to another type at runtime with as, so value as string behaves like String(value) and changes the actual data.",
+        "A runtime check that throws if the value does not match the type.",
+        "A test assertion that verifies types in unit tests."
+      ]
+    },
+    {
+      "id": 24,
+      "level": "basic",
+      "question": "What is the ! operator (non-null assertion)?",
+      "correctAnswer": "It asserts that a value is not null/undefined (obj!.x). Use with caution.",
+      "wrongAnswers": [
+        "It negates a type, so !string means every type except string; useful for excluding cases.",
+        "It checks at runtime that the value is not null and throws a descriptive error otherwise.",
+        "It marks a property as required in an interface."
+      ]
+    },
+    {
+      "id": 25,
+      "level": "basic",
+      "question": "What is optional chaining ?.?",
+      "correctAnswer": "It accesses properties safely, returning undefined if an intermediate value is nullish.",
+      "wrongAnswers": [
+        "It throws a descriptive TypeError if any intermediate value in the chain is null or undefined.",
+        "It makes a property optional in a type declaration.",
+        "It returns the right-hand side if the left is null or undefined."
+      ]
+    },
+    {
+      "id": 26,
+      "level": "basic",
+      "question": "What is nullish coalescing ???",
+      "correctAnswer": "It returns the right-hand side only if the left is null or undefined (unlike ||, which considers falsy values).",
+      "wrongAnswers": [
+        "It returns the right-hand side whenever the left is any falsy value, including 0 and empty strings, exactly like the || operator.",
+        "It accesses nested properties safely, returning undefined when an intermediate value is missing instead of throwing an error.",
+        "It checks whether both sides are null and returns a boolean."
+      ]
+    },
+    {
+      "id": 27,
+      "level": "basic",
+      "question": "What is tsconfig.json?",
+      "correctAnswer": "The compiler configuration file: options like target, module, strict, paths and included files.",
+      "wrongAnswers": [
+        "The file that lists the npm dependencies and scripts of a TypeScript project, replacing package.json in projects that use tsc.",
+        "A file generated by tsc containing the compiled output's source maps.",
+        "The file where runtime environment variables are declared for TypeScript."
+      ]
+    },
+    {
+      "id": 28,
+      "level": "basic",
+      "question": "What does the strict option do?",
+      "correctAnswer": "It enables a set of strict checks (strictNullChecks, noImplicitAny, etc.), recommended for new projects.",
+      "wrongAnswers": [
+        "It only enables JavaScript's \"use strict\" directive in the emitted files, without changing any type checking behavior in the compiler.",
+        "It makes the compiler stop at the first error it finds instead of reporting all of them, which speeds up feedback in large projects.",
+        "It forbids the use of classes and enums."
+      ]
+    },
+    {
+      "id": 29,
+      "level": "basic",
+      "question": "What is noImplicitAny?",
+      "correctAnswer": "It raises an error when TypeScript implicitly infers any due to a missing annotation.",
+      "wrongAnswers": [
+        "It forbids any explicit use of the any type anywhere in the code, including type assertions.",
+        "It converts every implicit any into unknown automatically.",
+        "It disables type inference so every variable must be annotated."
+      ]
+    },
+    {
+      "id": 30,
+      "level": "basic",
+      "question": "What is strictNullChecks?",
+      "correctAnswer": "It makes null and undefined distinct types, preventing errors from accessing null values.",
+      "wrongAnswers": [
+        "It removes null from the language entirely, so only undefined can be used to represent missing values.",
+        "It inserts runtime checks for null values in the emitted JavaScript and throws errors when they are accessed.",
+        "It forces every property to be initialized with null."
+      ]
+    },
+    {
+      "id": 31,
+      "level": "basic",
+      "question": "How do you type classes?",
+      "correctAnswer": "By declaring properties with types and access modifiers (public, private, protected) and implementing interfaces with implements.",
+      "wrongAnswers": [
+        "By placing a mandatory @Type() decorator above each property, since class fields cannot be annotated directly in TypeScript.",
+        "By declaring types only as constructor parameters, because properties declared in the class body cannot receive types or modifiers.",
+        "By using a @Type decorator above each property, which is required."
+      ]
+    },
+    {
+      "id": 32,
+      "level": "basic",
+      "question": "What is a .d.ts file?",
+      "correctAnswer": "A type declaration file, without implementation, that describes JavaScript libraries.",
+      "wrongAnswers": [
+        "A compiled JavaScript file with types embedded as metadata, used by Node to check values at runtime.",
+        "A debug file generated by tsc to trace type errors.",
+        "A data file containing test fixtures for typed tests."
+      ]
+    },
+    {
+      "id": 33,
+      "level": "basic",
+      "question": "What is @types?",
+      "correctAnswer": "npm packages (such as @types/node) that provide type declarations for libraries written in JavaScript.",
+      "wrongAnswers": [
+        "A built-in TypeScript namespace that contains the primitive types and must be imported in every file.",
+        "A folder in the project root where all interfaces and type aliases must be stored to be found by the compiler.",
+        "A decorator used to declare types on class properties."
+      ]
+    },
+    {
+      "id": 34,
+      "level": "basic",
+      "question": "How is TypeScript executed?",
+      "correctAnswer": "It is transpiled to JavaScript by tsc (or esbuild/SWC/Babel) and the resulting JS runs in Node or the browser. Tools like tsx and ts-node run it directly.",
+      "wrongAnswers": [
+        "Modern browsers and Node.js execute .ts files natively, reading the type annotations to validate values while the program runs, so no transpilation step is needed.",
+        "It is compiled to WebAssembly by tsc, and the resulting .wasm module runs faster than JavaScript in both Node.js and the browser.",
+        "Browsers execute .ts files natively, so no compilation is needed."
+      ]
+    },
+    {
+      "id": 35,
+      "level": "intermediate",
+      "question": "What are generics?",
+      "correctAnswer": "They allow creating reusable components, functions and types that work with various types, such as function id<T>(x: T): T.",
+      "wrongAnswers": [
+        "Types that accept any value without checking, similar to any, used when you don't know the type of a parameter, such as function id(x: any): any.",
+        "Built-in utility types such as Partial and Pick only.",
+        "Classes that can be instantiated without a constructor."
+      ]
+    },
+    {
+      "id": 36,
+      "level": "intermediate",
+      "question": "How do you constrain a generic?",
+      "correctAnswer": "With extends: <T extends { id: number }>, requiring T to have a certain shape.",
+      "wrongAnswers": [
+        "With implements: <T implements { id: number }>, requiring T to provide that shape.",
+        "With a where clause after the signature: <T> where T: { id: number }, as in C#.",
+        "With implements: <T implements { id: number }>."
+      ]
+    },
+    {
+      "id": 37,
+      "level": "intermediate",
+      "question": "What is keyof?",
+      "correctAnswer": "It produces a union of a type's keys: keyof {a: 1; b: 2} results in \"a\" | \"b\".",
+      "wrongAnswers": [
+        "It returns an array of the object's keys at runtime, like Object.keys.",
+        "It produces a union of a type's values: 1 | 2.",
+        "It checks whether a key exists in an object and returns a boolean."
+      ]
+    },
+    {
+      "id": 38,
+      "level": "intermediate",
+      "question": "What is typeof in a type context?",
+      "correctAnswer": "It obtains the type of an existing variable or value: type T = typeof obj.",
+      "wrongAnswers": [
+        "It returns a string literal type such as \"object\" or \"string\", matching JavaScript's typeof operator.",
+        "It creates a new variable with the same value as obj.",
+        "It checks at runtime whether a value matches a declared type."
+      ]
+    },
+    {
+      "id": 39,
+      "level": "intermediate",
+      "question": "What are mapped types?",
+      "correctAnswer": "Types that transform each property of another type: { [K in keyof T]: ... }.",
+      "wrongAnswers": [
+        "Types created from the Map data structure at runtime.",
+        "Types that map a function's parameters to its return type.",
+        "Types generated by source maps for debugging."
+      ]
+    },
+    {
+      "id": 40,
+      "level": "intermediate",
+      "question": "What are conditional types?",
+      "correctAnswer": "Types that choose a result based on a condition: T extends string ? \"yes\" : \"no\".",
+      "wrongAnswers": [
+        "Types that are only checked by the compiler when a corresponding runtime if statement evaluates to true.",
+        "Types that become optional depending on a compiler flag.",
+        "Types created with if/else blocks inside interfaces."
+      ]
+    },
+    {
+      "id": 41,
+      "level": "intermediate",
+      "question": "What is the infer keyword?",
+      "correctAnswer": "Inside conditional types, it captures a type for reuse, as in T extends Promise<infer U> ? U : T.",
+      "wrongAnswers": [
+        "It tells the compiler to infer the type of a variable at runtime.",
+        "It forces type inference on function parameters without annotations.",
+        "It converts any into the most specific type available."
+      ]
+    },
+    {
+      "id": 42,
+      "level": "intermediate",
+      "question": "What is Partial<T>?",
+      "correctAnswer": "A utility that makes all of T's properties optional.",
+      "wrongAnswers": [
+        "A utility that makes all of T's properties required, removing the ? modifier.",
+        "A utility that makes every property of T readonly and optional at once.",
+        "A utility that picks half of T's properties."
+      ]
+    },
+    {
+      "id": 43,
+      "level": "intermediate",
+      "question": "What is Required<T>?",
+      "correctAnswer": "It makes all properties required.",
+      "wrongAnswers": [
+        "It makes all properties of T optional, adding ? to each one.",
+        "It requires T to be an object type and fails compilation otherwise.",
+        "It removes null and undefined from T."
+      ]
+    },
+    {
+      "id": 44,
+      "level": "intermediate",
+      "question": "What is Pick<T, K>?",
+      "correctAnswer": "It creates a type with only the K properties of T.",
+      "wrongAnswers": [
+        "It creates a type with all properties of T except those listed in K.",
+        "It creates an object type whose keys are K and values are T.",
+        "It creates a type with all properties of T except K."
+      ]
+    },
+    {
+      "id": 45,
+      "level": "intermediate",
+      "question": "What is Omit<T, K>?",
+      "correctAnswer": "It creates a type with all properties of T except K.",
+      "wrongAnswers": [
+        "It creates a type with only the K properties of T, discarding the rest.",
+        "It removes from union T the members that are assignable to K.",
+        "It removes null and undefined from T."
+      ]
+    },
+    {
+      "id": 46,
+      "level": "intermediate",
+      "question": "What is Record<K, V>?",
+      "correctAnswer": "It creates an object type with keys K and values V.",
+      "wrongAnswers": [
+        "It creates a tuple type [K, V] used to represent key-value pairs.",
+        "It creates an interface whose property names are the members of V and whose values are the members of K.",
+        "It creates a Map instance with keys K and values V at runtime."
+      ]
+    },
+    {
+      "id": 47,
+      "level": "intermediate",
+      "question": "What is Readonly<T>?",
+      "correctAnswer": "It makes all of T's properties read-only.",
+      "wrongAnswers": [
+        "It freezes the object at runtime with Object.freeze, recursively.",
+        "It makes all properties of T private to the declaring class.",
+        "It makes only the top-level array of T immutable."
+      ]
+    },
+    {
+      "id": 48,
+      "level": "intermediate",
+      "question": "What is ReturnType<T>?",
+      "correctAnswer": "It extracts a function's return type.",
+      "wrongAnswers": [
+        "It extracts the types of a function's arguments and returns them as a readonly tuple, in declaration order.",
+        "It extracts the resolved value type of a Promise.",
+        "It extracts a function's parameter types as a tuple."
+      ]
+    },
+    {
+      "id": 49,
+      "level": "intermediate",
+      "question": "What is Parameters<T>?",
+      "correctAnswer": "It extracts a function's parameter types as a tuple.",
+      "wrongAnswers": [
+        "It extracts a function's return type as a single type.",
+        "It returns an object type keyed by the parameter names.",
+        "It returns an object with the parameter names as keys."
+      ]
+    },
+    {
+      "id": 50,
+      "level": "intermediate",
+      "question": "What is Awaited<T>?",
+      "correctAnswer": "It gets the resolved type of a Promise, unwrapping recursively.",
+      "wrongAnswers": [
+        "It wraps T in a Promise, producing Promise<T> for async return types.",
+        "It makes a function async at the type level, changing its return type automatically.",
+        "It waits for type checking to finish before compiling."
+      ]
+    },
+    {
+      "id": 51,
+      "level": "intermediate",
+      "question": "What is NonNullable<T>?",
+      "correctAnswer": "It removes null and undefined from T.",
+      "wrongAnswers": [
+        "It adds null and undefined to T, making it nullable.",
+        "It makes every property of T required and non-optional.",
+        "It throws a compile error if T can be null."
+      ]
+    },
+    {
+      "id": 52,
+      "level": "intermediate",
+      "question": "What are Exclude and Extract?",
+      "correctAnswer": "Exclude<T, U> removes from T the members assignable to U; Extract<T, U> keeps only those members.",
+      "wrongAnswers": [
+        "Exclude<T, U> keeps only the members of T that are assignable to U; Extract<T, U> removes those members from T.",
+        "Exclude removes properties from an object type; Extract picks properties from an object type, like Omit and Pick.",
+        "They are runtime functions that filter arrays by type."
+      ]
+    },
+    {
+      "id": 53,
+      "level": "intermediate",
+      "question": "What is type narrowing?",
+      "correctAnswer": "Refining a broader type into a more specific one using typeof, instanceof, in, equality or guards.",
+      "wrongAnswers": [
+        "Converting a specific type into a broader one, such as from a string literal to string or any, to make assignments more flexible.",
+        "Casting a value with as to a smaller type, which the compiler trusts without verifying, to reduce the number of possible types.",
+        "Reducing the number of types in a file to speed up compilation."
+      ]
+    },
+    {
+      "id": 54,
+      "level": "intermediate",
+      "question": "What are type guards?",
+      "correctAnswer": "Expressions or functions that guarantee the type within a block, such as typeof x === \"string\".",
+      "wrongAnswers": [
+        "Compiler flags that prevent the use of any.",
+        "Decorators that validate class property types at runtime.",
+        "Access modifiers that protect class members."
+      ]
+    },
+    {
+      "id": 55,
+      "level": "intermediate",
+      "question": "What are type predicates?",
+      "correctAnswer": "Functions with an x is Type return that tell the compiler the argument is of that type.",
+      "wrongAnswers": [
+        "Functions that return a boolean type literal only.",
+        "Generic constraints written with extends.",
+        "Assertions written with as const."
+      ]
+    },
+    {
+      "id": 56,
+      "level": "intermediate",
+      "question": "What are discriminated unions?",
+      "correctAnswer": "Unions of objects with a common literal property (e.g., kind) that enables safe narrowing with switch.",
+      "wrongAnswers": [
+        "Unions where each member must have completely different property names.",
+        "Unions that exclude members based on a compiler flag.",
+        "Unions of primitive types only, like string | number."
+      ]
+    },
+    {
+      "id": 57,
+      "level": "intermediate",
+      "question": "How do you do an exhaustive check?",
+      "correctAnswer": "In the switch default, assign the value to never; if a case is missing, the compiler reports an error.",
+      "wrongAnswers": [
+        "Add a default case that returns any, so the compiler considers every possible value handled and the switch complete.",
+        "Enable the exhaustive flag in tsconfig.json, which makes every switch statement report missing union cases automatically.",
+        "Add a default case that returns any, so all cases are covered."
+      ]
+    },
+    {
+      "id": 58,
+      "level": "intermediate",
+      "question": "What is as const?",
+      "correctAnswer": "It makes a literal be inferred as immutable with the most specific types possible (readonly, literals).",
+      "wrongAnswers": [
+        "It converts a let declaration into a const at runtime, preventing reassignment of the variable.",
+        "It freezes the object at runtime with Object.freeze, making nested properties immutable too.",
+        "It casts any value to a constant number type."
+      ]
+    },
+    {
+      "id": 59,
+      "level": "intermediate",
+      "question": "What is the difference between interface extends and intersection &?",
+      "correctAnswer": "extends detects property conflicts with an error and is more performant; & combines types and may produce never on conflicts.",
+      "wrongAnswers": [
+        "& detects property conflicts with a clear error and is faster to check, while extends silently produces never when properties conflict.",
+        "extends only works with classes and & only works with interfaces, so they are used in completely different situations.",
+        "There is no difference; they compile to identical declarations."
+      ]
+    },
+    {
+      "id": 60,
+      "level": "intermediate",
+      "question": "What is declaration merging?",
+      "correctAnswer": "Interfaces with the same name in the same scope are merged into one, useful for extending library types.",
+      "wrongAnswers": [
+        "Merging multiple .ts files into a single output file during compilation to reduce the number of modules.",
+        "Combining two type aliases with the same name into a union.",
+        "Merging a class and an enum into a single object at runtime."
+      ]
+    },
+    {
+      "id": 61,
+      "level": "intermediate",
+      "question": "What are index signatures?",
+      "correctAnswer": "They define the type of dynamic keys: { [key: string]: number }.",
+      "wrongAnswers": [
+        "They declare that every array index must be a positive integer, preventing negative or fractional indexes.",
+        "They create a runtime index for faster property lookups in large objects.",
+        "They define the index type of an array, which must always be number."
+      ]
+    },
+    {
+      "id": 62,
+      "level": "intermediate",
+      "question": "What are template literal types?",
+      "correctAnswer": "String types built by interpolation, such as on${Capitalize<string>} (with backticks inside the type).",
+      "wrongAnswers": [
+        "Types for HTML templates, used by frameworks like Angular to check bindings inside component templates.",
+        "Runtime template strings that validate their interpolated contents against a declared type and throw on mismatch.",
+        "Types that can only be used inside JSX."
+      ]
+    },
+    {
+      "id": 63,
+      "level": "intermediate",
+      "question": "What are function overloads?",
+      "correctAnswer": "Multiple signatures for the same function, describing different combinations of parameters and return types.",
+      "wrongAnswers": [
+        "Multiple implementations of the same function, each with its own body, selected at runtime by the argument types.",
+        "Methods redefined in subclasses using the override keyword, replacing the parent's implementation.",
+        "Functions that receive more arguments than declared."
+      ]
+    },
+    {
+      "id": 64,
+      "level": "intermediate",
+      "question": "What is the abstract modifier?",
+      "correctAnswer": "It marks classes or methods that must be implemented by subclasses; abstract classes cannot be instantiated.",
+      "wrongAnswers": [
+        "It marks classes that can be instantiated only once, implementing the singleton pattern at the type level.",
+        "It hides a method from the compiled JavaScript output while keeping it available for type checking.",
+        "It marks methods that run asynchronously."
+      ]
+    },
+    {
+      "id": 65,
+      "level": "intermediate",
+      "question": "What is the difference between private and #private?",
+      "correctAnswer": "private only exists at compile time; #field is real JavaScript privacy at runtime.",
+      "wrongAnswers": [
+        "#field only exists at compile time and is erased, while private is enforced by the JavaScript engine at runtime.",
+        "private is used for methods and #private for properties only; they cannot be used interchangeably.",
+        "There is no difference; # is just a shorter syntax."
+      ]
+    },
+    {
+      "id": 66,
+      "level": "intermediate",
+      "question": "How do you type a React component with props?",
+      "correctAnswer": "By defining a props interface/type and applying it to the parameter: function Button({ label }: ButtonProps).",
+      "wrongAnswers": [
+        "By passing the props type as a second function argument, as in function Button(props, ButtonProps), which React reads at runtime.",
+        "By annotating the component's return type as ButtonProps, so the compiler infers the expected props from the returned JSX.",
+        "By using PropTypes only, since TypeScript cannot type React props."
+      ]
+    },
+    {
+      "id": 67,
+      "level": "intermediate",
+      "question": "How do you type useState in React?",
+      "correctAnswer": "With generics: useState<User | null>(null).",
+      "wrongAnswers": [
+        "With a cast on the setter function: setUser as (u: User) => void.",
+        "It cannot be typed; useState always returns any in TypeScript.",
+        "It cannot be typed; useState always returns any."
+      ]
+    },
+    {
+      "id": 68,
+      "level": "intermediate",
+      "question": "How do you type events in React?",
+      "correctAnswer": "With types like React.ChangeEvent<HTMLInputElement> and React.MouseEvent<HTMLButtonElement>.",
+      "wrongAnswers": [
+        "With the native DOM Event type only, because React does not ship its own event type definitions for handlers.",
+        "With any, which is the type the React team recommends for event handlers to avoid compatibility issues between browsers.",
+        "With React.Event<\"click\"> and React.Event<\"change\">."
+      ]
+    },
+    {
+      "id": 69,
+      "level": "intermediate",
+      "question": "How do you safely type an API response?",
+      "correctAnswer": "Define types and validate at runtime with libraries like Zod, since types disappear after compilation.",
+      "wrongAnswers": [
+        "Annotate the fetch result with as MyType, which makes the compiler insert a runtime validation of the response body.",
+        "Use a .d.ts file for the API, which TypeScript checks against live responses.",
+        "Enable strict mode, which validates JSON responses automatically."
+      ]
+    },
+    {
+      "id": 70,
+      "level": "advanced",
+      "question": "How do you create a DeepPartial type?",
+      "correctAnswer": "type DeepPartial<T> = { [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K] }.",
+      "wrongAnswers": [
+        "type DeepPartial<T> = Partial<Partial<T>>, since applying Partial twice makes nested properties optional as well.",
+        "type DeepPartial<T> = { [K in keyof T]-?: DeepPartial<T[K]> }.",
+        "type DeepPartial<T> = T extends object ? Partial<T> : never."
+      ]
+    },
+    {
+      "id": 71,
+      "level": "advanced",
+      "question": "What are covariance and contravariance?",
+      "correctAnswer": "Covariance allows using subtypes where a supertype is expected (return types); contravariance reverses it (parameters, under strictFunctionTypes).",
+      "wrongAnswers": [
+        "Covariance applies to parameters and contravariance applies to return types.",
+        "They describe how types change between TypeScript versions.",
+        "Covariance means two types are identical; contravariance means they are incompatible."
+      ]
+    },
+    {
+      "id": 72,
+      "level": "advanced",
+      "question": "What is strictFunctionTypes?",
+      "correctAnswer": "It performs contravariant checking of function parameters, preventing unsafe assignments.",
+      "wrongAnswers": [
+        "It requires every function and method to declare an explicit return type, failing compilation otherwise.",
+        "It makes function parameters bivariant for flexibility, allowing more assignments between callbacks.",
+        "It forbids arrow functions in favor of function declarations."
+      ]
+    },
+    {
+      "id": 73,
+      "level": "advanced",
+      "question": "What are variadic tuple types?",
+      "correctAnswer": "Tuples with spreads of generic types ([...T, ...U]), allowing you to type argument concatenation.",
+      "wrongAnswers": [
+        "Tuples that can have any length and any element types, equivalent to any[] but with better autocomplete.",
+        "Functions that accept a variable number of type parameters, such as fn<A, B, C, ...>().",
+        "Arrays whose length is determined at runtime."
+      ]
+    },
+    {
+      "id": 74,
+      "level": "advanced",
+      "question": "What is key remapping in mapped types?",
+      "correctAnswer": "Using as to rename keys: { [K in keyof T as \"get\" + Capitalize<K & string>]: () => T[K] }.",
+      "wrongAnswers": [
+        "Using the rename() utility type to change an object's keys at runtime while preserving their value types.",
+        "Using Record<V, K> to swap the keys and values of a type, so values become the new keys of the resulting type.",
+        "Using keyof to sort the keys of a type alphabetically."
+      ]
+    },
+    {
+      "id": 75,
+      "level": "advanced",
+      "question": "What are distributive conditional types?",
+      "correctAnswer": "Conditional types with a \"naked\" type parameter distribute over unions: T extends U ? X : Y is applied to each member.",
+      "wrongAnswers": [
+        "Conditional types that apply only to the first member of a union, ignoring the remaining members unless wrapped in an array.",
+        "Conditional types that are distributed across multiple files for faster compilation.",
+        "Conditional types that convert unions into intersections automatically."
+      ]
+    },
+    {
+      "id": 76,
+      "level": "advanced",
+      "question": "How do you prevent distribution in conditional types?",
+      "correctAnswer": "By wrapping in tuples: [T] extends [U] ? ... : ....",
+      "wrongAnswers": [
+        "By adding the nodistribute keyword before extends, as in T nodistribute extends U ? X : Y.",
+        "By disabling strict mode in tsconfig.json, which turns off distribution of conditional types globally.",
+        "By using T & {} extends U."
+      ]
+    },
+    {
+      "id": 77,
+      "level": "advanced",
+      "question": "What are branded types (opaque types)?",
+      "correctAnswer": "A technique of adding a phantom brand (string & { __brand: \"UserId\" }) to differentiate structurally identical types.",
+      "wrongAnswers": [
+        "Types published by a vendor library and sealed so that consumers cannot extend or augment them with new properties.",
+        "Types encrypted by the compiler so their internal structure is hidden from consumers of a published package.",
+        "Types encrypted at compile time to hide their structure."
+      ]
+    },
+    {
+      "id": 78,
+      "level": "advanced",
+      "question": "How do you type a function that preserves literals?",
+      "correctAnswer": "Using generics with const (<const T>) or constraints like T extends string.",
+      "wrongAnswers": [
+        "By annotating the parameter as any, which keeps literal types intact because any never widens values.",
+        "By using readonly on the return type only, which prevents the compiler from widening literal arguments.",
+        "By annotating the parameter as any so literals are kept."
+      ]
+    },
+    {
+      "id": 79,
+      "level": "advanced",
+      "question": "What is unique symbol?",
+      "correctAnswer": "A type for unique symbols, useful for keys and brands that never collide.",
+      "wrongAnswers": [
+        "A runtime function that generates unique IDs for objects.",
+        "A type that forbids duplicate values in an array.",
+        "A modifier that makes a class a singleton."
+      ]
+    },
+    {
+      "id": 80,
+      "level": "advanced",
+      "question": "What is typed this?",
+      "correctAnswer": "You can declare the type of this as a fake first parameter: function f(this: Context); there is also the polymorphic this type.",
+      "wrongAnswers": [
+        "You type this with a decorator such as @this(Context) placed above the function declaration.",
+        "this is always typed as any and cannot be annotated.",
+        "this can only be typed inside arrow functions."
+      ]
+    },
+    {
+      "id": 81,
+      "level": "advanced",
+      "question": "What are decorators?",
+      "correctAnswer": "Functions annotated with @ that modify classes and members. TS 5 supports ECMAScript standard decorators; experimentalDecorators keeps the old format.",
+      "wrongAnswers": [
+        "Special comments starting with @ that only affect documentation generation tools and are ignored by the compiler and the runtime.",
+        "Functions that run only during compilation and are completely removed from the output, so they never have any effect at runtime.",
+        "Type annotations that add CSS styles to classes."
+      ]
+    },
+    {
+      "id": 82,
+      "level": "advanced",
+      "question": "What is module augmentation?",
+      "correctAnswer": "Extending types of existing modules with declare module \"x\" { ... }, e.g., adding fields to Express's Request.",
+      "wrongAnswers": [
+        "Installing missing npm modules automatically when the compiler cannot find type declarations for an import.",
+        "Merging two separate modules into a single file at build time to reduce imports and improve tree shaking.",
+        "Increasing the size limit of a module's bundle."
+      ]
+    },
+    {
+      "id": 83,
+      "level": "advanced",
+      "question": "What is declare global?",
+      "correctAnswer": "It lets you add or change types in the global scope from within a module.",
+      "wrongAnswers": [
+        "It declares a runtime global variable accessible from any file.",
+        "It makes all types in a file exported automatically.",
+        "It disables module scope for the entire project."
+      ]
+    },
+    {
+      "id": 84,
+      "level": "advanced",
+      "question": "What is isolatedModules?",
+      "correctAnswer": "It requires each file to be transpilable in isolation, needed for esbuild/SWC/Babel; it restricts re-exports of types without type.",
+      "wrongAnswers": [
+        "It runs each module's type checking in a separate thread during compilation to speed up large builds.",
+        "It prevents modules from importing each other, forcing every file to be self-contained with no dependencies.",
+        "It bundles each module into its own output file."
+      ]
+    },
+    {
+      "id": 85,
+      "level": "advanced",
+      "question": "What is the difference between tsc and esbuild/swc?",
+      "correctAnswer": "tsc type-checks and emits JS; esbuild/SWC only strip types and transpile, much faster, without checking.",
+      "wrongAnswers": [
+        "esbuild/SWC type-check more strictly than tsc, but are slower.",
+        "tsc only strips types; esbuild/SWC perform full type checking.",
+        "They are identical; esbuild and SWC are just tsc wrappers."
+      ]
+    },
+    {
+      "id": 86,
+      "level": "advanced",
+      "question": "What are project references?",
+      "correctAnswer": "A monorepo feature that splits the project into subprojects with incremental builds and typed dependencies (composite).",
+      "wrongAnswers": [
+        "Links to external documentation pages declared in tsconfig.json so the editor can show them on hover.",
+        "Triple-slash /// <reference> comments that every file must include to import types from other files.",
+        "A list of npm packages that the project depends on."
+      ]
+    },
+    {
+      "id": 87,
+      "level": "advanced",
+      "question": "How does module resolution (moduleResolution) work?",
+      "correctAnswer": "It defines how imports are located: node10, node16/nodenext (respecting ESM/CJS and exports) and bundler.",
+      "wrongAnswers": [
+        "It resolves version conflicts between npm packages by choosing the newest compatible version of each dependency.",
+        "It defines the order in which modules are executed at runtime.",
+        "It determines which modules are tree-shaken from the bundle."
+      ]
+    },
+    {
+      "id": 88,
+      "level": "advanced",
+      "question": "How do you correctly type Object.keys?",
+      "correctAnswer": "It returns string[] for structural safety; you cast as (keyof T)[] when you know the exact shape.",
+      "wrongAnswers": [
+        "It returns any[], so you should always annotate the result as unknown[] and narrow each key manually.",
+        "It already returns (keyof T)[], so no cast is ever needed.",
+        "It returns a union of the object's values."
+      ]
+    },
+    {
+      "id": 89,
+      "level": "advanced",
+      "question": "What are recursive types?",
+      "correctAnswer": "Types that reference themselves, such as type Json = string | number | boolean | null | Json[] | { [k: string]: Json }.",
+      "wrongAnswers": [
+        "Types that TypeScript forbids because self-references would cause the compiler to enter an infinite loop.",
+        "Types generated by recursive functions at runtime.",
+        "Types that repeat the same property multiple times."
+      ]
+    },
+    {
+      "id": 90,
+      "level": "advanced",
+      "question": "How do you infer types from a Zod schema?",
+      "correctAnswer": "With z.infer<typeof schema>, keeping validation and type in a single source.",
+      "wrongAnswers": [
+        "With ReturnType<typeof schema>, which extracts the validated output type from the schema object.",
+        "With ReturnType<schema>, which extracts the validated type.",
+        "With schema.type, a property that holds the TypeScript type at runtime."
+      ]
+    },
+    {
+      "id": 91,
+      "level": "advanced",
+      "question": "What is the Function type and why avoid it?",
+      "correctAnswer": "It accepts any function without specifying parameters or return. Prefer specific signatures like (x: number) => void.",
+      "wrongAnswers": [
+        "It only accepts arrow functions, so passing a function declaration or method to a Function parameter causes a compile error.",
+        "It is deprecated and always throws a compile error in strict mode, so code using it no longer builds.",
+        "It forces all functions to return void."
+      ]
+    },
+    {
+      "id": 92,
+      "level": "advanced",
+      "question": "How does infer work with tuples and functions?",
+      "correctAnswer": "It lets you extract parts, for example T extends (...args: infer A) => infer R ? [A, R] : never.",
+      "wrongAnswers": [
+        "infer only works with Promise types; to extract parameters or return types you must use runtime reflection instead.",
+        "It infers function types at runtime by inspecting the arguments passed on the first call and caching the result.",
+        "It only works with Promises and cannot extract function parts."
+      ]
+    },
+    {
+      "id": 93,
+      "level": "advanced",
+      "question": "How do you type HOCs or composition functions generically?",
+      "correctAnswer": "With generics that preserve the original props and remove/inject props via Omit and intersections.",
+      "wrongAnswers": [
+        "By typing every prop as any, because higher-order components cannot be typed generically in TypeScript.",
+        "By typing all props as any, since HOCs cannot be typed.",
+        "By duplicating the props interface for every wrapped component."
+      ]
+    },
+    {
+      "id": 94,
+      "level": "advanced",
+      "question": "What is \"type widening\"?",
+      "correctAnswer": "Widening literal types to their base type (let x = \"a\" becomes string), while const x = \"a\" keeps the literal.",
+      "wrongAnswers": [
+        "Narrowing a base type to a literal type, so let x = \"a\" is inferred as \"a\" while const x = \"a\" becomes string.",
+        "Automatically converting every number type in the project into bigint when values exceed the safe integer range.",
+        "Increasing the strictness level of the compiler."
+      ]
+    },
+    {
+      "id": 95,
+      "level": "advanced",
+      "question": "How do you deal with libraries without types?",
+      "correctAnswer": "Install @types/..., create a .d.ts with declare module \"lib\", or use an isolated any as a last resort.",
+      "wrongAnswers": [
+        "Disable TypeScript checking for the whole project with // @ts-nocheck in every file that imports the library.",
+        "Rewrite the library in TypeScript before using it.",
+        "Import it with require, which TypeScript types automatically."
+      ]
+    },
+    {
+      "id": 96,
+      "level": "advanced",
+      "question": "How do you reduce compile time in large projects?",
+      "correctAnswer": "Use incremental, project references, skipLibCheck, avoid overly complex types and run type checking in CI separately from the build.",
+      "wrongAnswers": [
+        "Disable strict mode and replace complex types with any everywhere, which removes most of the work tsc has to do.",
+        "Merge all source files into a single huge file so tsc only needs to read and parse one file per build.",
+        "Put all code in a single file so tsc reads only once."
+      ]
+    },
+    {
+      "id": 97,
+      "level": "advanced",
+      "question": "What are abstract construct signatures?",
+      "correctAnswer": "abstract new () => T signatures that describe constructors of abstract classes.",
+      "wrongAnswers": [
+        "Signatures that allow creating instances of abstract classes directly with new, bypassing the abstract restriction.",
+        "Constructor signatures that run only at compile time to validate class hierarchies.",
+        "Signatures that forbid a class from being extended."
+      ]
+    },
+    {
+      "id": 98,
+      "level": "advanced",
+      "question": "What is the using declaration (TS 5.2)?",
+      "correctAnswer": "A declaration of disposable resources that automatically calls [Symbol.dispose] when leaving scope.",
+      "wrongAnswers": [
+        "A keyword for importing namespaces into the current file, similar to the using directive in C#.",
+        "A declaration that marks a variable as used so the compiler and linter stop warning about unused values.",
+        "A statement that loads a module synchronously."
+      ]
+    },
+    {
+      "id": 99,
+      "level": "advanced",
+      "question": "How do you type an event emitter safely?",
+      "correctAnswer": "With an event map (interface Events { login: User }) and generics on<K extends keyof Events>(event: K, cb: (payload: Events[K]) => void).",
+      "wrongAnswers": [
+        "By typing every event name as string and every payload as any, then documenting the expected shapes in comments.",
+        "By creating a separate emitter class for every event and using the Function type for all registered callbacks.",
+        "By typing all events as string and all payloads as any."
+      ]
+    },
+    {
+      "id": 100,
+      "level": "advanced",
+      "question": "When do you use unknown in catch?",
+      "correctAnswer": "With useUnknownInCatchVariables (part of strict), the error is unknown, forcing you to check with instanceof Error before using it.",
+      "wrongAnswers": [
+        "Only when the try block contains await, because synchronous errors are always typed as Error by the compiler.",
+        "Never; catch variables are always typed as Error.",
+        "Only when the try block contains async code."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1107 @@
+{
+  "id": "github",
+  "language": "en",
+  "title": "GitHub",
+  "questions": [
+    {
+      "id": 1,
+      "level": "basic",
+      "question": "What is Git?",
+      "correctAnswer": "A distributed version control system that records the history of code changes.",
+      "wrongAnswers": [
+        "A centralized version control system that stores the full history only on a central server and requires a network connection for every commit.",
+        "A hosting platform that stores repositories in the cloud and provides pull requests, issues and continuous integration pipelines.",
+        "A package manager for installing JavaScript libraries."
+      ]
+    },
+    {
+      "id": 2,
+      "level": "basic",
+      "question": "What is GitHub?",
+      "correctAnswer": "A Git repository hosting platform with collaboration features: pull requests, issues, Actions, projects and code review.",
+      "wrongAnswers": [
+        "The official command-line implementation of Git, maintained by Linus Torvalds, used to create commits, branches and merges locally on your machine.",
+        "An open source version control system that replaces Git with a centralized model, focused on large enterprises and binary files.",
+        "The official command-line tool that implements Git."
+      ]
+    },
+    {
+      "id": 3,
+      "level": "basic",
+      "question": "What is the difference between Git and GitHub?",
+      "correctAnswer": "Git is the local versioning tool; GitHub is an online service that hosts Git repositories and adds collaboration.",
+      "wrongAnswers": [
+        "GitHub is the local command-line versioning tool, while Git is the online service that hosts repositories and adds pull requests and issues.",
+        "Git is the paid version of GitHub with extra features.",
+        "GitHub is the local tool; Git is the online hosting service."
+      ]
+    },
+    {
+      "id": 4,
+      "level": "basic",
+      "question": "What is a repository?",
+      "correctAnswer": "A project folder with the entire version history and Git configuration.",
+      "wrongAnswers": [
+        "A single commit containing all project files.",
+        "A remote server that only stores the latest version of the code.",
+        "A list of the project's npm dependencies."
+      ]
+    },
+    {
+      "id": 5,
+      "level": "basic",
+      "question": "What is a commit?",
+      "correctAnswer": "A \"snapshot\" of changes, with author, date, message and a unique hash.",
+      "wrongAnswers": [
+        "A request to merge one branch into another.",
+        "A copy of a repository in your own account.",
+        "A pointer to the current branch."
+      ]
+    },
+    {
+      "id": 6,
+      "level": "basic",
+      "question": "What is a branch?",
+      "correctAnswer": "An independent line of development, a movable pointer to a commit.",
+      "wrongAnswers": [
+        "A full copy of the repository stored in a separate folder on disk, including its own history and configuration files.",
+        "A fixed, immutable label attached to a specific commit, commonly used to mark release versions such as v1.0.0.",
+        "A fixed label for a release version, like v1.0.0."
+      ]
+    },
+    {
+      "id": 7,
+      "level": "basic",
+      "question": "How do you clone a repository?",
+      "correctAnswer": "git clone <url>.",
+      "wrongAnswers": [
+        "git fork <url>, which copies the remote repository into your account.",
+        "git checkout <url> --clone to download all branches.",
+        "git pull <url> --new."
+      ]
+    },
+    {
+      "id": 8,
+      "level": "basic",
+      "question": "How do you create a new branch and switch to it?",
+      "correctAnswer": "git switch -c branch-name (or git checkout -b branch-name).",
+      "wrongAnswers": [
+        "git checkout branch-name --new, which creates the branch from main and moves HEAD.",
+        "git branch -m branch-name.",
+        "git switch branch-name --create-only."
+      ]
+    },
+    {
+      "id": 9,
+      "level": "basic",
+      "question": "What does git add do?",
+      "correctAnswer": "It adds changes to the staging area for the next commit.",
+      "wrongAnswers": [
+        "It creates a new commit containing every modified file in the working directory, using a default message.",
+        "It registers a new remote URL in the repository configuration so you can push to it later.",
+        "It creates a new commit with all modified files."
+      ]
+    },
+    {
+      "id": 10,
+      "level": "basic",
+      "question": "What does git commit -m do?",
+      "correctAnswer": "It creates a commit with the staged changes and the given message.",
+      "wrongAnswers": [
+        "It merges the current branch into main with a message.",
+        "It edits the message of the last pushed commit.",
+        "It sends a message to the repository's collaborators."
+      ]
+    },
+    {
+      "id": 11,
+      "level": "basic",
+      "question": "What does git push do?",
+      "correctAnswer": "It sends local commits to the remote repository.",
+      "wrongAnswers": [
+        "It downloads new commits from the remote repository and merges them into the current branch.",
+        "It saves uncommitted changes temporarily so you can switch branches with a clean working directory.",
+        "It creates a pull request automatically."
+      ]
+    },
+    {
+      "id": 12,
+      "level": "basic",
+      "question": "What does git pull do?",
+      "correctAnswer": "It fetches changes from the remote and integrates them into the current branch (fetch + merge, or rebase if configured).",
+      "wrongAnswers": [
+        "It uploads your local commits to the remote repository and opens a pull request automatically on GitHub.",
+        "It only downloads changes without modifying the current branch.",
+        "It sends local commits to the remote."
+      ]
+    },
+    {
+      "id": 13,
+      "level": "basic",
+      "question": "What is the difference between git fetch and git pull?",
+      "correctAnswer": "fetch only downloads updates without changing your branch; pull downloads and integrates.",
+      "wrongAnswers": [
+        "pull only downloads remote updates without changing your branch, while fetch downloads and integrates them through a merge or rebase.",
+        "fetch works only with GitHub remotes and requires authentication, while pull works with any remote and accepts anonymous access.",
+        "pull only downloads; fetch downloads and merges."
+      ]
+    },
+    {
+      "id": 14,
+      "level": "basic",
+      "question": "What is a fork?",
+      "correctAnswer": "A copy of a repository into your account, used to contribute to third-party projects.",
+      "wrongAnswers": [
+        "A new branch created inside the original repository, used by maintainers to work on features in isolation.",
+        "A merge conflict between two branches.",
+        "A tag that marks a stable version."
+      ]
+    },
+    {
+      "id": 15,
+      "level": "basic",
+      "question": "What is a Pull Request (PR)?",
+      "correctAnswer": "A request to merge changes from one branch into another, allowing review, discussion and automated checks.",
+      "wrongAnswers": [
+        "A command that pulls the latest changes from the remote.",
+        "A request to gain write access to a repository.",
+        "A request to download a repository as a ZIP file."
+      ]
+    },
+    {
+      "id": 16,
+      "level": "basic",
+      "question": "What is an Issue?",
+      "correctAnswer": "A record for tracking bugs, tasks, ideas and discussions in a repository.",
+      "wrongAnswers": [
+        "An automatic error report that GitHub generates whenever a commit fails to build or a test fails in CI.",
+        "A pull request that has been blocked by branch protection and is waiting for administrator approval.",
+        "A security alert generated by Dependabot only."
+      ]
+    },
+    {
+      "id": 17,
+      "level": "basic",
+      "question": "What is .gitignore?",
+      "correctAnswer": "A file listing patterns of files and folders that Git should ignore (e.g., node_modules, .env).",
+      "wrongAnswers": [
+        "A file that lists collaborators who are not allowed to push to the repository, enforced by GitHub on every push.",
+        "A file that hides commits from the history.",
+        "A file that deletes listed files from the remote."
+      ]
+    },
+    {
+      "id": 18,
+      "level": "basic",
+      "question": "What is README.md?",
+      "correctAnswer": "The project's presentation document, displayed on the repository's home page.",
+      "wrongAnswers": [
+        "A file that configures GitHub Actions workflows, listing the jobs that run on each push and pull request.",
+        "The changelog that Git generates automatically from commit messages every time a new tag is created.",
+        "A file that Git reads to set default branch names."
+      ]
+    },
+    {
+      "id": 19,
+      "level": "basic",
+      "question": "What is origin?",
+      "correctAnswer": "The default name of the remote repository you cloned from.",
+      "wrongAnswers": [
+        "The default name of the main branch in every new repository, replacing the older master name.",
+        "The very first commit in the repository's history, from which all other commits descend.",
+        "The original author of the repository."
+      ]
+    },
+    {
+      "id": 20,
+      "level": "basic",
+      "question": "How do you view the commit history?",
+      "correctAnswer": "git log (or git log --oneline --graph).",
+      "wrongAnswers": [
+        "git history --all, which lists commits from every branch.",
+        "git history.",
+        "git status --all."
+      ]
+    },
+    {
+      "id": 21,
+      "level": "basic",
+      "question": "How do you view the state of files?",
+      "correctAnswer": "git status.",
+      "wrongAnswers": [
+        "git log --files, listing changed files.",
+        "git diff --status for each file.",
+        "git log --files."
+      ]
+    },
+    {
+      "id": 22,
+      "level": "basic",
+      "question": "How do you view differences in changes?",
+      "correctAnswer": "git diff (unstaged) and git diff --staged (staged).",
+      "wrongAnswers": [
+        "git compare for unstaged changes and git compare --cached for staged changes.",
+        "git status -v for unstaged changes and git status -vv for staged changes.",
+        "git log -p only, which shows staged changes."
+      ]
+    },
+    {
+      "id": 23,
+      "level": "basic",
+      "question": "What is HEAD?",
+      "correctAnswer": "A pointer to the current commit you are on (usually the tip of the active branch).",
+      "wrongAnswers": [
+        "A pointer to the latest commit on the remote main branch, updated every time someone pushes to the repository.",
+        "The first commit of the repository, used as the root from which all branches are created.",
+        "The repository's main configuration file."
+      ]
+    },
+    {
+      "id": 24,
+      "level": "basic",
+      "question": "What is the main branch?",
+      "correctAnswer": "The current default main branch of repositories (formerly commonly called master).",
+      "wrongAnswers": [
+        "A protected branch that can only be modified by GitHub administrators.",
+        "A branch automatically created for each release.",
+        "The branch where GitHub stores pull request drafts."
+      ]
+    },
+    {
+      "id": 25,
+      "level": "basic",
+      "question": "How do you discard uncommitted changes in a file?",
+      "correctAnswer": "git restore <file> (formerly git checkout -- file).",
+      "wrongAnswers": [
+        "git revert <file>, which creates a new commit undoing the changes in that file.",
+        "git reset --soft <file>, which discards local edits but keeps them staged.",
+        "git reset --soft <file>."
+      ]
+    },
+    {
+      "id": 26,
+      "level": "basic",
+      "question": "How do you remove a file from staging?",
+      "correctAnswer": "git restore --staged <file>.",
+      "wrongAnswers": [
+        "git rm <file>, which unstages it and keeps the file on disk.",
+        "git unstage --all <file>.",
+        "git reset --hard <file>."
+      ]
+    },
+    {
+      "id": 27,
+      "level": "basic",
+      "question": "How do you change the last commit message?",
+      "correctAnswer": "git commit --amend (avoid it if you already pushed to a shared branch).",
+      "wrongAnswers": [
+        "git commit --edit-last, which rewrites only the message and is always safe on shared branches that others already pulled.",
+        "git revert --message, which creates a new commit replacing the previous message without rewriting any history.",
+        "git rename HEAD."
+      ]
+    },
+    {
+      "id": 28,
+      "level": "basic",
+      "question": "What is a tag?",
+      "correctAnswer": "A marker for a specific commit, commonly used for versions such as v1.0.0.",
+      "wrongAnswers": [
+        "A movable pointer that advances automatically with each new commit, used to track release lines such as v1.x.",
+        "A label applied to issues to categorize them.",
+        "A movable pointer that follows new commits, like a branch."
+      ]
+    },
+    {
+      "id": 29,
+      "level": "basic",
+      "question": "What is a Release on GitHub?",
+      "correctAnswer": "A tag-based version publication, with notes and attached files.",
+      "wrongAnswers": [
+        "An automatic deployment of the main branch to production triggered whenever a pull request is merged.",
+        "A merged pull request that received at least two approvals and is therefore marked as releasable.",
+        "A merged pull request with more than one approval."
+      ]
+    },
+    {
+      "id": 30,
+      "level": "basic",
+      "question": "What is GitHub Pages?",
+      "correctAnswer": "A free service to host static sites directly from a repository.",
+      "wrongAnswers": [
+        "A wiki for documenting repositories, not for hosting sites.",
+        "A paid service for hosting Node.js backends.",
+        "A page listing all public repositories of a user."
+      ]
+    },
+    {
+      "id": 31,
+      "level": "basic",
+      "question": "How do you authenticate with GitHub via the terminal?",
+      "correctAnswer": "With SSH keys, Personal Access Tokens or GitHub CLI (gh auth login); passwords are no longer accepted.",
+      "wrongAnswers": [
+        "With your GitHub account password, which remains the recommended method for HTTPS remotes in the terminal.",
+        "With your email address only, since GitHub identifies terminal users by the email configured in git config.",
+        "With an OAuth app secret stored in .gitignore."
+      ]
+    },
+    {
+      "id": 32,
+      "level": "basic",
+      "question": "What is the GitHub CLI (gh)?",
+      "correctAnswer": "A command-line tool to create PRs, issues and manage repositories without leaving the terminal.",
+      "wrongAnswers": [
+        "The official Git implementation maintained by GitHub, which replaces the git command for every version control operation.",
+        "A graphical desktop client for Git.",
+        "A CI runner that executes Actions locally."
+      ]
+    },
+    {
+      "id": 33,
+      "level": "basic",
+      "question": "What are public and private repositories?",
+      "correctAnswer": "Public can be seen by anyone; private only by authorized people.",
+      "wrongAnswers": [
+        "Public repositories can be edited by anyone with a GitHub account; private repositories can be viewed by anyone but only edited by the owner.",
+        "Public repositories are always free and hosted on GitHub, while private repositories must be hosted on your own servers.",
+        "Public are free and private are always paid, regardless of features."
+      ]
+    },
+    {
+      "id": 34,
+      "level": "basic",
+      "question": "What is an open source license?",
+      "correctAnswer": "A document (MIT, Apache 2.0, GPL...) that defines how third parties may use, modify and distribute the code.",
+      "wrongAnswers": [
+        "A paid certificate issued by GitHub proving that the code has been audited and is free of security vulnerabilities and bugs.",
+        "A repository setting that makes the code public and automatically allows anyone to push changes without review.",
+        "A key required to install open source packages."
+      ]
+    },
+    {
+      "id": 35,
+      "level": "intermediate",
+      "question": "What is the difference between merge and rebase?",
+      "correctAnswer": "merge joins histories by creating a merge commit; rebase reapplies commits onto another base, producing a linear history but rewriting it.",
+      "wrongAnswers": [
+        "rebase joins histories by creating a merge commit that preserves both lines; merge reapplies commits onto a new base and rewrites them linearly.",
+        "rebase creates a merge commit; merge rewrites history linearly.",
+        "merge deletes the source branch; rebase keeps it."
+      ]
+    },
+    {
+      "id": 36,
+      "level": "intermediate",
+      "question": "When should you not use rebase?",
+      "correctAnswer": "On public/shared branches, because it rewrites history and causes problems for other collaborators.",
+      "wrongAnswers": [
+        "On local branches that have never been pushed.",
+        "When the branch has fewer than five commits.",
+        "Whenever there are no conflicts, since rebase only works with conflicts."
+      ]
+    },
+    {
+      "id": 37,
+      "level": "intermediate",
+      "question": "What is \"squash and merge\"?",
+      "correctAnswer": "A GitHub option that combines all of a PR's commits into a single commit on the target branch.",
+      "wrongAnswers": [
+        "A GitHub option that merges the pull request while keeping every individual commit and adding an extra merge commit on top.",
+        "An option that deletes all commits of the PR without merging.",
+        "An option that compresses repository files to save space."
+      ]
+    },
+    {
+      "id": 38,
+      "level": "intermediate",
+      "question": "What is git stash?",
+      "correctAnswer": "It temporarily stores uncommitted changes to clean the working directory; git stash pop restores them.",
+      "wrongAnswers": [
+        "It creates a new branch from the uncommitted changes, commits them and pushes the branch to the remote as a backup copy.",
+        "It permanently deletes uncommitted changes.",
+        "It stores commits on the remote for backup."
+      ]
+    },
+    {
+      "id": 39,
+      "level": "intermediate",
+      "question": "What is git cherry-pick?",
+      "correctAnswer": "It applies a specific commit from another branch onto the current branch.",
+      "wrongAnswers": [
+        "It selects which files to include in the next commit.",
+        "It picks the best branch to merge based on tests.",
+        "It removes a specific commit from the history."
+      ]
+    },
+    {
+      "id": 40,
+      "level": "intermediate",
+      "question": "What is the difference between git reset and git revert?",
+      "correctAnswer": "reset moves the branch back, rewriting history; revert creates a new commit that undoes another, safe for shared branches.",
+      "wrongAnswers": [
+        "revert rewrites history; reset creates a new undo commit.",
+        "reset only affects the remote; revert only affects the local repository.",
+        "They are equivalent; revert is the older name of reset."
+      ]
+    },
+    {
+      "id": 41,
+      "level": "intermediate",
+      "question": "What is the difference between reset --soft, --mixed and --hard?",
+      "correctAnswer": "--soft keeps changes staged; --mixed keeps them in the working directory; --hard discards everything.",
+      "wrongAnswers": [
+        "--soft discards all changes, --mixed keeps them staged and --hard keeps them in the working directory as unstaged edits.",
+        "--soft resets only the remote; --mixed resets local and remote; --hard deletes the branch.",
+        "They differ only in speed, not in what happens to the changes."
+      ]
+    },
+    {
+      "id": 42,
+      "level": "intermediate",
+      "question": "What is git reflog?",
+      "correctAnswer": "A local log of HEAD movements, useful for recovering \"lost\" commits.",
+      "wrongAnswers": [
+        "A server-side log of every push made by every collaborator, stored on GitHub and used for auditing access.",
+        "A command that reformats commit messages.",
+        "A list of files ignored by .gitignore."
+      ]
+    },
+    {
+      "id": 43,
+      "level": "intermediate",
+      "question": "What is Git Flow?",
+      "correctAnswer": "A branching strategy with main, develop, feature/*, release/* and hotfix/*.",
+      "wrongAnswers": [
+        "A strategy in which every developer commits directly to main without branches, relying only on feature flags.",
+        "GitHub's built-in visual pipeline editor for designing CI/CD flows without writing YAML.",
+        "GitHub's built-in CI/CD feature."
+      ]
+    },
+    {
+      "id": 44,
+      "level": "intermediate",
+      "question": "What is Trunk-Based Development?",
+      "correctAnswer": "A strategy where everyone integrates frequently into a main branch with short-lived branches and feature flags.",
+      "wrongAnswers": [
+        "A strategy with long-lived feature branches that stay isolated for weeks and are merged only at release time.",
+        "A strategy where each developer has a permanent personal branch.",
+        "A strategy that forbids feature flags."
+      ]
+    },
+    {
+      "id": 45,
+      "level": "intermediate",
+      "question": "What is GitHub Flow?",
+      "correctAnswer": "A simple flow: create a branch from main, commit, open a PR, review, merge and deploy.",
+      "wrongAnswers": [
+        "A flow with long-lived develop, release and hotfix branches in addition to main, with releases merged back into develop.",
+        "A visual editor for GitHub Actions workflows.",
+        "A process where commits go straight to production without review."
+      ]
+    },
+    {
+      "id": 46,
+      "level": "intermediate",
+      "question": "What is Conventional Commits?",
+      "correctAnswer": "A message standard (feat:, fix:, chore:...) that makes changelogs and automated semantic versioning easier.",
+      "wrongAnswers": [
+        "A Git setting that blocks any commit whose message does not reference an existing issue number in the tracker.",
+        "A rule that commits must be made at regular intervals.",
+        "A Git setting that blocks commits without tests."
+      ]
+    },
+    {
+      "id": 47,
+      "level": "intermediate",
+      "question": "What is semantic versioning (SemVer)?",
+      "correctAnswer": "The MAJOR.MINOR.PATCH format: major for breaking changes, minor for new features and patch for fixes.",
+      "wrongAnswers": [
+        "The MAJOR.MINOR.PATCH format, where major is for bug fixes, minor is for breaking changes and patch is for new backward-compatible features.",
+        "A date-based format such as 2024.10.08.",
+        "A versioning scheme that increments a single number per commit."
+      ]
+    },
+    {
+      "id": 48,
+      "level": "intermediate",
+      "question": "What is GitHub Actions?",
+      "correctAnswer": "An integrated CI/CD platform that runs workflows defined in YAML in response to repository events.",
+      "wrongAnswers": [
+        "A bot that reviews every pull request and approves it automatically when the code style matches the repository's linter rules.",
+        "A marketplace for purchasing premium themes and extensions that change how the GitHub interface looks and behaves.",
+        "A list of keyboard shortcuts in the GitHub interface."
+      ]
+    },
+    {
+      "id": 49,
+      "level": "intermediate",
+      "question": "How is a GitHub Actions workflow structured?",
+      "correctAnswer": "A .github/workflows/*.yml file with on (triggers), jobs, runs-on and steps (commands or reusable actions).",
+      "wrongAnswers": [
+        "A script named workflow in package.json containing the list of shell commands that GitHub runs on every push to main.",
+        "A Dockerfile placed in the repository root, which GitHub builds and runs automatically each time a pull request is opened.",
+        "A .github/actions.json file with triggers and a single shell script."
+      ]
+    },
+    {
+      "id": 50,
+      "level": "intermediate",
+      "question": "What are Secrets on GitHub?",
+      "correctAnswer": "Encrypted variables for storing sensitive data (tokens, keys) used in workflows without exposing them in code.",
+      "wrongAnswers": [
+        "Private repositories that only the owner can see.",
+        "Hidden branches not shown in the repository list.",
+        "Commits that are excluded from the public history."
+      ]
+    },
+    {
+      "id": 51,
+      "level": "intermediate",
+      "question": "What is CI/CD?",
+      "correctAnswer": "Continuous Integration (automatic build and tests on every change) and Continuous Delivery/Deployment (automated deploy).",
+      "wrongAnswers": [
+        "Code Inspection and Code Documentation, a manual process where senior developers review and document each change before release.",
+        "Continuous Isolation and Continuous Debugging, a practice of keeping every feature in its own branch until it is bug-free.",
+        "Continuous Isolation / Continuous Debugging of branches."
+      ]
+    },
+    {
+      "id": 52,
+      "level": "intermediate",
+      "question": "What are Branch Protection Rules?",
+      "correctAnswer": "Rules that require PRs, approvals and passing checks, and block force pushes on the branch.",
+      "wrongAnswers": [
+        "Rules that encrypt the contents of a branch so that only its creator and organization owners can read the files.",
+        "Rules that automatically delete branches that have not received commits in the last 30 days to keep the repository clean.",
+        "Rules that prevent branches from being created."
+      ]
+    },
+    {
+      "id": 53,
+      "level": "intermediate",
+      "question": "What is CODEOWNERS?",
+      "correctAnswer": "A file that defines owners for parts of the code, automatically requested as reviewers on PRs.",
+      "wrongAnswers": [
+        "A file listing the legal copyright holders of the repository, required for open source licenses to be valid.",
+        "A file that restricts who can clone the repository.",
+        "A list of contributors displayed on the repository page."
+      ]
+    },
+    {
+      "id": 54,
+      "level": "intermediate",
+      "question": "What are Pull Request Templates?",
+      "correctAnswer": "PR description templates (.github/pull_request_template.md) that standardize the information.",
+      "wrongAnswers": [
+        "Pre-built branches containing common features that can be merged into any repository from the GitHub marketplace.",
+        "Repository templates used to generate entirely new repositories with a predefined folder structure and files.",
+        "Templates for generating new repositories from scratch."
+      ]
+    },
+    {
+      "id": 55,
+      "level": "intermediate",
+      "question": "What is a Draft Pull Request?",
+      "correctAnswer": "A PR marked as a draft, signaling it isn't ready for review or merge yet.",
+      "wrongAnswers": [
+        "A pull request created automatically by Dependabot to update a dependency, which cannot be edited by humans.",
+        "A PR that was closed without merging.",
+        "A PR created automatically by Dependabot."
+      ]
+    },
+    {
+      "id": 56,
+      "level": "intermediate",
+      "question": "How do you keep a fork up to date?",
+      "correctAnswer": "Add the original repository as upstream, run git fetch upstream and merge/rebase, or use \"Sync fork\" on GitHub.",
+      "wrongAnswers": [
+        "Delete the fork and create a new one every time.",
+        "Run git pull origin, since origin always points to the original repository.",
+        "Forks update automatically whenever the original changes."
+      ]
+    },
+    {
+      "id": 57,
+      "level": "intermediate",
+      "question": "What are submodules?",
+      "correctAnswer": "References to other repositories inside a repository, pinned to a specific commit.",
+      "wrongAnswers": [
+        "Subfolders that Git ignores automatically because they contain generated files, such as build outputs and caches.",
+        "Smaller branches created from a feature branch.",
+        "npm packages installed inside the repository."
+      ]
+    },
+    {
+      "id": 58,
+      "level": "intermediate",
+      "question": "What is git bisect?",
+      "correctAnswer": "A binary search through history to find the commit that introduced a bug.",
+      "wrongAnswers": [
+        "A command that splits a large commit into two smaller commits interactively, so each one can be reviewed separately.",
+        "A command that compares two files or branches side by side in the terminal, highlighting differences line by line.",
+        "A command that divides a branch into two new branches."
+      ]
+    },
+    {
+      "id": 59,
+      "level": "intermediate",
+      "question": "What is git blame?",
+      "correctAnswer": "It shows who last changed each line of a file and in which commit.",
+      "wrongAnswers": [
+        "It reports which commit broke the build in CI.",
+        "It lists users who violated branch protection rules.",
+        "It reverts the changes made by a specific author."
+      ]
+    },
+    {
+      "id": 60,
+      "level": "intermediate",
+      "question": "What is Dependabot?",
+      "correctAnswer": "A GitHub feature that creates automatic PRs to update dependencies and fix vulnerabilities.",
+      "wrongAnswers": [
+        "A bot that reviews code style and formatting in pull requests, leaving comments when lint rules are violated.",
+        "A chatbot for answering questions about a repository.",
+        "A tool that removes unused dependencies automatically without PRs."
+      ]
+    },
+    {
+      "id": 61,
+      "level": "intermediate",
+      "question": "What are GitHub Projects?",
+      "correctAnswer": "Boards and tables for planning and tracking work, linking issues and PRs.",
+      "wrongAnswers": [
+        "A list of every repository that belongs to an organization, grouped by team and sorted by recent activity.",
+        "Separate Git repositories dedicated to documentation, linked to the main repository through submodules.",
+        "A list of all repositories belonging to an organization."
+      ]
+    },
+    {
+      "id": 62,
+      "level": "intermediate",
+      "question": "What is GitHub Discussions?",
+      "correctAnswer": "A forum inside the repository for questions, ideas and conversations outside of issues.",
+      "wrongAnswers": [
+        "Comment threads attached to individual lines of code in a pull request, used during code review.",
+        "A real-time chat for organization members.",
+        "A section for reviewing security alerts."
+      ]
+    },
+    {
+      "id": 63,
+      "level": "intermediate",
+      "question": "How do you sign commits?",
+      "correctAnswer": "With GPG or SSH (git commit -S), showing the \"Verified\" badge on GitHub.",
+      "wrongAnswers": [
+        "By adding your name at the end of the commit message.",
+        "With git commit --author, which verifies identity.",
+        "By enabling 2FA, which signs all commits automatically."
+      ]
+    },
+    {
+      "id": 64,
+      "level": "intermediate",
+      "question": "How do you revert an already merged PR?",
+      "correctAnswer": "Use GitHub's \"Revert\" button, which creates a new PR undoing the changes.",
+      "wrongAnswers": [
+        "Reopen the PR, which automatically undoes the merge.",
+        "Delete the source branch, which removes its commits from main.",
+        "Use git reset --hard on main and force push, the recommended approach."
+      ]
+    },
+    {
+      "id": 65,
+      "level": "intermediate",
+      "question": "What is git rebase -i?",
+      "correctAnswer": "Interactive rebase to reorder, edit, combine (squash) or remove commits.",
+      "wrongAnswers": [
+        "A rebase mode that resolves every conflict automatically by always keeping the version from the target branch.",
+        "An incremental rebase that runs in the background and applies commits gradually while you keep working.",
+        "A rebase that ignores conflicts automatically."
+      ]
+    },
+    {
+      "id": 66,
+      "level": "intermediate",
+      "question": "What is --force-with-lease?",
+      "correctAnswer": "It forces the push only if the remote has no new commits you don't know about, safer than --force.",
+      "wrongAnswers": [
+        "It pushes without running any local Git hooks, which is useful when hooks are slow or failing temporarily.",
+        "It forces the push and locks the branch for other collaborators.",
+        "It forces the push only on protected branches."
+      ]
+    },
+    {
+      "id": 67,
+      "level": "intermediate",
+      "question": "How do you remove an already committed sensitive file?",
+      "correctAnswer": "Rewrite history with git filter-repo or BFG and immediately rotate the exposed credential.",
+      "wrongAnswers": [
+        "Delete the file in a new commit and push it; that removes the content from every previous commit in the history.",
+        "Add the file to .gitignore and push; Git then removes it from all previous commits and the credential stays safe.",
+        "Make the repository private; the credential is then safe and needs no rotation."
+      ]
+    },
+    {
+      "id": 68,
+      "level": "advanced",
+      "question": "What is a reusable workflow (workflow_call)?",
+      "correctAnswer": "A workflow that can be called by others, avoiding duplicated pipelines across repositories.",
+      "wrongAnswers": [
+        "A workflow that reruns itself automatically when it fails, up to a configured number of attempts.",
+        "A workflow that can only be triggered manually from the Actions tab with input parameters.",
+        "A workflow cached between runs for speed."
+      ]
+    },
+    {
+      "id": 69,
+      "level": "advanced",
+      "question": "What are composite actions?",
+      "correctAnswer": "Actions that group several steps into one, defined in YAML without needing JavaScript or Docker code.",
+      "wrongAnswers": [
+        "Docker-based actions that compose several containers into one job using docker-compose files.",
+        "Actions written in JavaScript that combine multiple repositories.",
+        "Actions that run several workflows in parallel."
+      ]
+    },
+    {
+      "id": 70,
+      "level": "advanced",
+      "question": "How do you use a matrix strategy in Actions?",
+      "correctAnswer": "With strategy.matrix to run the same job across several combinations (Node versions, operating systems).",
+      "wrongAnswers": [
+        "With jobs.parallel, which splits a single test file across several runners to finish faster.",
+        "With a matrix.yml file at the repository root listing every combination to test.",
+        "With on.matrix to trigger workflows on multiple events."
+      ]
+    },
+    {
+      "id": 71,
+      "level": "advanced",
+      "question": "How do you speed up workflows?",
+      "correctAnswer": "Dependency caching (actions/cache), parallel jobs, concurrency to cancel old runs and suitable runners.",
+      "wrongAnswers": [
+        "Run all steps sequentially in a single large job so the runner doesn't need to set up the environment more than once.",
+        "Running all steps in a single job sequentially.",
+        "Removing tests from CI so builds finish faster."
+      ]
+    },
+    {
+      "id": 72,
+      "level": "advanced",
+      "question": "What is concurrency in Actions?",
+      "correctAnswer": "It ensures that only one run of a group executes at a time and allows canceling previous ones.",
+      "wrongAnswers": [
+        "It runs every job of a workflow at the same time on separate runners, ignoring the needs dependencies between them.",
+        "It allows several workflows in different repositories to share the same encrypted secrets and environment variables.",
+        "It limits the number of steps per job."
+      ]
+    },
+    {
+      "id": 73,
+      "level": "advanced",
+      "question": "What are Environments on GitHub?",
+      "correctAnswer": "Environments (staging, production) with their own secrets, required reviewers and protection rules for deploys.",
+      "wrongAnswers": [
+        "Cloud virtual machines that GitHub provides to developers for writing code in the browser, like Codespaces.",
+        "Different branches used for development.",
+        "Environment variables defined in .env files in the repository."
+      ]
+    },
+    {
+      "id": 74,
+      "level": "advanced",
+      "question": "How do you authenticate Actions to the cloud without static secrets?",
+      "correctAnswer": "Via OIDC, where GitHub issues short-lived tokens accepted by AWS, Azure and GCP.",
+      "wrongAnswers": [
+        "By using the GITHUB_TOKEN, which is accepted directly by AWS, Azure and GCP as a long-lived cloud credential.",
+        "By committing the cloud access keys to a private repository and reading them from the checked-out files during the job.",
+        "By storing credentials in the workflow YAML as plain text."
+      ]
+    },
+    {
+      "id": 75,
+      "level": "advanced",
+      "question": "What are self-hosted runners?",
+      "correctAnswer": "Your own machines that execute Actions jobs, useful for specific hardware or private networks, requiring security care.",
+      "wrongAnswers": [
+        "GitHub-managed machines reserved for Enterprise plans, with dedicated hardware and no security considerations for the user.",
+        "Containers that GitHub creates automatically inside each repository to run jobs locally on contributors' laptops.",
+        "Local copies of workflows that run only on the developer's laptop without GitHub."
+      ]
+    },
+    {
+      "id": 76,
+      "level": "advanced",
+      "question": "How do you protect against supply chain attacks in Actions?",
+      "correctAnswer": "Pin actions by commit SHA, use minimal GITHUB_TOKEN permissions, review dependencies and avoid running code from external PRs with secrets.",
+      "wrongAnswers": [
+        "Always reference actions by the @latest tag so you automatically receive security fixes, and grant write-all permissions to avoid failures.",
+        "Allow workflows triggered by external pull requests to access secrets, so that contributions are fully tested before review.",
+        "Give GITHUB_TOKEN write-all permissions to avoid failures."
+      ]
+    },
+    {
+      "id": 77,
+      "level": "advanced",
+      "question": "What is GITHUB_TOKEN?",
+      "correctAnswer": "A temporary token automatically generated for each run, with configurable permissions scoped to the repository.",
+      "wrongAnswers": [
+        "A permanent organization-wide token that never expires and has admin access to every repository.",
+        "The user's personal access token, shared with every workflow.",
+        "A token used only for GitHub Pages deployments."
+      ]
+    },
+    {
+      "id": 78,
+      "level": "advanced",
+      "question": "What are Rulesets?",
+      "correctAnswer": "An evolution of protection rules: they allow rules across multiple repositories, with more flexibility and test modes (evaluate).",
+      "wrongAnswers": [
+        "A set of ESLint and Prettier rules that GitHub enforces automatically on every pull request across the organization.",
+        "A list of words and patterns that are banned in issues, discussions and commit messages for moderation purposes.",
+        "Rules for formatting commit messages only."
+      ]
+    },
+    {
+      "id": 79,
+      "level": "advanced",
+      "question": "What is Merge Queue?",
+      "correctAnswer": "A queue that tests PRs against the latest version of main before merging, preventing breakage from concurrent merges.",
+      "wrongAnswers": [
+        "A list of pull requests waiting for a reviewer, sorted by creation date, that assigns reviewers in round-robin order.",
+        "A feature that postpones all merges until a scheduled release window, such as every Friday afternoon.",
+        "A queue that merges PRs in random order to distribute load."
+      ]
+    },
+    {
+      "id": 80,
+      "level": "advanced",
+      "question": "What is GitHub Advanced Security?",
+      "correctAnswer": "A suite with code scanning (CodeQL), secret scanning and dependency review for detecting vulnerabilities.",
+      "wrongAnswers": [
+        "A two-factor authentication method for GitHub accounts.",
+        "A firewall that blocks malicious IPs from cloning repositories.",
+        "A paid support plan for security incidents."
+      ]
+    },
+    {
+      "id": 81,
+      "level": "advanced",
+      "question": "What is CodeQL?",
+      "correctAnswer": "A static analysis engine that queries code as data to find vulnerabilities.",
+      "wrongAnswers": [
+        "A SQL-like query language for searching issues, pull requests and commits across repositories in the GitHub UI.",
+        "A database that stores repository metadata.",
+        "A runtime monitoring tool for production apps."
+      ]
+    },
+    {
+      "id": 82,
+      "level": "advanced",
+      "question": "What is secret scanning with push protection?",
+      "correctAnswer": "It detects credentials in commits and blocks the push before the secret reaches the repository.",
+      "wrongAnswers": [
+        "It encrypts any secrets found in commits automatically, so they can stay in the repository without being exposed.",
+        "It scans the repository only after a merge and opens an issue a few days later listing the exposed secrets.",
+        "It hides secrets from the commit diff in the UI."
+      ]
+    },
+    {
+      "id": 83,
+      "level": "advanced",
+      "question": "How do you manage monorepos with GitHub?",
+      "correctAnswer": "Use CODEOWNERS per folder, workflows with paths filters, tools like Nx/Turborepo and incremental builds with caching.",
+      "wrongAnswers": [
+        "Create a separate GitHub organization for each folder in the monorepo so that permissions are isolated per package.",
+        "Run every workflow for every change regardless of path, and avoid CODEOWNERS because it does not support folders.",
+        "Avoid CODEOWNERS, since it does not work with monorepos."
+      ]
+    },
+    {
+      "id": 84,
+      "level": "advanced",
+      "question": "How do you trigger workflows from external events?",
+      "correctAnswer": "With repository_dispatch, workflow_dispatch (manual) or webhooks via the API.",
+      "wrongAnswers": [
+        "With the on: external trigger, which listens to any public URL and starts the workflow when it changes.",
+        "Only by pushing a commit to the repository, since workflows cannot be started by external systems.",
+        "With schedule only, using cron syntax."
+      ]
+    },
+    {
+      "id": 85,
+      "level": "advanced",
+      "question": "What are GitHub Apps and OAuth Apps?",
+      "correctAnswer": "API integrations: GitHub Apps have granular permissions and act per installation; OAuth Apps act on behalf of the user with broad scopes.",
+      "wrongAnswers": [
+        "OAuth Apps have fine-grained permissions and act per installation, while GitHub Apps always act as the user with full account access.",
+        "GitHub Apps are mobile applications for iOS and Android, while OAuth Apps are desktop clients that integrate with the Git CLI.",
+        "They are the same thing with different names on the marketplace."
+      ]
+    },
+    {
+      "id": 86,
+      "level": "advanced",
+      "question": "What are GitHub webhooks?",
+      "correctAnswer": "HTTP notifications sent to a URL when events occur (push, PR, issue), enabling integrations.",
+      "wrongAnswers": [
+        "Git hooks that run locally before each commit.",
+        "Scheduled emails summarizing repository activity.",
+        "Browser notifications for new stars on a repository."
+      ]
+    },
+    {
+      "id": 87,
+      "level": "advanced",
+      "question": "What is the difference between GitHub's REST API and GraphQL API?",
+      "correctAnswer": "REST uses multiple fixed endpoints; GraphQL lets you query exactly the needed fields in a single request.",
+      "wrongAnswers": [
+        "GraphQL exposes many fixed endpoints, one per resource, while REST lets you request exactly the fields you need in a single call.",
+        "REST can only read data and GraphQL can only write data, so integrations normally use both APIs together.",
+        "REST is for public repos and GraphQL for private repos."
+      ]
+    },
+    {
+      "id": 88,
+      "level": "advanced",
+      "question": "How does Git store data internally?",
+      "correctAnswer": "As hash-addressed objects (blobs, trees, commits, tags) in .git/objects, forming an acyclic graph.",
+      "wrongAnswers": [
+        "As a full copy of every file for every commit, in folders named by date.",
+        "As diffs stored in a SQLite database inside .git.",
+        "As a single compressed JSON file with the whole history."
+      ]
+    },
+    {
+      "id": 89,
+      "level": "advanced",
+      "question": "What is a \"detached HEAD\"?",
+      "correctAnswer": "A state where HEAD points to a specific commit, not a branch; new commits may be lost if you don't create a branch.",
+      "wrongAnswers": [
+        "A corrupted repository state in which the HEAD file was deleted and Git can no longer determine the current branch.",
+        "A state in which the local branch is no longer tracking its remote branch after the remote was renamed or removed.",
+        "A state that occurs after a successful merge."
+      ]
+    },
+    {
+      "id": 90,
+      "level": "advanced",
+      "question": "What is git worktree?",
+      "correctAnswer": "It lets you have several working folders of the same repository with different branches simultaneously.",
+      "wrongAnswers": [
+        "It prints the repository's folder tree in the terminal, similar to the tree command, including ignored files.",
+        "It displays the repository's folder tree.",
+        "It creates a new repository from a subfolder."
+      ]
+    },
+    {
+      "id": 91,
+      "level": "advanced",
+      "question": "What is sparse checkout?",
+      "correctAnswer": "Checking out only part of the repository's files, useful in large monorepos.",
+      "wrongAnswers": [
+        "Cloning only the last commit of the history with --depth 1, which is useful in CI pipelines.",
+        "Checking out a branch without its commit history.",
+        "Downloading files in parallel to speed up cloning."
+      ]
+    },
+    {
+      "id": 92,
+      "level": "advanced",
+      "question": "What is a shallow clone?",
+      "correctAnswer": "A clone with limited history (--depth 1), faster and lighter, common in CI.",
+      "wrongAnswers": [
+        "A clone that downloads only part of the files in the repository, useful for working on a single folder of a monorepo.",
+        "A clone without the .git folder.",
+        "A clone that copies only the remote branches."
+      ]
+    },
+    {
+      "id": 93,
+      "level": "advanced",
+      "question": "What is Git LFS?",
+      "correctAnswer": "An extension that stores large files (binaries, media) outside the main repository, keeping only pointers.",
+      "wrongAnswers": [
+        "A Git mode that compresses large binary files inside the repository using a special algorithm, keeping them in .git/objects.",
+        "A command that lists the largest files in the history so you can delete them manually with git rm.",
+        "A file system for Linux optimized for Git."
+      ]
+    },
+    {
+      "id": 94,
+      "level": "advanced",
+      "question": "How do you deal with a very large or slow history?",
+      "correctAnswer": "Use git gc, shallow clones, partial clone (--filter=blob:none), LFS and remove large files from history.",
+      "wrongAnswers": [
+        "Delete the .git folder and initialize a new repository, since Git cannot handle histories larger than a few gigabytes.",
+        "Disable compression with git config core.compression 0, which makes every operation on large histories much faster.",
+        "Delete the .git folder and start a new repository."
+      ]
+    },
+    {
+      "id": 95,
+      "level": "advanced",
+      "question": "What is git rerere?",
+      "correctAnswer": "\"Reuse recorded resolution\": it remembers how you resolved conflicts to reapply them automatically in identical situations.",
+      "wrongAnswers": [
+        "A command that reruns the last failed rebase from the beginning, discarding any conflict resolutions you made.",
+        "A command that rewrites remote references so they point to your local branches after a force push.",
+        "A command that restores deleted branches."
+      ]
+    },
+    {
+      "id": 96,
+      "level": "advanced",
+      "question": "What is a release strategy with maintenance branches?",
+      "correctAnswer": "Keeping branches like release/1.x to receive fixes (backports via cherry-pick) while development continues on main.",
+      "wrongAnswers": [
+        "Deleting release branches immediately after tagging, since fixes are always shipped only in the next major version.",
+        "Creating a new repository for each major version.",
+        "Merging every release branch back into main without fixes."
+      ]
+    },
+    {
+      "id": 97,
+      "level": "advanced",
+      "question": "How do you automate releases and changelogs?",
+      "correctAnswer": "With Conventional Commits and tools like semantic-release or release-please, triggered by Actions.",
+      "wrongAnswers": [
+        "Write the changelog manually in each pull request description and copy it into a CHANGELOG file before every release.",
+        "Run git log > CHANGELOG.md on a developer's machine and commit the output directly to main before tagging.",
+        "By writing the changelog manually in each PR description."
+      ]
+    },
+    {
+      "id": 98,
+      "level": "advanced",
+      "question": "How do you configure secure continuous deployment with GitHub Actions?",
+      "correctAnswer": "Protected environments with approval, OIDC, minimal permissions, reversible deploys (rollback) and required checks before production.",
+      "wrongAnswers": [
+        "Deploy every push from any branch straight to production and skip tests in deploy workflows to reduce the total pipeline time.",
+        "Store production credentials as plain text in the workflow YAML so that every job can access them quickly when deploying.",
+        "Store production credentials in the repository for quick access."
+      ]
+    },
+    {
+      "id": 99,
+      "level": "advanced",
+      "question": "How do you measure the health of an engineering workflow?",
+      "correctAnswer": "DORA metrics: deployment frequency, lead time, change failure rate and time to restore.",
+      "wrongAnswers": [
+        "Counting lines of code written and commits made per developer per day, ranking the team by individual output.",
+        "Measuring the number of commits per day per person.",
+        "Counting how many stars the repository has."
+      ]
+    },
+    {
+      "id": 100,
+      "level": "advanced",
+      "question": "How do you structure governance of a GitHub organization?",
+      "correctAnswer": "Teams and role-based permissions, SSO/SAML, rulesets, CODEOWNERS, security policies and auditing via the audit log.",
+      "wrongAnswers": [
+        "Use a single shared account for the whole team so that permissions and audit logs are simpler to manage.",
+        "Give every member admin access so nobody is blocked.",
+        "Rely only on private repositories, with no other controls."
+      ]
+    }
+  ]
+}

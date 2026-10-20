@@ -1,0 +1,1107 @@
+{
+  "id": "nextjs",
+  "language": "pt-br",
+  "title": "Next.js",
+  "questions": [
+    {
+      "id": 1,
+      "level": "basic",
+      "question": "O que é Next.js?",
+      "correctAnswer": "Framework React full-stack da Vercel que oferece roteamento, renderização no servidor, otimizações e API routes em uma só ferramenta.",
+      "wrongAnswers": [
+        "Um runtime JavaScript criado pelo Google que substitui o Node.js para aplicações React, trazendo gerenciador de pacotes, bundler e test runner em um único binário.",
+        "Uma biblioteca de gerenciamento de estado no cliente da Vercel que substitui Redux e Context, sincronizando o estado React com o servidor via WebSockets automaticamente.",
+        "Um framework CSS da Vercel para construir layouts responsivos."
+      ]
+    },
+    {
+      "id": 2,
+      "level": "basic",
+      "question": "Quais as vantagens do Next.js sobre React puro?",
+      "correctAnswer": "Roteamento por arquivos, SSR/SSG/ISR, otimização de imagens e fontes, melhor SEO, code splitting automático e backend integrado.",
+      "wrongAnswers": [
+        "Elimina totalmente a necessidade de JavaScript no navegador, compilando cada componente React em HTML e CSS estáticos que nunca hidratam no cliente.",
+        "Substitui o modelo de componentes do React por templates HTML e um banco embutido, então desenvolvedores não escrevem mais JSX nem chamam APIs externas.",
+        "Inclui um banco de dados e um ORM embutidos."
+      ]
+    },
+    {
+      "id": 3,
+      "level": "basic",
+      "question": "O que é o App Router?",
+      "correctAnswer": "Sistema de roteamento moderno baseado na pasta app/, que usa React Server Components, layouts aninhados e streaming.",
+      "wrongAnswers": [
+        "O sistema clássico de rotas baseado na pasta pages/, que usa getServerSideProps e getStaticProps para dados e _app.tsx para layouts.",
+        "Um roteador apenas de cliente que substitui o React Router, tratando a navegação inteiramente no navegador sem renderização no servidor ou streaming.",
+        "Um recurso do painel da Vercel para gerenciar domínios."
+      ]
+    },
+    {
+      "id": 4,
+      "level": "basic",
+      "question": "O que é o Pages Router?",
+      "correctAnswer": "Sistema clássico baseado na pasta pages/, com getServerSideProps e getStaticProps; ainda suportado.",
+      "wrongAnswers": [
+        "O novo sistema de rotas baseado na pasta app/, que usa React Server Components, layouts aninhados e streaming com Suspense.",
+        "Um roteador descontinuado removido de todas as versões do Next.js desde a 13 e que não funciona mais em nenhum projeto.",
+        "Uma biblioteca para paginar listas."
+      ]
+    },
+    {
+      "id": 5,
+      "level": "basic",
+      "question": "Como criar uma rota no App Router?",
+      "correctAnswer": "Criando uma pasta em app/ com um arquivo page.tsx; o nome da pasta vira o segmento da URL.",
+      "wrongAnswers": [
+        "Adicionando uma entrada com caminho e componente em um arquivo routes.json na raiz do projeto, que o Next.js lê no build para gerar páginas.",
+        "Criando um arquivo com o nome da rota diretamente em app/, como app/sobre.tsx, sem precisar de pasta ou arquivo page.tsx.",
+        "Registrando a rota com createRoute() no next.config.js."
+      ]
+    },
+    {
+      "id": 6,
+      "level": "basic",
+      "question": "O que é um layout.tsx?",
+      "correctAnswer": "Componente que envolve páginas filhas e persiste entre navegações, sem re-renderizar. O layout raiz define <html> e <body>.",
+      "wrongAnswers": [
+        "Componente que é remontado a cada navegação entre páginas filhas, reiniciando o estado e reexecutando efeitos sempre que a URL muda.",
+        "Arquivo CSS que define o grid da página.",
+        "Arquivo de configuração de breakpoints responsivos."
+      ]
+    },
+    {
+      "id": 7,
+      "level": "basic",
+      "question": "O que são rotas dinâmicas?",
+      "correctAnswer": "Segmentos entre colchetes, como app/blog/[slug]/page.tsx, que capturam parâmetros da URL.",
+      "wrongAnswers": [
+        "Segmentos entre chaves, como app/blog/{slug}/page.tsx, que capturam parâmetros da URL e os passam como props.",
+        "Rotas geradas em runtime chamando router.add() no middleware, com base em registros guardados no banco.",
+        "Rotas cujo conteúdo muda aleatoriamente a cada visita."
+      ]
+    },
+    {
+      "id": 8,
+      "level": "basic",
+      "question": "O que são catch-all routes?",
+      "correctAnswer": "[...slug] captura vários segmentos; [[...slug]] os torna opcionais.",
+      "wrongAnswers": [
+        "[*slug] captura vários segmentos e [?slug] os torna opcionais, seguindo a sintaxe glob.",
+        "Rotas que redirecionam toda URL desconhecida de volta à página inicial em vez de mostrar 404.",
+        "[*slug] captura vários segmentos; [?slug] os torna opcionais."
+      ]
+    },
+    {
+      "id": 9,
+      "level": "basic",
+      "question": "O que são route groups?",
+      "correctAnswer": "Pastas entre parênteses, como (marketing), que organizam rotas sem afetar a URL.",
+      "wrongAnswers": [
+        "Pastas entre colchetes, como [marketing], que adicionam um prefixo dinâmico a toda URL dentro delas.",
+        "Pastas com prefixo @, como @marketing, que renderizam várias páginas em paralelo no mesmo layout.",
+        "Grupos de rotas que compartilham a mesma chave de API."
+      ]
+    },
+    {
+      "id": 10,
+      "level": "basic",
+      "question": "O que é o componente Link?",
+      "correctAnswer": "next/link realiza navegação no cliente com prefetch automático das rotas visíveis.",
+      "wrongAnswers": [
+        "Componente que sempre faz recarregamento completo para garantir dados atualizados, como uma tag <a> simples.",
+        "Componente para vincular folhas de estilo e fontes externas no head do documento de cada página.",
+        "Componente que cria âncoras apenas dentro da mesma página."
+      ]
+    },
+    {
+      "id": 11,
+      "level": "basic",
+      "question": "Como navegar programaticamente?",
+      "correctAnswer": "Com useRouter de next/navigation (router.push) ou redirect() em Server Components.",
+      "wrongAnswers": [
+        "Apenas com window.location.href, porque o Next.js não fornece API de navegação para código de cliente ou servidor.",
+        "Com useNavigate importado do react-router-dom, que o Next.js inclui e configura automaticamente.",
+        "Com a função navigate() exportada de next/link."
+      ]
+    },
+    {
+      "id": 12,
+      "level": "basic",
+      "question": "O que é o componente Image?",
+      "correctAnswer": "next/image otimiza imagens automaticamente: redimensionamento, formatos modernos (WebP/AVIF), lazy loading e prevenção de layout shift.",
+      "wrongAnswers": [
+        "Componente que converte imagens rasterizadas em SVG no build para escalarem perfeitamente em qualquer tela.",
+        "Componente que só aceita imagens da pasta public e as serve como estão, sem redimensionar nem mudar formato.",
+        "next/image converte toda imagem rasterizada em SVG no build, a embute no HTML e desativa o lazy loading, para as imagens renderizarem instantaneamente e nunca causarem layout shift em qualquer dispositivo."
+      ]
+    },
+    {
+      "id": 13,
+      "level": "basic",
+      "question": "O que é next/font?",
+      "correctAnswer": "Otimiza fontes (Google ou locais), hospedando-as no próprio domínio e eliminando requisições externas e layout shift.",
+      "wrongAnswers": [
+        "Baixa fontes do Google Fonts em runtime a cada requisição e injeta uma tag <link> em cada página, garantindo que os visitantes sempre usem a versão mais recente da fonte.",
+        "Componente para renderizar textos com cores personalizadas.",
+        "Propriedade CSS para definir tamanhos de fonte."
+      ]
+    },
+    {
+      "id": 14,
+      "level": "basic",
+      "question": "O que são Server Components?",
+      "correctAnswer": "Componentes padrão no App Router, renderizados no servidor, sem enviar JavaScript ao cliente e com acesso direto a dados.",
+      "wrongAnswers": [
+        "Componentes que rodam apenas no navegador e precisam declarar 'use server' no topo; são renderizados após a hidratação e enviam todo o seu JavaScript ao cliente para acessar dados.",
+        "Componentes que rodam em um microsserviço separado.",
+        "Componentes renderizados no servidor e depois reexecutados no navegador com seu JS."
+      ]
+    },
+    {
+      "id": 15,
+      "level": "basic",
+      "question": "O que é 'use client'?",
+      "correctAnswer": "Diretiva que marca um arquivo e suas importações como Client Components, permitindo estado, efeitos e eventos.",
+      "wrongAnswers": [
+        "Diretiva que habilita cache agressivo para um componente e todos os seus imports, guardando a saída na CDN.",
+        "Diretiva que faz um componente rodar só no servidor.",
+        "Import que carrega manualmente o runtime do Next.js no cliente."
+      ]
+    },
+    {
+      "id": 16,
+      "level": "basic",
+      "question": "Quando usar Client Components?",
+      "correctAnswer": "Quando precisa de interatividade, Hooks (useState, useEffect), eventos do navegador ou APIs como localStorage.",
+      "wrongAnswers": [
+        "Quando é preciso acessar o banco de dados diretamente.",
+        "Sempre, já que Server Components são experimentais.",
+        "Quando se quer reduzir o tamanho do bundle JavaScript."
+      ]
+    },
+    {
+      "id": 17,
+      "level": "basic",
+      "question": "Como buscar dados em Server Components?",
+      "correctAnswer": "Usando async/await diretamente no componente, com fetch ou acesso direto ao banco de dados.",
+      "wrongAnswers": [
+        "Apenas com useEffect e useState dentro do componente, já que Server Components não podem ser funções async.",
+        "Apenas com getServerSideProps exportado da página, que passa os dados aos Server Components como props.",
+        "Apenas por uma rota de API separada chamada do navegador."
+      ]
+    },
+    {
+      "id": 18,
+      "level": "basic",
+      "question": "O que são Route Handlers?",
+      "correctAnswer": "Endpoints de API definidos em route.ts dentro de app/, com funções GET, POST, etc., usando Request/Response padrão.",
+      "wrongAnswers": [
+        "Funções de middleware que rodam antes de cada renderização para modificar props, definidas em handlers.ts na raiz de app/.",
+        "Arquivos dentro de pages/api que exportam uma aplicação Express padrão, que o Next.js monta automaticamente no servidor.",
+        "Componentes que tratam navegação no cliente."
+      ]
+    },
+    {
+      "id": 19,
+      "level": "basic",
+      "question": "O que são variáveis de ambiente no Next.js?",
+      "correctAnswer": "Definidas em .env*; só as prefixadas com NEXT_PUBLIC_ são expostas ao navegador.",
+      "wrongAnswers": [
+        "Definidas no next.config.js; todas são expostas ao navegador automaticamente, então segredos precisam ficar em outro lugar.",
+        "Apenas variáveis com prefixo SECRET_ ficam ocultas do navegador; todas as outras são públicas por padrão.",
+        "Variáveis que só podem ser lidas em Client Components."
+      ]
+    },
+    {
+      "id": 20,
+      "level": "basic",
+      "question": "O que é o loading.tsx?",
+      "correctAnswer": "UI de carregamento exibida automaticamente (via Suspense) enquanto a página ou segmento carrega.",
+      "wrongAnswers": [
+        "Arquivo que pré-carrega todas as imagens e fontes de uma rota antes de renderizar, bloqueando a navegação até terminar.",
+        "Arquivo de configuração que define quais componentes são carregados sob demanda e os limites usados para carregá-los.",
+        "Script que mostra uma barra de progresso na aba do navegador."
+      ]
+    },
+    {
+      "id": 21,
+      "level": "basic",
+      "question": "O que é o error.tsx?",
+      "correctAnswer": "Error boundary de um segmento, exibindo fallback quando ocorre erro; deve ser Client Component.",
+      "wrongAnswers": [
+        "Página exibida apenas para erros 404 quando uma rota não existe no diretório app.",
+        "Arquivo que registra erros no servidor; deve ser Server Component.",
+        "Um try/catch global que envolve rotas de API."
+      ]
+    },
+    {
+      "id": 22,
+      "level": "basic",
+      "question": "O que é o not-found.tsx?",
+      "correctAnswer": "UI exibida quando notFound() é chamado ou a rota não existe.",
+      "wrongAnswers": [
+        "UI exibida quando ocorre erro de servidor (500) na renderização de qualquer rota da aplicação.",
+        "Configuração de redirecionamento que lista quais rotas desconhecidas devem ir para quais páginas existentes.",
+        "Arquivo que lista todas as imagens faltantes."
+      ]
+    },
+    {
+      "id": 23,
+      "level": "basic",
+      "question": "O que é metadata no App Router?",
+      "correctAnswer": "API para definir title, description, Open Graph e outros via export const metadata ou generateMetadata.",
+      "wrongAnswers": [
+        "Componente <Head> importado de next/head que precisa ser renderizado em toda página para definir título e meta tags.",
+        "Arquivo metadata.json na raiz do projeto com dados de SEO de todas as rotas, lido automaticamente no build.",
+        "Dados armazenados no navegador sobre as visitas do usuário."
+      ]
+    },
+    {
+      "id": 24,
+      "level": "basic",
+      "question": "Como criar o projeto?",
+      "correctAnswer": "npx create-next-app@latest.",
+      "wrongAnswers": [
+        "npm install -g next-cli && next new meu-app.",
+        "npx create-react-app meu-app --template next.",
+        "git clone next.js && npm start."
+      ]
+    },
+    {
+      "id": 25,
+      "level": "basic",
+      "question": "O que é SSR?",
+      "correctAnswer": "Renderização no servidor a cada requisição, gerando HTML atualizado para SEO e conteúdo dinâmico.",
+      "wrongAnswers": [
+        "Gerar HTML uma vez no build e servi-lo de uma CDN.",
+        "Renderizar no navegador após o JavaScript carregar.",
+        "Técnica de estilização para CSS no servidor."
+      ]
+    },
+    {
+      "id": 26,
+      "level": "basic",
+      "question": "O que é SSG?",
+      "correctAnswer": "Geração estática no build; as páginas são servidas prontas via CDN, muito rápidas.",
+      "wrongAnswers": [
+        "Renderizar no servidor a cada requisição.",
+        "Renderizar no navegador com JavaScript.",
+        "Camada de segurança para requisições no servidor."
+      ]
+    },
+    {
+      "id": 27,
+      "level": "basic",
+      "question": "O que é ISR?",
+      "correctAnswer": "Regeneração estática incremental: páginas estáticas são atualizadas em segundo plano após um intervalo ou sob demanda.",
+      "wrongAnswers": [
+        "Renderizar toda página a cada requisição sem nenhum cache, para o conteúdo estar sempre atualizado.",
+        "Gerar todas as páginas novamente só a cada deploy, sem forma de atualizá-las entre deploys.",
+        "Técnica para carregar imagens incrementalmente."
+      ]
+    },
+    {
+      "id": 28,
+      "level": "basic",
+      "question": "O que é CSR no Next.js?",
+      "correctAnswer": "Renderização no cliente, em que o componente busca dados no navegador após o carregamento.",
+      "wrongAnswers": [
+        "Renderização no servidor com respostas em cache revalidadas em segundo plano após um intervalo.",
+        "Geração estática durante o build.",
+        "Renderização feita na borda da CDN."
+      ]
+    },
+    {
+      "id": 29,
+      "level": "basic",
+      "question": "Como estilizar no Next.js?",
+      "correctAnswer": "CSS Modules, Tailwind CSS, CSS global, Sass ou CSS-in-JS compatível com Server Components.",
+      "wrongAnswers": [
+        "Apenas com props de estilo inline, porque o Next.js não suporta importar arquivos .css no diretório app.",
+        "Apenas com styled-components, que é obrigatório e configurado automaticamente em todo projeto novo.",
+        "Apenas com CSS global importado em cada página."
+      ]
+    },
+    {
+      "id": 30,
+      "level": "basic",
+      "question": "O que é a pasta public?",
+      "correctAnswer": "Armazena arquivos estáticos servidos a partir da raiz (/logo.png).",
+      "wrongAnswers": [
+        "Armazena componentes e páginas visíveis a todos os usuários sem autenticação.",
+        "Guarda a saída compilada do build que é publicada nos servidores de produção.",
+        "Contém variáveis de ambiente expostas ao navegador."
+      ]
+    },
+    {
+      "id": 31,
+      "level": "basic",
+      "question": "O que é o arquivo next.config.js?",
+      "correctAnswer": "Configuração do Next.js: redirects, rewrites, headers, domínios de imagens, variáveis, etc.",
+      "wrongAnswers": [
+        "Arquivo onde todas as rotas devem ser declaradas.",
+        "Arquivo de configuração do TypeScript em projetos Next.js.",
+        "Arquivo que define conexões com banco de dados."
+      ]
+    },
+    {
+      "id": 32,
+      "level": "basic",
+      "question": "O que é Turbopack?",
+      "correctAnswer": "Bundler escrito em Rust, sucessor do Webpack no Next.js, que acelera build e desenvolvimento.",
+      "wrongAnswers": [
+        "Serviço de CDN da Vercel que faz cache de arquivos estáticos em pontos de borda pelo mundo.",
+        "Runtime JavaScript escrito em Rust que substitui o Node.js ao rodar next start.",
+        "Pré-processador CSS escrito em Go."
+      ]
+    },
+    {
+      "id": 33,
+      "level": "basic",
+      "question": "Como fazer deploy do Next.js?",
+      "correctAnswer": "Na Vercel (mais simples), ou via Node server (next start), Docker, ou saída estática (output: 'export').",
+      "wrongAnswers": [
+        "Apenas na Vercel, porque o Next.js depende de infraestrutura proprietária da Vercel e não roda em outros hosts nem em Docker.",
+        "Apenas como arquivos estáticos no GitHub Pages ou S3, porque o Next.js sempre exporta HTML puro e não roda servidor Node.",
+        "Apenas na Vercel, já que o Next.js não roda em outro lugar."
+      ]
+    },
+    {
+      "id": 34,
+      "level": "basic",
+      "question": "O que é generateStaticParams?",
+      "correctAnswer": "Função que define quais parâmetros de rotas dinâmicas serão gerados estaticamente no build.",
+      "wrongAnswers": [
+        "Função que valida searchParams a cada requisição e retorna 400 quando são inválidos.",
+        "Função que gera parâmetros de URL aleatórios para testes de carga em toda rota dinâmica durante o build, reportando quais são lentas antes de o deploy ser concluído.",
+        "Função que cria variáveis de ambiente no build."
+      ]
+    },
+    {
+      "id": 35,
+      "level": "intermediate",
+      "question": "Como funciona o cache de fetch no Next.js?",
+      "correctAnswer": "Dependendo da versão, o fetch pode ser cacheado ou não por padrão; controla-se com cache, next.revalidate e next.tags. Confira a versão utilizada.",
+      "wrongAnswers": [
+        "O fetch nunca é cacheado em nenhuma versão do Next.js e não há opção para configurar cache por requisição.",
+        "Respostas do fetch são cacheadas automaticamente no localStorage do navegador e compartilhadas entre usuários.",
+        "O cache é configurado apenas em um arquivo cache.json."
+      ]
+    },
+    {
+      "id": 36,
+      "level": "intermediate",
+      "question": "Como revalidar dados sob demanda?",
+      "correctAnswer": "Com revalidatePath e revalidateTag em Server Actions ou Route Handlers.",
+      "wrongAnswers": [
+        "Fazendo um novo deploy da aplicação inteira sempre que os dados mudam, já que não há API sob demanda.",
+        "Apagando a pasta .next no servidor de produção para toda página ser regenerada na próxima requisição.",
+        "Fazendo um novo deploy da aplicação."
+      ]
+    },
+    {
+      "id": 37,
+      "level": "intermediate",
+      "question": "O que são Server Actions?",
+      "correctAnswer": "Funções 'use server' executadas no servidor e chamadas de formulários ou componentes cliente, para mutações sem criar API manual.",
+      "wrongAnswers": [
+        "Funções que rodam em um Web Worker no cliente para tirar processamento pesado da thread principal no envio de formulários.",
+        "Tarefas cron agendadas definidas no next.config.js que rodam no servidor em intervalos fixos para processar dados.",
+        "Actions do Redux despachadas do servidor."
+      ]
+    },
+    {
+      "id": 38,
+      "level": "intermediate",
+      "question": "Como tratar formulários com Server Actions?",
+      "correctAnswer": "Passando a função à prop action do <form>, validando dados no servidor e usando useActionState/useFormStatus para feedback.",
+      "wrongAnswers": [
+        "Usar onSubmit com fetch para um Route Handler, porque formulários não chamam Server Actions diretamente e elas nunca recebem FormData.",
+        "Validar os dados só no cliente antes de enviar, já que Server Actions confiam na entrada e não conseguem devolver erros ao formulário.",
+        "Usar exclusivamente o componente <ServerForm> de next/form."
+      ]
+    },
+    {
+      "id": 39,
+      "level": "intermediate",
+      "question": "O que é Middleware no Next.js?",
+      "correctAnswer": "Código (middleware.ts, ou proxy em versões recentes) executado antes da requisição, para autenticação, redirects, i18n e reescritas.",
+      "wrongAnswers": [
+        "Componente que envolve toda página como o layout.tsx e roda depois de a resposta ser enviada, usado para compartilhar UI entre rotas e registrar métricas e logs de cada requisição.",
+        "Camada de banco de dados entre o Next.js e o ORM.",
+        "Código que roda após a resposta ser enviada, para registrar métricas."
+      ]
+    },
+    {
+      "id": 40,
+      "level": "intermediate",
+      "question": "O que é o Edge Runtime?",
+      "correctAnswer": "Ambiente leve e rápido executado próximo ao usuário, com APIs limitadas em relação ao Node.js completo.",
+      "wrongAnswers": [
+        "Ambiente Node.js completo com APIs ilimitadas e módulos nativos, rodando em um único data center central.",
+        "Recurso do navegador para rodar código offline.",
+        "Modo do Next.js para construir apps desktop."
+      ]
+    },
+    {
+      "id": 41,
+      "level": "intermediate",
+      "question": "Qual a diferença entre Node runtime e Edge runtime?",
+      "correctAnswer": "Node tem acesso completo a bibliotecas e APIs; Edge tem menor latência e cold start, mas suporte restrito a módulos.",
+      "wrongAnswers": [
+        "Edge tem acesso total a toda API e módulo nativo do Node.js, enquanto o runtime Node fica restrito a Web APIs.",
+        "Código do runtime Node roda no navegador e do runtime Edge no servidor, então atendem camadas diferentes.",
+        "Não há diferença além do nome."
+      ]
+    },
+    {
+      "id": 42,
+      "level": "intermediate",
+      "question": "O que são layouts aninhados?",
+      "correctAnswer": "Layouts em subpastas que se compõem em hierarquia, preservando estado e evitando re-renderização ao navegar.",
+      "wrongAnswers": [
+        "Layouts que são remontados a cada navegação para reiniciar o estado e reexecutar efeitos em cada rota filha.",
+        "Layouts que precisam ser importados manualmente em cada página.",
+        "Grids CSS aninhados uns dentro dos outros."
+      ]
+    },
+    {
+      "id": 43,
+      "level": "intermediate",
+      "question": "O que é template.tsx?",
+      "correctAnswer": "Semelhante ao layout, mas cria uma nova instância a cada navegação, reiniciando estado e efeitos.",
+      "wrongAnswers": [
+        "Arquivo usado pela CLI para gerar novas páginas com estrutura e imports predefinidos.",
+        "Exatamente igual ao layout.tsx: persiste entre navegações e preserva estado e efeitos; o nome diferente existe só por compatibilidade com o Pages Router.",
+        "Arquivo que define o template HTML de e-mails."
+      ]
+    },
+    {
+      "id": 44,
+      "level": "intermediate",
+      "question": "O que são Parallel Routes?",
+      "correctAnswer": "Slots nomeados (@slot) que renderizam várias páginas simultaneamente no mesmo layout (dashboards, modais).",
+      "wrongAnswers": [
+        "Rotas que o navegador pré-carrega em paralelo para acelerar a navegação, configuradas pela prop prefetch do Link.",
+        "Pastas entre parênteses que organizam rotas em grupos sem afetar a estrutura da URL.",
+        "Rotas duplicadas em vários domínios."
+      ]
+    },
+    {
+      "id": 45,
+      "level": "intermediate",
+      "question": "O que são Intercepting Routes?",
+      "correctAnswer": "Rotas que interceptam navegação para exibir conteúdo no contexto atual (ex.: modal de foto), mantendo URL compartilhável.",
+      "wrongAnswers": [
+        "Rotas que interceptam requisições de API para adicionar cabeçalhos de autenticação antes de chegarem ao servidor.",
+        "Rotas que bloqueiam a navegação de usuários não autenticados.",
+        "Rotas que redirecionam todo o tráfego para uma página de manutenção."
+      ]
+    },
+    {
+      "id": 46,
+      "level": "intermediate",
+      "question": "Como fazer streaming com Suspense?",
+      "correctAnswer": "Envolver partes lentas com <Suspense fallback>; o HTML é enviado em fluxo e a UI aparece progressivamente.",
+      "wrongAnswers": [
+        "Usar o componente <Stream> de next/stream em volta de seções lentas, que abre um WebSocket para enviar partes do HTML.",
+        "Ativar streaming: true no next.config.js, que transmite toda página automaticamente sem mudanças no código.",
+        "Usar WebSockets para enviar partes do HTML ao navegador."
+      ]
+    },
+    {
+      "id": 47,
+      "level": "intermediate",
+      "question": "Como proteger rotas e implementar autenticação?",
+      "correctAnswer": "Com Auth.js (NextAuth), Clerk ou sessões próprias com cookies httpOnly, verificando no middleware e no servidor, não só no cliente.",
+      "wrongAnswers": [
+        "Escondendo links de navegação na interface para usuários não autenticados, o que os impede de chegar a páginas protegidas.",
+        "Guardando uma senha em variável de ambiente com prefixo NEXT_PUBLIC_ e comparando em Client Components.",
+        "Verificando uma flag no localStorage apenas no cliente."
+      ]
+    },
+    {
+      "id": 48,
+      "level": "intermediate",
+      "question": "Como funciona o cookies() e headers()?",
+      "correctAnswer": "APIs para ler cookies e cabeçalhos no servidor; usá-las torna a rota dinâmica.",
+      "wrongAnswers": [
+        "Hooks de cliente para ler e gravar cookies e cabeçalhos a partir de Client Components.",
+        "APIs que tornam a rota estática e cacheável ao ler valores no build.",
+        "Funções disponíveis apenas no middleware."
+      ]
+    },
+    {
+      "id": 49,
+      "level": "intermediate",
+      "question": "O que é renderização dinâmica vs estática?",
+      "correctAnswer": "Estática gera HTML no build/revalidação; dinâmica renderiza por requisição, ativada ao usar APIs dinâmicas como cookies, headers ou searchParams.",
+      "wrongAnswers": [
+        "Renderização estática acontece por requisição no servidor, enquanto a dinâmica acontece no build e é cacheada pela CDN.",
+        "Renderização estática é usada em Client Components e dinâmica em Server Components, independentemente das APIs usadas.",
+        "Renderização dinâmica significa que a página usa animações."
+      ]
+    },
+    {
+      "id": 50,
+      "level": "intermediate",
+      "question": "O que é Partial Prerendering (PPR)?",
+      "correctAnswer": "Combina um shell estático servido rapidamente com partes dinâmicas transmitidas via Suspense na mesma rota.",
+      "wrongAnswers": [
+        "Renderizar páginas parte no cliente e parte em um Web Worker para equilibrar o uso de CPU.",
+        "Pré-renderizar apenas metade das páginas no build, escolhidas por tráfego, e renderizar a outra metade no cliente com JavaScript após o carregamento inicial.",
+        "Pré-renderizar apenas o <head> de cada página."
+      ]
+    },
+    {
+      "id": 51,
+      "level": "intermediate",
+      "question": "Como otimizar imagens externas?",
+      "correctAnswer": "Configurar images.remotePatterns no next.config, e usar sizes, priority e placeholder=\"blur\".",
+      "wrongAnswers": [
+        "Baixá-las para a pasta public em runtime.",
+        "Usar uma tag <img> simples, já que next/image não suporta imagens externas.",
+        "Convertê-las em base64 e embuti-las no HTML."
+      ]
+    },
+    {
+      "id": 52,
+      "level": "intermediate",
+      "question": "Como configurar redirects e rewrites?",
+      "correctAnswer": "No next.config.js com redirects() e rewrites(), ou em middleware para lógica dinâmica.",
+      "wrongAnswers": [
+        "Apenas em um arquivo .htaccess na raiz do projeto, que o Next.js lê ao iniciar o servidor.",
+        "Criando uma pasta redirects em app/ com um arquivo por regra de redirecionamento.",
+        "Apenas pelo painel da Vercel."
+      ]
+    },
+    {
+      "id": 53,
+      "level": "intermediate",
+      "question": "O que são generateMetadata e Open Graph?",
+      "correctAnswer": "generateMetadata gera metadados dinâmicos por rota, incluindo tags Open Graph e Twitter para compartilhamento.",
+      "wrongAnswers": [
+        "generateMetadata cria tabelas no banco que guardam metadados das páginas, e Open Graph é o ORM usado para consultá-las.",
+        "generateMetadata gera tipos TypeScript a partir dos parâmetros da rota, e Open Graph é uma biblioteca de gráficos.",
+        "Open Graph é uma biblioteca de gráficos integrada ao Next.js."
+      ]
+    },
+    {
+      "id": 54,
+      "level": "intermediate",
+      "question": "Como gerar sitemap.xml e robots.txt?",
+      "correctAnswer": "Criando sitemap.ts e robots.ts em app/, que exportam funções retornando os dados.",
+      "wrongAnswers": [
+        "São gerados automaticamente em todo projeto sem código, listando todas as rotas encontradas no diretório app.",
+        "Instalando um plugin obrigatório de sitemap no next.config.js, já que o Next.js não tem suporte nativo a esses arquivos.",
+        "Apenas escrevendo arquivos estáticos na pasta public."
+      ]
+    },
+    {
+      "id": 55,
+      "level": "intermediate",
+      "question": "Como fazer internacionalização (i18n)?",
+      "correctAnswer": "No App Router, com segmentos [lang], middleware para detectar idioma e bibliotecas como next-intl.",
+      "wrongAnswers": [
+        "Com a chave i18n no next.config.js, único método suportado pelo App Router, que trata o roteamento automaticamente.",
+        "Duplicando a pasta app inteira para cada idioma.",
+        "O Next.js não suporta múltiplos idiomas."
+      ]
+    },
+    {
+      "id": 56,
+      "level": "intermediate",
+      "question": "Como usar variáveis de ambiente em runtime vs build?",
+      "correctAnswer": "NEXT_PUBLIC_* são embutidas no build; as demais ficam no servidor e podem ser lidas em runtime.",
+      "wrongAnswers": [
+        "Todas as variáveis de ambiente são lidas em runtime no navegador, então mudá-las só exige recarregar a página.",
+        "Variáveis NEXT_PUBLIC_* são lidas em runtime no servidor, enquanto as outras são embutidas no bundle no build.",
+        "Variáveis de ambiente só podem ser usadas no next.config.js."
+      ]
+    },
+    {
+      "id": 57,
+      "level": "intermediate",
+      "question": "Como compartilhar dados entre Server Components?",
+      "correctAnswer": "Chamar funções de dados repetidamente com fetch deduplicado ou React.cache, evitando prop drilling e Context no servidor.",
+      "wrongAnswers": [
+        "Usar variáveis globais no servidor mutadas a cada requisição para passar dados entre componentes.",
+        "Com providers de React Context declarados em Server Components.",
+        "Com useState no layout raiz."
+      ]
+    },
+    {
+      "id": 58,
+      "level": "intermediate",
+      "question": "Posso usar Context em Server Components?",
+      "correctAnswer": "Não; Providers precisam ser Client Components. Envolva a árvore em um componente cliente de Provider.",
+      "wrongAnswers": [
+        "Sim, o Context funciona exatamente igual no servidor e no cliente, então providers podem ser Server Components.",
+        "Sim, mas apenas quando o arquivo declara a diretiva 'use context' no topo, que habilita providers no servidor.",
+        "Sim, mas apenas com a diretiva 'use context'."
+      ]
+    },
+    {
+      "id": 59,
+      "level": "intermediate",
+      "question": "Como passar Server Components como children de Client Components?",
+      "correctAnswer": "Com a prop children, que mantém o conteúdo renderizado no servidor dentro do wrapper cliente.",
+      "wrongAnswers": [
+        "Importando o Server Component diretamente no arquivo do Client Component, o que o mantém renderizando no servidor.",
+        "É impossível, porque Client Components só podem renderizar outros Client Components na sua subárvore.",
+        "Serializando o Server Component em JSON e fazendo parse no cliente."
+      ]
+    },
+    {
+      "id": 60,
+      "level": "intermediate",
+      "question": "O que é use cache?",
+      "correctAnswer": "Diretiva de cache de funções/componentes introduzida em versões recentes (Cache Components), que substitui parte dos comportamentos implícitos anteriores.",
+      "wrongAnswers": [
+        "Hook do React que guarda valores calculados no localStorage do navegador para sobreviverem a recarregamentos.",
+        "Diretiva que desativa toda forma de cache da rota e força renderização dinâmica a cada requisição.",
+        "API do navegador para cache de Service Worker."
+      ]
+    },
+    {
+      "id": 61,
+      "level": "intermediate",
+      "question": "O que são next/script e como carregar scripts de terceiros?",
+      "correctAnswer": "Componente que controla estratégia de carregamento (beforeInteractive, afterInteractive, lazyOnload) de scripts externos.",
+      "wrongAnswers": [
+        "Componente que roda scripts no servidor durante o build para preparar dados para as páginas.",
+        "Comando de CLI que roda scripts definidos no package.json, como next script build, e instala scripts de terceiros listados no next.config.js antes de o servidor iniciar.",
+        "Comando de CLI para rodar scripts npm."
+      ]
+    },
+    {
+      "id": 62,
+      "level": "intermediate",
+      "question": "Como fazer upload de arquivos?",
+      "correctAnswer": "Via Route Handler/Server Action com FormData, ou URLs pré-assinadas para S3/Cloud Storage para evitar passar pelo servidor.",
+      "wrongAnswers": [
+        "O Next.js não suporta upload; é preciso um servidor Express separado para qualquer requisição multipart.",
+        "Salvando arquivos enviados na pasta public em runtime em produção, onde são servidos imediatamente, ou codificando-os na query string da URL para arquivos pequenos.",
+        "Codificando arquivos na query string da URL."
+      ]
+    },
+    {
+      "id": 63,
+      "level": "intermediate",
+      "question": "Como conectar ao banco de dados?",
+      "correctAnswer": "Usando ORMs como Prisma ou Drizzle em Server Components/Actions/Route Handlers, nunca no código cliente.",
+      "wrongAnswers": [
+        "Diretamente de Client Components, colocando a connection string em NEXT_PUBLIC_DATABASE_URL para o navegador conectar.",
+        "Apenas por um servidor Express separado, porque o Next.js não importa drivers de banco em código de servidor.",
+        "Pelo módulo next/database."
+      ]
+    },
+    {
+      "id": 64,
+      "level": "intermediate",
+      "question": "Como testar aplicações Next.js?",
+      "correctAnswer": "Vitest/Jest + Testing Library para componentes, Playwright/Cypress para E2E, e mocks de rede com MSW.",
+      "wrongAnswers": [
+        "Apenas com next test, o executor de testes nativo.",
+        "Apenas com testes manuais nos previews da Vercel.",
+        "Server Components não podem ser testados de forma alguma."
+      ]
+    },
+    {
+      "id": 65,
+      "level": "intermediate",
+      "question": "Como lidar com erros globais?",
+      "correctAnswer": "Com global-error.tsx, error.tsx por segmento e monitoramento (Sentry).",
+      "wrongAnswers": [
+        "Com um bloco try/catch no next.config.js, que envolve toda rota e reporta erros.",
+        "Com um único arquivo 500.tsx no diretório app, que captura todo erro no App Router.",
+        "Com um único arquivo 500.tsx, que captura todos os erros no App Router."
+      ]
+    },
+    {
+      "id": 66,
+      "level": "intermediate",
+      "question": "O que é useRouter vs usePathname?",
+      "correctAnswer": "useRouter navega e atualiza; usePathname lê o caminho atual para estilizar links ativos.",
+      "wrongAnswers": [
+        "usePathname navega programaticamente e useRouter lê o caminho atual para estilizar links ativos.",
+        "useRouter só funciona em Server Components e usePathname só dentro de arquivos de middleware.",
+        "Ambos são aliases idênticos."
+      ]
+    },
+    {
+      "id": 67,
+      "level": "intermediate",
+      "question": "O que é unstable_cache/cache de dados em Server?",
+      "correctAnswer": "Utilitário (e substitutos mais recentes) para cachear resultados de funções que não usam fetch, com tags e revalidação.",
+      "wrongAnswers": [
+        "Cache experimental no cliente guardado no sessionStorage, limpo quando a aba fecha, que o Next.js desativa automaticamente sempre que detecta conexão de rede instável.",
+        "Flag que desativa o cache quando o app está instável.",
+        "Cache que é limpo a cada requisição."
+      ]
+    },
+    {
+      "id": 68,
+      "level": "intermediate",
+      "question": "O que é Static Export?",
+      "correctAnswer": "Gera um site 100% estático (output: 'export'), sem recursos que dependem de servidor como Server Actions e middleware.",
+      "wrongAnswers": [
+        "Recurso para exportar dados da aplicação, como usuários e pedidos, em arquivos CSV pelo painel admin.",
+        "Build de site estático que ainda suporta Server Actions, middleware e revalidação sob demanda em qualquer host.",
+        "Recurso para exportar dados em CSV."
+      ]
+    },
+    {
+      "id": 69,
+      "level": "advanced",
+      "question": "Como o Next.js divide o bundle?",
+      "correctAnswer": "Automaticamente por rota e por componentes dinâmicos; Server Components não entram no bundle do cliente.",
+      "wrongAnswers": [
+        "Gera um único bundle com todas as rotas por simplicidade.",
+        "Apenas quando o desenvolvedor configura o Webpack manualmente.",
+        "Dividindo o bundle por tamanho em pedaços fixos de 100 KB."
+      ]
+    },
+    {
+      "id": 70,
+      "level": "advanced",
+      "question": "O que é next/dynamic?",
+      "correctAnswer": "Carrega componentes sob demanda (lazy), com opção de desabilitar SSR (ssr: false) para componentes dependentes de window.",
+      "wrongAnswers": [
+        "Força uma página a ser renderizada dinamicamente a cada requisição, retirando-a da geração estática e do cache.",
+        "Gera rotas dinâmicas a partir de registros do banco no build, substituindo o generateStaticParams.",
+        "Habilita hot reload de componentes em produção."
+      ]
+    },
+    {
+      "id": 71,
+      "level": "advanced",
+      "question": "Como funciona o Router Cache no cliente?",
+      "correctAnswer": "Cache em memória de segmentos já visitados/prefetched, que acelera navegações; pode ser invalidado por router.refresh() ou revalidações.",
+      "wrongAnswers": [
+        "Cache no servidor de resultados de consultas ao banco, compartilhado entre usuários e invalidado no deploy.",
+        "Cache guardado no localStorage do navegador que persiste para sempre e é compartilhado entre abas e sessões; só pode ser limpo pelo usuário, nunca por router.refresh() ou revalidação.",
+        "Cache de CDN que guarda páginas HTML completas para todos os usuários."
+      ]
+    },
+    {
+      "id": 72,
+      "level": "advanced",
+      "question": "Explique as camadas de cache do Next.js.",
+      "correctAnswer": "Request Memoization (deduplicação por render), Data Cache (servidor), Full Route Cache (HTML/RSC no build) e Router Cache (cliente); os padrões variam por versão.",
+      "wrongAnswers": [
+        "Há apenas uma camada de cache, o cache HTTP do navegador, controlado inteiramente por cabeçalhos Cache-Control no next.config.js.",
+        "Caches Redis, Memcached e localStorage, todos ativos por padrão e configurados por variáveis de ambiente.",
+        "Apenas cache de build; o Next.js não faz cache em runtime."
+      ]
+    },
+    {
+      "id": 73,
+      "level": "advanced",
+      "question": "Como o RSC Payload funciona?",
+      "correctAnswer": "Formato serializado da árvore de Server Components enviado ao cliente para reconciliar a UI e hidratar Client Components.",
+      "wrongAnswers": [
+        "O bundle JavaScript completo de cada Server Component, enviado ao cliente para reexecutá-los na hidratação.",
+        "Arquivo JSON com todas as variáveis de ambiente enviado ao navegador.",
+        "Formato de imagem comprimido para componentes React."
+      ]
+    },
+    {
+      "id": 74,
+      "level": "advanced",
+      "question": "O que são erros de hidratação e como evitá-los?",
+      "correctAnswer": "Divergência entre HTML do servidor e cliente (datas, window, IDs); resolvem-se com useEffect, useId ou suppressHydrationWarning.",
+      "wrongAnswers": [
+        "Erros que ocorrem quando a conexão com o banco cai durante a renderização; evite-os adicionando novas tentativas.",
+        "Erros causados quando o build fica sem memória; evite-os trocando para Turbopack e aumentando o heap.",
+        "Erros causados por imagens grandes; evite com next/image."
+      ]
+    },
+    {
+      "id": 75,
+      "level": "advanced",
+      "question": "Como evitar waterfalls de dados no App Router?",
+      "correctAnswer": "Disparar fetches em paralelo com Promise.all, usar Suspense granulares e iniciar requisições o mais cedo possível (preload).",
+      "wrongAnswers": [
+        "Aguardar cada fetch em sequência dentro de componentes aninhados, para cada nível esperar os dados do pai antes de começar.",
+        "Mover toda a busca de dados para o cliente com useEffect, para o servidor nunca esperar requisições lentas.",
+        "Adicionar atrasos artificiais entre fetches."
+      ]
+    },
+    {
+      "id": 76,
+      "level": "advanced",
+      "question": "Como implementar autenticação segura end-to-end?",
+      "correctAnswer": "Sessões em cookies httpOnly/secure/SameSite, verificação em Server Actions e Route Handlers (não apenas middleware), CSRF e autorização por recurso.",
+      "wrongAnswers": [
+        "Verificar autenticação apenas no middleware, que roda antes de toda requisição e basta para proteger Server Actions e Route Handlers.",
+        "Guardar JWTs no localStorage e verificá-los apenas em Client Components antes de renderizar conteúdo protegido.",
+        "Confiar em esconder elementos da interface para usuários sem permissão."
+      ]
+    },
+    {
+      "id": 77,
+      "level": "advanced",
+      "question": "Quais cuidados de segurança com Server Actions?",
+      "correctAnswer": "São endpoints públicos: valide entradas (Zod), autentique e autorize cada ação, evite vazar dados e mantenha o framework atualizado.",
+      "wrongAnswers": [
+        "Nenhum, porque Server Actions são funções privadas que não podem ser chamadas de fora da aplicação.",
+        "Apenas ofuscar o nome da função, já que o Next.js gera IDs imprevisíveis que funcionam como autenticação.",
+        "São protegidas automaticamente pelo Next.js, então validação é desnecessária."
+      ]
+    },
+    {
+      "id": 78,
+      "level": "advanced",
+      "question": "Como estruturar um monorepo com Next.js?",
+      "correctAnswer": "Turborepo/Nx com apps e pacotes compartilhados (UI, config, tipos), cache de build remoto e transpilePackages.",
+      "wrongAnswers": [
+        "Colocar toda aplicação em um único projeto Next.js com uma pasta app, separando-as só por grupos de rotas.",
+        "Usar git submodules para cada componente compartilhado e copiar os arquivos compilados manualmente em cada aplicação.",
+        "O Next.js não suporta monorepos."
+      ]
+    },
+    {
+      "id": 79,
+      "level": "advanced",
+      "question": "Como otimizar Core Web Vitals?",
+      "correctAnswer": "Priorizar LCP com next/image priority, evitar layout shift, reduzir JS cliente, streaming, fontes otimizadas e CDN.",
+      "wrongAnswers": [
+        "Desativar a otimização de imagens e a auto-hospedagem de fontes para reduzir o trabalho do servidor por requisição.",
+        "Carregar todo script de terceiros com beforeInteractive, marcar todos os componentes com 'use client' e desativar a otimização de imagens para reduzir o trabalho do servidor, o que melhora LCP e CLS.",
+        "Carregar todos os scripts com beforeInteractive."
+      ]
+    },
+    {
+      "id": 80,
+      "level": "advanced",
+      "question": "Como implementar ISR em larga escala?",
+      "correctAnswer": "Usar revalidate por tempo, revalidação por tags via webhooks do CMS e generateStaticParams parcial com dynamicParams.",
+      "wrongAnswers": [
+        "Gerar todas as páginas possíveis no build e nunca revalidar, recompilando o site inteiro a cada minuto com um cron job para o conteúdo refletir sempre os dados mais recentes.",
+        "Recompilar o site inteiro a cada minuto com um cron job.",
+        "Usar SSR para todas as páginas."
+      ]
+    },
+    {
+      "id": 81,
+      "level": "advanced",
+      "question": "Como funciona dynamicParams?",
+      "correctAnswer": "Define se rotas não retornadas por generateStaticParams são geradas sob demanda (true) ou retornam 404 (false).",
+      "wrongAnswers": [
+        "Habilita importação dinâmica de parâmetros de rota de um banco em runtime, substituindo o generateStaticParams.",
+        "Define se searchParams são convertidos automaticamente em números e booleanos antes de chegarem à página.",
+        "Torna todos os parâmetros de rota opcionais."
+      ]
+    },
+    {
+      "id": 82,
+      "level": "advanced",
+      "question": "Como implementar multi-tenancy?",
+      "correctAnswer": "Middleware reescrevendo subdomínios/domínios para segmentos dinâmicos, isolando dados por tenant no banco e no cache.",
+      "wrongAnswers": [
+        "Publicar uma cópia separada do código para cada cliente, a única abordagem suportada, ou usar a configuração i18n do next.config.js para tratar cada tenant como um idioma diferente.",
+        "Publicar uma cópia separada do código para cada cliente, única opção.",
+        "Usar uma única tabela compartilhada sem identificador de tenant."
+      ]
+    },
+    {
+      "id": 83,
+      "level": "advanced",
+      "question": "Como lidar com feature flags e A/B testing?",
+      "correctAnswer": "Decisão no middleware ou servidor (Edge Config, LaunchDarkly), mantendo variações estáticas via rewrites para preservar cache.",
+      "wrongAnswers": [
+        "Decidir a variação no cliente após renderizar, trocando componentes com useEffect, o que evita totalmente o layout shift.",
+        "Usar Math.random() em Server Components a cada requisição.",
+        "Publicar cada variação em um domínio diferente manualmente."
+      ]
+    },
+    {
+      "id": 84,
+      "level": "advanced",
+      "question": "Como funciona o Middleware e quais suas limitações?",
+      "correctAnswer": "Roda antes do cache/rotas, ideal para decisões leves; evite lógica pesada e acesso a bancos tradicionais, pois o runtime é restrito.",
+      "wrongAnswers": [
+        "Roda depois de a página ser renderizada e acessa qualquer API do Node.js, sendo o melhor lugar para consultas pesadas ao banco.",
+        "Só roda durante o build para reescrever rotas estáticas, então não consegue decidir com base na requisição recebida.",
+        "Roda depois de a página renderizar e acessa qualquer API do Node.js, sendo o melhor lugar para consultas pesadas ao banco; não tem limitações em relação aos Route Handlers."
+      ]
+    },
+    {
+      "id": 85,
+      "level": "advanced",
+      "question": "Como fazer streaming de respostas de IA?",
+      "correctAnswer": "Route Handler retornando ReadableStream/SSE, consumido no cliente (ex.: AI SDK com useChat).",
+      "wrongAnswers": [
+        "Consultando uma API a cada segundo por novos tokens.",
+        "Retornando a resposta completa apenas após a geração terminar.",
+        "Usando next/image para renderizar o texto progressivamente."
+      ]
+    },
+    {
+      "id": 86,
+      "level": "advanced",
+      "question": "Como implementar WebSockets/real-time?",
+      "correctAnswer": "Vercel serverless não mantém conexões longas; use serviços externos (Pusher, Ably, Supabase) ou servidor customizado/SSE.",
+      "wrongAnswers": [
+        "Route Handlers publicados na Vercel suportam conexões WebSocket permanentes nativamente, e o módulo nativo next/socket cria um servidor compartilhado por toda função serverless.",
+        "Usar o módulo next/socket.",
+        "Usar setInterval em Server Components."
+      ]
+    },
+    {
+      "id": 87,
+      "level": "advanced",
+      "question": "Como self-host de Next.js com escala horizontal?",
+      "correctAnswer": "Container Node/Docker com output: 'standalone', cache compartilhado (handler customizado com Redis), CDN e balanceador.",
+      "wrongAnswers": [
+        "Rodar next dev em vários servidores atrás de um balanceador, ou usar output: 'export', que mantém todos os recursos em qualquer host e escala horizontalmente sem cache compartilhado.",
+        "Rodar next dev em vários servidores.",
+        "Usar output: 'export', que suporta todos os recursos em qualquer host."
+      ]
+    },
+    {
+      "id": 88,
+      "level": "advanced",
+      "question": "O que é instrumentation.ts?",
+      "correctAnswer": "Arquivo que executa código na inicialização do servidor, usado para OpenTelemetry e monitoramento.",
+      "wrongAnswers": [
+        "Arquivo de setup que o Jest executa antes de cada suíte para simular módulos do Next.js, também usado para medir quanto tempo cada página leva para renderizar nos testes.",
+        "Arquivo que configura instrumentos musicais para apps de áudio.",
+        "Arquivo de setup de testes para o Jest."
+      ]
+    },
+    {
+      "id": 89,
+      "level": "advanced",
+      "question": "Como observar e monitorar em produção?",
+      "correctAnswer": "OpenTelemetry, Sentry, logs estruturados, Web Vitals via useReportWebVitals e métricas do host.",
+      "wrongAnswers": [
+        "Apenas com console.log em Client Components, já que logs do servidor não são acessíveis em produção.",
+        "O monitoramento é embutido no Next.js e não exige configuração, reportando todos os erros ao painel da Vercel.",
+        "Lendo a pasta de build .next."
+      ]
+    },
+    {
+      "id": 90,
+      "level": "advanced",
+      "question": "Quando preferir Pages Router em vez de App Router?",
+      "correctAnswer": "Projetos legados, bibliotecas incompatíveis com RSC ou equipes que precisam de menor mudança; novos projetos tendem ao App Router.",
+      "wrongAnswers": [
+        "Quando se precisa de Server Components, layouts aninhados e streaming, que só o Pages Router suporta.",
+        "Sempre em projetos novos, porque o App Router está obsoleto e será removido na próxima versão major; o Pages Router também é o único com Server Components e streaming.",
+        "Sempre em novos projetos, já que o App Router está obsoleto."
+      ]
+    },
+    {
+      "id": 91,
+      "level": "advanced",
+      "question": "Como migrar do Pages Router para App Router?",
+      "correctAnswer": "Incrementalmente: ambos coexistem; mover rotas uma a uma, trocar getServerSideProps por Server Components e adaptar layouts e metadados.",
+      "wrongAnswers": [
+        "Tudo de uma vez em uma única release, porque os diretórios pages e app não coexistem; renomear a pasta pages para app converte automaticamente toda página e método de busca de dados.",
+        "Tudo de uma vez, já que os dois roteadores não coexistem.",
+        "Renomeando a pasta pages para app."
+      ]
+    },
+    {
+      "id": 92,
+      "level": "advanced",
+      "question": "O que são Route Segment Config options?",
+      "correctAnswer": "Exports como dynamic, revalidate, runtime, maxDuration e fetchCache que controlam o comportamento de renderização de um segmento.",
+      "wrongAnswers": [
+        "Opções no next.config.js que renomeiam segmentos de URL sem mover pastas no diretório app.",
+        "Opções CSS exportadas de páginas (padding, margin, maxWidth) que definem os estilos aplicados ao container de cada segmento, sobrescrevendo os estilos do layout raiz.",
+        "Opções CSS para estilizar segmentos de rota."
+      ]
+    },
+    {
+      "id": 93,
+      "level": "advanced",
+      "question": "Como tratar CSS-in-JS no App Router?",
+      "correctAnswer": "Bibliotecas devem suportar RSC (registro de estilos no servidor) ou usar alternativas como CSS Modules, Tailwind ou vanilla-extract.",
+      "wrongAnswers": [
+        "Converter todos os styled components em props de estilo inline automaticamente com a opção cssInJs do compilador.",
+        "Qualquer biblioteca CSS-in-JS funciona em Server Components sem configuração porque os estilos são extraídos no build, e o compilador pode convertê-los em estilos inline automaticamente.",
+        "CSS-in-JS é proibido no Next.js."
+      ]
+    },
+    {
+      "id": 94,
+      "level": "advanced",
+      "question": "Como otimizar builds longos?",
+      "correctAnswer": "Turbopack, cache de build, ISR em vez de gerar tudo estático, generateStaticParams parcial e monorepo com cache remoto.",
+      "wrongAnswers": [
+        "Gerar toda página estaticamente no build, aumentar o número de entradas do generateStaticParams e desativar TypeScript e ESLint permanentemente, que respondem pela maior parte do build.",
+        "Desativar TypeScript e lint permanentemente.",
+        "Aumentar o número de páginas no generateStaticParams."
+      ]
+    },
+    {
+      "id": 95,
+      "level": "advanced",
+      "question": "O que são Cache Components e a abordagem \"dinâmico por padrão\"?",
+      "correctAnswer": "Modelo mais recente em que o código é dinâmico por padrão e o cache é explícito com use cache, combinado a PPR; veja a documentação da sua versão.",
+      "wrongAnswers": [
+        "Modelo em que tudo é cacheado para sempre por padrão e é preciso desativar explicitamente com no-store.",
+        "Componentes que guardam o próprio estado no localStorage para restaurá-lo após recarregar a página.",
+        "Recurso descontinuado do Pages Router."
+      ]
+    },
+    {
+      "id": 96,
+      "level": "advanced",
+      "question": "Como diferenciar Server e Client de forma segura para segredos?",
+      "correctAnswer": "Usar server-only para impedir importação acidental no cliente e nunca expor chaves sem NEXT_PUBLIC_.",
+      "wrongAnswers": [
+        "Prefixar segredos com NEXT_PUBLIC_, o que faz o Next.js criptografá-los antes de incluí-los no bundle do cliente.",
+        "Guardar segredos na pasta public com nome de arquivo oculto.",
+        "Usar 'use client' nos arquivos que leem segredos."
+      ]
+    },
+    {
+      "id": 97,
+      "level": "advanced",
+      "question": "Como lidar com SEO avançado?",
+      "correctAnswer": "Metadados dinâmicos, JSON-LD, canonical, sitemaps, SSR/SSG de conteúdo, hreflang e URLs consistentes.",
+      "wrongAnswers": [
+        "Renderizar todo o conteúdo no cliente com JavaScript, já que buscadores executam scripts e preferem páginas dinâmicas.",
+        "Usar só meta tags de keywords e esconder textos extras com palavras-chave via CSS para melhorar o ranking.",
+        "Renderizar todo o conteúdo no cliente com JavaScript."
+      ]
+    },
+    {
+      "id": 98,
+      "level": "advanced",
+      "question": "Como controlar headers de segurança?",
+      "correctAnswer": "Via headers() no next.config.js ou middleware: CSP, HSTS, X-Frame-Options e Referrer-Policy.",
+      "wrongAnswers": [
+        "O Next.js define todo cabeçalho de segurança automaticamente, e não há forma suportada de personalizar ou adicionar outros.",
+        "Adicionando-os em Client Components com useEffect, que define os cabeçalhos no documento após a hidratação.",
+        "O Next.js define todos os cabeçalhos automaticamente, sem configuração possível."
+      ]
+    },
+    {
+      "id": 99,
+      "level": "advanced",
+      "question": "Como lidar com grandes listas e paginação?",
+      "correctAnswer": "Paginação por cursor no servidor, searchParams como fonte de verdade, infinite scroll com Client Component e virtualização.",
+      "wrongAnswers": [
+        "Carregar todos os registros do banco de uma vez e esconder os que estão fora da página atual com CSS.",
+        "Guardar o número da página atual em uma variável global no servidor, compartilhada por toda requisição.",
+        "Renderizar todos os itens em um único Server Component sem limites."
+      ]
+    },
+    {
+      "id": 100,
+      "level": "advanced",
+      "question": "Como decidir entre Next.js e outras alternativas (Remix, Astro)?",
+      "correctAnswer": "Next.js para apps full-stack React com ecossistema vasto; Remix/React Router para foco em padrões web; Astro para sites de conteúdo com pouco JS.",
+      "wrongAnswers": [
+        "Astro para dashboards muito interativos com bastante estado no cliente, e Next.js só para blogs estáticos sem backend.",
+        "Astro para dashboards muito interativos com bastante estado no cliente; Remix para sites de conteúdo sem JavaScript; Next.js só para blogs estáticos ou apps mobile em React Native.",
+        "São intercambiáveis, sem trade-offs relevantes."
+      ]
+    }
+  ]
+}

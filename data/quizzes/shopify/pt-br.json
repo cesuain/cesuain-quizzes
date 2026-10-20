@@ -1,0 +1,1107 @@
+{
+  "id": "shopify",
+  "language": "pt-br",
+  "title": "Shopify",
+  "questions": [
+    {
+      "id": 1,
+      "level": "basic",
+      "question": "O que é a Shopify?",
+      "correctAnswer": "Plataforma SaaS de e-commerce que permite criar e gerenciar lojas online, com hospedagem, checkout, pagamentos e logística integrados.",
+      "wrongAnswers": [
+        "Plataforma de e-commerce open source que o lojista baixa e instala nos próprios servidores, cuidando de hospedagem, patches de segurança e integrações de pagamento.",
+        "Marketplace compartilhado semelhante à Amazon onde vendedores independentes listam produtos em um catálogo comum e a Shopify faz o envio a partir de seus armazéns.",
+        "Um plugin open source de e-commerce para WordPress que precisa ser auto-hospedado."
+      ]
+    },
+    {
+      "id": 2,
+      "level": "basic",
+      "question": "Quais são as principais vantagens da Shopify?",
+      "correctAnswer": "Rapidez para lançar a loja, hospedagem e segurança gerenciadas, ecossistema de apps e temas, checkout otimizado e escalabilidade.",
+      "wrongAnswers": [
+        "Acesso root total aos servidores e ao banco, código backend customizado ilimitado rodando na infraestrutura da Shopify e nenhuma taxa de transação em qualquer plano.",
+        "É totalmente open source, então lojistas podem fazer fork e modificar o código central do checkout e auto-hospedá-lo mantendo a segurança gerenciada.",
+        "Acesso total ao servidor e ao banco de dados, sem nenhuma taxa de transação."
+      ]
+    },
+    {
+      "id": 3,
+      "level": "basic",
+      "question": "O que é um tema (theme) na Shopify?",
+      "correctAnswer": "Conjunto de arquivos (Liquid, CSS, JS, JSON) que define a aparência e a estrutura da loja virtual.",
+      "wrongAnswers": [
+        "Uma paleta de cores e conjunto de fontes escolhidos nas configurações do admin, que só mudam cores e tipografia da loja sem afetar layout ou estrutura.",
+        "Um pacote de configuração de backend que define impostos, zonas de frete e regras de pagamento da loja, enviado como arquivo ZIP.",
+        "Um app instalado da App Store que gerencia produtos."
+      ]
+    },
+    {
+      "id": 4,
+      "level": "basic",
+      "question": "O que é Liquid?",
+      "correctAnswer": "Linguagem de template open source criada pela Shopify, usada para renderizar dados dinâmicos (produtos, coleções, carrinho) nos temas.",
+      "wrongAnswers": [
+        "Framework JavaScript proprietário da Shopify, semelhante ao React, usado para construir componentes interativos da loja que rodam no navegador.",
+        "Pré-processador CSS criado pela Shopify, semelhante ao Sass, usado para compilar as folhas de estilo do tema com variáveis e mixins.",
+        "Framework JavaScript proprietário da Shopify para construir lojas."
+      ]
+    },
+    {
+      "id": 5,
+      "level": "basic",
+      "question": "Quais são os três tipos de delimitadores do Liquid?",
+      "correctAnswer": "{{ }} para saída de dados, {% %} para lógica (if, for, assign) e filtros com | aplicados a saídas.",
+      "wrongAnswers": [
+        "{{ }} para lógica como if e for, {% %} para saída de dados e # no início da linha para comentários e filtros aplicados às saídas.",
+        "<% %> para lógica, <%= %> para saída de dados e -> para encadear filtros, seguindo a mesma sintaxe dos templates ERB do Ruby on Rails.",
+        "{{ }} para lógica, {% %} para saída e # para comentários."
+      ]
+    },
+    {
+      "id": 6,
+      "level": "basic",
+      "question": "O que são filtros no Liquid?",
+      "correctAnswer": "Funções que modificam a saída, como {{ produto.title | upcase }} ou {{ preco | money }}.",
+      "wrongAnswers": [
+        "Regras configuradas no admin que escondem produtos de coleções e buscas com base em tags, fornecedores ou níveis de estoque.",
+        "Funções no servidor que rodam antes de o tema carregar, como middleware, para reescrever URLs e redirecionar visitantes por país.",
+        "Filtros de busca exibidos aos clientes apenas na página de coleção."
+      ]
+    },
+    {
+      "id": 7,
+      "level": "basic",
+      "question": "O que é o Online Store 2.0?",
+      "correctAnswer": "Arquitetura moderna de temas, com seções em todas as páginas, templates JSON e blocos de app, permitindo personalização sem código.",
+      "wrongAnswers": [
+        "Framework headless que substitui o Liquid pelo React e exige que apps renderizem todas as seções da loja.",
+        "A segunda geração do painel Admin da Shopify, com interface redesenhada para pedidos e produtos, páginas de configuração em JSON e blocos de app dentro do Admin, permitindo que a equipe gerencie a loja sem código.",
+        "A segunda versão do painel administrativo da Shopify."
+      ]
+    },
+    {
+      "id": 8,
+      "level": "basic",
+      "question": "O que são seções (sections)?",
+      "correctAnswer": "Blocos reutilizáveis de conteúdo e layout, com configurações no editor de temas (arquivos em /sections).",
+      "wrongAnswers": [
+        "Categorias de produtos exibidas no menu de navegação da loja, criadas automaticamente a partir dos tipos de produto no admin.",
+        "Áreas do painel Admin, como Pedidos, Produtos e Clientes, cada uma com permissões próprias para contas de funcionários.",
+        "Arquivos CSS que definem o grid do layout."
+      ]
+    },
+    {
+      "id": 9,
+      "level": "basic",
+      "question": "O que são blocos (blocks)?",
+      "correctAnswer": "Elementos configuráveis dentro de uma seção, que o lojista pode adicionar, reordenar e remover no editor.",
+      "wrongAnswers": [
+        "Variantes de produto agrupadas por opção, como todos os tamanhos de uma camisa, que podem ser reordenadas na página do produto.",
+        "Trechos de código que bloqueiam certos IPs de acessar a loja.",
+        "Tags Liquid usadas para impedir a renderização de certos conteúdos."
+      ]
+    },
+    {
+      "id": 10,
+      "level": "basic",
+      "question": "O que é o Theme Editor (Personalizador)?",
+      "correctAnswer": "Editor visual para configurar seções, blocos e estilos do tema sem mexer no código.",
+      "wrongAnswers": [
+        "Editor de código dentro do Admin onde desenvolvedores só editam arquivos Liquid e JSON, sem pré-visualização das mudanças.",
+        "Aplicativo desktop que designers instalam para criar temas offline e enviá-los à loja quando terminam.",
+        "Aplicativo desktop para desenhar temas offline."
+      ]
+    },
+    {
+      "id": 11,
+      "level": "basic",
+      "question": "O que são templates JSON?",
+      "correctAnswer": "Arquivos que definem quais seções aparecem em cada tipo de página, em formato JSON, permitindo composição no editor.",
+      "wrongAnswers": [
+        "Arquivos que armazenam dados de produtos e estoque exportados do Admin, usados para migrar catálogos entre lojas.",
+        "Modelos de resposta da Storefront API que definem quais campos são retornados em cada tipo de requisição.",
+        "Modelos de resposta da Storefront API."
+      ]
+    },
+    {
+      "id": 12,
+      "level": "basic",
+      "question": "Qual a estrutura de pastas de um tema?",
+      "correctAnswer": "assets, config, layout, locales, sections, snippets, templates e (no OS 2.0) blocks.",
+      "wrongAnswers": [
+        "src, public, components, pages e styles, seguindo a mesma estrutura de uma aplicação React ou Next.js.",
+        "app, routes, models, views e controllers, seguindo a estrutura MVC de um projeto Ruby on Rails.",
+        "Apenas css, js, images, html e fonts."
+      ]
+    },
+    {
+      "id": 13,
+      "level": "basic",
+      "question": "O que é um snippet?",
+      "correctAnswer": "Trecho de Liquid reutilizável, incluído com {% render 'nome' %}.",
+      "wrongAnswers": [
+        "Uma descrição curta de produto exibida em buscas e grades de coleções, editada na página do produto no admin.",
+        "Uma seção configurada apenas pelo editor de temas e incluída com {% section 'nome' %} em arquivos de layout.",
+        "Uma seção configurada apenas no editor de temas, incluída com {% section 'nome' %}."
+      ]
+    },
+    {
+      "id": 14,
+      "level": "basic",
+      "question": "O que é o theme.liquid?",
+      "correctAnswer": "Arquivo de layout principal que envolve todas as páginas, contendo <head>, header, footer e {{ content_for_layout }}.",
+      "wrongAnswers": [
+        "Template usado apenas na página inicial, que define o banner principal e as coleções em destaque.",
+        "Arquivo de configurações que guarda cores e fontes do tema.",
+        "Snippet que renderiza o card de produto."
+      ]
+    },
+    {
+      "id": 15,
+      "level": "basic",
+      "question": "O que são produtos, variantes e coleções?",
+      "correctAnswer": "Produto é o item vendido; variantes são suas opções (tamanho, cor); coleções agrupam produtos manual ou automaticamente.",
+      "wrongAnswers": [
+        "Produto é uma categoria de itens; variantes são produtos totalmente diferentes dentro dela; coleções são grupos de pedidos de clientes.",
+        "Variantes são códigos de desconto; coleções são grupos de clientes.",
+        "Produtos são só itens físicos; variantes são itens digitais; coleções são kits vendidos juntos."
+      ]
+    },
+    {
+      "id": 16,
+      "level": "basic",
+      "question": "Quantas opções e variantes um produto pode ter?",
+      "correctAnswer": "Tradicionalmente até 3 opções e 100 variantes; limites maiores existem em planos/recursos mais novos, então verifique a documentação atual.",
+      "wrongAnswers": [
+        "Exatamente uma opção com até dez variantes, e opções adicionais exigem instalar um app de terceiros da App Store.",
+        "Opções e variantes ilimitadas em todos os planos desde o Online Store 2.0; a única restrição é que cada variante tenha SKU único, então a documentação não lista mais limites.",
+        "Opções e variantes ilimitadas em todos os planos."
+      ]
+    },
+    {
+      "id": 17,
+      "level": "basic",
+      "question": "O que são metafields?",
+      "correctAnswer": "Campos personalizados que armazenam dados extras em produtos, coleções, clientes, pedidos e outros recursos.",
+      "wrongAnswers": [
+        "Meta tags de SEO geradas automaticamente para cada página a partir do título e descrição, editáveis só no theme.liquid.",
+        "Campos do checkout que coletam informações de pagamento e cobrança, guardados criptografados nos servidores da Shopify.",
+        "Campos de analytics que rastreiam o comportamento dos visitantes."
+      ]
+    },
+    {
+      "id": 18,
+      "level": "basic",
+      "question": "O que são metaobjects?",
+      "correctAnswer": "Tipos de dados estruturados e personalizados (ex.: \"Designers\", \"FAQ\") criados no admin e reutilizáveis na loja.",
+      "wrongAnswers": [
+        "Variantes de produto com regras de preço extras para clientes atacadistas, disponíveis só no Shopify Plus.",
+        "Objetos JavaScript disponíveis globalmente nos arquivos do tema.",
+        "Objetos retornados apenas pela Admin REST API."
+      ]
+    },
+    {
+      "id": 19,
+      "level": "basic",
+      "question": "O que é o Shopify Admin?",
+      "correctAnswer": "Painel de administração onde o lojista gerencia produtos, pedidos, clientes, marketing e configurações.",
+      "wrongAnswers": [
+        "O portal de desenvolvedores onde parceiros criam, testam e publicam apps na App Store.",
+        "A vitrine pública que os clientes navegam ao comprar, onde o lojista também pode entrar para editar produtos, pedidos e configurações diretamente nas páginas publicadas, sem painel separado.",
+        "A vitrine que os clientes veem ao comprar."
+      ]
+    },
+    {
+      "id": 20,
+      "level": "basic",
+      "question": "O que é o Shopify Payments?",
+      "correctAnswer": "Gateway de pagamentos nativo da Shopify, disponível em alguns países. Em outros usam-se gateways de terceiros.",
+      "wrongAnswers": [
+        "Gateway de pagamento obrigatório disponível em todos os países, sem opção de usar gateways de terceiros em nenhum plano.",
+        "Programa de financiamento que oferece empréstimos a lojistas com base no histórico de vendas, pagos como percentual das vendas.",
+        "Programa de empréstimos para lojistas."
+      ]
+    },
+    {
+      "id": 21,
+      "level": "basic",
+      "question": "O que é o Shopify POS?",
+      "correctAnswer": "Ponto de venda para vendas presenciais, sincronizado com estoque e pedidos online.",
+      "wrongAnswers": [
+        "Plugin para publicar produtos em redes sociais e marketplaces como Instagram, Facebook e Google Shopping.",
+        "Sistema separado de loja física que mantém estoque próprio e não sincroniza pedidos com a loja online.",
+        "Serviço de impressão de etiquetas de envio."
+      ]
+    },
+    {
+      "id": 22,
+      "level": "basic",
+      "question": "Qual a diferença entre Shopify e WooCommerce?",
+      "correctAnswer": "Shopify é SaaS hospedado e gerenciado; WooCommerce é plugin do WordPress, auto-hospedado, com mais controle e mais responsabilidade técnica.",
+      "wrongAnswers": [
+        "São o mesmo produto vendido com nomes diferentes em regiões diferentes, compartilhando código, temas e ecossistema de apps.",
+        "WooCommerce é SaaS hospedado; Shopify é plugin auto-hospedado do WordPress.",
+        "Shopify é só para produtos físicos e WooCommerce só para digitais."
+      ]
+    },
+    {
+      "id": 23,
+      "level": "basic",
+      "question": "O que é a Shopify App Store?",
+      "correctAnswer": "Marketplace de aplicativos que estendem funcionalidades como avaliações, e-mail marketing, SEO e frete.",
+      "wrongAnswers": [
+        "Loja apenas para comprar temas Shopify, em que todo tema é construído e mantido pelo time interno da Shopify.",
+        "Marketplace onde lojistas vendem produtos no atacado para outros lojistas, com a Shopify intermediando os pagamentos.",
+        "App mobile da Shopify para clientes."
+      ]
+    },
+    {
+      "id": 24,
+      "level": "basic",
+      "question": "O que é o Shopify CLI?",
+      "correctAnswer": "Ferramenta de linha de comando para criar apps, desenvolver temas localmente (shopify theme dev) e fazer deploy.",
+      "wrongAnswers": [
+        "Ferramenta de linha de comando para gerenciar pedidos, reembolsos e clientes em massa pelo terminal, substituindo o Admin em lojas grandes.",
+        "Cliente de banco de dados por linha de comando para consultar os dados da loja com SQL, usado em analytics e relatórios.",
+        "Cliente de terminal para conversar com o suporte da Shopify."
+      ]
+    },
+    {
+      "id": 25,
+      "level": "basic",
+      "question": "Como desenvolver um tema localmente?",
+      "correctAnswer": "Com Shopify CLI (shopify theme dev) para pré-visualizar, e integração com Git/GitHub para versionar.",
+      "wrongAnswers": [
+        "Baixando uma cópia do banco de dados da loja e rodando localmente com Docker junto a um interpretador Liquid.",
+        "Editando arquivos apenas no editor de código do Admin, já que a Shopify não suporta desenvolvimento local de temas.",
+        "Com npm start em um projeto create-react-app."
+      ]
+    },
+    {
+      "id": 26,
+      "level": "basic",
+      "question": "O que são os planos da Shopify?",
+      "correctAnswer": "Planos como Starter, Basic, Grow/Shopify e Advanced, além de Plus para grandes empresas, com diferenças em taxas, funcionalidades e relatórios.",
+      "wrongAnswers": [
+        "Um único plano com o mesmo preço e recursos para toda loja, com complementos opcionais vendidos separadamente na App Store.",
+        "Free, Pro e Enterprise, sendo o Enterprise obrigatório para usar temas.",
+        "Planos baseados apenas no número de produtos, sem outras diferenças."
+      ]
+    },
+    {
+      "id": 27,
+      "level": "basic",
+      "question": "O que é o Shopify Plus?",
+      "correctAnswer": "Plano enterprise com maior personalização do checkout, automações (Flow), múltiplas lojas e suporte dedicado.",
+      "wrongAnswers": [
+        "Extensão de navegador que adiciona atalhos de produtividade e edição em massa ao Admin da Shopify.",
+        "Plano gratuito para lojas pequenas.",
+        "Programa de fidelidade para clientes da Shopify."
+      ]
+    },
+    {
+      "id": 28,
+      "level": "basic",
+      "question": "O que é o objeto product no Liquid?",
+      "correctAnswer": "Objeto global na página de produto com propriedades como title, price, variants, images, description.",
+      "wrongAnswers": [
+        "Objeto JavaScript injetado no window em toda página para analytics, contendo o histórico de navegação do visitante.",
+        "Objeto disponível apenas no template do carrinho, listando os produtos que o cliente adicionou ao carrinho.",
+        "Endpoint da Admin API para criar produtos."
+      ]
+    },
+    {
+      "id": 29,
+      "level": "basic",
+      "question": "Como exibir um preço formatado?",
+      "correctAnswer": "Com o filtro money: {{ product.price | money }}.",
+      "wrongAnswers": [
+        "Com a tag currency {% currency product.price %}, que usa a moeda padrão da loja.",
+        "Com {{ product.price | format: 'BRL' }}, a única forma de adicionar símbolos de moeda.",
+        "Com JavaScript, já que o Liquid não formata preços."
+      ]
+    },
+    {
+      "id": 30,
+      "level": "basic",
+      "question": "Como fazer um loop de produtos de uma coleção?",
+      "correctAnswer": "{% for product in collection.products %} ... {% endfor %}.",
+      "wrongAnswers": [
+        "{{ for product in collection.products }} ... {{ endfor }}, usando delimitadores de saída no laço.",
+        "{% each collection.products as product %} ... {% end %}, como em templates Handlebars.",
+        "{% loop collection.products %} ... {% endloop %}."
+      ]
+    },
+    {
+      "id": 31,
+      "level": "basic",
+      "question": "O que é o objeto cart?",
+      "correctAnswer": "Objeto com os itens do carrinho, total, quantidade e atributos.",
+      "wrongAnswers": [
+        "Objeto com os pedidos concluídos do cliente e o status de envio, disponível em toda página.",
+        "Biblioteca JavaScript carregada por todo tema para adicionar produtos ao carrinho via requisições AJAX.",
+        "Objeto disponível apenas no checkout com detalhes de pagamento."
+      ]
+    },
+    {
+      "id": 32,
+      "level": "basic",
+      "question": "O que é o Dawn?",
+      "correctAnswer": "Tema de referência gratuito e open source da Shopify, rápido e baseado em OS 2.0.",
+      "wrongAnswers": [
+        "Tema premium pago da Shopify disponível só para lojistas Plus, com personalização avançada do checkout embutida.",
+        "Framework React headless da Shopify para construir lojas customizadas, publicado no Oxygen.",
+        "App da Shopify para agendar lançamentos de produtos."
+      ]
+    },
+    {
+      "id": 33,
+      "level": "basic",
+      "question": "Como configurar um domínio próprio?",
+      "correctAnswer": "No Admin, em Configurações > Domínios, conectando o domínio por DNS (registros A/CNAME) ou comprando pela Shopify.",
+      "wrongAnswers": [
+        "Editando o theme.liquid e adicionando o domínio no <head>.",
+        "Enviando um certificado SSL pelo Editor de Temas.",
+        "Domínios próprios só estão disponíveis no Shopify Plus."
+      ]
+    },
+    {
+      "id": 34,
+      "level": "basic",
+      "question": "Como criar descontos?",
+      "correctAnswer": "Em Descontos no Admin: códigos ou automáticos, por porcentagem, valor fixo, frete grátis ou \"compre X leve Y\".",
+      "wrongAnswers": [
+        "Apenas editando manualmente o preço de cada produto antes de uma promoção e voltando depois, já que não há ferramentas nativas de desconto.",
+        "Escrevendo código Liquid no template do carrinho que subtrai um valor do total quando certo produto está presente.",
+        "Apenas por apps de terceiros, já que a Shopify não tem descontos nativos."
+      ]
+    },
+    {
+      "id": 35,
+      "level": "intermediate",
+      "question": "O que é a Storefront API?",
+      "correctAnswer": "API GraphQL pública para criar experiências de compra personalizadas (headless, apps móveis) com produtos, carrinho e checkout.",
+      "wrongAnswers": [
+        "API REST privada usada por sistemas de back-office para gerenciar pedidos, reembolsos e envios, exigindo token admin em toda chamada.",
+        "API para personalizar o layout e a navegação do painel Admin da Shopify para contas de funcionários.",
+        "API para enviar arquivos de tema."
+      ]
+    },
+    {
+      "id": 36,
+      "level": "intermediate",
+      "question": "O que é a Admin API?",
+      "correctAnswer": "API REST/GraphQL para gerenciar dados da loja (produtos, pedidos, clientes) a partir de apps e integrações, com autenticação por token.",
+      "wrongAnswers": [
+        "API interna usada só por funcionários da Shopify para dar suporte a lojistas, indisponível para apps e integrações.",
+        "API GraphQL pública e sem autenticação usada por lojas e apps mobile para exibir produtos a visitantes anônimos, criar carrinhos e processar pagamentos do checkout direto do navegador.",
+        "API exclusiva de funcionários da Shopify."
+      ]
+    },
+    {
+      "id": 37,
+      "level": "intermediate",
+      "question": "Por que preferir GraphQL à REST na Shopify?",
+      "correctAnswer": "A GraphQL é o foco de novos recursos, permite buscar apenas os campos necessários e a Shopify marcou a REST Admin API como legada.",
+      "wrongAnswers": [
+        "Porque a REST Admin API foi totalmente desligada e toda requisição REST agora retorna erro.",
+        "Porque queries GraphQL não têm limites nem cálculo de custo, então apps podem pedir dados ilimitados.",
+        "Porque a GraphQL é a única API que suporta autenticação."
+      ]
+    },
+    {
+      "id": 38,
+      "level": "intermediate",
+      "question": "O que é rate limiting na API da Shopify?",
+      "correctAnswer": "Limites de requisições; a GraphQL usa custo calculado por query com \"bucket\" que se recupera ao longo do tempo, e a REST usa um modelo leaky bucket.",
+      "wrongAnswers": [
+        "Limite no número de produtos, variantes e coleções que uma loja pode ter em cada plano.",
+        "Limite fixo de poucas requisições por dia por app, reiniciado à meia-noite no fuso da loja.",
+        "Limite de quantos clientes podem finalizar compra ao mesmo tempo."
+      ]
+    },
+    {
+      "id": 39,
+      "level": "intermediate",
+      "question": "O que são webhooks?",
+      "correctAnswer": "Notificações HTTP enviadas pela Shopify quando eventos ocorrem (pedido criado, produto atualizado), exigindo verificação do HMAC.",
+      "wrongAnswers": [
+        "Hooks JavaScript injetados no tema que rodam ao carregar a página para rastrear o comportamento do visitante.",
+        "Tarefas agendadas que o app registra para consultar a Shopify a cada hora por mudanças (pedido criado, produto atualizado), exigindo guardar o horário da última sincronização de cada recurso.",
+        "Notificações por e-mail enviadas aos clientes após a compra."
+      ]
+    },
+    {
+      "id": 40,
+      "level": "intermediate",
+      "question": "Como validar um webhook da Shopify?",
+      "correctAnswer": "Calculando o HMAC SHA-256 do corpo bruto com o segredo do app e comparando com o cabeçalho X-Shopify-Hmac-Sha256.",
+      "wrongAnswers": [
+        "Verificando apenas se a requisição vem de um IP shopify.com.",
+        "Comparando o corpo com um hash MD5 do nome da loja.",
+        "Decodificando o JWT do cabeçalho Authorization."
+      ]
+    },
+    {
+      "id": 41,
+      "level": "intermediate",
+      "question": "Qual a diferença entre app público, personalizado e privado (custom)?",
+      "correctAnswer": "Público é listado na App Store; personalizado é desenvolvido para uma loja específica; apps criados no Dev Dashboard/Admin são instalados diretamente por lojistas.",
+      "wrongAnswers": [
+        "Apps públicos são gratuitos e open source, personalizados são pagos por instalação e privados são ferramentas internas da Shopify; só apps públicos acessam a Admin API e webhooks.",
+        "Apps públicos rodam na loja; personalizados no Admin; privados no checkout.",
+        "Não há diferença além do modelo de preço."
+      ]
+    },
+    {
+      "id": 42,
+      "level": "intermediate",
+      "question": "Como funciona a autenticação OAuth para apps?",
+      "correctAnswer": "O lojista autoriza escopos, a Shopify devolve um código que o app troca por um access token. Apps embarcados usam também token exchange/session tokens.",
+      "wrongAnswers": [
+        "O lojista compartilha usuário e senha do Admin com o app, que faz login em nome dele para chamar as APIs.",
+        "O app recebe um access token permanente diretamente na URL de instalação, sem tela de autorização nem troca de código.",
+        "O cliente faz login no app com a conta da loja."
+      ]
+    },
+    {
+      "id": 43,
+      "level": "intermediate",
+      "question": "O que são scopes (escopos) de acesso?",
+      "correctAnswer": "Permissões solicitadas pelo app (ex.: read_products, write_orders), concedidas pelo lojista na instalação.",
+      "wrongAnswers": [
+        "Regiões geográficas e mercados em que um app pode ser instalado, configurados pelo desenvolvedor no Partner Dashboard.",
+        "Escopos CSS que isolam os estilos do app do tema para não conflitarem com o design da loja.",
+        "Regiões geográficas onde o app está disponível."
+      ]
+    },
+    {
+      "id": 44,
+      "level": "intermediate",
+      "question": "O que são App Extensions?",
+      "correctAnswer": "Extensões que adicionam funcionalidades à loja ou ao admin sem alterar o tema: theme app extensions, checkout UI, functions, POS UI.",
+      "wrongAnswers": [
+        "Arquivos que apps injetam diretamente no código do tema do lojista pela Asset API durante a instalação.",
+        "Extensões de navegador que lojistas precisam instalar no Chrome para usar apps no Admin, checkout e POS, injetando scripts diretamente nos arquivos do tema do lojista.",
+        "Taxas adicionais para usar apps além do plano gratuito."
+      ]
+    },
+    {
+      "id": 45,
+      "level": "intermediate",
+      "question": "O que são Theme App Extensions?",
+      "correctAnswer": "Permitem que apps adicionem blocos e embeds ao tema via editor, sem editar código Liquid do lojista.",
+      "wrongAnswers": [
+        "São snippets Liquid que apps copiam para a pasta snippets do tema e incluem com {% render %}.",
+        "Permitem que apps substituam todo o tema do lojista pelos templates do app enquanto ele estiver instalado, editando o theme.liquid e a pasta sections automaticamente pela Asset API.",
+        "Permitem que apps substituam todo o tema do lojista."
+      ]
+    },
+    {
+      "id": 46,
+      "level": "intermediate",
+      "question": "O que são Shopify Functions?",
+      "correctAnswer": "Código customizado (Rust, JavaScript/WASM) executado na infraestrutura da Shopify para personalizar descontos, frete, pagamentos e validações.",
+      "wrongAnswers": [
+        "Funções serverless que apps publicam na AWS Lambda e registram na Shopify para rodar no checkout.",
+        "Scripts Ruby que rodam no checkout de lojas Plus, editados pelo app Script Editor.",
+        "Filtros Liquid escritos por desenvolvedores para temas."
+      ]
+    },
+    {
+      "id": 47,
+      "level": "intermediate",
+      "question": "O que são Checkout UI Extensions?",
+      "correctAnswer": "Componentes React/JS que adicionam elementos personalizados ao checkout de forma segura, substituindo o antigo checkout.liquid.",
+      "wrongAnswers": [
+        "Templates Liquid que sobrescrevem o checkout.liquid.",
+        "Arquivos CSS para mudar as cores do checkout.",
+        "Plugins de navegador que modificam o checkout para os clientes."
+      ]
+    },
+    {
+      "id": 48,
+      "level": "intermediate",
+      "question": "O que é o Remix e o Hydrogen?",
+      "correctAnswer": "Hydrogen é o framework headless da Shopify (baseado em React Router/Remix) e Oxygen é a hospedagem global para ele.",
+      "wrongAnswers": [
+        "Hydrogen é a linguagem de templates da Shopify para temas, substituindo o Liquid, e Remix é seu framework de utilitários CSS.",
+        "Hydrogen é um framework de lojas baseado em Vue hospedado na Vercel, e Remix é o gateway de pagamento usado em lojas headless.",
+        "Remix é a hospedagem da Shopify e Hydrogen um gateway de pagamentos."
+      ]
+    },
+    {
+      "id": 49,
+      "level": "intermediate",
+      "question": "O que é commerce headless?",
+      "correctAnswer": "Arquitetura em que o frontend é desacoplado do backend de e-commerce e consome APIs, dando flexibilidade e performance, com mais complexidade.",
+      "wrongAnswers": [
+        "Loja sem página inicial nem navegação, em que clientes só chegam às páginas de produto por links diretos e anúncios.",
+        "Arquitetura em que o backend de e-commerce renderiza todo o HTML com Liquid e o frontend não tem JavaScript algum, o que simplifica o desenvolvimento e reduz a complexidade em lojas grandes.",
+        "Uma loja que vende apenas produtos digitais."
+      ]
+    },
+    {
+      "id": 50,
+      "level": "intermediate",
+      "question": "Quando escolher headless em vez de tema Liquid?",
+      "correctAnswer": "Quando se precisa de UX altamente customizada, múltiplos canais ou performance extrema; para a maioria das lojas, temas OS 2.0 bastam.",
+      "wrongAnswers": [
+        "Sempre, porque temas Liquid estão obsoletos e vão parar de funcionar quando o Online Store 2.0 for desativado.",
+        "Quando se busca o menor custo possível de desenvolvimento e manutenção e um time pequeno sem especialistas em frontend.",
+        "Sempre, já que temas Liquid estão obsoletos."
+      ]
+    },
+    {
+      "id": 51,
+      "level": "intermediate",
+      "question": "O que é o Shopify Polaris?",
+      "correctAnswer": "Design system oficial para criar interfaces de apps consistentes com o Admin.",
+      "wrongAnswers": [
+        "Painel de analytics da Shopify, que mostra relatórios de vendas, funis de conversão e coortes de clientes.",
+        "Serviço de envio que oferece etiquetas com desconto para pedidos internacionais por transportadoras parceiras.",
+        "Painel de analytics da Shopify."
+      ]
+    },
+    {
+      "id": 52,
+      "level": "intermediate",
+      "question": "O que são App Bridge e embedded apps?",
+      "correctAnswer": "App Bridge permite que apps rodem dentro do Admin em iframe, com navegação, toasts e ações integradas.",
+      "wrongAnswers": [
+        "App Bridge conecta duas lojas Shopify para compartilharem estoque e pedidos em tempo real entre regiões.",
+        "Embedded apps são apps instalados diretamente no hardware do POS, e App Bridge é o protocolo Bluetooth que usam.",
+        "App Bridge é uma ponte de pagamento entre apps e lojistas."
+      ]
+    },
+    {
+      "id": 53,
+      "level": "intermediate",
+      "question": "O que é o Ajax Cart API?",
+      "correctAnswer": "Endpoints (/cart/add.js, /cart/change.js, /cart.js) para manipular o carrinho via JavaScript sem recarregar a página.",
+      "wrongAnswers": [
+        "API Admin para ver carrinhos abandonados e enviar e-mails de recuperação a clientes que não finalizaram a compra.",
+        "API GraphQL usada só por lojas headless para criar checkouts e aplicar códigos de desconto; não está disponível em temas Liquid e exige access token do Admin em toda requisição.",
+        "API GraphQL para criar checkouts apenas em lojas headless."
+      ]
+    },
+    {
+      "id": 54,
+      "level": "intermediate",
+      "question": "O que é a Section Rendering API?",
+      "correctAnswer": "Permite buscar o HTML renderizado de seções por requisição, atualizando partes da página sem recarregar.",
+      "wrongAnswers": [
+        "API que renderiza seções em arquivos PDF para imprimir catálogos e notas.",
+        "API para criar novas seções programaticamente no tema.",
+        "API para ordenar seções em templates JSON."
+      ]
+    },
+    {
+      "id": 55,
+      "level": "intermediate",
+      "question": "O que é o Shopify Markets?",
+      "correctAnswer": "Recurso para vender internacionalmente, com moedas, idiomas, domínios e preços por mercado.",
+      "wrongAnswers": [
+        "Marketplace para comprar e vender lojas Shopify estabelecidas, incluindo domínios e listas de clientes.",
+        "A listagem da Shopify na bolsa de valores.",
+        "Ferramenta para campanhas de marketing em redes sociais."
+      ]
+    },
+    {
+      "id": 56,
+      "level": "intermediate",
+      "question": "Como lidar com multilíngue e multimoeda?",
+      "correctAnswer": "Com Markets, arquivos locales e o filtro t no Liquid, e apps de tradução; moedas locais via Shopify Payments ou conversores.",
+      "wrongAnswers": [
+        "Criando uma loja Shopify separada para cada idioma e moeda, a única forma suportada de vender internacionalmente.",
+        "Traduzindo dados dos produtos com JavaScript ao carregar a página e convertendo preços no navegador com câmbio.",
+        "Criando uma loja Shopify separada para cada idioma e moeda e ligando-as com um seletor de país, já que uma única loja só suporta um idioma e uma moeda."
+      ]
+    },
+    {
+      "id": 57,
+      "level": "intermediate",
+      "question": "O que é o Liquid render versus include?",
+      "correctAnswer": "render isola o escopo do snippet e é o recomendado; include compartilha variáveis e está obsoleto.",
+      "wrongAnswers": [
+        "render é usado só para seções e include só para snippets, então não podem ser trocados.",
+        "include isola o escopo e é recomendado; render compartilha variáveis e está obsoleto.",
+        "São idênticos; render é apenas mais curto."
+      ]
+    },
+    {
+      "id": 58,
+      "level": "intermediate",
+      "question": "Como otimizar a performance de um tema?",
+      "correctAnswer": "Imagens responsivas com image_url e srcset, lazy loading, minimizar apps/JS, fontes otimizadas e CSS crítico.",
+      "wrongAnswers": [
+        "Instalando mais apps para fazer cache das páginas.",
+        "Carregando todas as imagens em resolução máxima para evitar layout shift.",
+        "Movendo toda a lógica Liquid para grandes arquivos JavaScript inline."
+      ]
+    },
+    {
+      "id": 59,
+      "level": "intermediate",
+      "question": "Como medir performance?",
+      "correctAnswer": "Lighthouse, Web Vitals, relatório de velocidade da loja e Theme Inspector for Chrome para perfilar Liquid.",
+      "wrongAnswers": [
+        "Medindo o tamanho do ZIP exportado do tema, já que temas menores sempre carregam mais rápido para os clientes.",
+        "Apenas contando o número de produtos na página inicial.",
+        "Verificando o número de pedidos por hora no Admin."
+      ]
+    },
+    {
+      "id": 60,
+      "level": "intermediate",
+      "question": "O que são metafield definitions?",
+      "correctAnswer": "Definições (nome, tipo, validações) de metacampos no admin, permitindo uso no editor de temas e fixando o tipo de dado.",
+      "wrongAnswers": [
+        "Páginas da Central de Ajuda da Shopify que explicam o que são metafields e listam exemplos de uso.",
+        "Valores padrão que a Shopify preenche automaticamente em todo metafield quando um produto ou cliente é criado.",
+        "Definições de SEO para títulos de páginas."
+      ]
+    },
+    {
+      "id": 61,
+      "level": "intermediate",
+      "question": "Como acessar um metafield no Liquid?",
+      "correctAnswer": "{{ product.metafields.custom.garantia.value }}, usando namespace e chave.",
+      "wrongAnswers": [
+        "{{ metafield('custom', 'garantia') }}, função global que busca o campo no recurso da página atual.",
+        "{{ product.custom_fields['garantia'] }}, lendo do hash custom_fields no objeto product.",
+        "{{ metafield('custom', 'garantia') }}."
+      ]
+    },
+    {
+      "id": 62,
+      "level": "intermediate",
+      "question": "O que são Collections inteligentes (automated)?",
+      "correctAnswer": "Coleções preenchidas por regras (tag, preço, tipo), atualizadas automaticamente.",
+      "wrongAnswers": [
+        "Coleções geradas por IA com base no comportamento de navegação e histórico de compras, personalizadas para cada visitante.",
+        "Coleções que o lojista precisa atualizar manualmente todo dia, adicionando e removendo produtos conforme o estoque.",
+        "Coleções visíveis apenas para clientes logados."
+      ]
+    },
+    {
+      "id": 63,
+      "level": "intermediate",
+      "question": "O que são Selling Plans?",
+      "correctAnswer": "Estrutura para assinaturas e compras recorrentes, pré-venda e planos de pagamento.",
+      "wrongAnswers": [
+        "Metas e cotas de vendas que lojistas definem no Admin para acompanhar o desempenho da equipe nas lojas POS.",
+        "Calendários de marketing usados para planejar campanhas sazonais como Black Friday e promoções de fim de ano.",
+        "Planos de assinatura da Shopify para lojistas."
+      ]
+    },
+    {
+      "id": 64,
+      "level": "intermediate",
+      "question": "Como integrar Shopify com ERP e logística?",
+      "correctAnswer": "Via Admin API, webhooks e apps de integração, ou middleware/filas para sincronizar estoque, pedidos e rastreio.",
+      "wrongAnswers": [
+        "Exportando um CSV manualmente uma vez por mês, único método suportado.",
+        "Dando ao ERP acesso direto ao banco de dados da Shopify.",
+        "Por templates Liquid que chamam o ERP ao renderizar a página."
+      ]
+    },
+    {
+      "id": 65,
+      "level": "intermediate",
+      "question": "O que é o Bulk Operations API?",
+      "correctAnswer": "API GraphQL para executar consultas ou mutações massivas de forma assíncrona, com resultados em JSONL.",
+      "wrongAnswers": [
+        "API REST para aplicar descontos em massa nos produtos.",
+        "Recurso do Admin para editar produtos em visão de planilha.",
+        "API para enviar e-mails em massa aos clientes."
+      ]
+    },
+    {
+      "id": 66,
+      "level": "intermediate",
+      "question": "O que são fulfillment e fulfillment orders?",
+      "correctAnswer": "Fulfillment é o envio dos itens de um pedido; fulfillment orders representam o trabalho a ser cumprido por cada local.",
+      "wrongAnswers": [
+        "Fulfillment orders são pedidos de compra enviados a fornecedores para repor estoque quando ele acaba.",
+        "Fulfillment é a captura do pagamento autorizado no checkout; fulfillment orders são os reembolsos emitidos depois por localização, criados automaticamente quando o cliente pede devolução.",
+        "Fulfillment é a captura do pagamento; fulfillment orders são reembolsos."
+      ]
+    },
+    {
+      "id": 67,
+      "level": "intermediate",
+      "question": "Como funciona o controle de estoque?",
+      "correctAnswer": "Por localização (inventory levels), com itens de inventário rastreados por variante e ajustes via Admin ou API.",
+      "wrongAnswers": [
+        "Apenas por produto, com uma quantidade global por produto e sem suporte a localizações; os ajustes são feitos exclusivamente editando a página do produto no Admin.",
+        "Por coleção, com estoque compartilhado entre todos os produtos.",
+        "O estoque deve ser gerenciado apenas por apps externos."
+      ]
+    },
+    {
+      "id": 68,
+      "level": "intermediate",
+      "question": "Como testar pagamentos?",
+      "correctAnswer": "Com a opção Bogus Gateway em lojas de desenvolvimento ou modo de teste do gateway, usando cartões de teste.",
+      "wrongAnswers": [
+        "Fazendo compras reais e reembolsando depois, única opção.",
+        "Desativando o checkout e simulando pedidos no Admin.",
+        "Usando o sandbox da Storefront API, que ignora pagamentos."
+      ]
+    },
+    {
+      "id": 69,
+      "level": "advanced",
+      "question": "Como estruturar um app Shopify moderno?",
+      "correctAnswer": "Usar o template Remix/React Router com Shopify CLI, autenticação por token exchange, Prisma para sessões, Polaris/App Bridge e extensões.",
+      "wrongAnswers": [
+        "Construir um tema Liquid com scripts PHP embutidos que chamam a Admin API usando credenciais nas configurações do tema.",
+        "Usar jQuery e a REST Admin API com a senha do Admin do lojista armazenada para autenticação.",
+        "Construir um plugin WordPress que se conecta à Shopify via FTP."
+      ]
+    },
+    {
+      "id": 70,
+      "level": "advanced",
+      "question": "Como lidar com GraphQL cost e paginação?",
+      "correctAnswer": "Usar cursor-based pagination (first, after, pageInfo), monitorar extensions.cost e reduzir complexidade das queries.",
+      "wrongAnswers": [
+        "Usar números de página (page=2) e pedir todos os campos para evitar chamadas extras.",
+        "Ignorar o custo, já que queries GraphQL são gratuitas.",
+        "Buscar todos os registros em uma query com first: 100000."
+      ]
+    },
+    {
+      "id": 71,
+      "level": "advanced",
+      "question": "Como garantir idempotência no processamento de webhooks?",
+      "correctAnswer": "Armazenar o X-Shopify-Webhook-Id/evento processado, responder rápido (200) e processar em fila, tolerando reentregas e ordem inconsistente.",
+      "wrongAnswers": [
+        "Processar todo webhook de forma síncrona na requisição e retornar 500 para duplicados, para a Shopify parar de enviá-los.",
+        "Confiar que a Shopify entrega cada webhook exatamente uma vez e na ordem certa, dispensando deduplicação.",
+        "Apagar a assinatura do webhook após o primeiro evento."
+      ]
+    },
+    {
+      "id": 72,
+      "level": "advanced",
+      "question": "Por que processar webhooks em fila assíncrona?",
+      "correctAnswer": "A Shopify exige resposta rápida e reenvia em falha; filas (SQS, BullMQ) evitam timeouts e permitem reprocessamento.",
+      "wrongAnswers": [
+        "Porque a Shopify envia webhooks só uma vez por dia em grandes lotes que precisam ser divididos e processados em segundo plano.",
+        "Porque processar webhooks de forma síncrona é proibido pelos termos da Shopify e apps são removidos por isso.",
+        "Porque filas criptografam o payload do webhook."
+      ]
+    },
+    {
+      "id": 73,
+      "level": "advanced",
+      "question": "Como implementar uma Shopify Function de desconto?",
+      "correctAnswer": "Gerar extensão com CLI, definir input query GraphQL, escrever a lógica em JS/Rust que retorna operações de desconto e configurar via mutation/admin UI.",
+      "wrongAnswers": [
+        "Criar um Shopify Script em Ruby pelo app Script Editor, a abordagem atualmente recomendada para descontos.",
+        "Escrever um snippet Liquid no template do carrinho que subtrai o desconto do total exibido e criar um Shopify Script equivalente em Ruby pelo Script Editor, para o checkout cobrar o mesmo preço.",
+        "Escrever um snippet Liquid que altera o preço no template do carrinho."
+      ]
+    },
+    {
+      "id": 74,
+      "level": "advanced",
+      "question": "Quais as limitações das Functions?",
+      "correctAnswer": "Execução em WASM com limite estrito de tempo, instruções e memória, sem acesso a rede, operando só com os dados da query de entrada.",
+      "wrongAnswers": [
+        "Podem rodar por até dez minutos por execução, chamar qualquer API externa para buscar preços e dados do cliente e ler e gravar diretamente no banco da loja, mas só em lojas Plus.",
+        "Podem rodar por até 10 minutos e chamar qualquer API externa.",
+        "Podem acessar diretamente o banco de dados da loja."
+      ]
+    },
+    {
+      "id": 75,
+      "level": "advanced",
+      "question": "Como migrar do checkout.liquid para extensibilidade?",
+      "correctAnswer": "Substituir customizações por Checkout UI Extensions, Functions, branding via Checkout Editor e Web Pixels para rastreamento.",
+      "wrongAnswers": [
+        "Copiar o checkout.liquid para um novo tema, onde continua funcionando indefinidamente apesar da descontinuação.",
+        "Mover todas as personalizações do checkout para o theme.liquid, que agora controla também as páginas do checkout.",
+        "Reescrever o checkout como uma seção Liquid."
+      ]
+    },
+    {
+      "id": 76,
+      "level": "advanced",
+      "question": "O que são Web Pixels?",
+      "correctAnswer": "Mecanismo sandboxed para executar scripts de analytics/marketing no storefront e checkout sem acessar o DOM diretamente.",
+      "wrongAnswers": [
+        "Pequenas imagens transparentes embutidas nas páginas da loja e em e-mails de marketing para rastrear aberturas e cliques, injetadas no checkout.liquid com acesso total aos campos do formulário.",
+        "Pequenas imagens usadas para rastrear aberturas de e-mail.",
+        "Ferramentas de design pixel-perfect para temas."
+      ]
+    },
+    {
+      "id": 77,
+      "level": "advanced",
+      "question": "Como funciona o Customer Account API?",
+      "correctAnswer": "API GraphQL para experiências de conta do cliente em headless, com OAuth/PKCE para login e acesso a pedidos e dados.",
+      "wrongAnswers": [
+        "API REST que retorna senhas com hash dos clientes para lojas headless autenticarem localmente.",
+        "Objeto Liquid disponível só no template de conta do cliente, usado para renderizar histórico de pedidos.",
+        "API Admin para lojistas criarem contas de clientes em massa."
+      ]
+    },
+    {
+      "id": 78,
+      "level": "advanced",
+      "question": "Como proteger um app contra vulnerabilidades comuns?",
+      "correctAnswer": "Validar HMAC e session tokens, mínimos escopos, sanitizar entradas, proteger tokens, usar HTTPS e seguir os requisitos de privacidade (GDPR/LGPD).",
+      "wrongAnswers": [
+        "Solicitar todos os escopos na instalação para o app nunca falhar e guardar access tokens no frontend para chamadas mais rápidas.",
+        "Pular a validação HMAC em produção para reduzir latência, já que a Shopify verifica toda requisição antes de chegar ao app.",
+        "Solicitar todos os escopos disponíveis para o app nunca falhar."
+      ]
+    },
+    {
+      "id": 79,
+      "level": "advanced",
+      "question": "Quais são os webhooks obrigatórios de privacidade?",
+      "correctAnswer": "Apps públicos devem tratar customers/data_request, customers/redact e shop/redact para conformidade com leis de proteção de dados.",
+      "wrongAnswers": [
+        "orders/create, products/update e app/uninstalled, que todo app público deve tratar para manter os dados sincronizados.",
+        "customers/login, customers/logout e shop/update, exigidos para rastrear sessões por conformidade de privacidade.",
+        "Não há webhooks obrigatórios; todos são opcionais."
+      ]
+    },
+    {
+      "id": 80,
+      "level": "advanced",
+      "question": "Como estruturar uma loja multi-região?",
+      "correctAnswer": "Shopify Markets com domínios/subpastas por país, hreflang, catálogos e preços por mercado, e conformidade fiscal local.",
+      "wrongAnswers": [
+        "Vários temas instalados na mesma loja e trocados automaticamente pelo IP e idioma do navegador do visitante.",
+        "Um único domínio com preços convertidos por JavaScript ao carregar a página.",
+        "Uma conta Shopify compartilhada por todos os países, sem localização."
+      ]
+    },
+    {
+      "id": 81,
+      "level": "advanced",
+      "question": "Como funciona o Shopify Hydrogen com cache?",
+      "correctAnswer": "Estratégias de cache (CacheShort, CacheLong, SWR) para consultas da Storefront API, combinadas com Oxygen e CDN.",
+      "wrongAnswers": [
+        "O Hydrogen não tem camada de cache; toda requisição vai direto à Storefront API, e as respostas ficam apenas no localStorage do navegador até o usuário limpar os dados.",
+        "O Hydrogen não tem cache; toda requisição vai à Storefront API.",
+        "Faz cache de tudo no localStorage do navegador."
+      ]
+    },
+    {
+      "id": 82,
+      "level": "advanced",
+      "question": "Como lidar com busca e filtros avançados?",
+      "correctAnswer": "Storefront Filtering API/Search & Discovery app para filtros nativos, ou provedores como Algolia/Searchspring para relevância avançada.",
+      "wrongAnswers": [
+        "Filtrar todos os produtos em Liquid com laços aninhados em cada página de coleção, a única forma de suportar filtros nativos.",
+        "Filtrar todos os produtos em Liquid com laços aninhados em cada página de coleção, ou carregar todos os produtos no navegador e filtrá-los com JavaScript conforme opções são escolhidas.",
+        "A Shopify não suporta filtros; só coleções podem ser usadas."
+      ]
+    },
+    {
+      "id": 83,
+      "level": "advanced",
+      "question": "Como projetar integração de sincronização de estoque confiável?",
+      "correctAnswer": "Webhooks + reconciliação periódica via Bulk Operations, idempotência, tratamento de conflitos e monitoramento de falhas.",
+      "wrongAnswers": [
+        "Confiar apenas em webhooks, já que chegam garantidamente em ordem.",
+        "Consultar cada produto individualmente a cada segundo.",
+        "Atualizar o estoque manualmente ao fim de cada dia."
+      ]
+    },
+    {
+      "id": 84,
+      "level": "advanced",
+      "question": "Como automatizar o deploy de temas?",
+      "correctAnswer": "GitHub Actions com Shopify CLI, ambientes de staging/produção, integração GitHub nativa por branch e testes com Theme Check/Lighthouse CI.",
+      "wrongAnswers": [
+        "Editar arquivos diretamente no tema publicado em produção para os clientes verem as mudanças na hora.",
+        "Enviar um novo ZIP do tema manualmente no Admin a cada mudança, editando arquivos direto no tema publicado quando necessário, porque a Shopify não oferece CLI nem integração com Git para temas.",
+        "Enviando um ZIP manualmente no Admin a cada mudança, única opção."
+      ]
+    },
+    {
+      "id": 85,
+      "level": "advanced",
+      "question": "O que é o Theme Check?",
+      "correctAnswer": "Linter para temas Shopify que verifica boas práticas, performance e erros de Liquid e JSON.",
+      "wrongAnswers": [
+        "Processo de revisão feito pela equipe da Shopify pelo qual todo tema precisa passar antes de ser publicado em uma loja.",
+        "Ferramenta que compara visualmente dois temas lado a lado e destaca diferenças de layout entre versões.",
+        "Validação de checkout para compras de temas."
+      ]
+    },
+    {
+      "id": 86,
+      "level": "advanced",
+      "question": "Como depurar lentidão causada por Liquid?",
+      "correctAnswer": "Usar Shopify Theme Inspector, reduzir loops aninhados, evitar forloop pesado e mover lógica para metafields ou JS assíncrono.",
+      "wrongAnswers": [
+        "Adicionar mais laços aninhados que pré-calculam dados de todos os produtos a cada requisição, acelerando seções seguintes.",
+        "Aumentar CPU e memória do servidor nas configurações do Admin, o que a Shopify permite nos planos Advanced e Plus.",
+        "Desativar a CDN para o Liquid renderizar mais rápido."
+      ]
+    },
+    {
+      "id": 87,
+      "level": "advanced",
+      "question": "Como carregar conteúdo de forma assíncrona sem prejudicar SEO?",
+      "correctAnswer": "Renderizar o conteúdo essencial no HTML do servidor e usar a Section Rendering API ou fetch apenas para conteúdo secundário.",
+      "wrongAnswers": [
+        "Renderizar o conteúdo em iframes de outro domínio para a página principal ficar leve e os buscadores indexarem ambos.",
+        "Carregar todo o conteúdo, incluindo dados do produto, via JavaScript após o carregamento.",
+        "Esconder conteúdo com display: none e revelá-lo com JavaScript."
+      ]
+    },
+    {
+      "id": 88,
+      "level": "advanced",
+      "question": "Como tratar variantes e dados complexos em headless?",
+      "correctAnswer": "Consultar selectedOptions, availableForSale e variantBySelectedOptions na Storefront API e manter seleção em URL/estado.",
+      "wrongAnswers": [
+        "Buscar dados das variantes pela Admin API diretamente no navegador usando um token admin embutido no bundle.",
+        "Fixar IDs de variantes no frontend para cada produto.",
+        "Usar apenas a primeira variante de cada produto."
+      ]
+    },
+    {
+      "id": 89,
+      "level": "advanced",
+      "question": "Como funciona o checkout com Cart API e checkoutUrl?",
+      "correctAnswer": "O carrinho é criado via Storefront API (cartCreate) e o cliente é redirecionado a checkoutUrl, hospedado e seguro pela Shopify.",
+      "wrongAnswers": [
+        "O app headless constrói suas próprias páginas de checkout e envia os dados do cartão à Admin API para criar um pedido pago.",
+        "checkoutUrl é um endpoint de webhook que a Shopify chama após o pagamento para o app headless exibir a confirmação.",
+        "O carrinho é guardado em Liquid e o checkout roda no frontend headless."
+      ]
+    },
+    {
+      "id": 90,
+      "level": "advanced",
+      "question": "O que são Order Editing e Draft Orders?",
+      "correctAnswer": "Draft Orders criam pedidos manuais ou B2B antes do pagamento; Order Editing altera itens de pedidos existentes via API.",
+      "wrongAnswers": [
+        "Draft Orders são carrinhos abandonados que a Shopify salva automaticamente, e Order Editing é o fluxo de reembolso.",
+        "Order Editing cria novos pedidos; Draft Orders apagam pedidos.",
+        "Ambos só estão disponíveis para clientes na página da conta."
+      ]
+    },
+    {
+      "id": 91,
+      "level": "advanced",
+      "question": "Como funciona o B2B na Shopify?",
+      "correctAnswer": "Empresas, locais, catálogos e termos de pagamento específicos, com preços por cliente e pedidos de rascunho (Plus).",
+      "wrongAnswers": [
+        "B2B é ativado simplesmente dando aos clientes atacadistas um código de desconto para usar no checkout.",
+        "B2B exige uma plataforma de atacado separada da Shopify, conectada por um app de terceiros; dentro da Shopify só pode ser simulado dando códigos de desconto aos atacadistas.",
+        "B2B só funciona pelo POS."
+      ]
+    },
+    {
+      "id": 92,
+      "level": "advanced",
+      "question": "Como estruturar versionamento da API?",
+      "correctAnswer": "A Shopify lança versões trimestrais e mantém cada uma por cerca de 12 meses; defina a versão no endpoint e planeje atualizações regulares.",
+      "wrongAnswers": [
+        "A versão da API é escolhida automaticamente pela Shopify com base na data de criação do app e não pode ser mudada.",
+        "A Shopify tem uma única API sem versão que nunca traz mudanças incompatíveis, então apps nunca precisam de atualização; a versão na URL serve só para documentação.",
+        "Versões são lançadas a cada cinco anos e suportadas para sempre."
+      ]
+    },
+    {
+      "id": 93,
+      "level": "advanced",
+      "question": "Como lidar com picos de tráfego (Black Friday)?",
+      "correctAnswer": "Cache e CDN, otimização de imagens e scripts, testes de carga no que for possível, filas para integrações e monitoramento.",
+      "wrongAnswers": [
+        "Desativar o checkout nos horários de pico e mostrar uma página de espera para a loja não cair com a carga.",
+        "Aumentar a CPU do servidor da Shopify no Admin.",
+        "Remover a CDN para evitar conteúdo desatualizado."
+      ]
+    },
+    {
+      "id": 94,
+      "level": "advanced",
+      "question": "Como monitorar e observar um app Shopify?",
+      "correctAnswer": "Logs estruturados, métricas, alertas (Sentry/Datadog), rastreio de falhas de webhooks e health checks de integrações.",
+      "wrongAnswers": [
+        "Monitoramento é desnecessário porque a Shopify hospeda todo app e alerta o desenvolvedor automaticamente quando algo falha.",
+        "Verificando diariamente as avaliações da App Store.",
+        "Lendo apenas o log de atividades do Admin da Shopify."
+      ]
+    },
+    {
+      "id": 95,
+      "level": "advanced",
+      "question": "Como lidar com migração de plataforma para Shopify?",
+      "correctAnswer": "Mapear dados (produtos, clientes, pedidos), importar por CSV/Bulk API, configurar redirects 301 para preservar SEO e testar o fluxo de compra.",
+      "wrongAnswers": [
+        "Usar redirects temporários 302 para toda URL antiga, que preservam melhor o SEO do que redirects permanentes.",
+        "Copiar as páginas HTML do site antigo para o theme.liquid e manter as mesmas URLs, usando redirects temporários 302 só onde necessário, já que preservam melhor o SEO que os permanentes.",
+        "Copiar o HTML do site antigo para o theme.liquid."
+      ]
+    },
+    {
+      "id": 96,
+      "level": "advanced",
+      "question": "O que são Metaobject entries e como usá-los em headless?",
+      "correctAnswer": "Registros de metaobjects consultáveis pela Storefront API, úteis como CMS leve para conteúdo estruturado.",
+      "wrongAnswers": [
+        "Registros de log das mudanças em metaobjects, usados só para auditoria.",
+        "Entradas que existem apenas no Liquid e não podem ser consultadas por APIs.",
+        "Variantes de produto exportadas como JSON."
+      ]
+    },
+    {
+      "id": 97,
+      "level": "advanced",
+      "question": "O que são Shopify Scripts e por que migrar?",
+      "correctAnswer": "Scripts em Ruby para Plus, descontinuados em favor das Shopify Functions, mais performáticas e escaláveis.",
+      "wrongAnswers": [
+        "Scripts Python usados para importações em massa, substituídos pela ferramenta de importação CSV do Admin.",
+        "Arquivos JavaScript em temas que rodavam a cada carregamento e estão sendo substituídos pelo Liquid, que executa mais rápido no servidor e não exige Plus para personalizar o checkout.",
+        "Scripts Bash do Shopify CLI que não são mais suportados."
+      ]
+    },
+    {
+      "id": 98,
+      "level": "advanced",
+      "question": "Como equilibrar apps de terceiros e código customizado?",
+      "correctAnswer": "Avaliar impacto em performance e manutenção; usar apps para commodities (avaliações, e-mail) e código próprio para diferenciais de negócio.",
+      "wrongAnswers": [
+        "Sempre construir tudo como código próprio porque apps de terceiros são inseguros e lentos, ou instalar o máximo de apps para evitar código próprio; o impacto em performance nunca é relevante.",
+        "Sempre construir tudo customizado, já que apps são inseguros.",
+        "Escolher apenas com base no preço do app."
+      ]
+    },
+    {
+      "id": 99,
+      "level": "advanced",
+      "question": "Como projetar um app de assinaturas?",
+      "correctAnswer": "Usar Selling Plans API e contratos de assinatura, gerenciar cobranças recorrentes (billing attempts), falhas de pagamento e portal do cliente.",
+      "wrongAnswers": [
+        "Criar manualmente um novo pedido no Admin todo mês para cada assinante, guardando os números completos dos cartões no banco do app para um cron job mensal cobrá-los pelo gateway.",
+        "Criar um novo pedido manualmente todo mês para cada cliente.",
+        "Guardar números de cartão no banco do app e cobrá-los com um cron job."
+      ]
+    },
+    {
+      "id": 100,
+      "level": "advanced",
+      "question": "Como garantir acessibilidade e conformidade em uma loja?",
+      "correctAnswer": "HTML semântico, contraste, navegação por teclado, alt text, testes com axe/Lighthouse e atenção a leis locais (como LBI no Brasil).",
+      "wrongAnswers": [
+        "A Shopify trata a acessibilidade automaticamente em todo tema, então lojistas e desenvolvedores não precisam testar nada.",
+        "Instalar um app de overlay de acessibilidade, que garante conformidade legal total automaticamente; a Shopify também cuida de contraste, texto alternativo e navegação por teclado em todo tema sem testes.",
+        "Instalando um app de overlay de acessibilidade, que garante conformidade total."
+      ]
+    }
+  ]
+}

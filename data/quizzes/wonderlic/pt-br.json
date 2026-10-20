@@ -1,0 +1,1107 @@
+{
+  "id": "wonderlic",
+  "language": "pt-br",
+  "title": "Wonderlic",
+  "questions": [
+    {
+      "id": 1,
+      "level": "basic",
+      "question": "Qual número vem a seguir na sequência: 2, 4, 6, 8, ?",
+      "correctAnswer": "10",
+      "wrongAnswers": [
+        "12",
+        "9",
+        "16"
+      ]
+    },
+    {
+      "id": 2,
+      "level": "basic",
+      "question": "Qual número vem a seguir na sequência: 3, 6, 12, 24, ?",
+      "correctAnswer": "48",
+      "wrongAnswers": [
+        "36",
+        "30",
+        "42"
+      ]
+    },
+    {
+      "id": 3,
+      "level": "basic",
+      "question": "Qual palavra é o oposto de ANTIGO?",
+      "correctAnswer": "Moderno",
+      "wrongAnswers": [
+        "Velho",
+        "Arcaico",
+        "Histórico"
+      ]
+    },
+    {
+      "id": 4,
+      "level": "basic",
+      "question": "Lápis custam R$ 0,25 cada. Quanto custam 12 lápis?",
+      "correctAnswer": "R$ 3,00",
+      "wrongAnswers": [
+        "R$ 2,50",
+        "R$ 3,25",
+        "R$ 2,75"
+      ]
+    },
+    {
+      "id": 5,
+      "level": "basic",
+      "question": "Qual palavra não pertence ao grupo: Maçã, Banana, Cenoura, Uva?",
+      "correctAnswer": "Cenoura",
+      "wrongAnswers": [
+        "Maçã",
+        "Banana",
+        "Uva"
+      ]
+    },
+    {
+      "id": 6,
+      "level": "basic",
+      "question": "Se depois de amanhã é sábado, que dia é hoje?",
+      "correctAnswer": "Quinta-feira",
+      "wrongAnswers": [
+        "Sexta-feira",
+        "Quarta-feira",
+        "Domingo"
+      ]
+    },
+    {
+      "id": 7,
+      "level": "basic",
+      "question": "MÃO está para LUVA assim como PÉ está para:",
+      "correctAnswer": "Sapato",
+      "wrongAnswers": [
+        "Dedo",
+        "Tornozelo",
+        "Chapéu"
+      ]
+    },
+    {
+      "id": 8,
+      "level": "basic",
+      "question": "Qual palavra significa o mesmo que VELOZ?",
+      "correctAnswer": "Rápido",
+      "wrongAnswers": [
+        "Lento",
+        "Constante",
+        "Raro"
+      ]
+    },
+    {
+      "id": 9,
+      "level": "basic",
+      "question": "Um trem viaja a 60 km/h. Que distância ele percorre em 3 horas?",
+      "correctAnswer": "180 km",
+      "wrongAnswers": [
+        "120 km",
+        "200 km",
+        "160 km"
+      ]
+    },
+    {
+      "id": 10,
+      "level": "basic",
+      "question": "\"Todos os cães são animais. Rex é um cão.\" Se essas afirmações são verdadeiras, a conclusão \"Rex é um animal\" é:",
+      "correctAnswer": "Verdadeiro — decorre das afirmações",
+      "wrongAnswers": [
+        "Falso — contradiz as afirmações",
+        "Incerto — as afirmações não bastam para decidir",
+        "Nenhum — as afirmações se contradizem"
+      ]
+    },
+    {
+      "id": 11,
+      "level": "basic",
+      "question": "Quantos meses do ano têm 31 dias?",
+      "correctAnswer": "7",
+      "wrongAnswers": [
+        "6",
+        "5",
+        "8"
+      ]
+    },
+    {
+      "id": 12,
+      "level": "basic",
+      "question": "Qual não pertence ao grupo: Círculo, Quadrado, Triângulo, Cubo?",
+      "correctAnswer": "Cubo",
+      "wrongAnswers": [
+        "Círculo",
+        "Quadrado",
+        "Triângulo"
+      ]
+    },
+    {
+      "id": 13,
+      "level": "basic",
+      "question": "Qual número vem a seguir na sequência: 5, 10, 15, 20, ?",
+      "correctAnswer": "25",
+      "wrongAnswers": [
+        "30",
+        "24",
+        "22"
+      ]
+    },
+    {
+      "id": 14,
+      "level": "basic",
+      "question": "João é mais alto que Miguel, e Miguel é mais alto que Samuel. Quem é o mais baixo?",
+      "correctAnswer": "Samuel",
+      "wrongAnswers": [
+        "João",
+        "Miguel",
+        "Não é possível determinar"
+      ]
+    },
+    {
+      "id": 15,
+      "level": "basic",
+      "question": "Qual palavra é o oposto de GENEROSO?",
+      "correctAnswer": "Mesquinho",
+      "wrongAnswers": [
+        "Gentil",
+        "Rico",
+        "Humilde"
+      ]
+    },
+    {
+      "id": 16,
+      "level": "basic",
+      "question": "Uma camisa custa R$ 20 e está com 25% de desconto. Qual é o preço com desconto?",
+      "correctAnswer": "R$ 15",
+      "wrongAnswers": [
+        "R$ 5",
+        "R$ 16",
+        "R$ 18"
+      ]
+    },
+    {
+      "id": 17,
+      "level": "basic",
+      "question": "Qual destes números é o maior?",
+      "correctAnswer": "0,7",
+      "wrongAnswers": [
+        "0,65",
+        "0,077",
+        "0,69"
+      ]
+    },
+    {
+      "id": 18,
+      "level": "basic",
+      "question": "LIVRO está para LER assim como GARFO está para:",
+      "correctAnswer": "Comer",
+      "wrongAnswers": [
+        "Cozinha",
+        "Colher",
+        "Metal"
+      ]
+    },
+    {
+      "id": 19,
+      "level": "basic",
+      "question": "Qual letra vem a seguir na sequência: A, C, E, G, ?",
+      "correctAnswer": "I",
+      "wrongAnswers": [
+        "H",
+        "J",
+        "K"
+      ]
+    },
+    {
+      "id": 20,
+      "level": "basic",
+      "question": "Quantos minutos há em 2,5 horas?",
+      "correctAnswer": "150",
+      "wrongAnswers": [
+        "125",
+        "130",
+        "250"
+      ]
+    },
+    {
+      "id": 21,
+      "level": "basic",
+      "question": "Qual não pertence ao grupo: Cachorro, Gato, Águia, Cavalo?",
+      "correctAnswer": "Águia",
+      "wrongAnswers": [
+        "Cachorro",
+        "Gato",
+        "Cavalo"
+      ]
+    },
+    {
+      "id": 22,
+      "level": "basic",
+      "question": "Quanto é 15% de 200?",
+      "correctAnswer": "30",
+      "wrongAnswers": [
+        "20",
+        "15",
+        "35"
+      ]
+    },
+    {
+      "id": 23,
+      "level": "basic",
+      "question": "Um relógio marca exatamente 3:00. Qual é o ângulo entre os ponteiros das horas e dos minutos?",
+      "correctAnswer": "90°",
+      "wrongAnswers": [
+        "45°",
+        "180°",
+        "60°"
+      ]
+    },
+    {
+      "id": 24,
+      "level": "basic",
+      "question": "Qual palavra significa o mesmo que ENORME?",
+      "correctAnswer": "Gigantesco",
+      "wrongAnswers": [
+        "Minúsculo",
+        "Pesado",
+        "Largo"
+      ]
+    },
+    {
+      "id": 25,
+      "level": "basic",
+      "question": "Qual número vem a seguir na sequência: 1, 4, 9, 16, ?",
+      "correctAnswer": "25",
+      "wrongAnswers": [
+        "20",
+        "24",
+        "32"
+      ]
+    },
+    {
+      "id": 26,
+      "level": "basic",
+      "question": "Lisa tem 3 vezes mais maçãs que Tomás. Tomás tem 4 maçãs. Quantas maçãs eles têm juntos?",
+      "correctAnswer": "16",
+      "wrongAnswers": [
+        "12",
+        "7",
+        "15"
+      ]
+    },
+    {
+      "id": 27,
+      "level": "basic",
+      "question": "Qual palavra é o oposto de EXPANDIR?",
+      "correctAnswer": "Contrair",
+      "wrongAnswers": [
+        "Estender",
+        "Crescer",
+        "Espalhar"
+      ]
+    },
+    {
+      "id": 28,
+      "level": "basic",
+      "question": "Qual não pertence ao grupo: Janeiro, Março, Sexta-feira, Outubro?",
+      "correctAnswer": "Sexta-feira",
+      "wrongAnswers": [
+        "Janeiro",
+        "Março",
+        "Outubro"
+      ]
+    },
+    {
+      "id": 29,
+      "level": "basic",
+      "question": "Qual número vem a seguir na sequência: 100, 90, 80, 70, ?",
+      "correctAnswer": "60",
+      "wrongAnswers": [
+        "50",
+        "65",
+        "55"
+      ]
+    },
+    {
+      "id": 30,
+      "level": "basic",
+      "question": "Uma dúzia de ovos custa R$ 3,60. Quanto custa um ovo?",
+      "correctAnswer": "R$ 0,30",
+      "wrongAnswers": [
+        "R$ 0,36",
+        "R$ 0,25",
+        "R$ 0,33"
+      ]
+    },
+    {
+      "id": 31,
+      "level": "basic",
+      "question": "\"Alguns gatos são pretos. Bigode é um gato.\" Se essas afirmações são verdadeiras, a conclusão \"Bigode é preto\" é:",
+      "correctAnswer": "Incerto — as afirmações não bastam para decidir",
+      "wrongAnswers": [
+        "Verdadeiro — decorre das afirmações",
+        "Falso — contradiz as afirmações",
+        "Nenhum — as afirmações se contradizem"
+      ]
+    },
+    {
+      "id": 32,
+      "level": "basic",
+      "question": "Quanto tempo há entre 9:00 e 17:30?",
+      "correctAnswer": "8 horas e 30 minutos",
+      "wrongAnswers": [
+        "7 horas e 30 minutos",
+        "8 horas",
+        "9 horas e 30 minutos"
+      ]
+    },
+    {
+      "id": 33,
+      "level": "basic",
+      "question": "SOL está para DIA assim como LUA está para:",
+      "correctAnswer": "Noite",
+      "wrongAnswers": [
+        "Estrela",
+        "Céu",
+        "Luz"
+      ]
+    },
+    {
+      "id": 34,
+      "level": "basic",
+      "question": "Quanto é a metade de um quarto de 80?",
+      "correctAnswer": "10",
+      "wrongAnswers": [
+        "20",
+        "40",
+        "5"
+      ]
+    },
+    {
+      "id": 35,
+      "level": "intermediate",
+      "question": "Qual número vem a seguir na sequência: 1, 1, 2, 3, 5, 8, ?",
+      "correctAnswer": "13",
+      "wrongAnswers": [
+        "11",
+        "12",
+        "15"
+      ]
+    },
+    {
+      "id": 36,
+      "level": "intermediate",
+      "question": "Qual número vem a seguir na sequência: 2, 6, 18, 54, ?",
+      "correctAnswer": "162",
+      "wrongAnswers": [
+        "108",
+        "72",
+        "216"
+      ]
+    },
+    {
+      "id": 37,
+      "level": "intermediate",
+      "question": "\"Todas as rosas são flores. Algumas flores murcham rápido.\" Se essas afirmações são verdadeiras, a conclusão \"Algumas rosas murcham rápido\" é:",
+      "correctAnswer": "Incerto — as afirmações não bastam para decidir",
+      "wrongAnswers": [
+        "Verdadeiro — decorre das afirmações",
+        "Falso — contradiz as afirmações",
+        "Nenhum — as afirmações se contradizem"
+      ]
+    },
+    {
+      "id": 38,
+      "level": "intermediate",
+      "question": "4 operários constroem um muro em 6 dias. No mesmo ritmo, quanto tempo levariam 8 operários?",
+      "correctAnswer": "3 dias",
+      "wrongAnswers": [
+        "12 dias",
+        "2 dias",
+        "4 dias"
+      ]
+    },
+    {
+      "id": 39,
+      "level": "intermediate",
+      "question": "Um carro faz 12 km por litro e a gasolina custa R$ 6,00 o litro. Quanto custa o combustível para uma viagem de 240 km?",
+      "correctAnswer": "R$ 120,00",
+      "wrongAnswers": [
+        "R$ 100,00",
+        "R$ 144,00",
+        "R$ 132,00"
+      ]
+    },
+    {
+      "id": 40,
+      "level": "intermediate",
+      "question": "Ana é mais velha que Beto. Carla é mais nova que Beto. Daniel é mais velho que Ana. Quem é o segundo mais velho?",
+      "correctAnswer": "Ana",
+      "wrongAnswers": [
+        "Beto",
+        "Daniel",
+        "Carla"
+      ]
+    },
+    {
+      "id": 41,
+      "level": "intermediate",
+      "question": "Qual palavra é o oposto de FRANCO?",
+      "correctAnswer": "Dissimulado",
+      "wrongAnswers": [
+        "Sincero",
+        "Honesto",
+        "Direto"
+      ]
+    },
+    {
+      "id": 42,
+      "level": "intermediate",
+      "question": "Qual afirmação significa o mesmo que \"Nem todos os funcionários são gerentes\"?",
+      "correctAnswer": "Alguns funcionários não são gerentes",
+      "wrongAnswers": [
+        "Nenhum funcionário é gerente",
+        "Todos os gerentes são funcionários",
+        "Alguns gerentes não são funcionários"
+      ]
+    },
+    {
+      "id": 43,
+      "level": "intermediate",
+      "question": "O preço de um produto subiu de R$ 40 para R$ 50. Qual foi o aumento percentual?",
+      "correctAnswer": "25%",
+      "wrongAnswers": [
+        "20%",
+        "10%",
+        "50%"
+      ]
+    },
+    {
+      "id": 44,
+      "level": "intermediate",
+      "question": "Qual letra vem a seguir na sequência: B, D, G, K, ?",
+      "correctAnswer": "P",
+      "wrongAnswers": [
+        "O",
+        "Q",
+        "N"
+      ]
+    },
+    {
+      "id": 45,
+      "level": "intermediate",
+      "question": "Qual número não pertence ao grupo: 3, 5, 9, 11, 13?",
+      "correctAnswer": "9",
+      "wrongAnswers": [
+        "3",
+        "11",
+        "13"
+      ]
+    },
+    {
+      "id": 46,
+      "level": "intermediate",
+      "question": "Maria tem o triplo da idade do filho. Daqui a 12 anos, terá o dobro da idade dele. Quantos anos Maria tem hoje?",
+      "correctAnswer": "36",
+      "wrongAnswers": [
+        "24",
+        "30",
+        "48"
+      ]
+    },
+    {
+      "id": 47,
+      "level": "intermediate",
+      "question": "Um retângulo tem perímetro 30 e comprimento 10. Qual é a sua área?",
+      "correctAnswer": "50",
+      "wrongAnswers": [
+        "300",
+        "40",
+        "75"
+      ]
+    },
+    {
+      "id": 48,
+      "level": "intermediate",
+      "question": "PEIXE está para CARDUME assim como LOBO está para:",
+      "correctAnswer": "Alcateia",
+      "wrongAnswers": [
+        "Manada",
+        "Bando",
+        "Toca"
+      ]
+    },
+    {
+      "id": 49,
+      "level": "intermediate",
+      "question": "Qual é a média de 12, 15, 18, 21 e 24?",
+      "correctAnswer": "18",
+      "wrongAnswers": [
+        "17",
+        "19",
+        "20"
+      ]
+    },
+    {
+      "id": 50,
+      "level": "intermediate",
+      "question": "Qual número vem a seguir na sequência: 81, 27, 9, 3, ?",
+      "correctAnswer": "1",
+      "wrongAnswers": [
+        "0",
+        "1/3",
+        "-3"
+      ]
+    },
+    {
+      "id": 51,
+      "level": "intermediate",
+      "question": "Se alguns A são B, e todos os B são C, qual afirmação é necessariamente verdadeira?",
+      "correctAnswer": "Alguns A são C",
+      "wrongAnswers": [
+        "Todos os A são C",
+        "Nenhum A é C",
+        "Todos os C são A"
+      ]
+    },
+    {
+      "id": 52,
+      "level": "intermediate",
+      "question": "Qual palavra significa o mesmo que OBSOLETO?",
+      "correctAnswer": "Ultrapassado",
+      "wrongAnswers": [
+        "Obscuro",
+        "Absoluto",
+        "Essencial"
+      ]
+    },
+    {
+      "id": 53,
+      "level": "intermediate",
+      "question": "Uma loja vende 3 canetas por R$ 2. Quanto custam 18 canetas?",
+      "correctAnswer": "R$ 12",
+      "wrongAnswers": [
+        "R$ 9",
+        "R$ 10",
+        "R$ 15"
+      ]
+    },
+    {
+      "id": 54,
+      "level": "intermediate",
+      "question": "Uma reunião começou às 10:45 e durou 1 hora e 50 minutos. A que horas terminou?",
+      "correctAnswer": "12:35",
+      "wrongAnswers": [
+        "12:25",
+        "12:45",
+        "11:35"
+      ]
+    },
+    {
+      "id": 55,
+      "level": "intermediate",
+      "question": "Hoje é quarta-feira. Que dia da semana será daqui a 100 dias?",
+      "correctAnswer": "Sexta-feira",
+      "wrongAnswers": [
+        "Quinta-feira",
+        "Sábado",
+        "Quarta-feira"
+      ]
+    },
+    {
+      "id": 56,
+      "level": "intermediate",
+      "question": "Qual número vem a seguir na sequência: 2, 3, 5, 9, 17, ?",
+      "correctAnswer": "33",
+      "wrongAnswers": [
+        "25",
+        "31",
+        "34"
+      ]
+    },
+    {
+      "id": 57,
+      "level": "intermediate",
+      "question": "Quantas moedas de 5 centavos formam R$ 3,25?",
+      "correctAnswer": "65",
+      "wrongAnswers": [
+        "60",
+        "55",
+        "75"
+      ]
+    },
+    {
+      "id": 58,
+      "level": "intermediate",
+      "question": "Uma turma de 40 alunos tem proporção de meninos para meninas de 3:5. Quantas meninas há na turma?",
+      "correctAnswer": "25",
+      "wrongAnswers": [
+        "15",
+        "24",
+        "20"
+      ]
+    },
+    {
+      "id": 59,
+      "level": "intermediate",
+      "question": "Apontando para uma foto, um homem diz: \"Não tenho irmãos nem irmãs, mas o pai daquele homem é o filho do meu pai.\" Quem está na foto?",
+      "correctAnswer": "O filho dele",
+      "wrongAnswers": [
+        "Ele mesmo",
+        "O pai dele",
+        "O sobrinho dele"
+      ]
+    },
+    {
+      "id": 60,
+      "level": "intermediate",
+      "question": "Qual palavra é o oposto de ESCASSO?",
+      "correctAnswer": "Abundante",
+      "wrongAnswers": [
+        "Raro",
+        "Limitado",
+        "Frágil"
+      ]
+    },
+    {
+      "id": 61,
+      "level": "intermediate",
+      "question": "7 está para 49 assim como 9 está para:",
+      "correctAnswer": "81",
+      "wrongAnswers": [
+        "63",
+        "18",
+        "72"
+      ]
+    },
+    {
+      "id": 62,
+      "level": "intermediate",
+      "question": "Se você reorganizar as letras CIFOPCAI, obtém o nome de um(a):",
+      "correctAnswer": "Oceano",
+      "wrongAnswers": [
+        "Cidade",
+        "Animal",
+        "País"
+      ]
+    },
+    {
+      "id": 63,
+      "level": "intermediate",
+      "question": "Quanto é 0,25 × 0,4?",
+      "correctAnswer": "0,1",
+      "wrongAnswers": [
+        "0,01",
+        "1",
+        "0,65"
+      ]
+    },
+    {
+      "id": 64,
+      "level": "intermediate",
+      "question": "\"Se chove, o chão fica molhado. O chão está molhado.\" Se essas afirmações são verdadeiras, a conclusão \"Choveu\" é:",
+      "correctAnswer": "Incerto — as afirmações não bastam para decidir",
+      "wrongAnswers": [
+        "Verdadeiro — decorre das afirmações",
+        "Falso — contradiz as afirmações",
+        "Nenhum — as afirmações se contradizem"
+      ]
+    },
+    {
+      "id": 65,
+      "level": "intermediate",
+      "question": "Qual não pertence ao grupo: Cobre, Ferro, Bronze, Prata?",
+      "correctAnswer": "Bronze",
+      "wrongAnswers": [
+        "Cobre",
+        "Ferro",
+        "Prata"
+      ]
+    },
+    {
+      "id": 66,
+      "level": "intermediate",
+      "question": "Um homem anda 3 km para o norte e depois 4 km para o leste. A que distância, em linha reta, ele está do ponto de partida?",
+      "correctAnswer": "5 km",
+      "wrongAnswers": [
+        "7 km",
+        "6 km",
+        "4 km"
+      ]
+    },
+    {
+      "id": 67,
+      "level": "intermediate",
+      "question": "AUTOR está para ROMANCE assim como COMPOSITOR está para:",
+      "correctAnswer": "Sinfonia",
+      "wrongAnswers": [
+        "Orquestra",
+        "Piano",
+        "Maestro"
+      ]
+    },
+    {
+      "id": 68,
+      "level": "advanced",
+      "question": "Qual número vem a seguir na sequência: 1, 2, 6, 24, 120, ?",
+      "correctAnswer": "720",
+      "wrongAnswers": [
+        "240",
+        "600",
+        "840"
+      ]
+    },
+    {
+      "id": 69,
+      "level": "advanced",
+      "question": "Qual número vem a seguir na sequência: 3, 7, 15, 31, 63, ?",
+      "correctAnswer": "127",
+      "wrongAnswers": [
+        "126",
+        "125",
+        "95"
+      ]
+    },
+    {
+      "id": 70,
+      "level": "advanced",
+      "question": "Um relógio marca exatamente 3:15. Qual é o ângulo entre os ponteiros das horas e dos minutos?",
+      "correctAnswer": "7,5°",
+      "wrongAnswers": [
+        "0°",
+        "15°",
+        "22,5°"
+      ]
+    },
+    {
+      "id": 71,
+      "level": "advanced",
+      "question": "Dois trens a 300 km de distância seguem um em direção ao outro a 70 km/h e 80 km/h. Em quantas horas eles se encontram?",
+      "correctAnswer": "2",
+      "wrongAnswers": [
+        "2,5",
+        "3",
+        "1,5"
+      ]
+    },
+    {
+      "id": 72,
+      "level": "advanced",
+      "question": "O cano A enche um tanque em 6 horas e o cano B o enche em 3 horas. Quanto tempo os dois levam juntos?",
+      "correctAnswer": "2 horas",
+      "wrongAnswers": [
+        "4,5 horas",
+        "3 horas",
+        "1,5 hora"
+      ]
+    },
+    {
+      "id": 73,
+      "level": "advanced",
+      "question": "Um preço sobe 20% e depois cai 20%. Qual é a variação final?",
+      "correctAnswer": "Queda de 4%",
+      "wrongAnswers": [
+        "Nenhuma variação",
+        "Aumento de 4%",
+        "Queda de 2%"
+      ]
+    },
+    {
+      "id": 74,
+      "level": "advanced",
+      "question": "Qual número vem a seguir na sequência: 2, 5, 11, 23, 47, ?",
+      "correctAnswer": "95",
+      "wrongAnswers": [
+        "94",
+        "71",
+        "96"
+      ]
+    },
+    {
+      "id": 75,
+      "level": "advanced",
+      "question": "Qual letra vem a seguir na sequência: Z, X, U, Q, ?",
+      "correctAnswer": "L",
+      "wrongAnswers": [
+        "M",
+        "K",
+        "N"
+      ]
+    },
+    {
+      "id": 76,
+      "level": "advanced",
+      "question": "\"Nenhum gerente é preguiçoso. Alguns funcionários são preguiçosos.\" Qual afirmação é necessariamente verdadeira?",
+      "correctAnswer": "Alguns funcionários não são gerentes",
+      "wrongAnswers": [
+        "Nenhum funcionário é gerente",
+        "Alguns gerentes não são funcionários",
+        "Todos os preguiçosos são funcionários"
+      ]
+    },
+    {
+      "id": 77,
+      "level": "advanced",
+      "question": "Cinco pessoas sentam em fila. E está na ponta esquerda. A está à esquerda de B, C está à direita de B, e D está entre A e B. Quem está no assento do meio?",
+      "correctAnswer": "D",
+      "wrongAnswers": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "id": 78,
+      "level": "advanced",
+      "question": "A média de 5 números é 20. Após remover um número, a média dos 4 restantes é 18. Qual número foi removido?",
+      "correctAnswer": "28",
+      "wrongAnswers": [
+        "22",
+        "2",
+        "26"
+      ]
+    },
+    {
+      "id": 79,
+      "level": "advanced",
+      "question": "Daqui a 5 anos, Samuel terá o dobro da idade que tinha há 10 anos. Quantos anos Samuel tem hoje?",
+      "correctAnswer": "25",
+      "wrongAnswers": [
+        "20",
+        "30",
+        "15"
+      ]
+    },
+    {
+      "id": 80,
+      "level": "advanced",
+      "question": "Você vai ao trabalho a 40 km/h e volta pelo mesmo caminho a 60 km/h. Qual é a sua velocidade média na ida e volta?",
+      "correctAnswer": "48 km/h",
+      "wrongAnswers": [
+        "50 km/h",
+        "45 km/h",
+        "52 km/h"
+      ]
+    },
+    {
+      "id": 81,
+      "level": "advanced",
+      "question": "Você tem 20 moedas, todas de 10 e de 25 centavos, somando R$ 3,80. Quantas moedas de 25 centavos você tem?",
+      "correctAnswer": "12",
+      "wrongAnswers": [
+        "8",
+        "10",
+        "14"
+      ]
+    },
+    {
+      "id": 82,
+      "level": "advanced",
+      "question": "\"Todos os Bloops são Razzies. Todos os Razzies são Lazzies.\" Se essas afirmações são verdadeiras, a conclusão \"Todos os Bloops são Lazzies\" é:",
+      "correctAnswer": "Verdadeiro — decorre das afirmações",
+      "wrongAnswers": [
+        "Falso — contradiz as afirmações",
+        "Incerto — as afirmações não bastam para decidir",
+        "Nenhum — as afirmações se contradizem"
+      ]
+    },
+    {
+      "id": 83,
+      "level": "advanced",
+      "question": "Qual número vem a seguir na sequência: 4, 9, 25, 49, 121, ?",
+      "correctAnswer": "169",
+      "wrongAnswers": [
+        "144",
+        "196",
+        "125"
+      ]
+    },
+    {
+      "id": 84,
+      "level": "advanced",
+      "question": "Qual número não pertence ao grupo: 64, 125, 216, 343, 400?",
+      "correctAnswer": "400",
+      "wrongAnswers": [
+        "64",
+        "125",
+        "343"
+      ]
+    },
+    {
+      "id": 85,
+      "level": "advanced",
+      "question": "Se o dia 3 de um mês cai numa terça-feira, em que dia da semana cai o dia 25 do mesmo mês?",
+      "correctAnswer": "Quarta-feira",
+      "wrongAnswers": [
+        "Terça-feira",
+        "Quinta-feira",
+        "Segunda-feira"
+      ]
+    },
+    {
+      "id": 86,
+      "level": "advanced",
+      "question": "6 máquinas fazem 6 peças em 6 minutos. Quantas máquinas são necessárias para fazer 60 peças em 12 minutos?",
+      "correctAnswer": "30",
+      "wrongAnswers": [
+        "60",
+        "12",
+        "20"
+      ]
+    },
+    {
+      "id": 87,
+      "level": "advanced",
+      "question": "Dois dados honestos são lançados. Qual é a probabilidade de a soma ser 7?",
+      "correctAnswer": "1/6",
+      "wrongAnswers": [
+        "1/12",
+        "7/36",
+        "1/36"
+      ]
+    },
+    {
+      "id": 88,
+      "level": "advanced",
+      "question": "\"Se o alarme está ligado, a porta está trancada. A porta não está trancada.\" Se essas afirmações são verdadeiras, a conclusão \"O alarme não está ligado\" é:",
+      "correctAnswer": "Verdadeiro — decorre das afirmações",
+      "wrongAnswers": [
+        "Falso — contradiz as afirmações",
+        "Incerto — as afirmações não bastam para decidir",
+        "Nenhum — as afirmações se contradizem"
+      ]
+    },
+    {
+      "id": 89,
+      "level": "advanced",
+      "question": "Um número aumentado em 25% é igual a 150. Qual é o número original?",
+      "correctAnswer": "120",
+      "wrongAnswers": [
+        "112,5",
+        "125",
+        "110"
+      ]
+    },
+    {
+      "id": 90,
+      "level": "advanced",
+      "question": "Quantos litros de água pura devem ser adicionados a 10 litros de uma solução salina a 30% para obter uma solução a 20%?",
+      "correctAnswer": "5",
+      "wrongAnswers": [
+        "10",
+        "3",
+        "2,5"
+      ]
+    },
+    {
+      "id": 91,
+      "level": "advanced",
+      "question": "R$ 1.000 são investidos a juros compostos de 10% ao ano. Quanto valem após 2 anos?",
+      "correctAnswer": "R$ 1.210",
+      "wrongAnswers": [
+        "R$ 1.200",
+        "R$ 1.100",
+        "R$ 1.221"
+      ]
+    },
+    {
+      "id": 92,
+      "level": "advanced",
+      "question": "Qual número vem a seguir na sequência: 1, 3, 6, 10, 15, 21, ?",
+      "correctAnswer": "28",
+      "wrongAnswers": [
+        "27",
+        "30",
+        "26"
+      ]
+    },
+    {
+      "id": 93,
+      "level": "advanced",
+      "question": "PROLIXO está para CONCISO assim como TÍMIDO está para:",
+      "correctAnswer": "Ousado",
+      "wrongAnswers": [
+        "Acanhado",
+        "Breve",
+        "Quieto"
+      ]
+    },
+    {
+      "id": 94,
+      "level": "advanced",
+      "question": "Em um código, CAT é escrito como DBU. Como DOG seria escrito?",
+      "correctAnswer": "EPH",
+      "wrongAnswers": [
+        "EPG",
+        "CNF",
+        "DPH"
+      ]
+    },
+    {
+      "id": 95,
+      "level": "advanced",
+      "question": "Pai e filho somam 50 anos. Há cinco anos, o pai tinha 7 vezes a idade do filho. Quantos anos o pai tem hoje?",
+      "correctAnswer": "40",
+      "wrongAnswers": [
+        "35",
+        "42",
+        "45"
+      ]
+    },
+    {
+      "id": 96,
+      "level": "advanced",
+      "question": "Um prêmio está na caixa A, B ou C. Exatamente uma destas afirmações é verdadeira: (1) O prêmio está na caixa A. (2) O prêmio não está na caixa B. (3) O prêmio não está na caixa A. Onde está o prêmio?",
+      "correctAnswer": "Caixa B",
+      "wrongAnswers": [
+        "Caixa A",
+        "Caixa C",
+        "Não é possível determinar"
+      ]
+    },
+    {
+      "id": 97,
+      "level": "advanced",
+      "question": "Um ciclista percorre 12 km em 30 minutos. No mesmo ritmo, quantos minutos leva para percorrer 30 km?",
+      "correctAnswer": "75",
+      "wrongAnswers": [
+        "60",
+        "90",
+        "70"
+      ]
+    },
+    {
+      "id": 98,
+      "level": "advanced",
+      "question": "Qual número vem a seguir na sequência: 2, 3, 5, 7, 11, 13, ?",
+      "correctAnswer": "17",
+      "wrongAnswers": [
+        "15",
+        "19",
+        "16"
+      ]
+    },
+    {
+      "id": 99,
+      "level": "advanced",
+      "question": "Seguindo a mesma regra — 8 → 3, 15 → 4, 24 → 5 — 35 corresponde a quê?",
+      "correctAnswer": "6",
+      "wrongAnswers": [
+        "7",
+        "5",
+        "36"
+      ]
+    },
+    {
+      "id": 100,
+      "level": "advanced",
+      "question": "Se 3 gatos pegam 3 ratos em 3 minutos, quantos gatos são necessários para pegar 100 ratos em 100 minutos?",
+      "correctAnswer": "3",
+      "wrongAnswers": [
+        "100",
+        "33",
+        "300"
+      ]
+    }
+  ]
+}

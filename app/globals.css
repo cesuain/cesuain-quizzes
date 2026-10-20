@@ -1,0 +1,29 @@
+/* Tailwind CSS v4, the Cesuain design tokens (both themes) and the component styles. */
+@import "@cesuain/ui/styles.css";
+
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
+/* Achievement unlock: a short pop, skipped when the user prefers reduced motion. */
+@keyframes achievement-pop {
+  0% {
+    transform: scale(0.6) rotate(-8deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.12) rotate(3deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@utility animate-achievement-pop {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: achievement-pop 600ms var(--cds-easing-standard) both;
+  }
+}
