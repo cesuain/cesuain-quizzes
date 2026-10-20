@@ -66,7 +66,8 @@ export async function submitAnswerAction(input: z.input<typeof answerSchema>): P
   const { data, error } = await supabase.rpc("submit_answer", {
     p_attempt_id: parsed.data.attemptId,
     p_question_id: parsed.data.questionId,
-    p_option_id: parsed.data.optionId,
+    // null records a timeout. Generated types mark every SQL function argument non-null.
+    p_option_id: parsed.data.optionId as string,
     p_client_event_id: parsed.data.clientEventId,
   });
   if (error) return failure(error.message);
